@@ -1,0 +1,15 @@
+[submodule "ipl.labs"]
+	path = ipl.labs
+	url = https://github.com/vzalygin/ipl.labs.git
+[submodule "db.labs"]
+	path = db.labs
+	url = https://github.com/vzalygin/db.labs.git
+[submodule "op.labs"]
+	path = op.labs
+	url = https://github.com/vzalygin/op.labs.git
+[submodule "oop.labs"]
+	path = oop.labs
+	url = https://github.com/vzalygin/oop.labs.git
+[submodule "oop-exam"]
+	path = oop-exam
+	url = https://github.com/vzalygin/oop-exam.git
