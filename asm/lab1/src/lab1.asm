@@ -6,7 +6,7 @@ F2 dd 65535
 global _start
 _start:
     add WORD[F1],1
-    add DWORD[F2],1
     mov rax, 60
     xor rdi, rdi
+    add DWORD[F2],1
     syscall
