@@ -4,7 +4,7 @@ section .data
 		dd	 3,14,15,16,17,18
 		dd	19,20,21,22,23,24
 		dd	 5,26,27,28,29,30
-		dd	31,32,33,34,35,36
+		dd	 0,32,33,34,35,36
 	N	dd	 0, 0, 0, 0, 0, 0
 section .bss
 	RowMul	resd	1
@@ -22,7 +22,7 @@ _start:
 	mov	rcx,	5
 	mov	ebx,	[rsi]
 	mov	[RowMul],	ebx
-.cyc2:	inc	rsi
+.cyc2:	add	rsi,	4
 	xor	rdx,	rdx
 	mov	eax,	[rsi]
 	idiv	ebx,
@@ -36,11 +36,10 @@ _start:
 	mov	[rdi],	ebx
 	pop	rsi
 	pop	rcx
-.end1:	inc	rdi
+.end1:	add	rdi,	4
 	add	rsi,	24
 	dec	rcx
 	jne	.cyc
-
 	mov	rcx,	6
 	mov	rsi,	N
 .cyc3:	xor	rax,	rax
@@ -50,11 +49,15 @@ _start:
 	call	IntToStr64
 	sub	eax,	1
 	xor	rdx,	rdx
+	inc	eax
 	mov	edx,	eax
 	mov	rax,	1
 	mov	rdi,	1
+	push	rcx
 	syscall
+	pop	rcx
 	pop	rsi
+	add	rsi,	4
 	loop	.cyc3
 
 	mov	rax,	60
