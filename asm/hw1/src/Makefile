@@ -7,8 +7,8 @@ help:
 	@echo ' help  - show this message '
 $(TARGET): $(TARGET).asm	
 	nasm -f elf64 -l $(TARGET).lst $(TARGET).asm
-	ld -o $(TARGET) $(TARGET).o 
+	ld -o $(TARGET).e $(TARGET).o 
 run: $(TARGET)
-	./$(TARGET)
+	./$(TARGET).e
 debug: $(TARGET)
-	edb --run $(TARGET)
+	edb --run $(TARGET).e
