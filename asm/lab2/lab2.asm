@@ -9,6 +9,8 @@ REQ_K	db 	"Введите K:",10
 REQ_K_LEN equ	$-REQ_K
 RES	db 	"Результат вычисления выражения  d = a * x - 3 * (b + 3 / k):",10
 RES_LEN	equ	$-RES
+ERR	db 	"Введены некорректные данные. Завершение работы.",10
+ERR_LEN	equ	$-ERR
 THREE	dd	3
 	section .bss
 BUFFER	resb	10
@@ -80,6 +82,8 @@ _start:
 	call	StrToInt64
 	cmp	rbx,	0
 	jne	.err
+	cmp	eax,	0
+	je	.err
 	mov	[K],	eax
 	; compute d = a * x - 3 * (b + 3 / k)
 	xor	rdx,	rdx
@@ -113,6 +117,11 @@ _start:
 	mov	rdi,	0
 .exit	mov	rax,	60
 	syscall
-.err:	mov	rdi,	1
+.err:	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	ERR
+	mov	rdx, 	ERR_LEN
+	syscall
+	mov	rdi,	1
 	jmp	.exit
 %include "../lib.asm"
