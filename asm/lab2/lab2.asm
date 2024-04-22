@@ -1,46 +1,118 @@
-    section .data
-
-    section .bss
-InBuf resb 10
-lenIn equ $-InBuf
-a resw 1
-b resw 1
-d resw 1
-k resw 1
-x resw 1
-num resw 1
-    section .text ; d = a * x - 3 * (b + 3 / k)
-    mov rax, a
-    call InputNum
-    ; exit
-    mov rax, 60 ; системная функция 60 (exit)
-    xor rdi, rdi ; return code 0
-    syscall ; вызов системной функции
-InputNum:
-    push rbp
-    mov rbp,rsp
-    ;
-    mov [num], rax
-    xor rax, rax
-    push rbx
-    push rcx
-    push rdx
-    push rsi
-    ;
-    mov rax, 0 ; системная функция 0 (read)
-    mov rdi, 0 ; дескриптор файла stdin=0
-    mov rsi, InBuf ; адрес вводимой строки
-    mov rdx, lenIn ; длина строки
-    syscall ; вызов системной функции
-    call StrToInt64
-    mov word[num], ax
-    ;
-    pop rsi
-    pop rdx
-    pop rcx
-    pop rbx
-    ;
-    mov rsp,rbp
-    pop rbp
-    ret
+	section .data
+REQ_A 	db 	"Введите А:",10
+REQ_A_LEN equ	$-REQ_A
+REQ_X 	db 	"Введите X:",10
+REQ_X_LEN equ	$-REQ_X
+REQ_B	db 	"Введите B:",10
+REQ_B_LEN equ	$-REQ_B
+REQ_K	db 	"Введите K:",10
+REQ_K_LEN equ	$-REQ_K
+RES	db 	"Результат вычисления выражения  d = a * x - 3 * (b + 3 / k):",10
+RES_LEN	equ	$-RES
+THREE	dd	3
+	section .bss
+BUFFER	resb	10
+BUFFER_LEN equ	$-BUFFER
+A	resd	1
+B	resd	1
+D	resd	1
+K	resd	1
+X	resd	1
+section .text
+global _start ; d = a * x - 3 * (b + 3 / k)
+_start:
+	; input the number A
+	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	REQ_A
+	mov	rdx, 	REQ_A_LEN
+	syscall
+	mov	rax,	0 
+	mov	rdi,	0
+	mov	rsi,	BUFFER
+	mov	rdx,	BUFFER_LEN
+	syscall
+	call	StrToInt64
+	cmp	rbx,	0
+	jne	.err
+	mov	[A],	eax
+	; input the number X
+	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	REQ_X
+	mov	rdx, 	REQ_X_LEN
+	syscall
+	mov	rax,	0 
+	mov	rdi,	0
+	mov	rsi,	BUFFER
+	mov	rdx,	BUFFER_LEN
+	syscall
+	call	StrToInt64
+	cmp	rbx,	0
+	jne	.err
+	mov	[X],	eax
+	; input the number B
+	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	REQ_B
+	mov	rdx, 	REQ_B_LEN
+	syscall
+	mov	rax,	0 
+	mov	rdi,	0
+	mov	rsi,	BUFFER
+	mov	rdx,	BUFFER_LEN
+	syscall
+	call	StrToInt64
+	cmp	rbx,	0
+	jne	.err
+	mov	[B],	eax
+	; input the number K
+	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	REQ_K
+	mov	rdx, 	REQ_K_LEN
+	syscall
+	mov	rax,	0 
+	mov	rdi,	0
+	mov	rsi,	BUFFER
+	mov	rdx,	BUFFER_LEN
+	syscall
+	call	StrToInt64
+	cmp	rbx,	0
+	jne	.err
+	mov	[K],	eax
+	; compute d = a * x - 3 * (b + 3 / k)
+	xor	rdx,	rdx
+	mov	eax,	[A]
+	imul	dword[X]
+	mov	[A],	eax
+	xor	rdx,	rdx
+	mov	eax,	3
+	idiv	dword[K]
+	add	eax,	[B]
+	imul	dword[THREE]
+	mov	[B],	eax
+	mov	eax,	[A]
+	sub	eax,	[B]
+	mov	[D],	eax
+	; output
+	mov	rax, 	1
+	mov	rdi, 	1
+	mov	rsi, 	RES
+	mov	rdx, 	RES_LEN
+	syscall
+	xor	rax,	rax
+	mov	eax,	[D]
+	mov	rsi,	BUFFER
+	call	IntToStr64
+	mov	rdx,	rax
+	mov	rax, 	1
+	mov	rdi, 	1
+	syscall
+	; exit
+	mov	rdi,	0
+.exit	mov	rax,	60
+	syscall
+.err:	mov	rdi,	1
+	jmp	.exit
 %include "../lib.asm"
