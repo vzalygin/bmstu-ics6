@@ -1,0 +1,86 @@
+********************************************************************************
+***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
+***                                                                          ***
+***                                                                          ***
+***                             Dynamic AC of 2                              ***
+***                           28.04.2024 16:43:39                            ***
+********************************************************************************
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27
+
+AC Voltages at Frequency=1e+006 (Mag, Degrees)
+==============================================
+Node              Voltage  Node              Voltage 
+OUT      153.064,-179.999  2              1,956.548u 
+3                     0,0  IN                    1,0 
+
+
+AC values for Bipolar Junction Transistors NPN (Mag, Degrees)
+=============================================================
+Instance:                        Q1
+Using model:                 KT315E
+
+Power AC Terms:
+PG              152.134,-1.633E-019
+PD                         9.939m,0
+PS                              0,0
+
+AC Pin Currents:
+Ib                 19.878m,956.548u
+Ic                   1.988,956.548u
+Ie                   2.008,-179.999
+Is                              0,0
+
+Device Variables:
+area                         1.000 
+vbe                          0.000 
+vce                          0.000 
+
+
+
+AC values for Resistor (Mag, Degrees)
+=====================================
+Instance:                         R1                     R2                     RC
+
+Power AC Terms:
+PD                     5m,1.517E-019    37.509m,-1.617E-019              152.134,0
+
+AC Pin Currents:
+Ir                      10m,956.548u       75.019m,-179.999         1.988,-179.999
+
+Device Variables:
+tc1                           0.000                  0.000                  0.000 
+tc2                           0.000                  0.000                  0.000 
+
+
+
+AC values for Capacitor (Mag, Degrees)
+======================================
+Instance:                         C1
+
+Power AC Terms:
+PS                      875.624n,-90
+
+AC Pin Currents:
+Ic                 104.897m,-179.999
+
+Device Variables:
+ic                            0.000 
+
+
+
+AC values for SPICE Source (Mag, Degrees)
+=========================================
+Instance:                        EP                     EG
+
+Power AC Terms:
+PG                              0,0      52.449m,-956.547u
+
+AC Pin Currents:
+ISource              1.978,-179.999      104.897m,-179.999
+
+
