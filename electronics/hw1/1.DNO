@@ -1,4 +1,5 @@
 ********************************************************************************
+<<<<<<< HEAD
 ***              Micro-Cap 12.0.2.1 (32 bit) Evaluation Version              ***
 ***                                                                          ***
 ***                                                                          ***
@@ -18,11 +19,33 @@ Number of Points         51
 Maximum Change %         5
 Run Options              Normal
 Auto Scale Ranges        Off
+=======
+***                       Micro-Cap 12.2.0.5 (64 bit)                        ***
+***                                                                          ***
+***                                                                          ***
+***                             DC Analysis of 1                             ***
+***                            03.03.2024 0:01:21                            ***
+********************************************************************************
+Limits
+======
+Variable 1 Method        Linear
+Variable 1 Name          V1
+Variable 1 Range         50,0,1
+Variable 2 Method        None
+Variable 2 Name          
+Variable 2 Range         
+Temperature              List -60,0,60,130
+Number of Points         51
+Maximum Change %         5
+Run Options              Normal
+Auto Scale Ranges        On
+>>>>>>> 974f85ccb87f8f89d33b886fbeeb45664c2504fe
 Accumulate Plots         Off
 Ignore Expression Errors Off
 
 
 *****************************************************
+<<<<<<< HEAD
 ***                Temperature=27                 ***
 ***                  I1=0.000145                  ***
 *****************************************************
@@ -140,4 +163,31 @@ Temperature=27 I1=0.001445
 *****************************************************
 
 Temperature=27 I1=0.0015
+=======
+***                Temperature=-60                ***
+*****************************************************
+
+Temperature=-60
+
+
+*****************************************************
+***                 Temperature=0                 ***
+*****************************************************
+
+Temperature=0
+
+
+*****************************************************
+***                Temperature=60                 ***
+*****************************************************
+
+Temperature=60
+
+
+*****************************************************
+***                Temperature=130                ***
+*****************************************************
+
+Temperature=130
+>>>>>>> 974f85ccb87f8f89d33b886fbeeb45664c2504fe
 
