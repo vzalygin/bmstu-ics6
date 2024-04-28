@@ -112,7 +112,7 @@ _start:
 	; compute f = (g-c)/a+k
 	mov	eax,	[G]
 	sub	eax,	[C]
-	xor	rdx,	rdx
+	cdq
 	idiv	dword[A]
 	add	eax,	[K]
 	mov	[F],	eax
@@ -121,9 +121,12 @@ _start:
 	mov	rsi, 	RES
 	mov	rdx, 	RES_LEN
 	syscall
+	mov	rsi,	BUFFER
+;	mov	rcx,	BUFFER_LEN
+; .clb:	mov	byte[rsi+rcx-1], 0
+; 	loop	.clb
 	xor	rax,	rax
 	mov	eax,	[F]
-	mov	rsi,	BUFFER
 	call	IntToStr64
 	mov	rdx,	rax
 	mov	rax, 	1
