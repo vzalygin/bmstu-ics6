@@ -1,4 +1,4 @@
-TARGET = lab4
+TARGET = lab4-2
 
 help:
 	@echo Available goals:

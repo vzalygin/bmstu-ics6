@@ -3,7 +3,7 @@
 height			equ 	7
 width			equ	3	
 matrix times 21 	dd 	0
-invite			db 	"Enter the matrix 7x3:",10
+invite			db 	"Enter the  7x3:",10
 invite_len		equ	$-invite
 input times 100		db	" "
 input_len		equ	$-input
