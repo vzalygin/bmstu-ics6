@@ -40,7 +40,7 @@ repl:	; prologue
 	cmp	[rdi],	al
 	jne	.l1
 	mov	r11,	r10	; length of string
-	inc	r11
+	; inc	r11
 	; search first word
 	xor	r10,	r10		
 	mov	rdi,	[rsp]	; get start of string
