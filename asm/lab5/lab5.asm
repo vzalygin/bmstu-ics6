@@ -1,6 +1,5 @@
 ; Дан текст не более 255 символов. Слова отделяются друг от друга пробелами. Поменять местами пары слов с указанными номерами.
 	section .data
-eol			db	10,0
 too_big_idx		db	"err: incorrect index of the word",10,0
 	section .bss
 buffer			resb	255
@@ -24,10 +23,6 @@ repl:	; prologue
 	push	r14
 	push	r15
 	; body
-	; call	print_text
-	; mov	rdi,	eol
-	; call	print_text
-	; algorithm
 	cld
 	push	rdi
 	mov	r8,	rsi	; idx1
@@ -45,6 +40,7 @@ repl:	; prologue
 	cmp	[rdi],	al
 	jne	.l1
 	mov	r11,	r10	; length of string
+	inc	r11
 	; search first word
 	xor	r10,	r10		
 	mov	rdi,	[rsp]	; get start of string
@@ -56,6 +52,8 @@ repne	scasb
 	inc	r10
 	inc	rcx
 	loop	.l2
+	cmp	r10,	r8
+	je	.e2
 	jmp	.etbi
 .e2:	mov	r12,	rdi	; pointer to first word
 repne	scasb
@@ -106,8 +104,6 @@ rep	movsb
 rep	movsb
 	; print the same str
 .skip:	pop	rdi
-	call	print_text
-	mov	rdi,	eol
 	call	print_text
 	; epilogue
 .ret:	pop	r15
