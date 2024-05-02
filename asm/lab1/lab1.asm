@@ -1,12 +1,15 @@
     section .data
-F1 dw 65535
-F2 dd 65535
+A   db  105
+B   db  -13
     section .bss
+C   resb    1
     section .text
 global _start
 _start:
-    add WORD[F1],1
-    mov rax, 60
-    xor rdi, rdi
-    add DWORD[F2],1
-    syscall
+    mov AL,[A]
+    add AL,[B]
+    mov [C],AL
+
+    mov rdx,    0
+    mov	rax,	60
+	syscall
