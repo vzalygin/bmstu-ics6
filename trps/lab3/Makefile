@@ -6,4 +6,4 @@ compile:
 	gcc $(FLAGS) 11_memory.c -o 11_memory.o
 
 time: compile
-	./11.o; ./11_memory.o; ./11_fixed.o;
+	./11.o; ./11_memory.o; ./11_fixed.o
