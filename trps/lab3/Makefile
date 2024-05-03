@@ -5,8 +5,5 @@ compile:
 	gcc $(FLAGS) 11_fixed.c -o 11_fixed.o
 	gcc $(FLAGS) 11_memory.c -o 11_memory.o
 
-old: compile
-	./11.o
-
-fixed: compile
-	./11_fixed.o
+time: compile
+	./11.o; ./11_memory.o; ./11_fixed.o;

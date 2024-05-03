@@ -2,28 +2,32 @@
 #include <stdlib.h>
 #include <malloc.h>
 #include <math.h>
+#include <time.h>
+
+#define COUNT 50000
 
 int main()
 {
-    for (int __ = 0; __ < 100000; __++) {
-        double s,a,m,eps,x;
+    clock_t start = clock();
+    for (int __ = 0; __ < COUNT; __++) {
+        double s,m,eps,cur,prev;
         double *ms, *mss;
         int N = 1000, i,o; 
-        ms = (double*)malloc(N * sizeof(int));
-        mss = (double*)malloc(N * sizeof(int));
         eps = 0.00001;
-        ms[1] = 1.0/4;
+        prev = 1.0/4;
         o = 1;
-        s = 1.0/4;
-        mss[1] = s;
+        s = prev;
         do {
             o++;
             m = -1/(4*o);
-            ms[o] = ms[o-1]*m;
-            s = s+ms[o];
-            mss[o] = s;
-        } while (abs(ms[o-1]-ms[o])>=eps);
-        printf("s = %f\nn = %d\n",s,o);
+            cur = prev*m;
+            s = s+cur;
+            prev = cur;
+        } while (abs(prev-cur)>=eps);
+        // printf("s = %f\nn = %d\n",s,o);
     }
+    clock_t end = clock();
+    double time = (double)(end - start)/COUNT;
+    printf("%f\n", time);
     return 0;
 }
