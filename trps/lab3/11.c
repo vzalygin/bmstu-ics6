@@ -4,7 +4,7 @@
 #include <math.h>
 #include <time.h>
 
-#define COUNT 50000
+#define COUNT 100000
 
 int main()
 {
@@ -27,10 +27,10 @@ int main()
             s = s+ms[o];
             mss[o] = s;
         } while (abs(ms[o-1]-ms[o])>=eps);
-        // printf("s = %f\nn = %d\n",s,o);
+        printf("s = %f\nn = %d\n",s,o);
     }
     clock_t end = clock();
     double time = (double)(end - start)/COUNT;
-    printf("%f\n", time);
+    printf("до оптимизации. время работы: %fms\n", time);
     return 0;
 }
