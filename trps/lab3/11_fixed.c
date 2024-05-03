@@ -4,12 +4,15 @@
 #include <math.h>
 #include <time.h>
 
-#define COUNT 1000000
+int main(int argc, char **argv) {
+    int count;
+    if (argc == 1) {
 
-int main()
-{
+    } else {
+        count = 1;
+    }
     clock_t start = clock();
-    for (int __ = 0; __ < COUNT; __++) {
+    for (int __ = 0; __ < count; __++) {
         double s,m,eps,cur,prev;
         double *ms, *mss;
         int N = 1000, i,o; 
@@ -28,6 +31,6 @@ int main()
     }
     clock_t end = clock();
     double time = (double)(end - start)/COUNT;
-    printf("полная оптимизация. время работы: %fms\n", time);
+    printf("c оптимизациями\tвремя работы: %fms\n", time);
     return 0;
 }

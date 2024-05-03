@@ -6,8 +6,7 @@
 
 #define COUNT 100000
 
-int main()
-{
+int main() {
     clock_t start = clock();
     for (int __ = 0; __ < COUNT; __++) {
         double s,a,m,eps,x;
@@ -27,10 +26,10 @@ int main()
             s = s+ms[o];
             mss[o] = s;
         } while (abs(ms[o-1]-ms[o])>=eps);
-        printf("s = %f\nn = %d\n",s,o);
+        // printf("s = %f\nn = %d\n",s,o);
     }
     clock_t end = clock();
     double time = (double)(end - start)/COUNT;
-    printf("до оптимизации. время работы: %fms\n", time);
+    printf("без оптимизаций\tвремя работы: %fms\n", time);
     return 0;
 }
