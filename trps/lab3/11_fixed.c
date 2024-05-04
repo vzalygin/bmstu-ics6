@@ -10,7 +10,6 @@ int main(int argc, char **argv) {
     START_MEASURE("после оптимизаций\t")
 
     double s,m,eps,cur,prev;
-    double *ms, *mss;
     int N = 1000, i,o; 
     eps = 0.00001;
     prev = 1.0/4;

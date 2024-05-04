@@ -5,7 +5,7 @@ compile:
 	gcc $(FLAGS) 11_fixed.c -o 11_fixed.o
 
 time: compile
-	./11.o 1000; ./11_fixed.o 1000;
+	./time.sh
 
 old: compile
 	./11.o
