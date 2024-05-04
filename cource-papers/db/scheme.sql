@@ -1,7 +1,7 @@
 -- enums
 DROP TYPE IF EXISTS ORDER_STATUS_ENUM;
 CREATE TYPE ORDER_STATUS_ENUM AS ENUM  (
-	'assembling', 'delivering', 'closed'
+	'assembling', 'delivering', 'closed', 'cancelled'
 );
 
 DROP TYPE IF EXISTS DELIVERY_STATUS_ENUM;
@@ -38,17 +38,17 @@ CREATE TABLE IF NOT EXISTS "order" (
 	id SERIAL PRIMARY KEY,
 	"status" ORDER_STATUS_ENUM NOT NULL,
 	client_id INT NOT NULL,
-	total_price INT NOT NULL,
+	total_price INT NOT NULL CHECK (total_price >= 0),
 	"address" VARCHAR(1024)[] NOT NULL,
 	creation_date TIMESTAMP NOT NULL,
-	delivery_id INT,
+	delivery_date TIMESTAMP, -- TODO это тоже поправить
 	close_date TIMESTAMP
 );
 
 CREATE TABLE IF NOT EXISTS delivery (
 	id SERIAL PRIMARY KEY,
+	order_id INT NOT NULL, -- TODO поправить в картинке
 	courier_id INT NOT NULL,
-	creation_date TIMESTAMP NOT NULL,
 	"status" DELIVERY_STATUS_ENUM
 );
 
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS product (
 	units VARCHAR(32) NOT NULL,
 	"name" VARCHAR(256) NOT NULL,
 	image_url VARCHAR(1024) NOT NULL,
-	price_per_unit INT NOT NULL
+	price_per_unit INT NOT NULL CHECK (price_per_unit >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS shipment (
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS shipment (
 	delivery_date TIMESTAMP NOT NULL,
 	product_id INT NOT NULL,
 	expiration_date TIMESTAMP NOT NULL,
-	product_amount INT NOT NULL,
+	product_amount INT NOT NULL CHECK (product_amount > 0),
 	"status" SHIPMENT_STATUS_ENUM NOT NULL
 );
 
@@ -90,9 +90,9 @@ CREATE TABLE IF NOT EXISTS assembling (
 	product_id INT NOT NULL,
 	order_id INT NOT NULL,
 	assembler_id INT NOT NULL,
-	product_amount INT NOT NULL,
+	product_amount INT NOT NULL CHECK (product_amount > 0),
 	creation_date TIMESTAMP NOT NULL,
-	close_date TIMESTAMP,
+	close_date TIMESTAMP CHECK ((close_date = null) or (close_date != null and close_date > creation_date)),
 	PRIMARY KEY (product_id, order_id)
 );
 
@@ -107,22 +107,22 @@ CREATE TABLE IF NOT EXISTS shift (
 	employee_id INT NOT NULL,
 	store_id INT NOT NULL,
 	begin_date TIMESTAMP NOT NULL,
-	end_date TIMESTAMP NOT NULL,
+	end_date TIMESTAMP NOT NULL CHECK (end_date > begin_date),
 	PRIMARY KEY (employee_id, store_id)
 );
 
 CREATE TABLE IF NOT EXISTS assortment (
 	store_id INT NOT NULL,
 	product_id INT NOT NULL,
-	amount INT NOT NULL,
+	amount INT NOT NULL CHECK (amount >= 0),
 	PRIMARY KEY (store_id, product_id)
 );
 
 -- references
 ALTER TABLE "order" ADD CONSTRAINT fk_order_client FOREIGN KEY (client_id) REFERENCES client;
-ALTER TABLE "order" ADD CONSTRAINT fk_order_delivery FOREIGN KEY (delivery_id) REFERENCES delivery;
 
 ALTER TABLE delivery ADD CONSTRAINT fk_delivery_courier FOREIGN KEY (courier_id) REFERENCES employee;
+ALTER TABLE delivery ADD CONSTRAINT fk_delivery_order FOREIGN KEY (order_id) REFERENCES "order";
 
 ALTER TABLE shipment ADD CONSTRAINT fk_shipment_store FOREIGN KEY (store_id) REFERENCES store;
 ALTER TABLE shipment ADD CONSTRAINT fk_shipment_product FOREIGN KEY (product_id) REFERENCES product;
@@ -140,3 +140,19 @@ ALTER TABLE shift ADD CONSTRAINT fk_shift_store FOREIGN KEY (store_id) REFERENCE
 
 ALTER TABLE assortment ADD CONSTRAINT fk_assortment_store FOREIGN KEY (store_id) REFERENCES store;
 ALTER TABLE assortment ADD CONSTRAINT fk_assortment_product FOREIGN KEY (product_id) REFERENCES product;
+
+-- complex contraints
+
+
+-- triggers
+
+
+-- views
+
+
+-- jobs
+
+
+-- roles
+
+
