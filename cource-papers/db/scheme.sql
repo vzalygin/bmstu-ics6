@@ -1,7 +1,7 @@
 -- enums
 DROP TYPE IF EXISTS ORDER_STATUS_ENUM;
 CREATE TYPE ORDER_STATUS_ENUM AS ENUM  (
-	'assembling', 'delivering', 'closed', 'cancelled'
+	'assembling', 'assembled', 'delivering', 'closed', 'cancelled'
 );
 
 DROP TYPE IF EXISTS DELIVERY_STATUS_ENUM;
@@ -21,7 +21,7 @@ CREATE TYPE PRODUCT_CATEGORY_ENUM AS ENUM (
 
 DROP TYPE IF EXISTS SHIPMENT_STATUS_ENUM;
 CREATE TYPE SHIPMENT_STATUS_ENUM AS ENUM (
-	'on_the_way', 'delivered', 'accepted'
+	'on_the_way', 'delivered', 'accepted', 'run_out'
 );
 
 -- tables
@@ -89,7 +89,6 @@ CREATE TABLE IF NOT EXISTS store (
 CREATE TABLE IF NOT EXISTS assembling (
 	product_id INT NOT NULL,
 	order_id INT NOT NULL,
-	assembler_id INT NOT NULL,
 	product_amount INT NOT NULL CHECK (product_amount > 0),
 	creation_date TIMESTAMP NOT NULL,
 	close_date TIMESTAMP CHECK ((close_date = null) or (close_date != null and close_date > creation_date)),
@@ -142,17 +141,43 @@ ALTER TABLE assortment ADD CONSTRAINT fk_assortment_store FOREIGN KEY (store_id)
 ALTER TABLE assortment ADD CONSTRAINT fk_assortment_product FOREIGN KEY (product_id) REFERENCES product;
 
 -- complex contraints
-
+-- delivery_date не раньше creation_date
+-- close_date не раньше delivery_date
+-- close_date != null, если (delivery_date != null and status=closed) или status=cancelled
+-- delivery_date != null, если status!=assembling
+-- заказ нельзя перевести в status=delivering, пока все assembling не имеют close_date!=null
 
 -- triggers
-
+-- когда перевод заказа в status=assembled, когда все assembling имеют close_date
+-- когда shipment имеют статус accepted, то добавлять продукт в assortment
+-- если заказ cancalled, то возвращать продукты в ассортмент
+-- нельзя поставить пересекающиеся смены?
+-- при создании assembling количество товаров в ассортименте убавляется согласно assembling
+-- при убавлении товаров в assortment убавляется количество товаров из поставок:
+--		берется самая ранняя принятая доставка и из нее вычитается заказанное количество продуктов
+--		если продуктов больше, то доставка помечается run_out и ищется следующая
 
 -- views
+-- вьюхи, из нужно сделать только часть информации доступной
 
+-- user:
+-- client (без изменений), order (ниже), assortment (без изменений), store (без адреса), product (без изменений)
+-- информация о магазине
+-- заказы (время заказа только, без остальной меты)
+
+-- courier:
+-- order (собирается из delivery order, с прилинкованным адресом)
+
+-- assembler
+-- assembling (сразу подвязывается номер заказа и место, где лежит продукт)
 
 -- jobs
-
+-- раз в некоторое время списывать продукты, если истек срок годности (ассортимент тут же менять)
+-- если заказ assembled, то надо назначить доставщика (первого свободного) и сменить статус
 
 -- roles
-
-
+-- dba (имеет доступ ко всем)
+-- manager (работает только с core-частью)
+-- user
+-- courier
+-- assembler
