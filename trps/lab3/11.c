@@ -7,11 +7,13 @@
 #include "macros.h"
 
 int main(int argc, char **argv) {
-    START_MEASURE("до оптимизаций\t\t")
-
     double s,a,m,eps,x;
     double *ms, *mss;
-    int N = 1000, i,o; 
+    int N, i,o; 
+
+    START_MEASURE("до оптимизаций\t\t")
+    
+    N = 1000;
     ms = (double*)malloc(N * sizeof(int));
     mss = (double*)malloc(N * sizeof(int));
     eps = 0.00001;
@@ -26,8 +28,9 @@ int main(int argc, char **argv) {
         s = s+ms[o];
         mss[o] = s;
     } while (abs(ms[o-1]-ms[o])>=eps);
-    printf("s = %f\nn = %d\n",s,o);
     
     END_MEASURE()
+
+    printf("s = %f\nn = %d\n",s,o);
     return 0;
 }

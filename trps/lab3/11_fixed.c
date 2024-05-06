@@ -7,10 +7,12 @@
 #include "macros.h"
 
 int main(int argc, char **argv) {
+    double s,m,eps,cur,prev;
+    int N,i,o;
+    
     START_MEASURE("после оптимизаций\t")
 
-    double s,m,eps,cur,prev;
-    int N = 1000, i,o; 
+    N = 1000; 
     eps = 0.00001;
     prev = 1.0/4;
     o = 1;
@@ -22,8 +24,9 @@ int main(int argc, char **argv) {
         s = s+cur;
         prev = cur;
     } while (abs(prev-cur)>=eps);
-    printf("s = %f\nn = %d\n",s,o);
     
     END_MEASURE()
+
+    printf("s = %f\nn = %d\n",s,o);
     return 0;
 }
