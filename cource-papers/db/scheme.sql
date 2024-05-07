@@ -1,7 +1,6 @@
 -- enums
 DROP TYPE IF EXISTS ORDER_STATUS_ENUM;
 CREATE TYPE ORDER_STATUS_ENUM AS ENUM  (
-	-- надо ли cancelled?
 	'assembling', 'assembled', 'delivering', 'closed', 'cancelled'
 );
 
@@ -40,8 +39,8 @@ CREATE TABLE IF NOT EXISTS "order" (
 	"status" ORDER_STATUS_ENUM NOT NULL,
 	client_id INT NOT NULL,
 	total_price INT NOT NULL CHECK (total_price >= 0),
-	"address" VARCHAR(1024)[] NOT NULL,
-	creation_date TIMESTAMP NOT NULL DEFAULT current_timestamp,
+	"address" VARCHAR(1024) NOT NULL,
+	creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	delivery_date TIMESTAMP, -- TODO это тоже поправить
 	close_date TIMESTAMP,
 	store_id INT NOT NULL,
@@ -87,8 +86,8 @@ CREATE TABLE IF NOT EXISTS product (
 CREATE TABLE IF NOT EXISTS shipment (
 	id SERIAL,
 	store_id INT NOT NULL,
-	delivery_date TIMESTAMP NOT NULL,
 	product_id INT NOT NULL,
+	delivery_date TIMESTAMP NOT NULL,
 	expiration_date TIMESTAMP NOT NULL,
 	product_amount INT NOT NULL,
 	"status" SHIPMENT_STATUS_ENUM NOT NULL,
@@ -112,7 +111,7 @@ CREATE TABLE IF NOT EXISTS assembling (
 	product_id INT NOT NULL,
 	order_id INT NOT NULL,
 	product_amount INT NOT NULL CHECK (product_amount > 0),
-	creation_date TIMESTAMP NOT NULL DEFAULT current_timestamp,
+	creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	close_date TIMESTAMP,
 	
 	PRIMARY KEY (product_id, order_id),
@@ -174,7 +173,7 @@ ALTER TABLE assortment ADD CONSTRAINT fk_assortment_product FOREIGN KEY (product
 
 -- triggers
 
--- когда перевод заказа в status=assembled, когда все assembling имеют close_date
+-- перевод заказа в status=assembled, когда все assembling имеют close_date
 CREATE OR REPLACE FUNCTION set_order_assembled_on_assembly_ready_func()
 RETURNS TRIGGER AS 
 $$
@@ -186,14 +185,14 @@ BEGIN
 		= 0
 	THEN
 		UPDATE "order" 
-		SET "order.status" = 'assembled' 
-		WHERE "order.id" = NEW.order_id;
+		SET "order"."status" = 'assembled' 
+		WHERE "order".id = NEW.order_id;
 	END IF;
 	RETURN NEW;
 END; 
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER set_order_assembled_on_assembly_ready
+CREATE OR REPLACE TRIGGER set_order_assembled_on_assembly_ready
 	AFTER UPDATE
 	ON assembling
 	FOR EACH ROW
@@ -215,7 +214,7 @@ BEGIN
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER update_assortment_on_shipment_accepted
+CREATE OR REPLACE TRIGGER update_assortment_on_shipment_accepted
 	AFTER UPDATE
 	ON shipment
 	FOR EACH ROW
@@ -227,21 +226,17 @@ RETURNS TRIGGER AS
 $$
 DECLARE
 	store_id INT := (
-		SELECT "order.store_id" FROM "order" WHERE "order.id" = NEW.order_id
+		SELECT "order".store_id FROM "order" WHERE "order".id = NEW.order_id
 	);
 BEGIN
-	IF
-		OLD."status" != NEW."status" AND NEW."status" = 'accepted'
-	THEN
-		UPDATE assortment 
-		SET assortment.amount = assortment.amount - NEW.product_amount
-		WHERE assortment.store_id = store_id AND assortment.product_id = NEW.product_id;
-	END IF;
+	UPDATE assortment 
+	SET assortment.amount = assortment.amount - NEW.product_amount
+	WHERE assortment.store_id = store_id AND assortment.product_id = NEW.product_id;
 	RETURN NEW;
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER decrease_product_amount_on_new_assembling
+CREATE OR REPLACE TRIGGER decrease_product_amount_on_new_assembling
 	BEFORE INSERT
 	ON assembling
 	FOR EACH ROW
@@ -252,8 +247,8 @@ CREATE OR REPLACE FUNCTION set_shipment_run_out_on_zero_amount_func()
 RETURNS TRIGGER AS
 $$
 BEGIN
-	IF 
-		NEW.product_amount = 0
+	IF
+		NEW.product_amount = 0 AND NEW.status = 'accepted'
 	THEN
 		UPDATE shipment
 		SET shipment."status" = 'run_out'
@@ -263,8 +258,8 @@ BEGIN
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER set_shipment_run_out_on_zero_amount
-	BEFORE UPDATE
+CREATE OR REPLACE TRIGGER set_shipment_run_out_on_zero_amount
+	AFTER UPDATE
 	ON shipment
 	FOR EACH ROW
 	EXECUTE PROCEDURE set_shipment_run_out_on_zero_amount_func();
@@ -277,22 +272,22 @@ BEGIN
 	IF 
 		NEW."status" = 'delivering'
 	THEN
-		UPDATE "oder"
-		SET "order".delivery_date = current_timestamp
+		UPDATE "order"
+		SET "order".delivery_date = CURRENT_TIMESTAMP
 		WHERE "order".id = NEW.id;
 	END IF;
 	IF 
 		NEW."status" = 'closed' OR NEW."status" = 'cancelled'
 	THEN
-		UPDATE "oder"
-		SET "order".close_date = current_timestamp
+		UPDATE "order"
+		SET "order".close_date = CURRENT_TIMESTAMP
 		WHERE "order".id = NEW.id;
 	END IF;
 	RETURN NEW;
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER set_order_timestamp_on_status_change
+CREATE OR REPLACE TRIGGER set_order_timestamp_on_status_change
 	AFTER UPDATE
 	ON "order"
 	FOR EACH ROW
@@ -331,7 +326,7 @@ BEGIN
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER decrease_shipment_product_amount_on_assortment_decrease
+CREATE OR REPLACE TRIGGER decrease_shipment_product_amount_on_assortment_decrease
 	AFTER UPDATE
 	ON assortment
 	FOR EACH ROW
@@ -341,39 +336,140 @@ CREATE TRIGGER decrease_shipment_product_amount_on_assortment_decrease
 CREATE OR REPLACE FUNCTION return_products_to_assortment_on_order_cancel_func()
 RETURNS TRIGGER AS
 $$
+DECLARE
+	assembling_r RECORD;
 BEGIN
-
+	FOR assembling_r IN
+		(SELECT * 
+		 FROM assembling
+		 WHERE assembling.order_id = NEW.id)
+	LOOP
+		UPDATE assortment
+		SET assortment.amount = assortment.amount + assembling_r.product_amount
+		WHERE assortment.store_id = NEW.store_id AND assortment.product_id = assembling_r.product_id;
+	END LOOP;
 	RETURN NEW;
 END;
 $$
 LANGUAGE 'plpgsql';
-CREATE TRIGGER return_products_to_assortment_on_order_cancel
+CREATE OR REPLACE TRIGGER return_products_to_assortment_on_order_cancel
 	AFTER UPDATE
 	ON "order"
 	FOR EACH ROW
 	EXECUTE PROCEDURE return_products_to_assortment_on_order_cancel_func();
 
 -- views
--- вьюхи, из нужно сделать только часть информации доступной
 
--- user:
--- client (без изменений), order (ниже), assortment (без изменений), store (без адреса), product (без изменений)
--- информация о магазине
--- заказы (время заказа только, без остальной меты)
+-- заказы со список продуктов
+CREATE OR REPLACE VIEW client_order AS (
+	WITH order_product AS (
+		SELECT assembling.order_id AS order_id, product."name" AS product_name, assembling.product_amount AS product_amount
+		FROM assembling
+		JOIN product ON product.id = assembling.product_id
+	)
+	SELECT "order".id, "order"."status", "order".client_id, "order".total_price, "order".address, "order".creation_date, "order".close_date, array_agg(order_product.product_name) as products, array_agg(order_product.product_amount) as amounts
+	FROM "order"
+	JOIN order_product ON order_product.order_id = "order".id
+	GROUP BY "order".id
+);
 
--- courier:
--- order (собирается из delivery order, с прилинкованным адресом)
+-- заказы с адресами
+CREATE OR REPLACE VIEW courier_delivery AS (
+	SELECT "order".id, "order"."address"
+	FROM delivery, "order"
+	WHERE delivery.order_id = "order".id
+);
 
--- assembler
--- assembling (сразу подвязывается номер заказа и место, где лежит продукт)
+-- информация для сборки заказа 
+CREATE OR REPLACE VIEW assembler_assembling AS (
+	SELECT assembling.order_id, assembling.product_amount, product_location."description"
+	FROM "order", assembling, product, product_location
+	WHERE 
+		"order".id = assembling.order_id AND 
+		assembling.product_id = product.id AND 
+		product_location.product_id = product.id AND 
+		product_location.store_id = "order".store_id
+);
+
+-- сотрудники, который в данный момент находятся на смене
+CREATE OR REPLACE VIEW employee_shift AS (
+	SELECT *
+	FROM employee, shift
+	WHERE shift.employee_id = employee.id AND shift.end_date < CURRENT_TIMESTAMP
+);
 
 -- jobs
+
 -- раз в некоторое время списывать продукты, если истек срок годности (ассортимент тут же менять)
+CREATE OR REPLACE FUNCTION check_and_mark_expired_shipments()
+RETURNS void 
+LANGUAGE 'plpgsql' AS
+$$
+DECLARE 
+	shipment_r RECORD;
+BEGIN
+	FOR shipment_r IN
+		(SELECT * 
+		 FROM shipment 
+		 WHERE shipment.expiration_date < CURRENT_TIMESTAMP AND shipment.status = 'accepted')
+	LOOP
+		UPDATE shipment
+		SET shipment.status = 'expired'
+		WHERE shipment.id = shipment_r.id;
+
+		UPDATE assortment
+		SET assortment.amount = assortment.amount - shipment_r.product_amount
+		WHERE assortment.store_id = shipment_r.store_id AND assortment.product_id = shipment_r.product_id;
+	END LOOP;
+END;
+$$;
+
 -- если заказ assembled, то надо назначить доставщика (первого свободного) и сменить статус
+CREATE OR REPLACE FUNCTION check_ready_to_delivery_orders_and_assign_couriers()
+RETURNS void 
+LANGUAGE 'plpgsql' AS
+$$
+DECLARE
+	order_r RECORD;
+	courier_r RECORD;
+BEGIN
+	FOR order_r IN
+		(SELECT *
+		 FROM "order"
+		 WHERE "order"."status" = 'assembled')
+	LOOP
+		courier_r =	(
+			SELECT *
+			FROM employee_shift
+			WHERE employee_shift."role" = 'courier' AND employee_shift.store_id = order_r.store_id
+			LIMIT 1
+		);
+		UPDATE "order"
+		SET "order"."status" = 'deliverin'
+		WHERE "order".id = order_r.id;
+		
+		INSERT INTO delivery (order_id, courier_id, "status")
+		VALUES (order_r.id, courier_r.id, 'scheduled');
+	END LOOP;
+END;
+$$;
 
 -- roles
--- dba (имеет доступ ко всем)
--- manager (работает только с core-частью)
--- user
--- courier
--- assembler
+CREATE ROLE dba;
+GRANT ALL PRIVILEGES ON DATABASE postgres TO dba;
+
+CREATE ROLE manager;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA  public TO manager;
+GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO manager;
+
+CREATE ROLE "user";
+GRANT SELECT, UPDATE ON TABLE "order", client TO "user";
+GRANT SELECT ON TABLE product, assortment, store, client_order TO "user";
+
+CREATE ROLE courier;
+GRANT UPDATE ON TABLE delivery TO courier;
+GRANT SELECT ON TABLE courier_delivery TO courier;
+
+CREATE ROLE assembler;
+GRANT SELECT, UPDATE ON TABLE assembling, shipment TO assembler;
+GRANT SELECT ON TABLE assembler_assembling TO assembler;
