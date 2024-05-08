@@ -473,3 +473,5 @@ GRANT SELECT ON TABLE courier_delivery TO courier;
 CREATE ROLE assembler;
 GRANT SELECT, UPDATE ON TABLE assembling, shipment TO assembler;
 GRANT SELECT ON TABLE assembler_assembling TO assembler;
+
+SET ROLE dba;
