@@ -16,8 +16,7 @@ CREATE TYPE EMPLOYEE_ROLE_ENUM AS ENUM (
 
 DROP TYPE IF EXISTS PRODUCT_CATEGORY_ENUM;
 CREATE TYPE PRODUCT_CATEGORY_ENUM AS ENUM (
-	-- 'fruits', 'vegetables', 'dairy', 'meat', 'fish', 'seafood', 'bakery', 'cereals', 'canned', 'sauces', 'drinks', 'snacks', 'household', 'hygiene', 'pet', 'alcohol', 'dietary' 
-	'hleb'
+	'alcohol', 'bakery', 'bread', 'cheese', 'fish_and_seafood', 'fruit', 'juice', 'lemonade', 'meat', 'milk_and_egg', 'sausage', 'snack', 'water', 'yougurt'
 );
 
 DROP TYPE IF EXISTS SHIPMENT_STATUS_ENUM;
