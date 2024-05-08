@@ -16,7 +16,7 @@ CREATE TYPE EMPLOYEE_ROLE_ENUM AS ENUM (
 
 DROP TYPE IF EXISTS PRODUCT_CATEGORY_ENUM;
 CREATE TYPE PRODUCT_CATEGORY_ENUM AS ENUM (
-	'alcohol', 'bakery', 'bread', 'cheese', 'fish_and_seafood', 'fruit', 'juice', 'lemonade', 'meat', 'milk_and_egg', 'sausage', 'snack', 'water', 'yougurt'
+	'alcohol', 'bakery', 'bread', 'cheese', 'fish_and_seafood', 'fruit', 'juice', 'lemonade', 'meat', 'milk_and_egg', 'sausage', 'snack', 'water', 'yogurt'
 );
 
 DROP TYPE IF EXISTS SHIPMENT_STATUS_ENUM;
@@ -71,9 +71,9 @@ CREATE TABLE IF NOT EXISTS employee (
 
 CREATE TABLE IF NOT EXISTS product (
 	id SERIAL,
+	"name" VARCHAR(256) NOT NULL,
 	"description" TEXT NOT NULL,
 	category PRODUCT_CATEGORY_ENUM NOT NULL,
-	"name" VARCHAR(256) NOT NULL,
 	image_url VARCHAR(1024) NOT NULL,
 	price INT NOT NULL,
 
@@ -122,7 +122,7 @@ CREATE TABLE IF NOT EXISTS store (
 	id SERIAL,
 	"address" VARCHAR(1024) NOT NULL,
 	"name" VARCHAR(256) NOT NULL,
-	"owner" INT NOT NULL,
+	"owner_id" INT NOT NULL,
 
 	PRIMARY KEY (id)
 );
