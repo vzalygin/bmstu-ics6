@@ -31,8 +31,8 @@ data = []
 for name in os.listdir("./~raw"):
     with open(f'./~raw/{name}', 'r') as f:
         print(name)
-        data.extend(parse(f.read(), name))
+        data.extend(parse(f.read(), name[:-4]))
 
-with open('./data.json', 'bw') as f:
+with open('./product.json', 'bw') as f:
     f.write(json.dumps(data, ensure_ascii=False).encode('utf8'))
 print(f'product records: {len(data)}')
