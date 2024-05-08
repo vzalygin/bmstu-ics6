@@ -29,7 +29,7 @@ int main(int argc, char **argv) {
         mss[o] = s;
     } while (abs(ms[o-1]-ms[o])>=eps);
     
-    END_MEASURE()   
+    END_MEASURE()
 
     printf("s = %f\nn = %d\n",s,o);
     return 0;

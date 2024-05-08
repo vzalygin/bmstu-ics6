@@ -16,7 +16,8 @@ CREATE TYPE EMPLOYEE_ROLE_ENUM AS ENUM (
 
 DROP TYPE IF EXISTS PRODUCT_CATEGORY_ENUM;
 CREATE TYPE PRODUCT_CATEGORY_ENUM AS ENUM (
-	'todo'
+	-- 'fruits', 'vegetables', 'dairy', 'meat', 'fish', 'seafood', 'bakery', 'cereals', 'canned', 'sauces', 'drinks', 'snacks', 'household', 'hygiene', 'pet', 'alcohol', 'dietary' 
+	'hleb'
 );
 
 DROP TYPE IF EXISTS SHIPMENT_STATUS_ENUM;
@@ -73,14 +74,13 @@ CREATE TABLE IF NOT EXISTS product (
 	id SERIAL,
 	"description" TEXT NOT NULL,
 	category PRODUCT_CATEGORY_ENUM NOT NULL,
-	units VARCHAR(32) NOT NULL,
 	"name" VARCHAR(256) NOT NULL,
 	image_url VARCHAR(1024) NOT NULL,
-	price_per_unit INT NOT NULL,
+	price INT NOT NULL,
 
 	PRIMARY KEY (id),
 
-	CHECK (price_per_unit >= 0)
+	CHECK (price >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS shipment (
