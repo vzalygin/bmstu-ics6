@@ -6,7 +6,7 @@ CREATE TYPE ORDER_STATUS_ENUM AS ENUM  (
 
 DROP TYPE IF EXISTS DELIVERY_STATUS_ENUM;
 CREATE TYPE DELIVERY_STATUS_ENUM AS ENUM (
-	'sheduled', 'on_the_way', 'closed'
+	'scheduled', 'on_the_way', 'closed'
 );
 
 DROP TYPE IF EXISTS EMPLOYEE_ROLE_ENUM;
@@ -36,9 +36,9 @@ CREATE TABLE IF NOT EXISTS client (
 
 CREATE TABLE IF NOT EXISTS "order" (
 	id SERIAL,
-	"status" ORDER_STATUS_ENUM NOT NULL,
+	"status" ORDER_STATUS_ENUM NOT NULL DEFAULT 'assembling',
 	client_id INT NOT NULL,
-	total_price INT NOT NULL CHECK (total_price >= 0),
+	total_price INT NOT NULL CHECK (total_price >= 0) DEFAULT 100,
 	"address" VARCHAR(1024) NOT NULL,
 	creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	delivery_date TIMESTAMP, -- TODO это тоже поправить
@@ -86,14 +86,14 @@ CREATE TABLE IF NOT EXISTS shipment (
 	id SERIAL,
 	store_id INT NOT NULL,
 	product_id INT NOT NULL,
-	delivery_date TIMESTAMP NOT NULL,
+	delivery_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	expiration_date TIMESTAMP NOT NULL,
 	product_amount INT NOT NULL,
-	"status" SHIPMENT_STATUS_ENUM NOT NULL,
+	"status" SHIPMENT_STATUS_ENUM NOT NULL DEFAULT 'delivered',
 
 	PRIMARY KEY (id),
 
-	CHECK (product_amount > 0)
+	CHECK (product_amount >= 0)
 );
 
 CREATE TABLE IF NOT EXISTS assortment (
@@ -184,7 +184,7 @@ BEGIN
 		= 0
 	THEN
 		UPDATE "order" 
-		SET "order"."status" = 'assembled' 
+		SET "status" = 'assembled' 
 		WHERE "order".id = NEW.order_id;
 	END IF;
 	RETURN NEW;
@@ -205,9 +205,15 @@ BEGIN
 	IF 
 		OLD."status" != NEW."status" AND NEW."status" = 'accepted'
 	THEN
+		IF (
+			SELECT count(*) FROM assortment WHERE assortment.store_id = NEW.store_id AND assortment.product_id = NEW.product_id 
+		) = 0 THEN
+			INSERT INTO assortment (store_id, product_id, amount)
+			VALUES (NEW.store_id, NEW.product_id, 0);
+		END IF;
 		UPDATE assortment 
-		SET assortment.amount = assortment.amount + NEW.product_amount
-		WHERE assortment.store_id = NEW.store_id AND assortment.product_id = NEW.product_id;
+		SET amount = amount + NEW.product_amount
+		WHERE assortment.store_id = NEW.store_id AND assortment.product_id = NEW."product_id";
 	END IF;
 	RETURN NEW;
 END;
@@ -224,13 +230,13 @@ CREATE OR REPLACE FUNCTION decrease_product_amount_on_new_assembling_func()
 RETURNS TRIGGER AS
 $$
 DECLARE
-	store_id INT := (
+	store_id_var INT := (
 		SELECT "order".store_id FROM "order" WHERE "order".id = NEW.order_id
 	);
 BEGIN
 	UPDATE assortment 
-	SET assortment.amount = assortment.amount - NEW.product_amount
-	WHERE assortment.store_id = store_id AND assortment.product_id = NEW.product_id;
+	SET amount = amount - NEW.product_amount
+	WHERE assortment.store_id = store_id_var AND assortment.product_id = NEW.product_id;
 	RETURN NEW;
 END;
 $$
@@ -250,7 +256,7 @@ BEGIN
 		NEW.product_amount = 0 AND NEW.status = 'accepted'
 	THEN
 		UPDATE shipment
-		SET shipment."status" = 'run_out'
+		SET "status" = 'run_out'
 		WHERE shipment.id = NEW.id;
 	END IF;
 	RETURN NEW;
@@ -268,18 +274,19 @@ CREATE OR REPLACE FUNCTION set_order_timestamp_on_status_change_func()
 RETURNS TRIGGER AS
 $$
 BEGIN
-	IF 
-		NEW."status" = 'delivering'
+	IF
+		NEW."status" = 'delivering' AND OLD."status" != 'delivering'
 	THEN
 		UPDATE "order"
-		SET "order".delivery_date = CURRENT_TIMESTAMP
+		SET delivery_date = CURRENT_TIMESTAMP
 		WHERE "order".id = NEW.id;
 	END IF;
 	IF 
-		NEW."status" = 'closed' OR NEW."status" = 'cancelled'
+		(NEW."status" = 'closed' AND OLD."status" != 'closed') OR 
+		(NEW."status" = 'cancelled' AND OLD."status" != 'cancelled')
 	THEN
 		UPDATE "order"
-		SET "order".close_date = CURRENT_TIMESTAMP
+		SET close_date = CURRENT_TIMESTAMP
 		WHERE "order".id = NEW.id;
 	END IF;
 	RETURN NEW;
@@ -299,29 +306,32 @@ CREATE OR REPLACE FUNCTION decrease_shipment_product_amount_on_assortment_decrea
 RETURNS TRIGGER AS
 $$
 DECLARE
-	remaining INT := NEW.product_amount;
+	remaining INT := NEW.amount;
 	shipment_r RECORD;
 BEGIN
-	FOR shipment_r IN
-		(SELECT * 
-		 FROM shipment 
-		 WHERE shipment.store_id = NEW.store_id AND shipment.product_id = NEW.product_id
-		 ORDER BY expiration_date ASC)
-	LOOP
-		IF remaining > 0 THEN
-			IF remaining > shipment_r.product_amount THEN
-				UPDATE shipment
-				SET shipment.product_amount = 0
-				WHERE shipment.id = shipment_r.id;
-				remaining := remaining - shipment_r.product_amount;
-			ELSE
-				UPDATE shipment
-				SET shipment.product_amount = shipment.product_amount - remaining
-				WHERE shipment.id = shipment_r.id;
-				remaining := 0;
+	IF OLD.amount > NEW.amount THEN
+		FOR shipment_r IN
+			(SELECT * 
+			FROM shipment 
+			WHERE shipment.store_id = NEW.store_id AND shipment.product_id = NEW.product_id
+			ORDER BY expiration_date ASC)
+		LOOP
+			IF remaining > 0 THEN
+				IF remaining > shipment_r.product_amount THEN
+					UPDATE shipment
+					SET product_amount = 0
+					WHERE shipment.id = shipment_r.id;
+					remaining := remaining - shipment_r.product_amount;
+				ELSE
+					UPDATE shipment
+					SET product_amount = product_amount - remaining
+					WHERE shipment.id = shipment_r.id;
+					remaining := 0;
+				END IF;
 			END IF;
-		END IF;
-	END LOOP;
+		END LOOP;
+	END IF;
+	RETURN NEW;
 END;
 $$
 LANGUAGE 'plpgsql';
@@ -338,15 +348,17 @@ $$
 DECLARE
 	assembling_r RECORD;
 BEGIN
-	FOR assembling_r IN
-		(SELECT * 
-		 FROM assembling
-		 WHERE assembling.order_id = NEW.id)
-	LOOP
-		UPDATE assortment
-		SET assortment.amount = assortment.amount + assembling_r.product_amount
-		WHERE assortment.store_id = NEW.store_id AND assortment.product_id = assembling_r.product_id;
-	END LOOP;
+	IF NEW."status" = 'cancelled' AND OLD."status" != 'cancelled' THEN
+		FOR assembling_r IN
+			(SELECT * 
+			FROM assembling
+			WHERE assembling.order_id = NEW.id)
+		LOOP
+			UPDATE assortment
+			SET amount = amount + assembling_r.product_amount
+			WHERE assortment.store_id = NEW.store_id AND assortment.product_id = assembling_r.product_id;
+		END LOOP;
+	END IF;
 	RETURN NEW;
 END;
 $$
@@ -356,6 +368,34 @@ CREATE OR REPLACE TRIGGER return_products_to_assortment_on_order_cancel
 	ON "order"
 	FOR EACH ROW
 	EXECUTE PROCEDURE return_products_to_assortment_on_order_cancel_func();
+
+-- докидывать в price цену при добавлнии assemling
+CREATE OR REPLACE FUNCTION upd_price_on_assembling_func()
+RETURNS TRIGGER AS
+$$
+DECLARE
+	old_price INT;
+	new_price INT;
+BEGIN
+	old_price := (SELECT total_price FROM "order" WHERE "order".id = NEW.order_id);
+	UPDATE "order"
+	SET total_price = total_price + (SELECT product.price FROM product WHERE product.id = NEW.product_id)
+	WHERE "order".id = NEW.order_id;
+	new_price := (SELECT total_price FROM "order" WHERE "order".id = NEW.order_id);
+	IF new_price >= 1000 AND old_price < 1000 THEN
+		UPDATE "order"
+		SET total_price = total_price - 100
+		WHERE "order".id = NEW.order_id;
+	END IF;
+	RETURN NEW;
+END;
+$$
+LANGUAGE 'plpgsql';
+CREATE OR REPLACE TRIGGER upd_price_on_assembling
+	AFTER INSERT
+	ON assembling
+	FOR EACH ROW
+	EXECUTE PROCEDURE upd_price_on_assembling_func();
 
 -- views
 
@@ -372,16 +412,24 @@ CREATE OR REPLACE VIEW client_order AS (
 	GROUP BY "order".id
 );
 
+-- ассортименты магизинов с адресами
+CREATE OR REPLACE VIEW client_assortment AS (
+	SELECT store.address, product.name, assortment.amount
+	FROM assortment
+	JOIN product ON product.id = assortment.product_id
+	JOIN store ON store.id = assortment.store_id
+);
+
 -- заказы с адресами
 CREATE OR REPLACE VIEW courier_delivery AS (
-	SELECT "order".id, "order"."address"
-	FROM delivery, "order"
-	WHERE delivery.order_id = "order".id
+	SELECT "order".id, "order"."address", employee.id as courier_id, employee.name, employee.lastname
+	FROM delivery, "order", employee
+	WHERE delivery.order_id = "order".id AND delivery.courier_id = employee.id AND delivery."status" != 'closed'
 );
 
 -- информация для сборки заказа 
 CREATE OR REPLACE VIEW assembler_assembling AS (
-	SELECT assembling.order_id, assembling.product_amount, product_location."description"
+	SELECT "order".store_id, assembling.order_id, assembling.product_amount, product_location."description"
 	FROM "order", assembling, product, product_location
 	WHERE 
 		"order".id = assembling.order_id AND 
@@ -392,9 +440,9 @@ CREATE OR REPLACE VIEW assembler_assembling AS (
 
 -- сотрудники, который в данный момент находятся на смене
 CREATE OR REPLACE VIEW employee_shift AS (
-	SELECT *
+	SELECT employee.id AS employee_id, employee."role", shift.begin_date, shift.end_date, shift.store_id
 	FROM employee, shift
-	WHERE shift.employee_id = employee.id AND shift.end_date < CURRENT_TIMESTAMP
+	WHERE shift.employee_id = employee.id AND shift.end_date > CURRENT_TIMESTAMP
 );
 
 -- jobs
@@ -413,11 +461,11 @@ BEGIN
 		 WHERE shipment.expiration_date < CURRENT_TIMESTAMP AND shipment.status = 'accepted')
 	LOOP
 		UPDATE shipment
-		SET shipment.status = 'expired'
+		SET status = 'expired'
 		WHERE shipment.id = shipment_r.id;
 
 		UPDATE assortment
-		SET assortment.amount = assortment.amount - shipment_r.product_amount
+		SET amount = amount - shipment_r.product_amount
 		WHERE assortment.store_id = shipment_r.store_id AND assortment.product_id = shipment_r.product_id;
 	END LOOP;
 END;
@@ -430,25 +478,25 @@ LANGUAGE 'plpgsql' AS
 $$
 DECLARE
 	order_r RECORD;
-	courier_r RECORD;
+	courier_id_r INT;
 BEGIN
 	FOR order_r IN
 		(SELECT *
 		 FROM "order"
 		 WHERE "order"."status" = 'assembled')
 	LOOP
-		courier_r =	(
-			SELECT *
+		courier_id_r := (
+			SELECT employee_shift.employee_id
 			FROM employee_shift
 			WHERE employee_shift."role" = 'courier' AND employee_shift.store_id = order_r.store_id
 			LIMIT 1
 		);
 		UPDATE "order"
-		SET "order"."status" = 'deliverin'
+		SET "status" = 'delivering'
 		WHERE "order".id = order_r.id;
 		
 		INSERT INTO delivery (order_id, courier_id, "status")
-		VALUES (order_r.id, courier_r.id, 'scheduled');
+		VALUES (order_r.id, courier_id_r, 'scheduled');
 	END LOOP;
 END;
 $$;
@@ -463,7 +511,7 @@ GRANT ALL PRIVILEGES ON ALL FUNCTIONS IN SCHEMA public TO manager;
 
 CREATE ROLE "user";
 GRANT SELECT, UPDATE ON TABLE "order", client TO "user";
-GRANT SELECT ON TABLE product, assortment, store, client_order TO "user";
+GRANT SELECT ON TABLE product, assortment, store, client_order, client_assortment TO "user";
 
 CREATE ROLE courier;
 GRANT UPDATE ON TABLE delivery TO courier;

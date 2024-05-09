@@ -43,10 +43,13 @@ def parse(str, category):
 
 
 data = []
+s = 1
 for name in os.listdir("./~raw"):
     with open(f"./~raw/{name}", "r") as f:
-        print(name)
-        data.extend(parse(f.read(), name[:-4]))
+        d = parse(f.read(), name[:-4])
+        print(f"{name}: {s}-{s+len(d)-1}")
+        s += len(d)
+        data.extend(d)
 
 with open("./product.json", "bw") as f:
     f.write(json.dumps(data, ensure_ascii=False).encode("utf8"))

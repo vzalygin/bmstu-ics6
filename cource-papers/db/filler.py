@@ -1,20 +1,28 @@
-#!/bin/python3
+#!/bin/pypy
 
 from faker import Faker
-import psycopg2
+
+try:
+    import psycopg2 as ps
+except:
+    import psycopg2cffi as ps
 import random
 import json
-import sys
+from datetime import datetime, timezone, timedelta
 
 CLIENT_AMOUNT = 150
-SHIPMENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
 STORE_AMOUNT = 150
+ORDER_AMOUNT = 1000
+OWNER_IDS = range(CLIENT_AMOUNT * 0 + 1, CLIENT_AMOUNT * 1 + 1)
+MANAGER_IDS = range(CLIENT_AMOUNT * 1 + 1, CLIENT_AMOUNT * 2 + 1)
+COURIER_IDS = range(CLIENT_AMOUNT * 2 + 1, CLIENT_AMOUNT * 3 + 1)
+ASSEMBER_IDS = range(CLIENT_AMOUNT * 3 + 1, CLIENT_AMOUNT * 4 + 1)
 
-random.seed(42)
+random.seed(40)
 Faker.seed(42)
 fake = Faker(locale="ru_RU")
-conn = psycopg2.connect(
+conn = ps.connect(
     dbname="postgres",
     user="postgres",
     password="12345678",
@@ -24,11 +32,11 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 
-# static data
 def clients():
     data = []
     for _ in range(CLIENT_AMOUNT):
-        lastname, name = fake.name().split()[0:2]
+        name = fake.first_name()
+        lastname = fake.last_name()
         saved_addresses = [fake.address() for _ in range(fake.random_int(0, 5))]
         phone_number = fake.phone_number()
         email = fake.email()
@@ -42,10 +50,7 @@ def clients():
     )
     conn.commit()
     print(f"clients records {len(data)}")
-
-
-clients()
-conn.commit()
+    return data
 
 
 def products():
@@ -62,10 +67,7 @@ def products():
         data,
     )
     print(f"product records {len(data)}")
-
-
-products()
-conn.commit()
+    return data
 
 
 def stores():
@@ -73,7 +75,7 @@ def stores():
     for i in range(1, STORE_AMOUNT + 1):
         address = fake.address()
         owner_id = i
-        name = fake.domain_word()
+        name = fake.nic_handle()
         data.append((address, name, owner_id))
     cur.executemany(
         """
@@ -83,23 +85,29 @@ def stores():
         data,
     )
     print(f"store records {len(data)}")
-
-
-stores()
+    return data
 
 
 def employees():
     data = []
-    for _ in range(STORE_AMOUNT * 3):  # owner and managers
-        lastname, name = fake.name().split()[0:2]
+    for _ in OWNER_IDS:  # owner
+        name = fake.first_name()
+        lastname = fake.last_name()
         role = "manager"
         data.append((name, lastname, role))
-    for _ in range(STORE_AMOUNT * 3):  # couriers
-        lastname, name = fake.name().split()[0:2]
+    for _ in OWNER_IDS:  # managers
+        name = fake.first_name()
+        lastname = fake.last_name()
+        role = "manager"
+        data.append((name, lastname, role))
+    for _ in COURIER_IDS:  # couriers
+        name = fake.first_name()
+        lastname = fake.last_name()
         role = "courier"
         data.append((name, lastname, role))
-    for _ in range(STORE_AMOUNT * 3):  # assemblers
-        lastname, name = fake.name().split()[0:2]
+    for _ in ASSEMBER_IDS:  # assemblers
+        name = fake.first_name()
+        lastname = fake.last_name()
         role = "assembler"
         data.append((name, lastname, role))
     cur.executemany(
@@ -110,10 +118,7 @@ def employees():
         data,
     )
     print(f"employee records {len(data)}")
-
-
-employees()
-conn.commit()
+    return data
 
 
 def product_locations():
@@ -126,7 +131,7 @@ def product_locations():
     ]
     for store_id in range(1, STORE_AMOUNT + 1):
         for product_id in range(1, PRODUCT_AMOUNT + 1):
-            desc =descs[product_id]
+            desc = descs[product_id]
             data.append((product_id, store_id, desc))
 
     cur.executemany(
@@ -137,14 +142,191 @@ def product_locations():
         data,
     )
     print(f"product_location records {len(data)}")
+    return data
 
 
+# поставить 1 менеджеру, 1 доставщику и 1 сборщику смены от сейчас на 12 часов
+def shifts():
+    store_id = lambda x: (x - 1) % STORE_AMOUNT + 1
+    data = []
+    start = datetime.now(timezone(timedelta(hours=3)))
+    end = start + timedelta(hours=12)
+    for employee_id in MANAGER_IDS:
+        data.append((employee_id, store_id(employee_id), start, end))
+    for employee_id in COURIER_IDS:
+        data.append((employee_id, store_id(employee_id), start, end))
+    for employee_id in ASSEMBER_IDS:
+        data.append((employee_id, store_id(employee_id), start, end))
+    cur.executemany(
+        """
+            INSERT INTO shift (employee_id, store_id, begin_date, end_date)
+            VALUES (%s, %s, %s, %s)
+        """,
+        data,
+    )
+    print(f"shift records {len(data)}")
+    return data
+
+
+def shipments():
+    data = []
+    exp_data = []
+    exp_shipments = [
+        (random.randint(1, 931), -1),  # expired
+        (random.randint(1, 931), -1),  # expired
+    ]
+    shipments = [
+        (random.randint(1, 42), random.randint(30, 60)),  # lemonade
+        (random.randint(91, 167), random.randint(20, 40)),  # cheese
+        (random.randint(890, 931), random.randint(1, 4)),  # bread
+        (random.randint(493, 536), random.randint(10, 20)),  # meat
+        (random.randint(537, 663), random.randint(5, 20)),  # yogurt
+        (random.randint(810, 889), random.randint(10, 30)),  # fruit
+        (random.randint(810, 889), random.randint(10, 30)),  # fruit
+        (random.randint(664, 743), random.randint(360, 720)),  # alcohol
+    ]
+    for store_id in range(1, STORE_AMOUNT + 1):
+        for product_id, exp in shipments:
+            product_amount = random.randint(10, 100)
+            expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
+                days=exp
+            )
+            data.append((store_id, product_id, expiration_date, product_amount))
+        for product_id, exp in exp_shipments:
+            product_amount = random.randint(200, 300)
+            expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
+                days=exp
+            )
+            exp_data.append((store_id, product_id, expiration_date, product_amount))
+    cur.executemany(
+        """
+            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
+            VALUES (%s, %s, %s, %s)
+        """,
+        data,
+    )
+    cur.executemany(
+        """
+            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
+            VALUES (%s, %s, %s, %s)
+        """,
+        exp_data,
+    )
+    cur.execute(
+        """
+            UPDATE shipment
+            SET "status" = 'accepted'
+            WHERE shipment.id < %s
+        """,
+        (str(int(len(data) * 0.95)),),
+    )
+    cur.execute(
+        """
+            SELECT check_and_mark_expired_shipments()
+        """
+    )
+    print(f"shipment records {len(data)+len(exp_data)}")
+    return list(map(lambda x: (x[0] + 1, *x[1]), enumerate(data)))
+
+
+def orders(shipments):
+    assert len(shipments) >= ORDER_AMOUNT
+    assems_amount = 0
+    for order_id in range(1, ORDER_AMOUNT + 1):
+        client_id = random.randint(1, CLIENT_AMOUNT)
+        address = fake.address()
+        shs = []
+        while len(shs) < 2:
+            store_id = random.randint(1, STORE_AMOUNT + 1)
+            shs = list(filter(lambda x: x[1] == store_id, shipments))
+        assemblings = [
+            (shipment[2], order_id, random.randint(1, 3))
+            for shipment in random.sample(shs, k=random.randint(1, min(len(shs), 3)))
+        ]
+        assems_amount += len(assemblings)
+        cur.execute(
+            """
+                INSERT INTO "order" (client_id, "address", store_id)
+                VALUES (%s, %s, %s)
+            """,
+            (client_id, address, store_id),
+        )
+        cur.executemany(
+            """
+                INSERT INTO assembling (product_id, order_id, product_amount)
+                VALUES (%s, %s, %s)
+            """,
+            assemblings,
+        )
+
+    cur.execute(
+        """
+            UPDATE assembling
+            SET close_date = CURRENT_TIMESTAMP
+            WHERE assembling.order_id in (SELECT assembling.order_id FROM assembling LIMIT %s)
+        """,
+        (str(int(assems_amount * 0.70)),),
+    )
+    cur.execute(
+        """
+            UPDATE "order"
+            SET "status" = 'cancelled'
+            WHERE "order".id < %s
+        """,
+        (str(int(ORDER_AMOUNT * 0.05)),),
+    )
+
+    print(f"order records {ORDER_AMOUNT}")
+    print(f"assembling records {assems_amount}")
+
+
+def deliveries():
+    cur.execute(
+        """
+            SELECT check_ready_to_delivery_orders_and_assign_couriers();
+        """
+    )
+    cur.execute(
+        """
+           SELECT count(*) FROM delivery
+        """
+    )
+    (delivery_amount,) = cur.fetchone()
+    cur.execute(
+        """
+            UPDATE delivery
+            SET "status" = 'on_the_way'
+            WHERE delivery.id < %s
+        """,
+        (str(int(delivery_amount * 0.70)),),
+    )
+    cur.execute(
+        """
+            UPDATE delivery
+            SET "status" = 'closed'
+            WHERE delivery.id < %s
+        """,
+        (str(int(delivery_amount * 0.50)),),
+    )
+    print(f"delivery records {delivery_amount}")
+
+
+# static
+clients()
+conn.commit()
+products()
+conn.commit()
+stores()
+employees()
+conn.commit()
 product_locations()
 conn.commit()
-
-# dynamic data
-# shift
-# shipment (для всех дернуть разгрузку)
-# assortment
-# order + assembling
-# delivery (для заказов дернуть назначение курьеров)
+# dynamic
+shifts()
+s = shipments()
+conn.commit()
+orders(s)
+conn.commit()
+deliveries()
+conn.commit()
+print("db filled successfully")
