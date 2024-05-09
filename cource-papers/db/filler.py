@@ -4,20 +4,23 @@ from faker import Faker
 
 try:
     import psycopg2 as ps
+    from psycopg2.extras import execute_batch
 except:
     import psycopg2cffi as ps
+    from psycopg2cffi.extras import execute_batch
+from itertools import groupby
 import random
 import json
 from datetime import datetime, timezone, timedelta
 
 CLIENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
-STORE_AMOUNT = 150
-ORDER_AMOUNT = 1000
-OWNER_IDS = range(CLIENT_AMOUNT * 0 + 1, CLIENT_AMOUNT * 1 + 1)
-MANAGER_IDS = range(CLIENT_AMOUNT * 1 + 1, CLIENT_AMOUNT * 2 + 1)
-COURIER_IDS = range(CLIENT_AMOUNT * 2 + 1, CLIENT_AMOUNT * 3 + 1)
-ASSEMBER_IDS = range(CLIENT_AMOUNT * 3 + 1, CLIENT_AMOUNT * 4 + 1)
+STORE_AMOUNT = 1000
+ORDER_AMOUNT = 1_000_000
+OWNER_IDS = range(STORE_AMOUNT * 0 + 1, STORE_AMOUNT * 1 + 1)
+MANAGER_IDS = range(STORE_AMOUNT * 1 + 1, STORE_AMOUNT * 2 + 1)
+COURIER_IDS = range(STORE_AMOUNT * 2 + 1, STORE_AMOUNT * 3 + 1)
+ASSEMBER_IDS = range(STORE_AMOUNT * 3 + 1, STORE_AMOUNT * 4 + 1)
 
 random.seed(40)
 Faker.seed(42)
@@ -41,14 +44,14 @@ def clients():
         phone_number = fake.phone_number()
         email = fake.email()
         data.append((name, lastname, saved_addresses, phone_number, email))
-    cur.executemany(
+    execute_batch(
+        cur,
         """
             INSERT INTO client (\"name\", lastname, saved_addresses, phone_number, email)
             VALUES (%s, %s, %s, %s, %s)
         """,
         data,
     )
-    conn.commit()
     print(f"clients records {len(data)}")
     return data
 
@@ -59,7 +62,9 @@ def products():
     ) as f:
         data = json.load(f)
     data = [(p["name"], p["name"], p["caterogy"], p["img"], p["price"]) for p in data]
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO product ("name", "description", category, image_url, price)
             VALUES (%s, %s, %s::PRODUCT_CATEGORY_ENUM, %s, %s)
@@ -77,7 +82,9 @@ def stores():
         owner_id = i
         name = fake.nic_handle()
         data.append((address, name, owner_id))
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO store ("address", "name", "owner_id")
             VALUES (%s, %s, %s)
@@ -110,7 +117,9 @@ def employees():
         lastname = fake.last_name()
         role = "assembler"
         data.append((name, lastname, role))
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO employee ("name", lastname, "role")
             VALUES (%s, %s, %s::EMPLOYEE_ROLE_ENUM)
@@ -133,8 +142,9 @@ def product_locations():
         for product_id in range(1, PRODUCT_AMOUNT + 1):
             desc = descs[product_id]
             data.append((product_id, store_id, desc))
-
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO product_location (product_id, store_id, "description")
             VALUES (%s, %s, %s)
@@ -157,7 +167,9 @@ def shifts():
         data.append((employee_id, store_id(employee_id), start, end))
     for employee_id in ASSEMBER_IDS:
         data.append((employee_id, store_id(employee_id), start, end))
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO shift (employee_id, store_id, begin_date, end_date)
             VALUES (%s, %s, %s, %s)
@@ -176,14 +188,28 @@ def shipments():
         (random.randint(1, 931), -1),  # expired
     ]
     shipments = [
-        (random.randint(1, 42), random.randint(30, 60)),  # lemonade
-        (random.randint(91, 167), random.randint(20, 40)),  # cheese
-        (random.randint(890, 931), random.randint(1, 4)),  # bread
-        (random.randint(493, 536), random.randint(10, 20)),  # meat
-        (random.randint(537, 663), random.randint(5, 20)),  # yogurt
-        (random.randint(810, 889), random.randint(10, 30)),  # fruit
-        (random.randint(810, 889), random.randint(10, 30)),  # fruit
-        (random.randint(664, 743), random.randint(360, 720)),  # alcohol
+        *[
+            (random.randint(1, 42), random.randint(30, 60)) for _ in range(50)
+        ],  # lemonade
+        *[
+            (random.randint(91, 167), random.randint(20, 40)) for _ in range(50)
+        ],  # cheese
+        *[(random.randint(890, 931), random.randint(1, 4)) for _ in range(50)],  # bread
+        *[
+            (random.randint(493, 536), random.randint(10, 20)) for _ in range(50)
+        ],  # meat
+        *[
+            (random.randint(537, 663), random.randint(5, 20)) for _ in range(50)
+        ],  # yogurt
+        *[
+            (random.randint(810, 889), random.randint(10, 30)) for _ in range(50)
+        ],  # fruit
+        *[
+            (random.randint(810, 889), random.randint(10, 30)) for _ in range(50)
+        ],  # fruit
+        *[
+            (random.randint(664, 743), random.randint(360, 720)) for _ in range(50)
+        ],  # alcohol
     ]
     for store_id in range(1, STORE_AMOUNT + 1):
         for product_id, exp in shipments:
@@ -198,14 +224,17 @@ def shipments():
                 days=exp
             )
             exp_data.append((store_id, product_id, expiration_date, product_amount))
-    cur.executemany(
+    print("insert into db")
+    execute_batch(
+        cur,
         """
             INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
             VALUES (%s, %s, %s, %s)
         """,
         data,
     )
-    cur.executemany(
+    execute_batch(
+        cur,
         """
             INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
             VALUES (%s, %s, %s, %s)
@@ -230,8 +259,8 @@ def shipments():
 
 
 def orders(shipments):
-    assert len(shipments) >= ORDER_AMOUNT
-    assems_amount = 0
+    assems = []
+    orders = []
     for order_id in range(1, ORDER_AMOUNT + 1):
         client_id = random.randint(1, CLIENT_AMOUNT)
         address = fake.address()
@@ -239,34 +268,39 @@ def orders(shipments):
         while len(shs) < 2:
             store_id = random.randint(1, STORE_AMOUNT + 1)
             shs = list(filter(lambda x: x[1] == store_id, shipments))
-        assemblings = [
+        assemblings =[(p, order_id, sum(x[2] for x in s)) for p, s in groupby((
             (shipment[2], order_id, random.randint(1, 3))
             for shipment in random.sample(shs, k=random.randint(1, min(len(shs), 3)))
-        ]
-        assems_amount += len(assemblings)
-        cur.execute(
-            """
-                INSERT INTO "order" (client_id, "address", store_id)
-                VALUES (%s, %s, %s)
-            """,
-            (client_id, address, store_id),
-        )
-        cur.executemany(
-            """
-                INSERT INTO assembling (product_id, order_id, product_amount)
-                VALUES (%s, %s, %s)
-            """,
-            assemblings,
-        )
-
+        ), key=lambda x: x[0])]
+        assems += assemblings
+        orders.append((client_id, address, store_id))
+    print("insert into db")
+    execute_batch(
+        cur,
+        """
+            INSERT INTO "order" (client_id, "address", store_id)
+            VALUES (%s, %s, %s)
+        """,
+        orders,
+    )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO assembling (product_id, order_id, product_amount)
+            VALUES (%s, %s, %s)
+        """,
+        assems,
+    )
+    print("insert into db")
     cur.execute(
         """
             UPDATE assembling
             SET close_date = CURRENT_TIMESTAMP
             WHERE assembling.order_id in (SELECT assembling.order_id FROM assembling LIMIT %s)
         """,
-        (str(int(assems_amount * 0.70)),),
+        (str(int(len(assems) * 0.70)),),
     )
+    print("insert into db")
     cur.execute(
         """
             UPDATE "order"
@@ -277,7 +311,7 @@ def orders(shipments):
     )
 
     print(f"order records {ORDER_AMOUNT}")
-    print(f"assembling records {assems_amount}")
+    print(f"assembling records {len(assems)}")
 
 
 def deliveries():
@@ -319,8 +353,8 @@ conn.commit()
 stores()
 employees()
 conn.commit()
-product_locations()
-conn.commit()
+# product_locations()
+# conn.commit()
 # dynamic
 shifts()
 s = shipments()

@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS "order" (
 	total_price INT NOT NULL CHECK (total_price >= 0) DEFAULT 100,
 	"address" VARCHAR(1024) NOT NULL,
 	creation_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-	delivery_date TIMESTAMP, -- TODO это тоже поправить
+	delivery_date TIMESTAMP,
 	close_date TIMESTAMP,
 	store_id INT NOT NULL,
 
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS "order" (
 
 CREATE TABLE IF NOT EXISTS delivery (
 	id SERIAL,
-	order_id INT NOT NULL, -- TODO поправить в картинке
+	order_id INT NOT NULL,
 	courier_id INT NOT NULL,
 	"status" DELIVERY_STATUS_ENUM,
 
