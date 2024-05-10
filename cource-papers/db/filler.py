@@ -12,11 +12,12 @@ from itertools import groupby
 import random
 import json
 from datetime import datetime, timezone, timedelta
+import sys
 
 CLIENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
 STORE_AMOUNT = 1000
-ORDER_AMOUNT = 1_000_000
+ORDER_AMOUNT = 1_300_000
 OWNER_IDS = range(STORE_AMOUNT * 0 + 1, STORE_AMOUNT * 1 + 1)
 MANAGER_IDS = range(STORE_AMOUNT * 1 + 1, STORE_AMOUNT * 2 + 1)
 COURIER_IDS = range(STORE_AMOUNT * 2 + 1, STORE_AMOUNT * 3 + 1)
@@ -33,6 +34,16 @@ conn = ps.connect(
     port="5433",
 )
 cur = conn.cursor()
+
+
+def ignore_on_fail(f):
+    def g(*args):
+        try:
+            return f(*args)
+        except Exception as e:
+            print(f"continue on err: {e}", file=sys.stderr)
+
+    return g
 
 
 def clients():
@@ -53,9 +64,12 @@ def clients():
         data,
     )
     print(f"clients records {len(data)}")
+    with open('./insert/clients.json', 'w') as f:
+        json.dump(data, f)
     return data
 
 
+@ignore_on_fail
 def products():
     with open(
         "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/data/product.json", "r"
@@ -75,6 +89,7 @@ def products():
     return data
 
 
+@ignore_on_fail
 def stores():
     data = []
     for i in range(1, STORE_AMOUNT + 1):
@@ -92,9 +107,12 @@ def stores():
         data,
     )
     print(f"store records {len(data)}")
+    with open('./insert/stores.json', 'w') as f:
+        json.dump(data, f)
     return data
 
 
+@ignore_on_fail
 def employees():
     data = []
     for _ in OWNER_IDS:  # owner
@@ -127,9 +145,12 @@ def employees():
         data,
     )
     print(f"employee records {len(data)}")
+    with open('./insert/employees.json', 'w') as f:
+        json.dump(data, f)
     return data
 
 
+@ignore_on_fail
 def product_locations():
     data = []
     descs = [
@@ -142,6 +163,8 @@ def product_locations():
         for product_id in range(1, PRODUCT_AMOUNT + 1):
             desc = descs[product_id]
             data.append((product_id, store_id, desc))
+    with open('./insert/product_locations.json', 'w') as f:
+        json.dump(data, f)
     print("insert into db")
     execute_batch(
         cur,
@@ -155,7 +178,7 @@ def product_locations():
     return data
 
 
-# поставить 1 менеджеру, 1 доставщику и 1 сборщику смены от сейчас на 12 часов
+@ignore_on_fail
 def shifts():
     store_id = lambda x: (x - 1) % STORE_AMOUNT + 1
     data = []
@@ -167,6 +190,8 @@ def shifts():
         data.append((employee_id, store_id(employee_id), start, end))
     for employee_id in ASSEMBER_IDS:
         data.append((employee_id, store_id(employee_id), start, end))
+    with open('./insert/shifts.json', 'w') as f:
+        json.dump(data, f, default=str)
     print("insert into db")
     execute_batch(
         cur,
@@ -180,6 +205,7 @@ def shifts():
     return data
 
 
+@ignore_on_fail
 def shipments():
     data = []
     exp_data = []
@@ -189,7 +215,7 @@ def shipments():
     ]
     shipments = [
         *[
-            (random.randint(1, 42), random.randint(30, 60)) for _ in range(50)
+            (random.randint(1, 90), random.randint(30, 60)) for _ in range(50)
         ],  # lemonade
         *[
             (random.randint(91, 167), random.randint(20, 40)) for _ in range(50)
@@ -224,6 +250,8 @@ def shipments():
                 days=exp
             )
             exp_data.append((store_id, product_id, expiration_date, product_amount))
+    with open('./insert/shipments.json', 'w') as f:
+        json.dump(data, f, default=str)
     print("insert into db")
     execute_batch(
         cur,
@@ -258,6 +286,7 @@ def shipments():
     return list(map(lambda x: (x[0] + 1, *x[1]), enumerate(data)))
 
 
+@ignore_on_fail
 def orders(shipments):
     assems = []
     orders = []
@@ -268,12 +297,25 @@ def orders(shipments):
         while len(shs) < 2:
             store_id = random.randint(1, STORE_AMOUNT + 1)
             shs = list(filter(lambda x: x[1] == store_id, shipments))
-        assemblings =[(p, order_id, sum(x[2] for x in s)) for p, s in groupby((
-            (shipment[2], order_id, random.randint(1, 3))
-            for shipment in random.sample(shs, k=random.randint(1, min(len(shs), 3)))
-        ), key=lambda x: x[0])]
+        assemblings = [
+            (p, order_id, sum(x[2] for x in s))
+            for p, s in groupby(
+                (
+                    (shipment[2], order_id, random.randint(1, 3))
+                    for shipment in random.sample(
+                        shs, k=random.randint(1, min(len(shs), 3))
+                    )
+                ),
+                key=lambda x: x[0],
+            )
+        ]
         assems += assemblings
         orders.append((client_id, address, store_id))
+    assems = list(set({(x[0], x[1]): x for x in assems}.values()))
+    with open('./insert/orders.json', 'w') as f:
+        json.dump(orders, f, default=str)
+    with open('./insert/assemblings.json', 'w') as f:
+        json.dump(assems, f, default=str)
     print("insert into db")
     execute_batch(
         cur,
@@ -314,6 +356,7 @@ def orders(shipments):
     print(f"assembling records {len(assems)}")
 
 
+@ignore_on_fail
 def deliveries():
     cur.execute(
         """
@@ -353,8 +396,8 @@ conn.commit()
 stores()
 employees()
 conn.commit()
-# product_locations()
-# conn.commit()
+product_locations()
+conn.commit()
 # dynamic
 shifts()
 s = shipments()
