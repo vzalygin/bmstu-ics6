@@ -17,7 +17,7 @@ import sys
 CLIENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
 STORE_AMOUNT = 1000
-ORDER_AMOUNT = 1_300_000
+ORDER_AMOUNT = 1_000_000
 OWNER_IDS = range(STORE_AMOUNT * 0 + 1, STORE_AMOUNT * 1 + 1)
 MANAGER_IDS = range(STORE_AMOUNT * 1 + 1, STORE_AMOUNT * 2 + 1)
 COURIER_IDS = range(STORE_AMOUNT * 2 + 1, STORE_AMOUNT * 3 + 1)
@@ -31,7 +31,7 @@ conn = ps.connect(
     user="postgres",
     password="12345678",
     host="localhost",
-    port="5433",
+    port="5434",
 )
 cur = conn.cursor()
 
@@ -46,6 +46,7 @@ def ignore_on_fail(f):
     return g
 
 
+@ignore_on_fail
 def clients():
     data = []
     for _ in range(CLIENT_AMOUNT):
@@ -64,7 +65,9 @@ def clients():
         data,
     )
     print(f"clients records {len(data)}")
-    with open('./insert/clients.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/clients.json", "w"
+    ) as f:
         json.dump(data, f)
     return data
 
@@ -107,7 +110,9 @@ def stores():
         data,
     )
     print(f"store records {len(data)}")
-    with open('./insert/stores.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/stores.json", "w"
+    ) as f:
         json.dump(data, f)
     return data
 
@@ -145,7 +150,9 @@ def employees():
         data,
     )
     print(f"employee records {len(data)}")
-    with open('./insert/employees.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/employees.json", "w"
+    ) as f:
         json.dump(data, f)
     return data
 
@@ -163,7 +170,10 @@ def product_locations():
         for product_id in range(1, PRODUCT_AMOUNT + 1):
             desc = descs[product_id]
             data.append((product_id, store_id, desc))
-    with open('./insert/product_locations.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/product_locations.json",
+        "w",
+    ) as f:
         json.dump(data, f)
     print("insert into db")
     execute_batch(
@@ -190,7 +200,9 @@ def shifts():
         data.append((employee_id, store_id(employee_id), start, end))
     for employee_id in ASSEMBER_IDS:
         data.append((employee_id, store_id(employee_id), start, end))
-    with open('./insert/shifts.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/shifts.json", "w"
+    ) as f:
         json.dump(data, f, default=str)
     print("insert into db")
     execute_batch(
@@ -210,47 +222,48 @@ def shipments():
     data = []
     exp_data = []
     exp_shipments = [
-        (random.randint(1, 931), -1),  # expired
-        (random.randint(1, 931), -1),  # expired
+        *[(random.randint(1, 931), -1) for _ in range(200)],  # expired
     ]
     shipments = [
         *[
-            (random.randint(1, 90), random.randint(30, 60)) for _ in range(50)
+            [random.randint(1, 90), random.randint(30, 60)] for _ in range(50)
         ],  # lemonade
         *[
-            (random.randint(91, 167), random.randint(20, 40)) for _ in range(50)
+            [random.randint(91, 167), random.randint(20, 40)] for _ in range(50)
         ],  # cheese
-        *[(random.randint(890, 931), random.randint(1, 4)) for _ in range(50)],  # bread
+        *[[random.randint(890, 931), random.randint(1, 4)] for _ in range(50)],  # bread
         *[
-            (random.randint(493, 536), random.randint(10, 20)) for _ in range(50)
+            [random.randint(493, 536), random.randint(10, 20)] for _ in range(50)
         ],  # meat
         *[
-            (random.randint(537, 663), random.randint(5, 20)) for _ in range(50)
+            [random.randint(537, 663), random.randint(5, 20)] for _ in range(50)
         ],  # yogurt
         *[
-            (random.randint(810, 889), random.randint(10, 30)) for _ in range(50)
+            [random.randint(810, 889), random.randint(10, 30)] for _ in range(50)
         ],  # fruit
         *[
-            (random.randint(810, 889), random.randint(10, 30)) for _ in range(50)
+            [random.randint(810, 889), random.randint(10, 30)] for _ in range(50)
         ],  # fruit
         *[
-            (random.randint(664, 743), random.randint(360, 720)) for _ in range(50)
+            [random.randint(664, 743), random.randint(360, 720)] for _ in range(50)
         ],  # alcohol
     ]
     for store_id in range(1, STORE_AMOUNT + 1):
         for product_id, exp in shipments:
+            product_amount = random.randint(200, 1000)
+            expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
+                days=exp
+            )
+            data.append([store_id, product_id, expiration_date, product_amount])
+        for product_id, exp in exp_shipments:
             product_amount = random.randint(10, 100)
             expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
                 days=exp
             )
-            data.append((store_id, product_id, expiration_date, product_amount))
-        for product_id, exp in exp_shipments:
-            product_amount = random.randint(200, 300)
-            expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
-                days=exp
-            )
             exp_data.append((store_id, product_id, expiration_date, product_amount))
-    with open('./insert/shipments.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/shipments.json", "w"
+    ) as f:
         json.dump(data, f, default=str)
     print("insert into db")
     execute_batch(
@@ -275,7 +288,7 @@ def shipments():
             SET "status" = 'accepted'
             WHERE shipment.id < %s
         """,
-        (str(int(len(data) * 0.95)),),
+        (str(int(len(data) * 0.99)),),
     )
     cur.execute(
         """
@@ -283,25 +296,30 @@ def shipments():
         """
     )
     print(f"shipment records {len(data)+len(exp_data)}")
-    return list(map(lambda x: (x[0] + 1, *x[1]), enumerate(data)))
+    return list(map(lambda x: [x[0] + 1, *x[1]], enumerate(data)))
 
 
 @ignore_on_fail
 def orders(shipments):
     assems = []
     orders = []
+
+    def dec(x, i, y):
+        x[i] -= y
+        return y
+
     for order_id in range(1, ORDER_AMOUNT + 1):
         client_id = random.randint(1, CLIENT_AMOUNT)
         address = fake.address()
         shs = []
         while len(shs) < 2:
             store_id = random.randint(1, STORE_AMOUNT + 1)
-            shs = list(filter(lambda x: x[1] == store_id, shipments))
+            shs = list(filter(lambda x: x[1] == store_id and x[4] > 5, shipments))
         assemblings = [
             (p, order_id, sum(x[2] for x in s))
             for p, s in groupby(
                 (
-                    (shipment[2], order_id, random.randint(1, 3))
+                    (shipment[2], order_id, dec(shipment, 4, random.randint(1, 3)))
                     for shipment in random.sample(
                         shs, k=random.randint(1, min(len(shs), 3))
                     )
@@ -312,9 +330,13 @@ def orders(shipments):
         assems += assemblings
         orders.append((client_id, address, store_id))
     assems = list(set({(x[0], x[1]): x for x in assems}.values()))
-    with open('./insert/orders.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/orders.json", "w"
+    ) as f:
         json.dump(orders, f, default=str)
-    with open('./insert/assemblings.json', 'w') as f:
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/assemblings.json", "w"
+    ) as f:
         json.dump(assems, f, default=str)
     print("insert into db")
     execute_batch(
