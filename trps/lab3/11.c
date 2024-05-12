@@ -23,11 +23,11 @@ int main(int argc, char **argv) {
     mss[1] = s;
     do {
         o++;
-        m = -1/(4*o);
+        m = -1.0/(4*o);
         ms[o] = ms[o-1]*m;
         s = s+ms[o];
         mss[o] = s;
-    } while (abs(ms[o-1]-ms[o])>=eps);
+    } while (fabs(ms[o-1]-ms[o])>=eps);
     
     END_MEASURE()
 
