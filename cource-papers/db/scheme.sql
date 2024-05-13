@@ -397,6 +397,26 @@ CREATE OR REPLACE TRIGGER upd_price_on_assembling
 	FOR EACH ROW
 	EXECUTE PROCEDURE upd_price_on_assembling_func();
 
+-- закрывать заказ при закрытии доставки
+CREATE OR REPLACE FUNCTION close_order_on_close_delivery_func()
+RETURNS TRIGGER AS
+$$
+BEGIN
+	IF NEW.status = 'closed' AND OLD.status != 'closed' THEN
+		UPDATE "order"
+		SET "status" = 'closed'
+		WHERE "order".id = NEW.order_id;
+	END IF;
+	RETURN NEW;
+END;
+$$
+LANGUAGE 'plpgsql';
+CREATE OR REPLACE TRIGGER close_order_on_close_delivery
+	AFTER UPDATE
+	ON delivery
+	FOR EACH ROW
+	EXECUTE PROCEDURE close_order_on_close_delivery_func();
+
 -- views
 
 -- заказы со список продуктов
