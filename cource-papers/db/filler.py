@@ -14,10 +14,11 @@ import json
 from datetime import datetime, timezone, timedelta
 import sys
 
+A = 20
 CLIENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
-STORE_AMOUNT = 200
-ORDER_AMOUNT = 10_000
+STORE_AMOUNT = 150
+ORDER_AMOUNT = 10000
 OWNER_IDS = range(STORE_AMOUNT * 0 + 1, STORE_AMOUNT * 1 + 1)
 MANAGER_IDS = range(STORE_AMOUNT * 1 + 1, STORE_AMOUNT * 2 + 1)
 COURIER_IDS = range(STORE_AMOUNT * 2 + 1, STORE_AMOUNT * 3 + 1)
@@ -217,40 +218,51 @@ def shifts():
     return data
 
 
-@ignore_on_fail
 def shipments():
     data = []
     exp_data = []
     exp_shipments = [
-        *[(random.randint(1, 931), -1) for _ in range(200)],  # expired
+        *[
+            (random.randint(1, 931), -1) for _ in range(random.randint(int(A * 0.5), A))
+        ],  # expired
     ]
     shipments = [
         *[
-            [random.randint(1, 90), random.randint(30, 60)] for _ in range(50)
+            [random.randint(1, 90), random.randint(30, 60)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # lemonade
         *[
-            [random.randint(91, 167), random.randint(20, 40)] for _ in range(50)
+            [random.randint(91, 167), random.randint(20, 40)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # cheese
-        *[[random.randint(890, 931), random.randint(1, 4)] for _ in range(50)],  # bread
         *[
-            [random.randint(493, 536), random.randint(10, 20)] for _ in range(50)
+            [random.randint(890, 931), random.randint(1, 4)]
+            for _ in range(random.randint(int(A * 0.5), A))
+        ],  # bread
+        *[
+            [random.randint(493, 536), random.randint(10, 20)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # meat
         *[
-            [random.randint(537, 663), random.randint(5, 20)] for _ in range(50)
+            [random.randint(537, 663), random.randint(5, 20)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # yogurt
         *[
-            [random.randint(810, 889), random.randint(10, 30)] for _ in range(50)
+            [random.randint(810, 889), random.randint(10, 30)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # fruit
         *[
-            [random.randint(810, 889), random.randint(10, 30)] for _ in range(50)
+            [random.randint(810, 889), random.randint(10, 30)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # fruit
         *[
-            [random.randint(664, 743), random.randint(360, 720)] for _ in range(50)
+            [random.randint(664, 743), random.randint(360, 720)]
+            for _ in range(random.randint(int(A * 0.5), A))
         ],  # alcohol
     ]
     for store_id in range(1, STORE_AMOUNT + 1):
         for product_id, exp in shipments:
-            product_amount = random.randint(200, 1000)
+            product_amount = random.randint(200, 300)
             expiration_date = datetime.now(timezone(timedelta(hours=-3))) + timedelta(
                 days=exp
             )
@@ -265,15 +277,6 @@ def shipments():
         "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/shipments.json", "w"
     ) as f:
         json.dump(data, f, default=str)
-    print("insert into db")
-    execute_batch(
-        cur,
-        """
-            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
-            VALUES (%s, %s, %s, %s)
-        """,
-        data,
-    )
     execute_batch(
         cur,
         """
@@ -282,13 +285,22 @@ def shipments():
         """,
         exp_data,
     )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
+            VALUES (%s, %s, %s, %s)
+        """,
+        data,
+    )
+    per = 0.95
     cur.execute(
         """
             UPDATE shipment
             SET "status" = 'accepted'
-            WHERE shipment.id < %s
+            WHERE shipment.id < %s and status != 'expired'
         """,
-        (str(int(len(data) * 0.99)),),
+        (str(int((len(data) + len(exp_data)) * per)),),
     )
     cur.execute(
         """
@@ -296,7 +308,12 @@ def shipments():
         """
     )
     print(f"shipment records {len(data)+len(exp_data)}")
-    return list(map(lambda x: [x[0] + 1, *x[1]], enumerate(data)))
+    return list(
+        map(
+            lambda x: [x[0] + 1, *x[1]],
+            enumerate(data[0 : int((len(data) + len(exp_data)) * per) - len(exp_data)]),
+        )
+    )
 
 
 @ignore_on_fail
@@ -308,13 +325,16 @@ def orders(shipments):
         x[i] -= y
         return y
 
+    print("orders start")
     for order_id in range(1, ORDER_AMOUNT + 1):
         client_id = random.randint(1, CLIENT_AMOUNT)
         address = fake.address()
         shs = []
         while len(shs) < 2:
             store_id = random.randint(1, STORE_AMOUNT + 1)
-            shs = list(filter(lambda x: x[1] == store_id and x[4] > 5, shipments))
+            shs = list(
+                filter(lambda x: x[1] == store_id and x[4] > 5, shipments),
+            )
         assemblings = [
             (p, order_id, sum(x[2] for x in s))
             for p, s in groupby(
@@ -338,7 +358,7 @@ def orders(shipments):
         "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/assemblings.json", "w"
     ) as f:
         json.dump(assems, f, default=str)
-    print("insert into db")
+    print("insert into db orders")
     execute_batch(
         cur,
         """
@@ -347,6 +367,8 @@ def orders(shipments):
         """,
         orders,
     )
+    conn.commit()
+    print(f"insert into db assems {len(assems)}")
     execute_batch(
         cur,
         """
@@ -418,8 +440,8 @@ conn.commit()
 stores()
 employees()
 conn.commit()
-product_locations()
-conn.commit()
+# product_locations()
+# conn.commit()
 # dynamic
 shifts()
 s = shipments()
