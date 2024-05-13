@@ -12,18 +12,18 @@ int main(int argc, char **argv) {
     
     START_MEASURE("после оптимизаций\t")
 
-    N = 1000; 
+    N = 1000;
     eps = 0.00001;
-    prev = 1.0/4;
+    cur = 1.0/4;
     o = 1;
-    s = prev;
+    s = cur;
     do {
+        prev = cur;
         o++;
-        m = -1/(4*o);
+        m = -1.0/(4*o);
         cur = prev*m;
         s = s+cur;
-        prev = cur;
-    } while (abs(prev-cur)>=eps);
+    } while (fabs(prev-cur)>=eps);
     
     END_MEASURE()
 
