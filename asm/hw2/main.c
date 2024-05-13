@@ -123,7 +123,7 @@ char * number(char * inp) {
 
 char * expr_tail(char * inp);
 
-// <выр>     ::= <число>|<число><оп><выр_tail>
+// <выр>     ::= <число>|<число><оп><выр_tail>|<выр_tail>
 char * expr(char * inp) {
     ASSERT_NOT_NULL(inp);
     char * next;
@@ -133,6 +133,8 @@ char * expr(char * inp) {
         (next = expr_tail(next))
     ) || (
         (next = number(inp))
+    ) || (
+        (next = expr_tail(inp))
     )) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
@@ -141,7 +143,7 @@ char * expr(char * inp) {
     }
 }
 
-// <выр_tail>::= <чбз>|<чбз><оп><выр_tail>|(<выр>)
+// <выр_tail>::= <чбз>|<чбз><оп><выр_tail>|(<выр>)<оп><выр_tail>
 char * expr_tail(char * inp) {
     ASSERT_NOT_NULL(inp);
     char * next;
@@ -154,7 +156,9 @@ char * expr_tail(char * inp) {
     ) || (
         (next = inp, ++next, next[-1] == '(') &&
         (next = expr(next)) &&
-        (++next, next[-1] == ')')
+        (++next, next[-1] == ')') &&
+        (next = op(next)) &&
+        (next = expr_tail(next))
     )) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
@@ -168,6 +172,6 @@ char * parse(char * inp) {
 }
 
 int main() {
-    expr("-34.3456+0.56*0.7989");
+    expr("-34.3456+(0.56)*0.7989");
     return 0;
 }
