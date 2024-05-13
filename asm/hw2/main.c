@@ -3,39 +3,42 @@
 
 // Разработать грамматику и распознаватель выражений языка программирования Pascal, оперирующих вещественными числами в формате с фиксированной точкой. Например:
 // -34.3456 + 0.56* 0.7989
-
+// * ()
 // чбз -- число без знака
 // чсз -- число с знаком
 // рц -- ряд цифр
-// опр -- оператор
+// оп -- оператор
 
 // <знак>  ::= -|+
 // <цифра> ::= 0|1|2|3|4|5|6|7|8|9
-// <опр>   ::= *|/
+// <оп>   ::= *|/|<знак>
 
 // <число>  ::= <чбз>|<чсз>
 // <чсз>    ::= <знак><чбз>
 // <чбз>    ::= <рц>.<pц>
 // <рц>     ::= <цифра>|<цифра><рц>
 
-// <сум>    ::= <число>|<число><сумк>
-// <сумк>   ::= <чсз>|<чсз><сумк>
-// <множ>   ::= <чбз>|(<сум>)
-// <прз>    ::= <множ>|<множ><опр><прз>
+// <выр>     ::= <число>|<число><оп><выр_tail>|<число>
+// <выр_tail>::= <чбз>|<чбз><оп><выр_tail>|(<выр>)
 
 #define ASSERT_NOT_NULL(x) if (x == NULL) { return NULL; }
 #define CHAR(x) (next++, next[-1] == x)
 #define APPLY(x) (next = x(next))
 
-typedef char * (* parser)(char *);
-
 // <цифра> ::= 0|1|2|3|4|5|6|7|8|9
 char * digit(char * inp) {
-    return inp[0] >= '0' && inp[0] <= '9' ? ++inp : NULL;
+    ASSERT_NOT_NULL(inp);
+    if (inp[0] >= '0' && inp[0] <= '9') {
+        printf("recognised: %.*s\n", 1, inp);
+        return ++inp;
+    } else {
+        return NULL;
+    }
 }
 
 // <знак>  ::= -|+
 char * sign(char * inp) {
+    ASSERT_NOT_NULL(inp);
     if (inp[0] == '-' || inp[0] == '+') {
         printf("recognised: %.*s\n", 1, inp);
         return ++inp;
@@ -44,11 +47,17 @@ char * sign(char * inp) {
     }
 }
 
-// <опр>   ::= *|/
+// <оп>   ::= *|/|<знак>
 char * op(char * inp) {
-    if (inp[0] == '*' || inp[0] == '/') {
+    ASSERT_NOT_NULL(inp);
+    char * next;
+    if (
+        (next = inp, ++next, next[-1] == '*') ||
+        (next = inp, ++next, next[-1] == '/') || 
+        (next = sign(inp))
+    ) {
         printf("recognised: %.*s\n", 1, inp);
-        return ++inp;
+        return next;
     } else {
         return NULL;
     }
@@ -62,7 +71,7 @@ char * digit_seq(char * inp) {
         (next = digit_seq(digit(inp))) ||
         (next = digit(inp))
     ) {
-        printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
+        // printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
     } else {
         return NULL;
@@ -70,12 +79,12 @@ char * digit_seq(char * inp) {
 }
 
 // <чбз>    ::= <рц>.<pц>
-char * ufloat(char * inp) {
+char * unumber(char * inp) {
     ASSERT_NOT_NULL(inp);
-    char * next = inp;
+    char * next;
     if (
-        (next = digit_seq(next)) && 
-        (CHAR('.')) && 
+        (next = digit_seq(inp)) && 
+        (++next, next[-1] == '.') && 
         (next = digit_seq(next))
     ) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
@@ -86,10 +95,10 @@ char * ufloat(char * inp) {
 }
 
 // <чсз>    ::= <знак><чбз>
-char * ifloat(char * inp) {
+char * inumber(char * inp) {
     ASSERT_NOT_NULL(inp);
     char * next;
-    if (next = ufloat(sign(inp))) {
+    if (next = unumber(sign(inp))) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
     } else {
@@ -102,8 +111,8 @@ char * number(char * inp) {
     ASSERT_NOT_NULL(inp);
     char * next;
     if (
-        (next = ifloat(inp)) || 
-        (next = ufloat(inp))
+        (next = inumber(inp)) || 
+        (next = unumber(inp))
     ) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
@@ -112,47 +121,18 @@ char * number(char * inp) {
     }
 }
 
-// <сумк>   ::= <чсз>|<чсз><сумк>
-char * sum_tail(char * inp) {
+char * expr_tail(char * inp);
+
+// <выр>     ::= <число>|<число><оп><выр_tail>
+char * expr(char * inp) {
     ASSERT_NOT_NULL(inp);
     char * next;
-    if (
-        (next = sum_tail(ifloat(inp))) || 
-        (next = ifloat(inp))
-    ) {
-        printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
-        return next;
-    } else {
-        return NULL;
-    }
-}
-
-// <сум>    ::= <число>|<число><сумк>
-char * sum(char * inp) {
-    ASSERT_NOT_NULL(inp);
-    char * next;
-    if (
-        (next = sum_tail(number(inp))) ||
-        (next = number(inp))
-    ) {
-        printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
-        return next;
-    } else {
-        return NULL;
-    }
-}
-
-// <множ>   ::= <чбз>|(<сум>)
-char * multiplier(char * inp) {
-    char * next = inp;
     if ((
-        (next = inp) &&
-        (next = ufloat(next))
+        (next = number(inp)) &&
+        (next = op(next)) &&
+        (next = expr_tail(next))
     ) || (
-        (next = inp) &&
-        (CHAR('(')) &&
-        (next = sum(next)) &&
-        (CHAR(')'))
+        (next = number(inp))
     )) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
@@ -161,20 +141,20 @@ char * multiplier(char * inp) {
     }
 }
 
-// <прз>    ::= <множ>|<множ><опр><прз>|<сум>
-char * expression(char * inp) {
-    char * next = inp;
+// <выр_tail>::= <чбз>|<чбз><оп><выр_tail>|(<выр>)
+char * expr_tail(char * inp) {
+    ASSERT_NOT_NULL(inp);
+    char * next;
     if ((
-        (next = inp) &&
-        (next = multiplier(next)) &&
+        (next = unumber(inp)) &&
         (next = op(next)) &&
-        (next = expression(next))
+        (next = expr_tail(next))
     ) || (
-        (next = inp) &&
-        (next = multiplier(next))
+        (next = unumber(inp))
     ) || (
-        (next = inp) &&
-        (next = sum(next))
+        (next = inp, ++next, next[-1] == '(') &&
+        (next = expr(next)) &&
+        (++next, next[-1] == ')')
     )) {
         printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
@@ -188,6 +168,6 @@ char * parse(char * inp) {
 }
 
 int main() {
-    expression("-123412.0+1.0*2.1");
+    expr("-34.3456+0.56*0.7989");
     return 0;
 }
