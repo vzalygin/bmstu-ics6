@@ -12,7 +12,7 @@ int main() {
     printf("enter amount of pairs:\n");
     scanf("%d", &c);
     for (int i = 0; i < c; ++i) {
-        printf("enter the indexes of the first and the second word to swap them:\n");
+        printf("enter the indexes (starts from 0) of the first and the second word to swap them:\n");
         scanf("%d%d", &first, &second);
         repl(text, first, second);
     }

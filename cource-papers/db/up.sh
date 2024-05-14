@@ -16,7 +16,7 @@ if ! sudo docker run \
     exit 1
 fi
 
-while ! PGPASSWORD=$PASSWORD psql -h localhost -p 5433 -d $DB_NAME -U $USER -a -f $SCRPATH/scripts/empty.sql >/dev/null 2>&1; do
+while ! PGPASSWORD=$PASSWORD psql -h localhost -p $PORT -d $DB_NAME -U $USER -a -f $SCRPATH/scripts/empty.sql >/dev/null 2>&1; do
     sleep 0.1
 done
 
