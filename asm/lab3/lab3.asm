@@ -11,7 +11,7 @@ REQ_K	db 	"Введите K:",10
 REQ_K_LEN equ	$-REQ_K
 RES	db 	"Результат вычисления выражения:",10
 RES_LEN	equ	$-RES
-ERR	db 	"Введены некорректные данные. Завершение работы.",10
+ERR	db 	"Ошибка деления на 0. Завершение работы.",10
 ERR_LEN	equ	$-ERR
 THREE	dd	3
 	section .bss

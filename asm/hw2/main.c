@@ -79,12 +79,12 @@ char * unumber(char * inp, int print) {
         (next = digit_seq(next, FALSE))
     ) {
         if (print) {
-            printf("Распознано число: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
+            printf("Распознано число без знака: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         }
         return next;
     } else {
         if (print) {
-            printf("Ошибка числа: %.*s\n", strlen(inp), inp);
+            printf("Ошибка числа без: %.*s\n", strlen(inp), inp);
         }
         return NULL;
     }
@@ -122,11 +122,11 @@ char * expr(char * inp, int print) {
     ASSERT_NOT_NULL(inp);
     char * next;
     if ((
+        (next = expr_tail(inp, print))
+    ) || (
         (next = number(inp, print)) &&
         (next = op(next, print)) &&
         (next = expr_tail(next, print))
-    ) || (
-        (next = expr_tail(inp, print))
     ) || (
         (next = number(inp, print))
     )) {
@@ -141,19 +141,23 @@ char * expr_tail(char * inp, int print) {
     ASSERT_NOT_NULL(inp);
     char * next;
     if ((
-        (next = unumber(inp, print)) &&
-        (next = op(next, print)) &&
-        (next = expr_tail(next, print))
-    ) || (
-        (next = unumber(inp, print))
-    ) || (
         (next = inp, ++next, next[-1] == '(') &&
         (next = expr(next, print)) &&
         (++next, next[-1] == ')') &&
         (next = op(next, print)) &&
         (next = expr_tail(next, print))
+    ) || (
+        (next = inp, ++next, next[-1] == '(') &&
+        (next = expr(next, FALSE)) &&
+        (++next, next[-1] == ')')
+    ) || (
+        (next = unumber(inp, print)) &&
+        (next = op(next, print)) &&
+        (next = expr_tail(next, print))
+    ) || (
+        (next = unumber(inp, FALSE))
     )) {
-        printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
+        // printf("recognised: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         return next;
     } else {
         return NULL;
@@ -163,8 +167,8 @@ char * expr_tail(char * inp, int print) {
 char * parse(char * inp, int print) {
     ASSERT_NOT_NULL(inp);
     char * next = expr(inp, print);
-    printf("Распознано: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
-    if (strlen(next) == 0) {
+    if (next != NULL && strlen(next) == 0) {
+        printf("Распознано: %.*s\n", (int)(strlen(inp)-strlen(next)), inp);
         printf("Конструкция распознана.\n");
     } else {
         printf("Обнаружена ошибка.\n");
@@ -172,8 +176,7 @@ char * parse(char * inp, int print) {
     return next;
 }
 
-void rem(char* s, char c)
-{
+void rem(char* s, char c) {
     for (int i = 0; i < strlen(s); i++)
         if (s[i] == '\n') {
             s[i] = '\0';
@@ -190,14 +193,14 @@ void rem(char* s, char c)
 int main() {
     char inp[100];
     while(1) {
-        printf("Введите строку:\n");
+        printf("Введите строку (end для выхода):\n");
         gets(inp);
-        if (inp[0] == 'в' && inp[1] == 'с' && inp[2] == 'е') {
+        if (inp[0] == 'e' && inp[1] == 'n' && inp[2] == 'd') {
             return 0;
         }
         rem(inp, ' ');
         parse(inp, TRUE);
     }
-    // parse("-32.0\0", TRUE);
+    // parse("a\0", TRUE);
     return 0;
 }
