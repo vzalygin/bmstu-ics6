@@ -14,11 +14,11 @@ import json
 from datetime import datetime, timezone, timedelta
 import sys
 
-A = 20
+A = 40
 CLIENT_AMOUNT = 150
 PRODUCT_AMOUNT = 931
-STORE_AMOUNT = 150
-ORDER_AMOUNT = 10000
+STORE_AMOUNT = 1000
+ORDER_AMOUNT = 1_000_000
 OWNER_IDS = range(STORE_AMOUNT * 0 + 1, STORE_AMOUNT * 1 + 1)
 MANAGER_IDS = range(STORE_AMOUNT * 1 + 1, STORE_AMOUNT * 2 + 1)
 COURIER_IDS = range(STORE_AMOUNT * 2 + 1, STORE_AMOUNT * 3 + 1)
@@ -32,7 +32,7 @@ conn = ps.connect(
     user="postgres",
     password="12345678",
     host="localhost",
-    port="5434",
+    port="5433",
 )
 cur = conn.cursor()
 
