@@ -1,3 +1,3 @@
 #!/bin/bash
 
-{ ./down.sh && ./up.sh && ./query.sh ./scheme.sql && time ./filler.py; } 2>./6.log 1>&2;
+{ time ./down.sh && time ./up.sh && time ./query.sh ./scheme.sql && time ./filler.py; } 2>./6.log 1>&2;
