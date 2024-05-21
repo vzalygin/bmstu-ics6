@@ -57,17 +57,17 @@ def clients():
         phone_number = fake.phone_number()
         email = fake.email()
         data.append((name, lastname, saved_addresses, phone_number, email))
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO client (\"name\", lastname, saved_addresses, phone_number, email)
-    #         VALUES (%s, %s, %s, %s, %s)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO client (\"name\", lastname, saved_addresses, phone_number, email)
+            VALUES (%s, %s, %s, %s, %s)
+        """,
+        data,
+    )
     print(f"clients records {len(data)}")
     with open(
-        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/clients.json", "w"
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/clients.json", "w"
     ) as f:
         json.dump(data, f)
     return data
@@ -81,14 +81,14 @@ def products():
         data = json.load(f)
     data = [(p["name"], p["name"], p["caterogy"], p["img"], p["price"]) for p in data]
     print("insert into db")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO product ("name", "description", category, image_url, price)
-    #         VALUES (%s, %s, %s::PRODUCT_CATEGORY_ENUM, %s, %s)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO product ("name", "description", category, image_url, price)
+            VALUES (%s, %s, %s::PRODUCT_CATEGORY_ENUM, %s, %s)
+        """,
+        data,
+    )
     print(f"product records {len(data)}")
     return data
 
@@ -102,17 +102,17 @@ def stores():
         name = fake.nic_handle()
         data.append((address, name, owner_id))
     print("insert into db")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO store ("address", "name", "owner_id")
-    #         VALUES (%s, %s, %s)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO store ("address", "name", "owner_id")
+            VALUES (%s, %s, %s)
+        """,
+        data,
+    )
     print(f"store records {len(data)}")
     with open(
-        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/stores.json", "w"
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/stores.json", "w"
     ) as f:
         json.dump(data, f)
     return data
@@ -142,17 +142,17 @@ def employees():
         role = "assembler"
         data.append((name, lastname, role))
     print("insert into db")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO employee ("name", lastname, "role")
-    #         VALUES (%s, %s, %s::EMPLOYEE_ROLE_ENUM)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO employee ("name", lastname, "role")
+            VALUES (%s, %s, %s::EMPLOYEE_ROLE_ENUM)
+        """,
+        data,
+    )
     print(f"employee records {len(data)}")
     with open(
-        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/employees.json", "w"
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/employees.json", "w"
     ) as f:
         json.dump(data, f)
     return data
@@ -172,19 +172,19 @@ def product_locations():
             desc = descs[product_id]
             data.append((product_id, store_id, desc))
     with open(
-        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/product_locations.json",
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/product_locations.json",
         "w",
     ) as f:
         json.dump(data, f)
     print("insert into db")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO product_location (product_id, store_id, "description")
-    #         VALUES (%s, %s, %s)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO product_location (product_id, store_id, "description")
+            VALUES (%s, %s, %s)
+        """,
+        data,
+    )
     print(f"product_location records {len(data)}")
     return data
 
@@ -202,18 +202,18 @@ def shifts():
     for employee_id in ASSEMBER_IDS:
         data.append((employee_id, store_id(employee_id), start, end))
     with open(
-        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/shifts.json", "w"
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/shifts.json", "w"
     ) as f:
         json.dump(data, f, default=str)
     print("insert into db")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO shift (employee_id, store_id, begin_date, end_date)
-    #         VALUES (%s, %s, %s, %s)
-    #     """,
-    #     data,
-    # )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO shift (employee_id, store_id, begin_date, end_date)
+            VALUES (%s, %s, %s, %s)
+        """,
+        data,
+    )
     print(f"shift records {len(data)}")
     return data
 
@@ -273,40 +273,40 @@ def shipments():
                 days=exp
             )
             exp_data.append((store_id, product_id, expiration_date, product_amount))
-    # with open(
-    #     "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/shipments.json", "w"
-    # ) as f:
-    #     json.dump(data, f, default=str)
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
-    #         VALUES (%s, %s, %s, %s)
-    #     """,
-    #     exp_data,
-    # )
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
-    #         VALUES (%s, %s, %s, %s)
-    #     """,
-    #     data,
-    # )
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/shipments.json", "w"
+    ) as f:
+        json.dump(data, f, default=str)
+    execute_batch(
+        cur,
+        """
+            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
+            VALUES (%s, %s, %s, %s)
+        """,
+        exp_data,
+    )
+    execute_batch(
+        cur,
+        """
+            INSERT INTO shipment (store_id, product_id, expiration_date, product_amount)
+            VALUES (%s, %s, %s, %s)
+        """,
+        data,
+    )
     per = 0.95
-    # cur.execute(
-    #     """
-    #         UPDATE shipment
-    #         SET "status" = 'accepted'
-    #         WHERE shipment.id < %s and status != 'expired'
-    #     """,
-    #     (str(int((len(data) + len(exp_data)) * per)),),
-    # )
-    # cur.execute(
-    #     """
-    #         SELECT check_and_mark_expired_shipments()
-    #     """
-    # )
+    cur.execute(
+        """
+            UPDATE shipment
+            SET "status" = 'accepted'
+            WHERE shipment.id < %s and status != 'expired'
+        """,
+        (str(int((len(data) + len(exp_data)) * per)),),
+    )
+    cur.execute(
+        """
+            SELECT check_and_mark_expired_shipments()
+        """
+    )
     print(f"shipment records {len(data)+len(exp_data)}")
     return list(
         map(
@@ -325,51 +325,51 @@ def orders(shipments):
         return y
 
     print("orders start")
-    with open("/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/assemblings.json", "r") as f:
+    with open("/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/assemblings.json", "r") as f:
         assems = json.loads(f.read())[0:200000]
-    # print(assems)
-    # for order_id in range(1, ORDER_AMOUNT + 1):
-    #     client_id = random.randint(1, CLIENT_AMOUNT)
-    #     address = fake.address()
-    #     shs = []
-    #     while len(shs) < 2:
-    #         store_id = random.randint(1, STORE_AMOUNT + 1)
-    #         shs = list(
-    #             filter(lambda x: x[1] == store_id and x[4] > 5, shipments),
-    #         )
-    #     assemblings = [
-    #         (p, order_id, sum(x[2] for x in s))
-    #         for p, s in groupby(
-    #             (
-    #                 (shipment[2], order_id, dec(shipment, 4, random.randint(1, 3)))
-    #                 for shipment in random.sample(
-    #                     shs, k=random.randint(1, min(len(shs), 3))
-    #                 )
-    #             ),
-    #             key=lambda x: x[0],
-    #         )
-    #     ]
-    #     assems += assemblings
-    #     orders.append((client_id, address, store_id))
-    # assems = list(set({(x[0], x[1]): x for x in assems}.values()))
-    # with open(
-    #     "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/orders.json", "w"
-    # ) as f:
-    #     json.dump(orders, f, default=str)
-    # with open(
-    #     "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert/assemblings.json", "w"
-    # ) as f:
-    #     json.dump(assems, f, default=str)
+    print(assems)
+    for order_id in range(1, ORDER_AMOUNT + 1):
+        client_id = random.randint(1, CLIENT_AMOUNT)
+        address = fake.address()
+        shs = []
+        while len(shs) < 2:
+            store_id = random.randint(1, STORE_AMOUNT + 1)
+            shs = list(
+                filter(lambda x: x[1] == store_id and x[4] > 5, shipments),
+            )
+        assemblings = [
+            (p, order_id, sum(x[2] for x in s))
+            for p, s in groupby(
+                (
+                    (shipment[2], order_id, dec(shipment, 4, random.randint(1, 3)))
+                    for shipment in random.sample(
+                        shs, k=random.randint(1, min(len(shs), 3))
+                    )
+                ),
+                key=lambda x: x[0],
+            )
+        ]
+        assems += assemblings
+        orders.append((client_id, address, store_id))
+    assems = list(set({(x[0], x[1]): x for x in assems}.values()))
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/orders.json", "w"
+    ) as f:
+        json.dump(orders, f, default=str)
+    with open(
+        "/home/vzalygin/repos/bmstu-ics6/cource-papers/db/~insert-1/assemblings.json", "w"
+    ) as f:
+        json.dump(assems, f, default=str)
     print("insert into db orders")
-    # execute_batch(
-    #     cur,
-    #     """
-    #         INSERT INTO "order" (client_id, "address", store_id)
-    #         VALUES (%s, %s, %s)
-    #     """,
-    #     orders,
-    # )
-    # conn.commit()
+    execute_batch(
+        cur,
+        """
+            INSERT INTO "order" (client_id, "address", store_id)
+            VALUES (%s, %s, %s)
+        """,
+        orders,
+    )
+    conn.commit()
     print(f"insert into db assems {len(assems)}")
     execute_batch(
         cur,
@@ -435,7 +435,7 @@ def deliveries():
     print(f"delivery records {delivery_amount}")
 
 
-# static
+# # static
 # clients()
 # conn.commit()
 # products()
@@ -445,12 +445,12 @@ def deliveries():
 # conn.commit()
 # product_locations()
 # conn.commit()
-# dynamic
+# # dynamic
 # shifts()
-s = shipments()
-conn.commit()
-orders(s)
-conn.commit()
+# s = shipments()
+# conn.commit()
+# orders(s)
+# conn.commit()
 deliveries()
 conn.commit()
 print("db filled successfully")
