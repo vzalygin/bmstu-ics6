@@ -6,7 +6,7 @@ const make_state_machine = (init_state, transitions, fall_back) => {
             return fall_back;
         }
         const { next_state, output } = transition;
-        state = next_state;
+        state = next_state();
         return output;
     };
     return make_next_state;
@@ -28,10 +28,17 @@ const make_number = () => {
 
 const go_to = (next_state, output) => {
     return  {
+        next_state: () => next_state,
+        output: output
+    };
+};
+
+const go_to_run = (next_state, output) => {
+    return  {
         next_state: next_state,
         output: output
     };
-} 
+};
 
 let counter_value = 0;
 
@@ -67,7 +74,7 @@ const FORBIDDEN = () => { text('Неправильный ввод.'); };
 const transitions = {
     BEGIN: {
         GO_TO_RESET: go_to(BEGIN, RESET),
-        START_GAME: go_to(make_number(), START)
+        START_GAME: go_to_run(make_number, START)
     },
     MADE_ONE: {
         GO_TO_RESET: go_to(BEGIN, RESET),
