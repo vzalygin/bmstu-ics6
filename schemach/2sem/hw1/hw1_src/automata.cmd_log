@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.xst" -ofn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.syr" 
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.xst" -ofn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.syr" 
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.xst" -ofn "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s200-pq208-5 automata.ngc automata.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o automata_map.ncd automata.ngd automata.pcf 
+par -w -intstyle ise -ol high -t 1 automata_map.ncd automata.ncd automata.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml automata.twx automata.ncd -o automata.twr automata.pcf 
+vhdtdtfi -lib work /mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.v -lang verilog -prj hw1_src -o automata.spl -module automata -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3 automata.spl /mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata.sym 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata_test_isim_beh.exe" -prj "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata_test_beh.prj" "work.automata_test" "work.glbl" 

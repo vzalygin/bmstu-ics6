@@ -1,0 +1,5 @@
+set -tmpdir "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/xst/projnav.tmp"
+set -xsthdpdir "/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/xst"
+elaborate
+-ifn automata.prj
+-ifmt mixed
