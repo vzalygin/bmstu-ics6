@@ -1,0 +1,3717 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="793.76001"
+   height="1122.5601"
+   viewBox="0 0 793.76001 1122.5601"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path14" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath24">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path22" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath32">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path30" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath44">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path42" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath52">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path50" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath64">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path62" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath72">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path70" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath84">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path82" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath96">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path94" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath108">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path106" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath116">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path114" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath128">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path126" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath136">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path134" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath144">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path142" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath156">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path154" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath168">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path166" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath176">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path174" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath188">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path186" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath196">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path194" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath208">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path206" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath220">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path218" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath232">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path230" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath244">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path242" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath252">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path250" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath264">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path262" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath272">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path270" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath284">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path282" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath296">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path294" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath308">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path306" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath316">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path314" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath324">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path322" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath336">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path334" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath348">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path346" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath356">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path354" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath368">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path366" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath380">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path378" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath388">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path386" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath400">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path398" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath412">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path410" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath420">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path418" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath432">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path430" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath444">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path442" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath456">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path454" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath468">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path466" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath480">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path478" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath492">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path490" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath500">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path498" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath512">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path510" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath524">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path522" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath536">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path534" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath548">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path546" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath560">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path558" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath568">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path566" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath580">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path578" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath588">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path586" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath600">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path598" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath608">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path606" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath616">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path614" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath628">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path626" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath636">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path634" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath648">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path646" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath660">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path658" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath672">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path670" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath684">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path682" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath696">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path694" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath708">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path706" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath720">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path718" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath728">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path726" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath740">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path738" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath752">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path750" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath760">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path758" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath772">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path770" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath784">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path782" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath796">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path794" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath808">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path806" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath820">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path818" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath828">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path826" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath840">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path838" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath848">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path846" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath860">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path858" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath872">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path870" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath880">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path878" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath892">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path890" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath900">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path898" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath912">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path910" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath924">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path922" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath932">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path930" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath940">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path938" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath952">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path950" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath964">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path962" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath972">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path970" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath984">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path982" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath992">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path990" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1004">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1002" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1016">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1014" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1028">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1026" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1036">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1034" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1048">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1046" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1060">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1058" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1072">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1070" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1084">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1082" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1096">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1094" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1104">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1102" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1116">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1114" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1128">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1126" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1140">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1138" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1148">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1146" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1160">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1158" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1172">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1170" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1184">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1182" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1196">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1194" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1208">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1206" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1216">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1214" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1224">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1222" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1236">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1234" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1248">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1246" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1260">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1258" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1268">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1266" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1280">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1278" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1292">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1290" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1304">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1302" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1312">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1310" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1320">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1318" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1332">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1330" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1344">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1342" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1356">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1354" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1364">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1362" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1376">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1374" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1388">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1386" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1396">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1394" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1408">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1406" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1420">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1418" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1432">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1430" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1440">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1438" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1448">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1446" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1460">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1458" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1472">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1470" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1480">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1478" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1492">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1490" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1504">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1502" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1516">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1514" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1528">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1526" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1536">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1534" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1548">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1546" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1556">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1554" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1564">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1562" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1576">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1574" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1588">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1586" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1596">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1594" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1604">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1602" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1616">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1614" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1628">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1626" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1636">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1634" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1648">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1646" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1656">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1654" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1664">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1662" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1676">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1674" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1684">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1682" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1692">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1690" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1704">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1702" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1716">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1714" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1728">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1726" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1736">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1734" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1744">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1742" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1756">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1754" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1768">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1766" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1780">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1778" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1792">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1790" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1800">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1798" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1808">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1806" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1820">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1818" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1832">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1830" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1844">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1842" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1856">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1854" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1864">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1862" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1876">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1874" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1884">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1882" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1892">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1890" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1900">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1898" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1912">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1910" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1924">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1922" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1936">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1934" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1948">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1946" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1956">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1954" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1968">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1966" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1976">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1974" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1984">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path1982" />
+    </clipPath>
+  </defs>
+  <g
+     id="g8"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,1122.56)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)" />
+    </g>
+    <g
+       id="g18">
+      <g
+         id="g20"
+         clip-path="url(#clipPath24)" />
+    </g>
+    <g
+       id="g26">
+      <g
+         id="g28"
+         clip-path="url(#clipPath32)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text36"><tspan
+             x="0 6 9 15 18 24 27"
+             y="0"
+             id="tspan34">4.4.2.2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g38">
+      <g
+         id="g40"
+         clip-path="url(#clipPath44)" />
+    </g>
+    <g
+       id="g46">
+      <g
+         id="g48"
+         clip-path="url(#clipPath52)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,156.5,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text56"><tspan
+             x="0 8.0279999 14.028 20.016001 26.496 32.495998 37.776001 43.056 48.299999 53.964001 59.964001 62.964001 68.484001 74.592003 79.919998 85.919998 88.919998 95.363998 101.364 107.364 113.832 119.112 124.392 129.672 135.672 141.672"
+             y="0"
+             id="tspan54">Количество ядер процессора</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g58">
+      <g
+         id="g60"
+         clip-path="url(#clipPath64)" />
+    </g>
+    <g
+       id="g66">
+      <g
+         id="g68"
+         clip-path="url(#clipPath72)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,306.05,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text76"><tspan
+             x="0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93"
+             y="0"
+             id="tspan74">................................</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g78">
+      <g
+         id="g80"
+         clip-path="url(#clipPath84)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,402.07,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text88"><tspan
+             x="0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93"
+             y="0"
+             id="tspan86">................................</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g90">
+      <g
+         id="g92"
+         clip-path="url(#clipPath96)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,498.1,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text100"><tspan
+             x="0 3 6 9 12 15 18 21"
+             y="0"
+             id="tspan98">........</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g102">
+      <g
+         id="g104"
+         clip-path="url(#clipPath108)" />
+    </g>
+    <g
+       id="g110">
+      <g
+         id="g112"
+         clip-path="url(#clipPath116)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,523.54,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text120"><tspan
+             x="0 6 9 21.108 26.388"
+             y="0"
+             id="tspan118">1 Шт.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g122">
+      <g
+         id="g124"
+         clip-path="url(#clipPath128)" />
+    </g>
+    <g
+       id="g130">
+      <g
+         id="g132"
+         clip-path="url(#clipPath136)" />
+    </g>
+    <g
+       id="g138">
+      <g
+         id="g140"
+         clip-path="url(#clipPath144)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text148"><tspan
+             x="0 6 9 15 18 24"
+             y="0"
+             id="tspan146">4.4.2.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g150">
+      <g
+         id="g152"
+         clip-path="url(#clipPath156)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,147.5,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text160"><tspan
+             x="0"
+             y="0"
+             id="tspan158">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g162">
+      <g
+         id="g164"
+         clip-path="url(#clipPath168)" />
+    </g>
+    <g
+       id="g170">
+      <g
+         id="g172"
+         clip-path="url(#clipPath176)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,156.5,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text180"><tspan
+             x="0 8.6639996 14.772 20.976 26.304001 33.84 36.84 45.504002 51.48"
+             y="0"
+             id="tspan178">Объем ОЗУ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g182">
+      <g
+         id="g184"
+         clip-path="url(#clipPath188)" />
+    </g>
+    <g
+       id="g190">
+      <g
+         id="g192"
+         clip-path="url(#clipPath196)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,219.05,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text200"><tspan
+             x="0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93"
+             y="0"
+             id="tspan198">................................</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g202">
+      <g
+         id="g204"
+         clip-path="url(#clipPath208)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,315.07,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text212"><tspan
+             x="0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93"
+             y="0"
+             id="tspan210">................................</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g214">
+      <g
+         id="g216"
+         clip-path="url(#clipPath220)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,411.07,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text224"><tspan
+             x="0 3 6 9 12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84 87 90 93"
+             y="0"
+             id="tspan222">................................</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g226">
+      <g
+         id="g228"
+         clip-path="url(#clipPath232)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,507.1,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text236"><tspan
+             x="0 3 6 9 12 15"
+             y="0"
+             id="tspan234">......</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g238">
+      <g
+         id="g240"
+         clip-path="url(#clipPath244)" />
+    </g>
+    <g
+       id="g246">
+      <g
+         id="g248"
+         clip-path="url(#clipPath252)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,527.86,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text256"><tspan
+             x="0"
+             y="0"
+             id="tspan254">1</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g258">
+      <g
+         id="g260"
+         clip-path="url(#clipPath264)" />
+    </g>
+    <g
+       id="g266">
+      <g
+         id="g268"
+         clip-path="url(#clipPath272)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,536.86,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text276"><tspan
+             x="0"
+             y="0"
+             id="tspan274">Г</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g278">
+      <g
+         id="g280"
+         clip-path="url(#clipPath284)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,543.82,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text288"><tspan
+             x="0"
+             y="0"
+             id="tspan286">б</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g290">
+      <g
+         id="g292"
+         clip-path="url(#clipPath296)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,549.94,746.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text300"><tspan
+             x="0"
+             y="0"
+             id="tspan298">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g302">
+      <g
+         id="g304"
+         clip-path="url(#clipPath308)" />
+    </g>
+    <g
+       id="g310">
+      <g
+         id="g312"
+         clip-path="url(#clipPath316)" />
+    </g>
+    <g
+       id="g318">
+      <g
+         id="g320"
+         clip-path="url(#clipPath324)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,718.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text328"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan326">4.4.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g330">
+      <g
+         id="g332"
+         clip-path="url(#clipPath336)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,718.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text340"><tspan
+             x="0"
+             y="0"
+             id="tspan338">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g342">
+      <g
+         id="g344"
+         clip-path="url(#clipPath348)" />
+    </g>
+    <g
+       id="g350">
+      <g
+         id="g352"
+         clip-path="url(#clipPath356)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,149.9,718.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text360"><tspan
+             x="0 7.3319998 13.332 18.6 24.708 30.708 36.372002 41.639999 48.108002 54.576 60.096001 65.484001 71.351997 76.739998 82.608002 88.716003 95.183998 102.96 109.452 114.48 120.12 126.12 131.39999 137.868"
+             y="0"
+             id="tspan358">Требования к конфигураци</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g362">
+      <g
+         id="g364"
+         clip-path="url(#clipPath368)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,294.41,718.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text372"><tspan
+             x="0"
+             y="0"
+             id="tspan370">и</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g374">
+      <g
+         id="g376"
+         clip-path="url(#clipPath380)" />
+    </g>
+    <g
+       id="g382">
+      <g
+         id="g384"
+         clip-path="url(#clipPath388)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,306.29,718.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text392"><tspan
+             x="0 5.244 10.572 16.667999 23.028 29.496 35.495998 40.776001 46.056 51.924 58.391998 64.5 69.888 75.167999 81.167999 86.447998 92.556 97.848 103.092 108.756 111.756 117.156 123.624 128.90401 134.29201 140.16 146.16 151.40401 157.40401 163.40401 171.468 177.588 182.976 189.444 194.724 201.192 207.192 213.07201 219.53999 225.06 230.34 235.584 240.912 246.43201"
+             y="0"
+             id="tspan390">технических средств, на которых исполняется </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g394">
+      <g
+         id="g396"
+         clip-path="url(#clipPath400)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text404"><tspan
+             x="0 5.2800002 11.148 17.148001 24.708 31.176001 37.644001 43.632 50.112 56.112 62.112 67.776001 73.031998 79.391998 85.860001 91.139999 96.660004 99.660004 106.128 112.128 118.008 122.928 128.92799 134.20799 141.76801 149.328 154.608"
+             y="0"
+             id="tspan402">скомпилированная программа:</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g406">
+      <g
+         id="g408"
+         clip-path="url(#clipPath412)" />
+    </g>
+    <g
+       id="g414">
+      <g
+         id="g416"
+         clip-path="url(#clipPath420)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,246.17,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text424"><tspan
+             x="0"
+             y="0"
+             id="tspan422">п</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g426">
+      <g
+         id="g428"
+         clip-path="url(#clipPath432)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,252.65,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text436"><tspan
+             x="0 6 12 18.468 23.747999 29.028 34.307999"
+             y="0"
+             id="tspan434">роцессо</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g438">
+      <g
+         id="g440"
+         clip-path="url(#clipPath444)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,292.97,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text448"><tspan
+             x="0 6"
+             y="0"
+             id="tspan446">р </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g450">
+      <g
+         id="g452"
+         clip-path="url(#clipPath456)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,301.97,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text460"><tspan
+             x="0 6.1079998 12.108 18.228001 26.52 31.788 38.256001"
+             y="0"
+             id="tspan458">должен </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g462">
+      <g
+         id="g464"
+         clip-path="url(#clipPath468)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,343.27,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text472"><tspan
+             x="0 6.48"
+             y="0"
+             id="tspan470">по</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g474">
+      <g
+         id="g476"
+         clip-path="url(#clipPath480)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,355.75,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text484"><tspan
+             x="0 6.1079998 12.216 17.544001 23.544001 31.799999 38.268002 43.931999 49.188 54.431999 59.976002 62.976002 69.444 74.723999 80.832001 86.723999 92.723999 95.723999 101.592 107.592 115.152 120.432 126.9"
+             y="0"
+             id="tspan482">ддерживать набор команд</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g486">
+      <g
+         id="g488"
+         clip-path="url(#clipPath492)" />
+    </g>
+    <g
+       id="g494">
+      <g
+         id="g496"
+         clip-path="url(#clipPath500)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,491.86,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text504"><tspan
+             x="0"
+             y="0"
+             id="tspan502">x</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g506">
+      <g
+         id="g508"
+         clip-path="url(#clipPath512)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,497.98,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text516"><tspan
+             x="0 6"
+             y="0"
+             id="tspan514">86</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g518">
+      <g
+         id="g520"
+         clip-path="url(#clipPath524)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,509.98,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text528"><tspan
+             x="0"
+             y="0"
+             id="tspan526">-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g530">
+      <g
+         id="g532"
+         clip-path="url(#clipPath536)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,513.94,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text540"><tspan
+             x="0 6"
+             y="0"
+             id="tspan538">64</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g542">
+      <g
+         id="g544"
+         clip-path="url(#clipPath548)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,525.94,691.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text552"><tspan
+             x="0"
+             y="0"
+             id="tspan550">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g554">
+      <g
+         id="g556"
+         clip-path="url(#clipPath560)" />
+    </g>
+    <g
+       id="g562">
+      <g
+         id="g564"
+         clip-path="url(#clipPath568)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,657.7)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text572"><tspan
+             x="0 6 9"
+             y="0"
+             id="tspan570">4.5</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g574">
+      <g
+         id="g576"
+         clip-path="url(#clipPath580)" />
+    </g>
+    <g
+       id="g582">
+      <g
+         id="g584"
+         clip-path="url(#clipPath588)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,657.7)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text592"><tspan
+             x="0 8.7480001 16.176001 22.884001 30.431999 37.860001 44.928001 51.515999 59.304001 67.211998 74.040001 78.468002 85.655998 89.963997 97.751999 105.66 114.768 122.196 129.62399 138.612 145.2 152.98801 160.896 168.20399 175.992 183.89999 191.20799 199.116 203.424 211.332 215.64 223.548 230.976 238.284 244.632 252.06 258.76801 267.75601 276.62399 284.53201 291.84 299.74799 304.17599 310.76401 318.19199 325.26001 334.12799 340.836 347.54401 354.25201 362.16 371.02802 378.45599 385.164 391.75201"
+             y="0"
+             id="tspan590">Требования к информационной и программной совместимости</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g594">
+      <g
+         id="g596"
+         clip-path="url(#clipPath600)" />
+    </g>
+    <g
+       id="g602">
+      <g
+         id="g604"
+         clip-path="url(#clipPath608)" />
+    </g>
+    <g
+       id="g610">
+      <g
+         id="g612"
+         clip-path="url(#clipPath616)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,624.1)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text620"><tspan
+             x="0 6 9 15 18"
+             y="0"
+             id="tspan618">4.5.1</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g622">
+      <g
+         id="g624"
+         clip-path="url(#clipPath628)" />
+    </g>
+    <g
+       id="g630">
+      <g
+         id="g632"
+         clip-path="url(#clipPath636)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,149.42,624.1)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text640"><tspan
+             x="0 8.6639996 14.664 20.664 25.584 31.584 36.84 44.507999 52.068001 58.535999 64.536003 69.816002 74.124001 80.124001 86.232002 91.632004 96.912003 103.38 108.66 114.66 119.94 126.408 132.87601 138.15601 142.464 148.57201 154.57201 160.56 168.85201 175.332 181.332 185.64 191.64 196.92 203.028 209.028 214.308 219.588 224.832 230.37601 234.68401 241.15199 247.15199 253.25999 257.70001 263.34 269.80801 275.91599 281.19601 286.85999 292.84799 298.116 304.58401 311.052 316.332 323.892 328.20001 334.30801 340.776 346.056 352.056 357.336 363.80399 370.272 376.272 382.63199 389.10001 397.164 403.164"
+             y="0"
+             id="tspan638">Программное обеспечение должно работать под управлением операционных </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g642">
+      <g
+         id="g644"
+         clip-path="url(#clipPath648)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text652"><tspan
+             x="0 5.2800002 11.748 17.028 22.271999 27.6 35.147999 38.147999 43.428001 48.816002 56.375999 61.655998 68.124001 73.403999 78.648003"
+             y="0"
+             id="tspan650">систем семейств</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g654">
+      <g
+         id="g656"
+         clip-path="url(#clipPath660)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,169.46,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text664"><tspan
+             x="0 5.2800002"
+             y="0"
+             id="tspan662">а </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g666">
+      <g
+         id="g668"
+         clip-path="url(#clipPath672)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,177.86,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text676"><tspan
+             x="0 8.6400003 17.280001"
+             y="0"
+             id="tspan674">GNU</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g678">
+      <g
+         id="g680"
+         clip-path="url(#clipPath684)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,203.81,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text688"><tspan
+             x="0"
+             y="0"
+             id="tspan686">/</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g690">
+      <g
+         id="g692"
+         clip-path="url(#clipPath696)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,207.29,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text700"><tspan
+             x="0 7.1999998 10.536 16.535999 22.535999"
+             y="0"
+             id="tspan698">Linux</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g702">
+      <g
+         id="g704"
+         clip-path="url(#clipPath708)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,235.97,596.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text712"><tspan
+             x="0"
+             y="0"
+             id="tspan710">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g714">
+      <g
+         id="g716"
+         clip-path="url(#clipPath720)" />
+    </g>
+    <g
+       id="g722">
+      <g
+         id="g724"
+         clip-path="url(#clipPath728)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text732"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan730">4.5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g734">
+      <g
+         id="g736"
+         clip-path="url(#clipPath740)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,139.1,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text744"><tspan
+             x="0"
+             y="0"
+             id="tspan742">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g746">
+      <g
+         id="g748"
+         clip-path="url(#clipPath752)" />
+    </g>
+    <g
+       id="g754">
+      <g
+         id="g756"
+         clip-path="url(#clipPath760)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,148.1,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text764"><tspan
+             x="0 8.6639996 14.664 20.664 25.584 31.584 36.84 44.400002 51.959999 58.428001 64.428001 69.708 72.708 78.708 84.816002 90.216003 95.603996 102.072 107.352 113.352 118.632 125.1 131.56799 136.84801 139.84801 145.95599 151.95599 157.944 166.23599 172.716 178.716"
+             y="0"
+             id="tspan762">Программное обеспечение должно </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g766">
+      <g
+         id="g768"
+         clip-path="url(#clipPath772)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,329.95,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text776"><tspan
+             x="0 6.4679999 14.028 19.308001 24.552 30.096001"
+             y="0"
+             id="tspan774">иметь </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g778">
+      <g
+         id="g780"
+         clip-path="url(#clipPath784)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,362.95,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text788"><tspan
+             x="0 6.4679999 12.936 18.18 23.507999 29.507999 37.284 42.576 49.043999 54.324001"
+             y="0"
+             id="tspan786">интерфейс </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g790">
+      <g
+         id="g792"
+         clip-path="url(#clipPath796)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,420.31,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text800"><tspan
+             x="0 5.868 11.868 19.427999 24.708 31.176001 37.175999 43.644001 49.644001 56.112 59.112 64.272003 69.515999 75.515999 81.515999 87.419998"
+             y="0"
+             id="tspan798">командной строки</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g802">
+      <g
+         id="g804"
+         clip-path="url(#clipPath808)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,514.3,568.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text812"><tspan
+             x="0"
+             y="0"
+             id="tspan810">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g814">
+      <g
+         id="g816"
+         clip-path="url(#clipPath820)" />
+    </g>
+    <g
+       id="g822">
+      <g
+         id="g824"
+         clip-path="url(#clipPath828)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,168.74,523.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text832"><tspan
+             x="0"
+             y="0"
+             id="tspan830">5</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g834">
+      <g
+         id="g836"
+         clip-path="url(#clipPath840)" />
+    </g>
+    <g
+       id="g842">
+      <g
+         id="g844"
+         clip-path="url(#clipPath848)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,177.74,523.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text852"><tspan
+             x="0 7.3319998 14.028 21.360001 28.188 36.852001 44.748001 53.495998 62.16 70.776001 78.804001 81.804001 89.832001 92.832001 101.496 108.168 116.832 123.768 130.5 139.164"
+             y="0"
+             id="tspan850">ТРЕБОВАНИЯ К ПРОГРАМ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g854">
+      <g
+         id="g856"
+         clip-path="url(#clipPath860)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,327.67,523.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text864"><tspan
+             x="0 10.668 19.332001 27.959999 36.624001 39.624001 47.759998 56.424 64.428001 72.947998 83.615997 90.947998 99.612 106.908 115.572 124.188 132.85201"
+             y="0"
+             id="tspan862">МНОЙ ДОКУМЕНТАЦИИ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g866">
+      <g
+         id="g868"
+         clip-path="url(#clipPath872)" />
+    </g>
+    <g
+       id="g874">
+      <g
+         id="g876"
+         clip-path="url(#clipPath880)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,489.67)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text884"><tspan
+             x="0 6 9"
+             y="0"
+             id="tspan882">5.1</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g886">
+      <g
+         id="g888"
+         clip-path="url(#clipPath892)" />
+    </g>
+    <g
+       id="g894">
+      <g
+         id="g896"
+         clip-path="url(#clipPath900)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,489.67)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text904"><tspan
+             x="0 6.7080002 11.988 16.775999 22.775999 28.056 34.164001 39.456001 44.700001 52.764 58.428001 63.695999 68.975998 76.643997 84.708 89.963997 92.363998 98.832001 104.94 110.94 115.86 121.86 127.14 134.7 142.25999 148.728 156.79201 162.048 164.448 172.008 178.008 184.356 190.116 196.104 202.584 204.98399 211.092 217.092 223.21201 231.504 237.96001 246.024 248.39999 254.508 262.57199 267.81601 273.34799 275.74799 281.02802 286.30801 293.86801 299.86801 305.97601 311.97601 317.97601 323.73599 331.40399 336.68399 343.15201 348.396 354.89999 360.89999 366.89999 372.564 377.82001 384.28799 392.35199 395.35199 397.728 402.97198 405.97198 411.29999 414.168"
+             y="0"
+             id="tspan902">Разрабатываемые программные модули должны быть самодокументированы, т.е. </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g906">
+      <g
+         id="g908"
+         clip-path="url(#clipPath912)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,462.07)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text916"><tspan
+             x="0 5.244 10.572 16.403999 21.732 26.976 35.040001 38.040001 44.507999 50.507999 56.507999 61.428001 67.428001 72.708 80.267998 87.828003 90.828003 96.935997 102.936 108.924 117.216 123.696 131.75999 134.75999 140.01601 146.01601 152.12399 157.416 163.416 171.70799 176.976 182.22 187.76401 190.76401 196.42799 201.68401 206.964 209.964 216.43201 221.71201 227.71201 233.82001 239.94 245.94 252.048 258.52802 266.08801 274.15201 279.40799 282.40799 288.276 294.276 301.836 309.396 314.67599 321.14401 326.388 331.716 337.716 344.172 350.64001 353.64001"
+             y="0"
+             id="tspan914">тексты программ должны содержать все необходимые комментарии. </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g918">
+      <g
+         id="g920"
+         clip-path="url(#clipPath924)" />
+    </g>
+    <g
+       id="g926">
+      <g
+         id="g928"
+         clip-path="url(#clipPath932)" />
+    </g>
+    <g
+       id="g934">
+      <g
+         id="g936"
+         clip-path="url(#clipPath940)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,434.47)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text944"><tspan
+             x="0 6"
+             y="0"
+             id="tspan942">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g946">
+      <g
+         id="g948"
+         clip-path="url(#clipPath952)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,434.47)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text956"><tspan
+             x="0"
+             y="0"
+             id="tspan954">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g958">
+      <g
+         id="g960"
+         clip-path="url(#clipPath964)" />
+    </g>
+    <g
+       id="g966">
+      <g
+         id="g968"
+         clip-path="url(#clipPath972)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,139.1,434.47)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text976"><tspan
+             x="0 7.9200001 10.92 16.200001 22.200001 27.48 32.868 38.147999 43.812 46.812 52.068001 58.068001 64.536003 70.536003 76.536003 82.199997 88.199997 96.456001 102.684 107.964 116.952 126.192 131.472 137.94 140.94 147.048 153.048 159.048 164.808 172.368 177.64799 184.116 189.36 194.688 201.144 207.612 214.08 217.08 223.08 229.08 235.06799 243.36 249.828 257.892 260.892 266.508 272.616 278.616 284.616 291.08401 296.328 301.76401"
+             y="0"
+             id="tspan974">В состав сопровождающей документации должны входить:</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g978">
+      <g
+         id="g980"
+         clip-path="url(#clipPath984)" />
+    </g>
+    <g
+       id="g986">
+      <g
+         id="g988"
+         clip-path="url(#clipPath992)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text996"><tspan
+             x="0 6"
+             y="0"
+             id="tspan994">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g998">
+      <g
+         id="g1000"
+         clip-path="url(#clipPath1004)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1008"><tspan
+             x="0"
+             y="0"
+             id="tspan1006">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1010">
+      <g
+         id="g1012"
+         clip-path="url(#clipPath1016)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,136.1,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1020"><tspan
+             x="0 3"
+             y="0"
+             id="tspan1018">.1</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1022">
+      <g
+         id="g1024"
+         clip-path="url(#clipPath1028)" />
+    </g>
+    <g
+       id="g1030">
+      <g
+         id="g1032"
+         clip-path="url(#clipPath1036)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,148.1,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1040"><tspan
+             x="0 6.7080002 11.988 17.268 23.268 28.548 33.792 40.296001"
+             y="0"
+             id="tspan1038">Расчетно</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1042">
+      <g
+         id="g1044"
+         clip-path="url(#clipPath1048)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,194.45,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1052"><tspan
+             x="0"
+             y="0"
+             id="tspan1050">-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1054">
+      <g
+         id="g1056"
+         clip-path="url(#clipPath1060)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,198.41,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1064"><tspan
+             x="0 6.4679999 12.468 17.988001 23.268 29.736 36.203999 41.363998 46.644001 52.632 58.152 64.620003 69.900002 75.419998 78.419998 83.208 88.487999 94.956001 101.424 106.704 112.572 117.852 120.852 127.32 132.60001 135.60001 141.60001"
+             y="0"
+             id="tspan1062">пояснительная записка на 25</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1066">
+      <g
+         id="g1068"
+         clip-path="url(#clipPath1072)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,346.15,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1076"><tspan
+             x="0"
+             y="0"
+             id="tspan1074">-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1078">
+      <g
+         id="g1080"
+         clip-path="url(#clipPath1084)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,350.11,406.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1088"><tspan
+             x="0 6 11.88 14.88 20.868 27.348 32.627998 37.872002 43.200001 49.296001 52.296001 60.071999 66.071999 72.071999 79.667999 84.935997 90.18 95.508003 98.508003 107.136 113.136 116.136 120.132 126.24 131.496 136.284 139.284 145.752 151.752 158.112 164.10001 170.10001 178.392 183.672"
+             y="0"
+             id="tspan1086">30 листах формата А4 (без приложе-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1090">
+      <g
+         id="g1092"
+         clip-path="url(#clipPath1096)" />
+    </g>
+    <g
+       id="g1098">
+      <g
+         id="g1100"
+         clip-path="url(#clipPath1104)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1108"><tspan
+             x="0 6.4679999 12.936 19.403999 22.403999 28.403999"
+             y="0"
+             id="tspan1106">ний 5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1110">
+      <g
+         id="g1112"
+         clip-path="url(#clipPath1116)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,116.54,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1120"><tspan
+             x="0"
+             y="0"
+             id="tspan1118">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1122">
+      <g
+         id="g1124"
+         clip-path="url(#clipPath1128)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,122.54,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1132"><tspan
+             x="0 3"
+             y="0"
+             id="tspan1130">.2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1134">
+      <g
+         id="g1136"
+         clip-path="url(#clipPath1140)" />
+    </g>
+    <g
+       id="g1142">
+      <g
+         id="g1144"
+         clip-path="url(#clipPath1148)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,134.42,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1152"><tspan
+             x="0 6.4679999 9.4680004 15.468"
+             y="0"
+             id="tspan1150">и 5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1154">
+      <g
+         id="g1156"
+         clip-path="url(#clipPath1160)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,152.9,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1164"><tspan
+             x="0"
+             y="0"
+             id="tspan1162">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1166">
+      <g
+         id="g1168"
+         clip-path="url(#clipPath1172)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,158.9,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1176"><tspan
+             x="0"
+             y="0"
+             id="tspan1174">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1178">
+      <g
+         id="g1180"
+         clip-path="url(#clipPath1184)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,161.9,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1188"><tspan
+             x="0"
+             y="0"
+             id="tspan1186">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1190">
+      <g
+         id="g1192"
+         clip-path="url(#clipPath1196)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,167.9,379.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1200"><tspan
+             x="0 3.96"
+             y="0"
+             id="tspan1198">).</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1202">
+      <g
+         id="g1204"
+         clip-path="url(#clipPath1208)" />
+    </g>
+    <g
+       id="g1210">
+      <g
+         id="g1212"
+         clip-path="url(#clipPath1216)" />
+    </g>
+    <g
+       id="g1218">
+      <g
+         id="g1220"
+         clip-path="url(#clipPath1224)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1228"><tspan
+             x="0 6"
+             y="0"
+             id="tspan1226">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1230">
+      <g
+         id="g1232"
+         clip-path="url(#clipPath1236)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1240"><tspan
+             x="0"
+             y="0"
+             id="tspan1238">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1242">
+      <g
+         id="g1244"
+         clip-path="url(#clipPath1248)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,136.1,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1252"><tspan
+             x="0 3"
+             y="0"
+             id="tspan1250">.2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1254">
+      <g
+         id="g1256"
+         clip-path="url(#clipPath1260)" />
+    </g>
+    <g
+       id="g1262">
+      <g
+         id="g1264"
+         clip-path="url(#clipPath1268)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,148.1,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1272"><tspan
+             x="0 7.3319998 12.6 18.708 25.176001 31.643999 37.644001 42.924 48.203999 54.071999 60.071999 65.351997 68.351997 73.139999 78.419998 84.528 89.82 96.288002 102.756 108.036 111.036 115.032 123.636 129.636 136.104 142.092 148.092 156.384 161.664 168.132 174.60001 179.88"
+             y="0"
+             id="tspan1270">Техническое задание (Приложение </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1274">
+      <g
+         id="g1276"
+         clip-path="url(#clipPath1280)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,331.15,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1284"><tspan
+             x="0"
+             y="0"
+             id="tspan1282">А</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1286">
+      <g
+         id="g1288"
+         clip-path="url(#clipPath1292)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,339.79,351.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1296"><tspan
+             x="0 3.96"
+             y="0"
+             id="tspan1294">).</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1298">
+      <g
+         id="g1300"
+         clip-path="url(#clipPath1304)" />
+    </g>
+    <g
+       id="g1306">
+      <g
+         id="g1308"
+         clip-path="url(#clipPath1312)" />
+    </g>
+    <g
+       id="g1314">
+      <g
+         id="g1316"
+         clip-path="url(#clipPath1320)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1324"><tspan
+             x="0 6"
+             y="0"
+             id="tspan1322">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1326">
+      <g
+         id="g1328"
+         clip-path="url(#clipPath1332)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1336"><tspan
+             x="0"
+             y="0"
+             id="tspan1334">2</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1338">
+      <g
+         id="g1340"
+         clip-path="url(#clipPath1344)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,136.1,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1348"><tspan
+             x="0 3"
+             y="0"
+             id="tspan1346">.3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1350">
+      <g
+         id="g1352"
+         clip-path="url(#clipPath1356)" />
+    </g>
+    <g
+       id="g1358">
+      <g
+         id="g1360"
+         clip-path="url(#clipPath1364)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,148.1,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1368"><tspan
+             x="0 6.8280001 12.468 18.336 24.336 30 36 42.203999 47.484001 52.728001 58.391998 64.391998"
+             y="0"
+             id="tspan1366">Руководство </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1370">
+      <g
+         id="g1372"
+         clip-path="url(#clipPath1376)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,215.57,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1380"><tspan
+             x="0 6.4679999 12.468 18.468 23.388 29.388 34.667999 42.228001 49.787998 56.256001 61.535999 66.779999"
+             y="0"
+             id="tspan1378">программиста</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1382">
+      <g
+         id="g1384"
+         clip-path="url(#clipPath1388)" />
+    </g>
+    <g
+       id="g1390">
+      <g
+         id="g1392"
+         clip-path="url(#clipPath1396)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,290.69,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1400"><tspan
+             x="0 3.9960001 12.6 18.6 25.068001 31.056 37.056 45.348 50.627998 57.096001 63.563999 68.952003"
+             y="0"
+             id="tspan1398">(Приложение </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1402">
+      <g
+         id="g1404"
+         clip-path="url(#clipPath1408)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,362.71,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1412"><tspan
+             x="0"
+             y="0"
+             id="tspan1410">Б</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1414">
+      <g
+         id="g1416"
+         clip-path="url(#clipPath1420)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,369.55,324.05)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1424"><tspan
+             x="0 3.96"
+             y="0"
+             id="tspan1422">).</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1426">
+      <g
+         id="g1428"
+         clip-path="url(#clipPath1432)" />
+    </g>
+    <g
+       id="g1434">
+      <g
+         id="g1436"
+         clip-path="url(#clipPath1440)" />
+    </g>
+    <g
+       id="g1442">
+      <g
+         id="g1444"
+         clip-path="url(#clipPath1448)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1452"><tspan
+             x="0 6"
+             y="0"
+             id="tspan1450">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1454">
+      <g
+         id="g1456"
+         clip-path="url(#clipPath1460)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1464"><tspan
+             x="0"
+             y="0"
+             id="tspan1462">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1466">
+      <g
+         id="g1468"
+         clip-path="url(#clipPath1472)" />
+    </g>
+    <g
+       id="g1474">
+      <g
+         id="g1476"
+         clip-path="url(#clipPath1480)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,139.1,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1484"><tspan
+             x="0 6.9359999 12.936 18.264 26.040001 32.507999 38.507999 43.787998 49.068001 54.936001 60.216 65.736 68.736 74.736 80.124001 85.403999 90.648003 96.192001 99.192001 105.3 111.3 117.288 125.58 132.06 137.34 140.34 146.448 154.51199 159.756 165.28799 168.28799 173.952 179.784 185.79601 194.784 200.784 206.064 212.532 217.812 220.692 226.356 229.356 235.356 240.612 245.892 252 257.28 262.52399 269.02802"
+             y="0"
+             id="tspan1482">Графическая часть должна быть включена в расчетно</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1486">
+      <g
+         id="g1488"
+         clip-path="url(#clipPath1492)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,414.31,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1496"><tspan
+             x="0"
+             y="0"
+             id="tspan1494">-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1498">
+      <g
+         id="g1500"
+         clip-path="url(#clipPath1504)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,418.27,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1508"><tspan
+             x="0 6.4679999 12.468 17.988001 23.268 29.736 36.203999 41.448002 46.776001 52.764 58.164001 64.751999 70.391998 79.379997"
+             y="0"
+             id="tspan1506">пояснительную </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1510">
+      <g
+         id="g1512"
+         clip-path="url(#clipPath1516)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,500.74,296.45)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1520"><tspan
+             x="0 4.7880001 10.068 16.535999 23.004 28.284 34.271999 40.032001 43.032001 48.695999"
+             y="0"
+             id="tspan1518">записку в </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1522">
+      <g
+         id="g1524"
+         clip-path="url(#clipPath1528)" />
+    </g>
+    <g
+       id="g1530">
+      <g
+         id="g1532"
+         clip-path="url(#clipPath1536)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,268.85)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1540"><tspan
+             x="0 5.868 11.148 17.148001 22.427999 27.708 32.952 38.616001 43.908001 46.908001 53.375999 59.363998 65.351997 74.363998 79.643997 84.888 90.888 96.216003 102.672 109.14 115.608"
+             y="0"
+             id="tspan1538">качестве иллюстраций:</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1542">
+      <g
+         id="g1544"
+         clip-path="url(#clipPath1548)" />
+    </g>
+    <g
+       id="g1550">
+      <g
+         id="g1552"
+         clip-path="url(#clipPath1556)" />
+    </g>
+    <g
+       id="g1558">
+      <g
+         id="g1560"
+         clip-path="url(#clipPath1564)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,241.25)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1568"><tspan
+             x="0 6 9 15 18 24 27 35.028 41.136002 46.416 53.976002 59.256001 62.256001 67.536003 72.779999 78.924004 84.564003 90.431999 95.940002 101.7 107.7 114.168 119.556 125.076 128.076 134.54401 140.54401 146.54401 151.464 157.464 162.744 170.304 177.864 184.332 190.332 195.252 201.252 204.252 210.252 216.36 221.65199 226.93201 233.39999 238.78799 244.78799 250.06799 256.53601 263.004"
+             y="0"
+             id="tspan1566">5.3.1 Схема структурная программного обеспечения</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1570">
+      <g
+         id="g1572"
+         clip-path="url(#clipPath1576)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,389.83,241.25)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1580"><tspan
+             x="0"
+             y="0"
+             id="tspan1578">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1582">
+      <g
+         id="g1584"
+         clip-path="url(#clipPath1588)" />
+    </g>
+    <g
+       id="g1590">
+      <g
+         id="g1592"
+         clip-path="url(#clipPath1596)" />
+    </g>
+    <g
+       id="g1598">
+      <g
+         id="g1600"
+         clip-path="url(#clipPath1604)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,213.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1608"><tspan
+             x="0 6 9 15 18 24 27 35.028 41.136002 46.416"
+             y="0"
+             id="tspan1606">5.3.2 Схем</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1610">
+      <g
+         id="g1612"
+         clip-path="url(#clipPath1616)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,175.1,213.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1620"><tspan
+             x="0"
+             y="0"
+             id="tspan1618">ы</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1622">
+      <g
+         id="g1624"
+         clip-path="url(#clipPath1628)" />
+    </g>
+    <g
+       id="g1630">
+      <g
+         id="g1632"
+         clip-path="url(#clipPath1636)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,186.14,213.65)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1640"><tspan
+             x="0 5.2800002 11.268 16.188 22.188 28.188 34.667999 39.911999 47.507999 53.388 59.051998"
+             y="0"
+             id="tspan1638">алгоритмов.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1642">
+      <g
+         id="g1644"
+         clip-path="url(#clipPath1648)" />
+    </g>
+    <g
+       id="g1650">
+      <g
+         id="g1652"
+         clip-path="url(#clipPath1656)" />
+    </g>
+    <g
+       id="g1658">
+      <g
+         id="g1660"
+         clip-path="url(#clipPath1664)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,186.02)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1668"><tspan
+             x="0 6 9 15 18 24 27 36.588001 42.348 48.816002 54.683998 61.152 67.620003 73.620003 80.087997 85.367996 91.356003 96.767998 103.236 108.516 114.036 117.036 123.144 129.62399 134.90401 139.82401 145.82401 151.104 158.664 166.224 171.504 174.504 180.972 186.972 192.972 197.892 203.892 209.172 216.84 224.39999 230.868 236.868 241.78799 247.78799 250.78799 256.78799 262.896 268.18799 273.46799 279.936 285.216 291.216 296.496 302.96399 309.43201 314.952"
+             y="0"
+             id="tspan1666">5.3.3 Функциональная диаграмма программного обеспечения.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1670">
+      <g
+         id="g1672"
+         clip-path="url(#clipPath1676)" />
+    </g>
+    <g
+       id="g1678">
+      <g
+         id="g1680"
+         clip-path="url(#clipPath1684)" />
+    </g>
+    <g
+       id="g1686">
+      <g
+         id="g1688"
+         clip-path="url(#clipPath1692)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,158.42)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1696"><tspan
+             x="0 6 9 15 18 24 27 35.028 41.495998 47.855999 53.099998 58.428001 64.260002 69.587997 76.043999 82.043999 87.323997 92.603996 98.472 103.752 109.272 112.272 118.38 124.86 130.14 135.06 141.06 146.34 153.89999 161.46001 166.74001"
+             y="0"
+             id="tspan1694">5.3.4 Синтаксическая диаграмма </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1698">
+      <g
+         id="g1700"
+         clip-path="url(#clipPath1704)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,290.93,158.42)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1708"><tspan
+             x="0 4.9200001 11.028 16.308001 23.868 31.535999 36.816002 42.060001 48.563999 54.431999 60.900002"
+             y="0"
+             id="tspan1706">грамматики </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1710">
+      <g
+         id="g1712"
+         clip-path="url(#clipPath1716)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,354.91,158.42)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1720"><tspan
+             x="0 6.3600001 11.64 17.747999 23.747999 29.856001 36.335999 42.335999 47.256001 53.256001 56.256001 61.655998 66.444 74.508003 80.339996 85.667999"
+             y="0"
+             id="tspan1718">исходного языка.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1722">
+      <g
+         id="g1724"
+         clip-path="url(#clipPath1728)" />
+    </g>
+    <g
+       id="g1730">
+      <g
+         id="g1732"
+         clip-path="url(#clipPath1736)" />
+    </g>
+    <g
+       id="g1738">
+      <g
+         id="g1740"
+         clip-path="url(#clipPath1744)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,130.82)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1748"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan1746">5.3.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1750">
+      <g
+         id="g1752"
+         clip-path="url(#clipPath1756)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,139.1,130.82)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1760"><tspan
+             x="0 6 9 17.184 23.628 28.908001 33.827999 39.827999 45.108002 52.667999 60.335999 65.615997"
+             y="0"
+             id="tspan1758">5 Диаграмма </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1762">
+      <g
+         id="g1764"
+         clip-path="url(#clipPath1768)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,207.77,130.82)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1772"><tspan
+             x="0 5.664 10.92 16.92 23.388 28.667999 35.256001 40.5 46.5 52.164001 55.164001 61.644001 66.924004 73.391998 79.391998 85.379997 90.792 95.580002 101.58 107.244 112.5 118.968 125.436"
+             y="0"
+             id="tspan1770">вариантов использования</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1774">
+      <g
+         id="g1776"
+         clip-path="url(#clipPath1780)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,338.83,130.82)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1784"><tspan
+             x="0"
+             y="0"
+             id="tspan1782">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1786">
+      <g
+         id="g1788"
+         clip-path="url(#clipPath1792)" />
+    </g>
+    <g
+       id="g1794">
+      <g
+         id="g1796"
+         clip-path="url(#clipPath1800)" />
+    </g>
+    <g
+       id="g1802">
+      <g
+         id="g1804"
+         clip-path="url(#clipPath1808)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,103.22)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1812"><tspan
+             x="0 6 9 15 18 24 26.52 34.548 41.015999 47.375999 52.619999 57.948002 63.779999 69.108002 75.564003 81.564003 86.844002 92.124001 97.991997 103.272 108.792 111.312 117.42 123.9 129.17999 134.10001 140.10001 145.38 152.94 160.5 165.78"
+             y="0"
+             id="tspan1810">5.3.6 Синтаксическая диаграмма </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1814">
+      <g
+         id="g1816"
+         clip-path="url(#clipPath1820)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,289.49,103.22)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1824"><tspan
+             x="0 5.868 11.868 18.336 23.615999 29.615999 35.604 41.124001 47.591999 53.591999 58.512001 64.512001"
+             y="0"
+             id="tspan1822">консольного </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1826">
+      <g
+         id="g1828"
+         clip-path="url(#clipPath1832)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,356.59,103.22)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1836"><tspan
+             x="0 6.4679999 12.936 18.18 23.507999 29.507999 37.284 42.576 49.043999 54.324001 59.604 62.124001 68.592003 74.592003 81.059998 87.047997 93.047997 101.34 106.62 112.98 119.34 124.86 127.38 133.04401"
+             y="0"
+             id="tspan1834">интерфейса приложения в </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1838">
+      <g
+         id="g1840"
+         clip-path="url(#clipPath1844)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,492.22,103.22)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1848"><tspan
+             x="0 5.664 12.108 18.216"
+             y="0"
+             id="tspan1846">виде</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1850">
+      <g
+         id="g1852"
+         clip-path="url(#clipPath1856)" />
+    </g>
+    <g
+       id="g1858">
+      <g
+         id="g1860"
+         clip-path="url(#clipPath1864)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,518.26,103.22)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1868"><tspan
+             x="0 6.7080002 13.548 22.212 31.691999"
+             y="0"
+             id="tspan1866">РБНФ.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1870">
+      <g
+         id="g1872"
+         clip-path="url(#clipPath1876)" />
+    </g>
+    <g
+       id="g1878">
+      <g
+         id="g1880"
+         clip-path="url(#clipPath1884)" />
+    </g>
+    <g
+       id="g1886">
+      <g
+         id="g1888"
+         clip-path="url(#clipPath1892)" />
+    </g>
+    <g
+       id="g1894">
+      <g
+         id="g1896"
+         clip-path="url(#clipPath1900)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,75.624)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1904"><tspan
+             x="0 6"
+             y="0"
+             id="tspan1902">5.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1906">
+      <g
+         id="g1908"
+         clip-path="url(#clipPath1912)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,130.1,75.624)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1916"><tspan
+             x="0"
+             y="0"
+             id="tspan1914">3</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1918">
+      <g
+         id="g1920"
+         clip-path="url(#clipPath1924)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,136.1,75.624)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1928"><tspan
+             x="0"
+             y="0"
+             id="tspan1926">.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1930">
+      <g
+         id="g1932"
+         clip-path="url(#clipPath1936)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,139.1,75.624)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1940"><tspan
+             x="0"
+             y="0"
+             id="tspan1938">7</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1942">
+      <g
+         id="g1944"
+         clip-path="url(#clipPath1948)" />
+    </g>
+    <g
+       id="g1950">
+      <g
+         id="g1952"
+         clip-path="url(#clipPath1956)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,148.1,75.624)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text1960"><tspan
+             x="0 7.3319998 12.6 18.708 24.695999 31.188 37.655998 45.720001 48.720001 53.964001 59.256001 64.536003 69.779999 75.779999 81.444"
+             y="0"
+             id="tspan1958">Таблицы тестов.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g1962">
+      <g
+         id="g1964"
+         clip-path="url(#clipPath1968)" />
+    </g>
+    <g
+       id="g1970">
+      <g
+         id="g1972"
+         clip-path="url(#clipPath1976)" />
+    </g>
+    <g
+       id="g1978">
+      <g
+         id="g1980"
+         clip-path="url(#clipPath1984)" />
+    </g>
+  </g>
+</svg>

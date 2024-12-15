@@ -13,3 +13,6 @@
 [submodule "oop-exam"]
 	path = oop-exam
 	url = https://github.com/vzalygin/oop-exam.git
+[submodule "cource-papers/trps/рпз/материалы/приватно"]
+	path = cource-papers/trps/рпз/материалы/приватно
+	url = https://github.com/vzalygin/bmstu-ics6-private

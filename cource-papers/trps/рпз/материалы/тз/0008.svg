@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="793.76001"
+   height="1122.5601"
+   viewBox="0 0 793.76001 1122.5601"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath16">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path14" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath24">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path22" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath32">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path30" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath44">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path42" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath52">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path50" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath64">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path62" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath72">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path70" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath84">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path82" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath96">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path94" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath104">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path102" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath112">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path110" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath124">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path122" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath132">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path130" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath144">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path142" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath156">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path154" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath164">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path162" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath172">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path170" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath184">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path182" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath192">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path190" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath204">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path202" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath216">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path214" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath224">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path222" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath232">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path230" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath244">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path242" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath256">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path254" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath268">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path266" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath276">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path274" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath288">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path286" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath296">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path294" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath308">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path306" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath320">
+      <path
+         d="M 8.871e-6,0 H 595.32001 V 841.92 H 8.871e-6 Z"
+         clip-rule="evenodd"
+         id="path318" />
+    </clipPath>
+  </defs>
+  <g
+     id="g8"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,1122.56)">
+    <g
+       id="g10">
+      <g
+         id="g12"
+         clip-path="url(#clipPath16)" />
+    </g>
+    <g
+       id="g18">
+      <g
+         id="g20"
+         clip-path="url(#clipPath24)" />
+    </g>
+    <g
+       id="g26">
+      <g
+         id="g28"
+         clip-path="url(#clipPath32)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,215.81,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text36"><tspan
+             x="0 6 9 17.664 26.280001 32.987999 41.015999 49.200001 57.816002 65.844002 68.844002 76.872002 85.536003 94.152 101.484 108.18 116.844 124.98 133.008 136.008"
+             y="0"
+             id="tspan34">7 ПОРЯДОК КОНТРОЛЯ И</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g38">
+      <g
+         id="g40"
+         clip-path="url(#clipPath44)" />
+    </g>
+    <g
+       id="g46">
+      <g
+         id="g48"
+         clip-path="url(#clipPath52)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,363.55,774.12)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text56"><tspan
+             x="0 8.6639996 15.336 24 31.332001 42 50.028"
+             y="0"
+             id="tspan54">ПРИЕМКИ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g58">
+      <g
+         id="g60"
+         clip-path="url(#clipPath64)" />
+    </g>
+    <g
+       id="g66">
+      <g
+         id="g68"
+         clip-path="url(#clipPath72)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,740.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text76"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan74">7.1 </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g78">
+      <g
+         id="g80"
+         clip-path="url(#clipPath84)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,740.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text88"><tspan
+             x="0 10.668 18.695999 26.724001 34.152 42.299999 50.208 58.116001 63.023998 70.931999 78.839996 87.348 94.536003 102.444 110.472 118.5"
+             y="0"
+             id="tspan86">Порядок контроля</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g90">
+      <g
+         id="g92"
+         clip-path="url(#clipPath96)" />
+    </g>
+    <g
+       id="g98">
+      <g
+         id="g100"
+         clip-path="url(#clipPath104)" />
+    </g>
+    <g
+       id="g106">
+      <g
+         id="g108"
+         clip-path="url(#clipPath112)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,706.9)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text116"><tspan
+             x="0 8.0279999 14.028 20.496 25.74 31.74 37.740002 43.655998 49.164001 52.164001 57.827999 65.844002 72.311996 78.311996 84.300003 90.779999 96.059998 102.42 108.888 114.408 117.288 123.288 128.67599 134.436 143.784 149.064 154.34399 159.588 165.252 171.24001 176.75999 182.088 187.332 192.62399 198.144 201.144 207.37199 213.132 219 225 230.664 236.748 242.856 249.336 254.58 259.90799 265.896 271.17599 278.73599 281.73599 287.01599 295.30801 300.57599 307.04401 312.32401 318.43201 323.724 329.71201 335.23199 341.70001 347.70001"
+             y="0"
+             id="tspan114">Контроль выполнения осуществляется руководителем еженедельно.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g118">
+      <g
+         id="g120"
+         clip-path="url(#clipPath124)" />
+    </g>
+    <g
+       id="g126">
+      <g
+         id="g128"
+         clip-path="url(#clipPath132)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,673.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text136"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan134">7.2 </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g138">
+      <g
+         id="g140"
+         clip-path="url(#clipPath144)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,673.3)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text148"><tspan
+             x="0 10.668 18.695999 26.724001 34.152 42.299999 50.208 58.116001 63.023998 69.851997 77.160004 88.307999 96.816002 104.004"
+             y="0"
+             id="tspan146">Порядок защиты</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g150">
+      <g
+         id="g152"
+         clip-path="url(#clipPath156)" />
+    </g>
+    <g
+       id="g158">
+      <g
+         id="g160"
+         clip-path="url(#clipPath164)" />
+    </g>
+    <g
+       id="g166">
+      <g
+         id="g168"
+         clip-path="url(#clipPath172)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,639.7)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text176"><tspan
+             x="0 6.0120001 11.28 20.52 26.988001 32.231998 37.560001 40.560001 46.560001 52.056 57.816002 67.056 72.335999 77.615997 82.860001 88.524002 94.512001 100.164 105.444 110.688 116.016 121.632 124.632 130.5 136.5 144.06 150.528 155.808 161.088 167.556 174.024 177.024 183.492 189.492 194.772 201.24001 207.24001 213.34801 218.64 224.304 229.56 234.804 240.132 246.12 251.39999 257.86801 260.86801 266.73599 272.01599 279.79199 285.12 291.228 297.228 305.25601"
+             y="0"
+             id="tspan174">Защита осуществляется комиссии преподавателей кафедры.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g178">
+      <g
+         id="g180"
+         clip-path="url(#clipPath184)" />
+    </g>
+    <g
+       id="g186">
+      <g
+         id="g188"
+         clip-path="url(#clipPath192)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,120.5,606.1)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text196"><tspan
+             x="0 6 9 15"
+             y="0"
+             id="tspan194">7.3 </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g198">
+      <g
+         id="g200"
+         clip-path="url(#clipPath204)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,138.5,606.1)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text208"><tspan
+             x="0 10.068 18.096001 26.004 33.911999 38.82 45.647999 52.956001 64.103996 72.491997 79.800003"
+             y="0"
+             id="tspan206">Срок защиты</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g210">
+      <g
+         id="g212"
+         clip-path="url(#clipPath216)" />
+    </g>
+    <g
+       id="g218">
+      <g
+         id="g220"
+         clip-path="url(#clipPath224)" />
+    </g>
+    <g
+       id="g226">
+      <g
+         id="g228"
+         clip-path="url(#clipPath232)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,572.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text236"><tspan
+             x="0 8.0279999 14.028 20.028 25.896 28.896 33.683998 38.964001 48.203999 54.563999 59.807999 67.872002 71.232002 74.232002 80.232002"
+             y="0"
+             id="tspan234">Срок защиты: 15</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g238">
+      <g
+         id="g240"
+         clip-path="url(#clipPath244)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,207.41,572.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text248"><tspan
+             x="0"
+             y="0"
+             id="tspan246">-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g250">
+      <g
+         id="g252"
+         clip-path="url(#clipPath256)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,211.37,572.5)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text260"><tspan
+             x="0 6 12 15 21.468 26.747999 32.855999 38.147999 44.136002 50.616001"
+             y="0"
+             id="tspan258">16 недели.</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g262">
+      <g
+         id="g264"
+         clip-path="url(#clipPath268)" />
+    </g>
+    <g
+       id="g270">
+      <g
+         id="g272"
+         clip-path="url(#clipPath276)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,272.93,526.87)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text280"><tspan
+             x="0 6 9 17.664 24.336 33 43.667999 51 58.799999 67.463997 76.080002 84.744003"
+             y="0"
+             id="tspan278">8 ПРИМЕЧАНИЕ</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g282">
+      <g
+         id="g284"
+         clip-path="url(#clipPath288)" />
+    </g>
+    <g
+       id="g290">
+      <g
+         id="g292"
+         clip-path="url(#clipPath296)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,121.1,493.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text300"><tspan
+             x="0 7.9200001"
+             y="0"
+             id="tspan298">В </tspan></text>
+      </g>
+    </g>
+    <g
+       id="g302">
+      <g
+         id="g304"
+         clip-path="url(#clipPath308)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,132.5,493.27)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text312"><tspan
+             x="0 6.4679999 12.468 18.468 24.936001 30.216 35.495998 40.776001 46.056 49.523998 55.271999 63.335999 69.779999 75.779999 81.767998 88.248001 93.528 99.996002 106.356 111.876 115.344 121.344 126.624 132.73199 138.73199 144.01199 152.076 155.52 161.18401 167.18401 171.948 179.508 185.508 193.8 200.256 206.256 209.84399 215.48399 220.728 226.87199 232.87199 239.34 244.62 251.088 257.556 262.836 266.30399 272.30399 277.548 283.69199 288.97198 294.95999 300.48001 306.948 314.86801 320.97601 324.32401 329.56799 335.56799 340.896 347.004 353.004 358.668 363.92401 370.392 376.85999 383.328 386.79599 392.04001 397.23599 403.34399 409.70401 416.172"
+             y="0"
+             id="tspan310">процессе выполнения работы возможно уточнение отдельных требований техни-</tspan></text>
+      </g>
+    </g>
+    <g
+       id="g314">
+      <g
+         id="g316"
+         clip-path="url(#clipPath320)">
+        <text
+           xml:space="preserve"
+           transform="matrix(1,0,0,-1,85.104,465.67)"
+           style="font-variant:normal;font-weight:normal;font-size:12px;font-family:'Times New Roman';-inkscape-font-specification:TimesNewRomanPSMT;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="text324"><tspan
+             x="0 6 11.28 16.559999 22.427999 28.427999 33.348 39.348 42.348 47.136002 52.416 58.523998 63.816002 70.283997 76.751999 82.272003 85.272003 91.739998 97.739998 100.74 106.404 111.168 116.448 122.916 130.476 136.944 142.944 150.612 156.37199 159.37199 164.65199 170.65199 175.57201 181.56 186.96001 192.24001 198.24001 203.90401 209.16 215.62801 222.09599 231.084 234.084 240.192 245.952 251.82001 257.82001 263.48401 269.48401 275.59201 282.048 287.29199 292.62 298.608 304.12799 307.12799 313.59601 316.59601 323.064 328.34399 334.81201 340.81201 346.79999 353.172 359.64001 364.884 370.21201 376.20001"
+             y="0"
+             id="tspan322">ческого задания по взаимному согласованию руководителя и исполнителя</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
