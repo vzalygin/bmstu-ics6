@@ -23,6 +23,8 @@
 
 #include "разделы/заключение.typ"
 
+#bibliography("bibliography.yml")
+
 #include "разделы/приложение_а.typ"
 
 #include "разделы/приложение_б.typ"
