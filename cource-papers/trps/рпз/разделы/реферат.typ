@@ -1,9 +1,9 @@
 = реферат 
 
-#let страницы = context counter(page).final().at(0)
+#let страницы = 39
 #let рисунки = context counter(figure.where(kind: image)).final().at(0)
 #let таблицы = context counter(figure.where(kind: table)).final().at(0)
-#let источники = 0
+#let источники = 8
 #let приложения = 2
 
 Расчетно-пояснительная записка состоит из #страницы страниц, включающих в себя #рисунки рисунков, #таблицы таблиц, #источники источников и #приложения приложения.
