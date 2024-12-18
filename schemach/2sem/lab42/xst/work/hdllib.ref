@@ -1,0 +1,6 @@
+MO main_test NULL main1.v vlg74/main__test.bin 1733469172
+MO seven_segment_driver NULL seven_segment_driver.v vlg56/seven__segment__driver.bin 1733469172
+MO automata NULL automata.v vlg04/automata.bin 1733469172
+MO main NULL main.v vlg2D/main.bin 1733469172
+MO lab2_example NULL lab2_example.v vlg44/lab2__example.bin 1731049157
+MO led_decode NULL led_decode.v vlg1C/led__decode.bin 1733469172

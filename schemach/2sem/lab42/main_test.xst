@@ -1,0 +1,5 @@
+set -tmpdir "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/xst/projnav.tmp"
+set -xsthdpdir "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/xst"
+elaborate
+-ifn main_test.prj
+-ifmt mixed

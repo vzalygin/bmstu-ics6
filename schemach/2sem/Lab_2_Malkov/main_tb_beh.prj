@@ -1,0 +1,7 @@
+verilog work "seven_segment_driver.v"
+verilog work "led_decode.v"
+verilog work "lab3.v"
+verilog work "lab2_example.v"
+verilog work "main.v"
+verilog work "main_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

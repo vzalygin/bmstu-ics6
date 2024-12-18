@@ -51,9 +51,11 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="automata.unroutes" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="automata.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="automata.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="automata_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="automata_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="automata_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="automata_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="automata_isim_beh.wdb"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="automata_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="automata_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="automata_map.ncd" xil_pn:subbranch="Map"/>
@@ -66,9 +68,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="automata_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="automata_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="automata_summary.xml"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="automata_test_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="automata_test_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="automata_test_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="automata_test_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="automata_usage.xml"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="automata_xst.xrpt"/>
@@ -90,16 +90,22 @@
     <transform xil_pn:end_ts="1732258874" xil_pn:in_ck="-4517343394523969537" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1732258874">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="automata.v"/>
       <outfile xil_pn:name="automata_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1732255603" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8818931186877649650" xil_pn:start_ts="1732255603">
+    <transform xil_pn:end_ts="1733467112" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-1580667206718674189" xil_pn:start_ts="1733467112">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
-    <transform xil_pn:end_ts="1732255603" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-7155057942002977110" xil_pn:start_ts="1732255603">
+    <transform xil_pn:end_ts="1733467112" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3563507892485820245" xil_pn:start_ts="1733467112">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1732255555" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-8787652340213369689" xil_pn:start_ts="1732255555">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -108,25 +114,38 @@
     <transform xil_pn:end_ts="1732258874" xil_pn:in_ck="-4517343394523969537" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1732258874">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="automata.v"/>
       <outfile xil_pn:name="automata_test.v"/>
     </transform>
-    <transform xil_pn:end_ts="1732258878" xil_pn:in_ck="-4517343394523969537" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4811657461820466720" xil_pn:start_ts="1732258874">
+    <transform xil_pn:end_ts="1733467114" xil_pn:in_ck="-4517343394523969537" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="7299383431536727874" xil_pn:start_ts="1733467112">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="automata_test_beh.prj"/>
-      <outfile xil_pn:name="automata_test_isim_beh.exe"/>
+      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="automata_isim_beh.exe"/>
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1732258878" xil_pn:in_ck="-8520025108976819531" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8729954406072578791" xil_pn:start_ts="1732258878">
+    <transform xil_pn:end_ts="1733467114" xil_pn:in_ck="-8520025108976819531" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="2834883804328104777" xil_pn:start_ts="1733467114">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="automata_test_isim_beh.wdb"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
     </transform>
