@@ -1,11 +1,3 @@
-методичка:
-    type: Book
-    title: >-
-        Методические указания по выполнению курсовой работы по дисциплине «Технология разработки программных систем»: Электронное учебное издание.
-    author: ["Иванова Г.С.", "Ничушкина Т.Н.", "Пугачёв Е.К.", "Самарёв Р.С.", "Фетисов М.В."]
-    publisher:
-        name: МГТУ им. Н. Э. Баумана, 2021
-    page-total: 41
 технология-программирования:
     type: Book
     title: >-
@@ -53,3 +45,9 @@ cli-guidelines:
     url:
         value: https://clig.dev/
         date: 2024-10-06
+unix:
+    type: Web
+    title: Философия UNIX
+    url:
+        value: http://www.catb.org/esr/writings/taoup/html/ch01s06.html
+        date: 2024-10-03
