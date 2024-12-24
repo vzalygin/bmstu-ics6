@@ -1,4 +1,5 @@
-= реферат 
+= реферат
+#h(0.5em)
 
 #let страницы = 39
 #let рисунки = context counter(figure.where(kind: image)).final().at(0)
