@@ -1,0 +1,8 @@
+
+# PlanAhead Generated IO constraints 
+
+NET "state[1]" IOSTANDARD = LVCMOS25;
+NET "state[0]" IOSTANDARD = LVCMOS25;
+NET "clk" IOSTANDARD = LVCMOS25;
+NET "count" IOSTANDARD = LVCMOS25;
+NET "rst" IOSTANDARD = LVCMOS25;

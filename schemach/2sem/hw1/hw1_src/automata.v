@@ -1,6 +1,7 @@
 module automata(
 		input clk,
 		input rst,
+		input en,
 		input [7:0] U,
 		output reg [7:0] C
     );

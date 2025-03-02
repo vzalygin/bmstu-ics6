@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Nov 22 15:47:18 2024
+# Process ID: 2745
+# Log file: /home/user/lab3_sch/Lab_2_Malkov/planAhead_run_1/planAhead.log
+# Journal file: /home/user/lab3_sch/Lab_2_Malkov/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/user/lab3_sch/Lab_2_Malkov/pa.fromNetlist.tcl
+startgroup
+set_property package_pin K12 [get_ports {C_to_print[0]}]
+endgroup
+save_constraints

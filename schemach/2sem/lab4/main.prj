@@ -1,0 +1,4 @@
+verilog work "seven_segment_driver.v"
+verilog work "led_decode.v"
+verilog work "lab2_example.v"
+verilog work "main.v"
