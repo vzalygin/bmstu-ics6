@@ -38,5 +38,5 @@ module lab2_example (
 		else
 			counter <= counter + 1;
 
-	assign dly_ovf = (counter == 2**20); // 
+	assign dly_ovf = (counter == 2**5); // 
 endmodule 

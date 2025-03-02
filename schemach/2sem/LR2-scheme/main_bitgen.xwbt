@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/user/vzalygin/LR2-scheme/main.ncd
+OUTFILE=/home/user/vzalygin/LR2-scheme/main.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=/home/user/vzalygin/LR2-scheme
+LICENSE=WebPack
+USER_INFO=__0_0_0

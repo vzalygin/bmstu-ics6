@@ -26,7 +26,7 @@ static unsigned int ng1[] = {2U, 0U};
 static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {1, 0};
 static int ng4[] = {2, 0};
-static int ng5[] = {4, 0};
+static int ng5[] = {5, 0};
 
 
 

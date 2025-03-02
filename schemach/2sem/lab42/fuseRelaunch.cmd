@@ -1,1 +1,0 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/main_test_isim_beh.exe" -prj "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/main_test_beh.prj" "work.main_test" "work.glbl" 

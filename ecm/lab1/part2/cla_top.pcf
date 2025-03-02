@@ -1,0 +1,342 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Mar 01 21:02:30 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "en" LOCATE = SITE "A19" LEVEL 1;
+COMP "rst" LOCATE = SITE "H10" LEVEL 1;
+COMP "error" LOCATE = SITE "AH28" LEVEL 1;
+COMP "locked" LOCATE = SITE "AH27" LEVEL 1;
+COMP "user_clk" LOCATE = SITE "U23" LEVEL 1;
+TIMEGRP int_clk = BEL "logic_resetn_0" BEL "logic_resetn_1" BEL
+        "logic_resetn_2" BEL "logic_resetn_3" BEL "logic_resetn_4" BEL
+        "logic_resetn_5" BEL "logic_resetn_6" BEL "logic_resetn_7" BEL
+        "logic_resetn_8" BEL "logic_resetn_9" BEL "logic_resetn_10" BEL
+        "logic_resetn_11" BEL "logic_resetn_12" BEL "logic_resetn_13" BEL
+        "logic_resetn_14" BEL "logic_resetn_15" BEL "bufgctrl_clk" BEL
+        "cla_inst/sum_194" BEL "cla_inst/sum_193" BEL "cla_inst/sum_192" BEL
+        "cla_inst/sum_191" BEL "cla_inst/sum_190" BEL "cla_inst/sum_189" BEL
+        "cla_inst/sum_188" BEL "cla_inst/sum_187" BEL "cla_inst/sum_186" BEL
+        "cla_inst/sum_185" BEL "cla_inst/sum_184" BEL "cla_inst/sum_183" BEL
+        "cla_inst/sum_182" BEL "cla_inst/sum_181" BEL "cla_inst/sum_180" BEL
+        "cla_inst/sum_179" BEL "cla_inst/sum_178" BEL "cla_inst/sum_177" BEL
+        "cla_inst/sum_176" BEL "cla_inst/sum_175" BEL "cla_inst/sum_174" BEL
+        "cla_inst/sum_173" BEL "cla_inst/sum_172" BEL "cla_inst/sum_171" BEL
+        "cla_inst/sum_170" BEL "cla_inst/sum_169" BEL "cla_inst/sum_168" BEL
+        "cla_inst/sum_167" BEL "cla_inst/sum_166" BEL "cla_inst/sum_165" BEL
+        "cla_inst/sum_164" BEL "cla_inst/sum_163" BEL "cla_inst/sum_162" BEL
+        "cla_inst/sum_161" BEL "cla_inst/sum_160" BEL "cla_inst/sum_159" BEL
+        "cla_inst/sum_158" BEL "cla_inst/sum_157" BEL "cla_inst/sum_156" BEL
+        "cla_inst/sum_155" BEL "cla_inst/sum_154" BEL "cla_inst/sum_153" BEL
+        "cla_inst/sum_152" BEL "cla_inst/sum_151" BEL "cla_inst/sum_150" BEL
+        "cla_inst/sum_149" BEL "cla_inst/sum_148" BEL "cla_inst/sum_147" BEL
+        "cla_inst/sum_146" BEL "cla_inst/sum_145" BEL "cla_inst/sum_144" BEL
+        "cla_inst/sum_143" BEL "cla_inst/sum_142" BEL "cla_inst/sum_141" BEL
+        "cla_inst/sum_140" BEL "cla_inst/sum_139" BEL "cla_inst/sum_138" BEL
+        "cla_inst/sum_137" BEL "cla_inst/sum_136" BEL "cla_inst/sum_135" BEL
+        "cla_inst/sum_134" BEL "cla_inst/sum_133" BEL "cla_inst/sum_132" BEL
+        "cla_inst/sum_131" BEL "cla_inst/sum_130" BEL "cla_inst/sum_129" BEL
+        "cla_inst/sum_128" BEL "cla_inst/sum_127" BEL "cla_inst/sum_126" BEL
+        "cla_inst/sum_125" BEL "cla_inst/sum_124" BEL "cla_inst/sum_123" BEL
+        "cla_inst/sum_122" BEL "cla_inst/sum_121" BEL "cla_inst/sum_120" BEL
+        "cla_inst/sum_119" BEL "cla_inst/sum_118" BEL "cla_inst/sum_117" BEL
+        "cla_inst/sum_116" BEL "cla_inst/sum_115" BEL "cla_inst/sum_114" BEL
+        "cla_inst/sum_113" BEL "cla_inst/sum_112" BEL "cla_inst/sum_111" BEL
+        "cla_inst/sum_110" BEL "cla_inst/sum_109" BEL "cla_inst/sum_108" BEL
+        "cla_inst/sum_107" BEL "cla_inst/sum_106" BEL "cla_inst/sum_105" BEL
+        "cla_inst/sum_104" BEL "cla_inst/sum_103" BEL "cla_inst/sum_102" BEL
+        "cla_inst/sum_101" BEL "cla_inst/sum_100" BEL "cla_inst/sum_99" BEL
+        "cla_inst/sum_98" BEL "cla_inst/sum_97" BEL "cla_inst/sum_96" BEL
+        "cla_inst/sum_95" BEL "cla_inst/sum_94" BEL "cla_inst/sum_93" BEL
+        "cla_inst/sum_92" BEL "cla_inst/sum_91" BEL "cla_inst/sum_90" BEL
+        "cla_inst/sum_89" BEL "cla_inst/sum_88" BEL "cla_inst/sum_87" BEL
+        "cla_inst/sum_86" BEL "cla_inst/sum_85" BEL "cla_inst/sum_84" BEL
+        "cla_inst/sum_83" BEL "cla_inst/sum_82" BEL "cla_inst/sum_81" BEL
+        "cla_inst/sum_80" BEL "cla_inst/sum_79" BEL "cla_inst/sum_78" BEL
+        "cla_inst/sum_77" BEL "cla_inst/sum_76" BEL "cla_inst/sum_75" BEL
+        "cla_inst/sum_74" BEL "cla_inst/sum_73" BEL "cla_inst/sum_72" BEL
+        "cla_inst/sum_71" BEL "cla_inst/sum_70" BEL "cla_inst/sum_69" BEL
+        "cla_inst/sum_68" BEL "cla_inst/sum_67" BEL "cla_inst/sum_66" BEL
+        "cla_inst/sum_65" BEL "cla_inst/sum_64" BEL "cla_inst/sum_63" BEL
+        "cla_inst/sum_62" BEL "cla_inst/sum_61" BEL "cla_inst/sum_60" BEL
+        "cla_inst/sum_59" BEL "cla_inst/sum_58" BEL "cla_inst/sum_57" BEL
+        "cla_inst/sum_56" BEL "cla_inst/sum_55" BEL "cla_inst/sum_54" BEL
+        "cla_inst/sum_53" BEL "cla_inst/sum_52" BEL "cla_inst/sum_51" BEL
+        "cla_inst/sum_50" BEL "cla_inst/sum_49" BEL "cla_inst/sum_48" BEL
+        "cla_inst/sum_47" BEL "cla_inst/sum_46" BEL "cla_inst/sum_45" BEL
+        "cla_inst/sum_44" BEL "cla_inst/sum_43" BEL "cla_inst/sum_42" BEL
+        "cla_inst/sum_41" BEL "cla_inst/sum_40" BEL "cla_inst/sum_39" BEL
+        "cla_inst/sum_38" BEL "cla_inst/sum_37" BEL "cla_inst/sum_36" BEL
+        "cla_inst/sum_35" BEL "cla_inst/sum_34" BEL "cla_inst/sum_33" BEL
+        "cla_inst/sum_32" BEL "cla_inst/sum_31" BEL "cla_inst/sum_30" BEL
+        "cla_inst/sum_29" BEL "cla_inst/sum_28" BEL "cla_inst/sum_27" BEL
+        "cla_inst/sum_26" BEL "cla_inst/sum_25" BEL "cla_inst/sum_24" BEL
+        "cla_inst/sum_23" BEL "cla_inst/sum_22" BEL "cla_inst/sum_21" BEL
+        "cla_inst/sum_20" BEL "cla_inst/sum_19" BEL "cla_inst/sum_18" BEL
+        "cla_inst/sum_17" BEL "cla_inst/sum_16" BEL "cla_inst/sum_15" BEL
+        "cla_inst/sum_14" BEL "cla_inst/sum_13" BEL "cla_inst/sum_12" BEL
+        "cla_inst/sum_11" BEL "cla_inst/sum_10" BEL "cla_inst/sum_9" BEL
+        "cla_inst/sum_8" BEL "cla_inst/sum_7" BEL "cla_inst/sum_6" BEL
+        "cla_inst/sum_5" BEL "cla_inst/sum_4" BEL "cla_inst/sum_3" BEL
+        "cla_inst/sum_2" BEL "cla_inst/sum_1" BEL "cla_inst/sum_0" BEL
+        "cla_inst/b_194" BEL "cla_inst/b_193" BEL "cla_inst/b_192" BEL
+        "cla_inst/b_191" BEL "cla_inst/b_190" BEL "cla_inst/b_189" BEL
+        "cla_inst/b_188" BEL "cla_inst/b_187" BEL "cla_inst/b_186" BEL
+        "cla_inst/b_185" BEL "cla_inst/b_184" BEL "cla_inst/b_183" BEL
+        "cla_inst/b_182" BEL "cla_inst/b_181" BEL "cla_inst/b_180" BEL
+        "cla_inst/b_179" BEL "cla_inst/b_178" BEL "cla_inst/b_177" BEL
+        "cla_inst/b_176" BEL "cla_inst/b_175" BEL "cla_inst/b_174" BEL
+        "cla_inst/b_173" BEL "cla_inst/b_172" BEL "cla_inst/b_171" BEL
+        "cla_inst/b_170" BEL "cla_inst/b_169" BEL "cla_inst/b_168" BEL
+        "cla_inst/b_167" BEL "cla_inst/b_166" BEL "cla_inst/b_165" BEL
+        "cla_inst/b_164" BEL "cla_inst/b_163" BEL "cla_inst/b_162" BEL
+        "cla_inst/b_161" BEL "cla_inst/b_160" BEL "cla_inst/b_159" BEL
+        "cla_inst/b_158" BEL "cla_inst/b_157" BEL "cla_inst/b_156" BEL
+        "cla_inst/b_155" BEL "cla_inst/b_154" BEL "cla_inst/b_153" BEL
+        "cla_inst/b_152" BEL "cla_inst/b_151" BEL "cla_inst/b_150" BEL
+        "cla_inst/b_149" BEL "cla_inst/b_148" BEL "cla_inst/b_147" BEL
+        "cla_inst/b_146" BEL "cla_inst/b_145" BEL "cla_inst/b_144" BEL
+        "cla_inst/b_143" BEL "cla_inst/b_142" BEL "cla_inst/b_141" BEL
+        "cla_inst/b_140" BEL "cla_inst/b_139" BEL "cla_inst/b_138" BEL
+        "cla_inst/b_137" BEL "cla_inst/b_136" BEL "cla_inst/b_135" BEL
+        "cla_inst/b_134" BEL "cla_inst/b_133" BEL "cla_inst/b_132" BEL
+        "cla_inst/b_131" BEL "cla_inst/b_130" BEL "cla_inst/b_129" BEL
+        "cla_inst/b_128" BEL "cla_inst/b_127" BEL "cla_inst/b_126" BEL
+        "cla_inst/b_125" BEL "cla_inst/b_124" BEL "cla_inst/b_123" BEL
+        "cla_inst/b_122" BEL "cla_inst/b_121" BEL "cla_inst/b_120" BEL
+        "cla_inst/b_119" BEL "cla_inst/b_118" BEL "cla_inst/b_117" BEL
+        "cla_inst/b_116" BEL "cla_inst/b_115" BEL "cla_inst/b_114" BEL
+        "cla_inst/b_113" BEL "cla_inst/b_112" BEL "cla_inst/b_111" BEL
+        "cla_inst/b_110" BEL "cla_inst/b_109" BEL "cla_inst/b_108" BEL
+        "cla_inst/b_107" BEL "cla_inst/b_106" BEL "cla_inst/b_105" BEL
+        "cla_inst/b_104" BEL "cla_inst/b_103" BEL "cla_inst/b_102" BEL
+        "cla_inst/b_101" BEL "cla_inst/b_100" BEL "cla_inst/b_99" BEL
+        "cla_inst/b_98" BEL "cla_inst/b_97" BEL "cla_inst/b_96" BEL
+        "cla_inst/b_95" BEL "cla_inst/b_94" BEL "cla_inst/b_93" BEL
+        "cla_inst/b_92" BEL "cla_inst/b_91" BEL "cla_inst/b_90" BEL
+        "cla_inst/b_89" BEL "cla_inst/b_88" BEL "cla_inst/b_87" BEL
+        "cla_inst/b_86" BEL "cla_inst/b_85" BEL "cla_inst/b_84" BEL
+        "cla_inst/b_83" BEL "cla_inst/b_82" BEL "cla_inst/b_81" BEL
+        "cla_inst/b_80" BEL "cla_inst/b_79" BEL "cla_inst/b_78" BEL
+        "cla_inst/b_77" BEL "cla_inst/b_76" BEL "cla_inst/b_75" BEL
+        "cla_inst/b_74" BEL "cla_inst/b_73" BEL "cla_inst/b_72" BEL
+        "cla_inst/b_71" BEL "cla_inst/b_70" BEL "cla_inst/b_69" BEL
+        "cla_inst/b_68" BEL "cla_inst/b_67" BEL "cla_inst/b_66" BEL
+        "cla_inst/b_65" BEL "cla_inst/b_64" BEL "cla_inst/b_63" BEL
+        "cla_inst/b_62" BEL "cla_inst/b_61" BEL "cla_inst/b_60" BEL
+        "cla_inst/b_59" BEL "cla_inst/b_58" BEL "cla_inst/b_57" BEL
+        "cla_inst/b_56" BEL "cla_inst/b_55" BEL "cla_inst/b_54" BEL
+        "cla_inst/b_53" BEL "cla_inst/b_52" BEL "cla_inst/b_51" BEL
+        "cla_inst/b_50" BEL "cla_inst/b_49" BEL "cla_inst/b_48" BEL
+        "cla_inst/b_47" BEL "cla_inst/b_46" BEL "cla_inst/b_45" BEL
+        "cla_inst/b_44" BEL "cla_inst/b_43" BEL "cla_inst/b_42" BEL
+        "cla_inst/b_41" BEL "cla_inst/b_40" BEL "cla_inst/b_39" BEL
+        "cla_inst/b_38" BEL "cla_inst/b_37" BEL "cla_inst/b_36" BEL
+        "cla_inst/b_35" BEL "cla_inst/b_34" BEL "cla_inst/b_33" BEL
+        "cla_inst/b_32" BEL "cla_inst/b_31" BEL "cla_inst/b_30" BEL
+        "cla_inst/b_29" BEL "cla_inst/b_28" BEL "cla_inst/b_27" BEL
+        "cla_inst/b_26" BEL "cla_inst/b_25" BEL "cla_inst/b_24" BEL
+        "cla_inst/b_23" BEL "cla_inst/b_22" BEL "cla_inst/b_21" BEL
+        "cla_inst/b_20" BEL "cla_inst/b_19" BEL "cla_inst/b_18" BEL
+        "cla_inst/b_17" BEL "cla_inst/b_16" BEL "cla_inst/b_15" BEL
+        "cla_inst/b_14" BEL "cla_inst/b_13" BEL "cla_inst/b_12" BEL
+        "cla_inst/b_11" BEL "cla_inst/b_10" BEL "cla_inst/b_9" BEL
+        "cla_inst/b_8" BEL "cla_inst/b_7" BEL "cla_inst/b_6" BEL
+        "cla_inst/b_5" BEL "cla_inst/b_4" BEL "cla_inst/b_3" BEL
+        "cla_inst/b_2" BEL "cla_inst/b_1" BEL "cla_inst/b_0" BEL
+        "cla_inst/a_194" BEL "cla_inst/a_193" BEL "cla_inst/a_192" BEL
+        "cla_inst/a_191" BEL "cla_inst/a_190" BEL "cla_inst/a_189" BEL
+        "cla_inst/a_188" BEL "cla_inst/a_187" BEL "cla_inst/a_186" BEL
+        "cla_inst/a_185" BEL "cla_inst/a_184" BEL "cla_inst/a_183" BEL
+        "cla_inst/a_182" BEL "cla_inst/a_181" BEL "cla_inst/a_180" BEL
+        "cla_inst/a_179" BEL "cla_inst/a_178" BEL "cla_inst/a_177" BEL
+        "cla_inst/a_176" BEL "cla_inst/a_175" BEL "cla_inst/a_174" BEL
+        "cla_inst/a_173" BEL "cla_inst/a_172" BEL "cla_inst/a_171" BEL
+        "cla_inst/a_170" BEL "cla_inst/a_169" BEL "cla_inst/a_168" BEL
+        "cla_inst/a_167" BEL "cla_inst/a_166" BEL "cla_inst/a_165" BEL
+        "cla_inst/a_164" BEL "cla_inst/a_163" BEL "cla_inst/a_162" BEL
+        "cla_inst/a_161" BEL "cla_inst/a_160" BEL "cla_inst/a_159" BEL
+        "cla_inst/a_158" BEL "cla_inst/a_157" BEL "cla_inst/a_156" BEL
+        "cla_inst/a_155" BEL "cla_inst/a_154" BEL "cla_inst/a_153" BEL
+        "cla_inst/a_152" BEL "cla_inst/a_151" BEL "cla_inst/a_150" BEL
+        "cla_inst/a_149" BEL "cla_inst/a_148" BEL "cla_inst/a_147" BEL
+        "cla_inst/a_146" BEL "cla_inst/a_145" BEL "cla_inst/a_144" BEL
+        "cla_inst/a_143" BEL "cla_inst/a_142" BEL "cla_inst/a_141" BEL
+        "cla_inst/a_140" BEL "cla_inst/a_139" BEL "cla_inst/a_138" BEL
+        "cla_inst/a_137" BEL "cla_inst/a_136" BEL "cla_inst/a_135" BEL
+        "cla_inst/a_134" BEL "cla_inst/a_133" BEL "cla_inst/a_132" BEL
+        "cla_inst/a_131" BEL "cla_inst/a_130" BEL "cla_inst/a_129" BEL
+        "cla_inst/a_128" BEL "cla_inst/a_127" BEL "cla_inst/a_126" BEL
+        "cla_inst/a_125" BEL "cla_inst/a_124" BEL "cla_inst/a_123" BEL
+        "cla_inst/a_122" BEL "cla_inst/a_121" BEL "cla_inst/a_120" BEL
+        "cla_inst/a_119" BEL "cla_inst/a_118" BEL "cla_inst/a_117" BEL
+        "cla_inst/a_116" BEL "cla_inst/a_115" BEL "cla_inst/a_114" BEL
+        "cla_inst/a_113" BEL "cla_inst/a_112" BEL "cla_inst/a_111" BEL
+        "cla_inst/a_110" BEL "cla_inst/a_109" BEL "cla_inst/a_108" BEL
+        "cla_inst/a_107" BEL "cla_inst/a_106" BEL "cla_inst/a_105" BEL
+        "cla_inst/a_104" BEL "cla_inst/a_103" BEL "cla_inst/a_102" BEL
+        "cla_inst/a_101" BEL "cla_inst/a_100" BEL "cla_inst/a_99" BEL
+        "cla_inst/a_98" BEL "cla_inst/a_97" BEL "cla_inst/a_96" BEL
+        "cla_inst/a_95" BEL "cla_inst/a_94" BEL "cla_inst/a_93" BEL
+        "cla_inst/a_92" BEL "cla_inst/a_91" BEL "cla_inst/a_90" BEL
+        "cla_inst/a_89" BEL "cla_inst/a_88" BEL "cla_inst/a_87" BEL
+        "cla_inst/a_86" BEL "cla_inst/a_85" BEL "cla_inst/a_84" BEL
+        "cla_inst/a_83" BEL "cla_inst/a_82" BEL "cla_inst/a_81" BEL
+        "cla_inst/a_80" BEL "cla_inst/a_79" BEL "cla_inst/a_78" BEL
+        "cla_inst/a_77" BEL "cla_inst/a_76" BEL "cla_inst/a_75" BEL
+        "cla_inst/a_74" BEL "cla_inst/a_73" BEL "cla_inst/a_72" BEL
+        "cla_inst/a_71" BEL "cla_inst/a_70" BEL "cla_inst/a_69" BEL
+        "cla_inst/a_68" BEL "cla_inst/a_67" BEL "cla_inst/a_66" BEL
+        "cla_inst/a_65" BEL "cla_inst/a_64" BEL "cla_inst/a_63" BEL
+        "cla_inst/a_62" BEL "cla_inst/a_61" BEL "cla_inst/a_60" BEL
+        "cla_inst/a_59" BEL "cla_inst/a_58" BEL "cla_inst/a_57" BEL
+        "cla_inst/a_56" BEL "cla_inst/a_55" BEL "cla_inst/a_54" BEL
+        "cla_inst/a_53" BEL "cla_inst/a_52" BEL "cla_inst/a_51" BEL
+        "cla_inst/a_50" BEL "cla_inst/a_49" BEL "cla_inst/a_48" BEL
+        "cla_inst/a_47" BEL "cla_inst/a_46" BEL "cla_inst/a_45" BEL
+        "cla_inst/a_44" BEL "cla_inst/a_43" BEL "cla_inst/a_42" BEL
+        "cla_inst/a_41" BEL "cla_inst/a_40" BEL "cla_inst/a_39" BEL
+        "cla_inst/a_38" BEL "cla_inst/a_37" BEL "cla_inst/a_36" BEL
+        "cla_inst/a_35" BEL "cla_inst/a_34" BEL "cla_inst/a_33" BEL
+        "cla_inst/a_32" BEL "cla_inst/a_31" BEL "cla_inst/a_30" BEL
+        "cla_inst/a_29" BEL "cla_inst/a_28" BEL "cla_inst/a_27" BEL
+        "cla_inst/a_26" BEL "cla_inst/a_25" BEL "cla_inst/a_24" BEL
+        "cla_inst/a_23" BEL "cla_inst/a_22" BEL "cla_inst/a_21" BEL
+        "cla_inst/a_20" BEL "cla_inst/a_19" BEL "cla_inst/a_18" BEL
+        "cla_inst/a_17" BEL "cla_inst/a_16" BEL "cla_inst/a_15" BEL
+        "cla_inst/a_14" BEL "cla_inst/a_13" BEL "cla_inst/a_12" BEL
+        "cla_inst/a_11" BEL "cla_inst/a_10" BEL "cla_inst/a_9" BEL
+        "cla_inst/a_8" BEL "cla_inst/a_7" BEL "cla_inst/a_6" BEL
+        "cla_inst/a_5" BEL "cla_inst/a_4" BEL "cla_inst/a_3" BEL
+        "cla_inst/a_2" BEL "cla_inst/a_1" BEL "cla_inst/a_0" BEL
+        "cla_inst/carry_in" BEL "cla_inst/lsfr_128/q_194" BEL
+        "cla_inst/lsfr_128/q_193" BEL "cla_inst/lsfr_128/q_192" BEL
+        "cla_inst/lsfr_128/q_191" BEL "cla_inst/lsfr_128/q_190" BEL
+        "cla_inst/lsfr_128/q_189" BEL "cla_inst/lsfr_128/q_188" BEL
+        "cla_inst/lsfr_128/q_187" BEL "cla_inst/lsfr_128/q_186" BEL
+        "cla_inst/lsfr_128/q_185" BEL "cla_inst/lsfr_128/q_184" BEL
+        "cla_inst/lsfr_128/q_183" BEL "cla_inst/lsfr_128/q_182" BEL
+        "cla_inst/lsfr_128/q_181" BEL "cla_inst/lsfr_128/q_180" BEL
+        "cla_inst/lsfr_128/q_179" BEL "cla_inst/lsfr_128/q_178" BEL
+        "cla_inst/lsfr_128/q_177" BEL "cla_inst/lsfr_128/q_176" BEL
+        "cla_inst/lsfr_128/q_175" BEL "cla_inst/lsfr_128/q_174" BEL
+        "cla_inst/lsfr_128/q_173" BEL "cla_inst/lsfr_128/q_172" BEL
+        "cla_inst/lsfr_128/q_171" BEL "cla_inst/lsfr_128/q_170" BEL
+        "cla_inst/lsfr_128/q_169" BEL "cla_inst/lsfr_128/q_168" BEL
+        "cla_inst/lsfr_128/q_167" BEL "cla_inst/lsfr_128/q_166" BEL
+        "cla_inst/lsfr_128/q_165" BEL "cla_inst/lsfr_128/q_164" BEL
+        "cla_inst/lsfr_128/q_163" BEL "cla_inst/lsfr_128/q_162" BEL
+        "cla_inst/lsfr_128/q_161" BEL "cla_inst/lsfr_128/q_160" BEL
+        "cla_inst/lsfr_128/q_159" BEL "cla_inst/lsfr_128/q_158" BEL
+        "cla_inst/lsfr_128/q_157" BEL "cla_inst/lsfr_128/q_156" BEL
+        "cla_inst/lsfr_128/q_155" BEL "cla_inst/lsfr_128/q_154" BEL
+        "cla_inst/lsfr_128/q_153" BEL "cla_inst/lsfr_128/q_152" BEL
+        "cla_inst/lsfr_128/q_151" BEL "cla_inst/lsfr_128/q_150" BEL
+        "cla_inst/lsfr_128/q_149" BEL "cla_inst/lsfr_128/q_148" BEL
+        "cla_inst/lsfr_128/q_147" BEL "cla_inst/lsfr_128/q_146" BEL
+        "cla_inst/lsfr_128/q_145" BEL "cla_inst/lsfr_128/q_144" BEL
+        "cla_inst/lsfr_128/q_143" BEL "cla_inst/lsfr_128/q_142" BEL
+        "cla_inst/lsfr_128/q_141" BEL "cla_inst/lsfr_128/q_140" BEL
+        "cla_inst/lsfr_128/q_139" BEL "cla_inst/lsfr_128/q_138" BEL
+        "cla_inst/lsfr_128/q_137" BEL "cla_inst/lsfr_128/q_136" BEL
+        "cla_inst/lsfr_128/q_135" BEL "cla_inst/lsfr_128/q_134" BEL
+        "cla_inst/lsfr_128/q_133" BEL "cla_inst/lsfr_128/q_132" BEL
+        "cla_inst/lsfr_128/q_131" BEL "cla_inst/lsfr_128/q_130" BEL
+        "cla_inst/lsfr_128/q_129" BEL "cla_inst/lsfr_128/q_128" BEL
+        "cla_inst/lsfr_128/q_127" BEL "cla_inst/lsfr_128/q_126" BEL
+        "cla_inst/lsfr_128/q_125" BEL "cla_inst/lsfr_128/q_124" BEL
+        "cla_inst/lsfr_128/q_123" BEL "cla_inst/lsfr_128/q_122" BEL
+        "cla_inst/lsfr_128/q_121" BEL "cla_inst/lsfr_128/q_120" BEL
+        "cla_inst/lsfr_128/q_119" BEL "cla_inst/lsfr_128/q_118" BEL
+        "cla_inst/lsfr_128/q_117" BEL "cla_inst/lsfr_128/q_116" BEL
+        "cla_inst/lsfr_128/q_115" BEL "cla_inst/lsfr_128/q_114" BEL
+        "cla_inst/lsfr_128/q_113" BEL "cla_inst/lsfr_128/q_112" BEL
+        "cla_inst/lsfr_128/q_111" BEL "cla_inst/lsfr_128/q_110" BEL
+        "cla_inst/lsfr_128/q_109" BEL "cla_inst/lsfr_128/q_108" BEL
+        "cla_inst/lsfr_128/q_107" BEL "cla_inst/lsfr_128/q_106" BEL
+        "cla_inst/lsfr_128/q_105" BEL "cla_inst/lsfr_128/q_104" BEL
+        "cla_inst/lsfr_128/q_103" BEL "cla_inst/lsfr_128/q_102" BEL
+        "cla_inst/lsfr_128/q_101" BEL "cla_inst/lsfr_128/q_100" BEL
+        "cla_inst/lsfr_128/q_99" BEL "cla_inst/lsfr_128/q_98" BEL
+        "cla_inst/lsfr_128/q_97" BEL "cla_inst/lsfr_128/q_96" BEL
+        "cla_inst/lsfr_128/q_95" BEL "cla_inst/lsfr_128/q_94" BEL
+        "cla_inst/lsfr_128/q_93" BEL "cla_inst/lsfr_128/q_92" BEL
+        "cla_inst/lsfr_128/q_91" BEL "cla_inst/lsfr_128/q_90" BEL
+        "cla_inst/lsfr_128/q_89" BEL "cla_inst/lsfr_128/q_88" BEL
+        "cla_inst/lsfr_128/q_87" BEL "cla_inst/lsfr_128/q_86" BEL
+        "cla_inst/lsfr_128/q_85" BEL "cla_inst/lsfr_128/q_84" BEL
+        "cla_inst/lsfr_128/q_83" BEL "cla_inst/lsfr_128/q_82" BEL
+        "cla_inst/lsfr_128/q_81" BEL "cla_inst/lsfr_128/q_80" BEL
+        "cla_inst/lsfr_128/q_79" BEL "cla_inst/lsfr_128/q_78" BEL
+        "cla_inst/lsfr_128/q_77" BEL "cla_inst/lsfr_128/q_76" BEL
+        "cla_inst/lsfr_128/q_75" BEL "cla_inst/lsfr_128/q_74" BEL
+        "cla_inst/lsfr_128/q_73" BEL "cla_inst/lsfr_128/q_72" BEL
+        "cla_inst/lsfr_128/q_71" BEL "cla_inst/lsfr_128/q_70" BEL
+        "cla_inst/lsfr_128/q_69" BEL "cla_inst/lsfr_128/q_68" BEL
+        "cla_inst/lsfr_128/q_67" BEL "cla_inst/lsfr_128/q_66" BEL
+        "cla_inst/lsfr_128/q_65" BEL "cla_inst/lsfr_128/q_64" BEL
+        "cla_inst/lsfr_128/q_63" BEL "cla_inst/lsfr_128/q_62" BEL
+        "cla_inst/lsfr_128/q_61" BEL "cla_inst/lsfr_128/q_60" BEL
+        "cla_inst/lsfr_128/q_59" BEL "cla_inst/lsfr_128/q_58" BEL
+        "cla_inst/lsfr_128/q_57" BEL "cla_inst/lsfr_128/q_56" BEL
+        "cla_inst/lsfr_128/q_55" BEL "cla_inst/lsfr_128/q_54" BEL
+        "cla_inst/lsfr_128/q_53" BEL "cla_inst/lsfr_128/q_52" BEL
+        "cla_inst/lsfr_128/q_51" BEL "cla_inst/lsfr_128/q_50" BEL
+        "cla_inst/lsfr_128/q_49" BEL "cla_inst/lsfr_128/q_48" BEL
+        "cla_inst/lsfr_128/q_47" BEL "cla_inst/lsfr_128/q_46" BEL
+        "cla_inst/lsfr_128/q_45" BEL "cla_inst/lsfr_128/q_44" BEL
+        "cla_inst/lsfr_128/q_43" BEL "cla_inst/lsfr_128/q_42" BEL
+        "cla_inst/lsfr_128/q_41" BEL "cla_inst/lsfr_128/q_40" BEL
+        "cla_inst/lsfr_128/q_39" BEL "cla_inst/lsfr_128/q_38" BEL
+        "cla_inst/lsfr_128/q_37" BEL "cla_inst/lsfr_128/q_36" BEL
+        "cla_inst/lsfr_128/q_35" BEL "cla_inst/lsfr_128/q_34" BEL
+        "cla_inst/lsfr_128/q_33" BEL "cla_inst/lsfr_128/q_32" BEL
+        "cla_inst/lsfr_128/q_31" BEL "cla_inst/lsfr_128/q_30" BEL
+        "cla_inst/lsfr_128/q_29" BEL "cla_inst/lsfr_128/q_28" BEL
+        "cla_inst/lsfr_128/q_27" BEL "cla_inst/lsfr_128/q_26" BEL
+        "cla_inst/lsfr_128/q_25" BEL "cla_inst/lsfr_128/q_24" BEL
+        "cla_inst/lsfr_128/q_23" BEL "cla_inst/lsfr_128/q_22" BEL
+        "cla_inst/lsfr_128/q_21" BEL "cla_inst/lsfr_128/q_20" BEL
+        "cla_inst/lsfr_128/q_19" BEL "cla_inst/lsfr_128/q_18" BEL
+        "cla_inst/lsfr_128/q_17" BEL "cla_inst/lsfr_128/q_16" BEL
+        "cla_inst/lsfr_128/q_15" BEL "cla_inst/lsfr_128/q_14" BEL
+        "cla_inst/lsfr_128/q_13" BEL "cla_inst/lsfr_128/q_12" BEL
+        "cla_inst/lsfr_128/q_11" BEL "cla_inst/lsfr_128/q_10" BEL
+        "cla_inst/lsfr_128/q_9" BEL "cla_inst/lsfr_128/q_8" BEL
+        "cla_inst/lsfr_128/q_7" BEL "cla_inst/lsfr_128/q_6" BEL
+        "cla_inst/lsfr_128/q_5" BEL "cla_inst/lsfr_128/q_4" BEL
+        "cla_inst/lsfr_128/q_3" BEL "cla_inst/lsfr_128/q_2" BEL
+        "cla_inst/lsfr_128/q_1" BEL "cla_inst/lsfr_128/q_0" BEL
+        "cla_inst/error";
+PIN MMCM_BASE_inst_pins<2> = BEL "MMCM_BASE_inst" PINNAME CLKIN1;
+TIMEGRP userclk = PIN "MMCM_BASE_inst_pins<2>";
+ts0 = PERIOD TIMEGRP "userclk" 15.15 ns HIGH 50%;
+TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 7.5 HIGH 50%;
+PIN rst_pins<0> = BEL "rst" PINNAME PAD;
+PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_LUT2_4" PINNAME O6;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3" PINNAME SR;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2" PINNAME SR;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<3> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1" PINNAME SR;
+PIN MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<2> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1" PINNAME Q;
+PIN MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0_pins<0> = BEL
+        "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0" PINNAME CK;
+PIN "rst_pins<0>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<3>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_3_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<3>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_2_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<3>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_FDCPE_I0_1_pins<2>" TIG;
+PIN "MMCM_PHASE_CALIBRATION_ML_LDCPE_I0_0_pins<0>" TIG;
+SCHEMATIC END;
+

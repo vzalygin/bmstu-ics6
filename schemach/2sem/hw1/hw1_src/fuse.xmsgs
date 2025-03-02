@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/mnt/c/repos/bmstu-ics6/schemach/2sem/hw1/hw1_src/automata_test.v" Line 9: Port <arg fmt="%s" index="1">en</arg> is not connected to this instance
+</msg>
+
 </messages>
 

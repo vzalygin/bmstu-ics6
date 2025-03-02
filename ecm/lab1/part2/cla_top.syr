@@ -1,0 +1,631 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> 
+Reading design: cla_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cla_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cla_top"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : cla_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/lfsr.v" into library work
+Parsing module <lfsr>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker.v" into library work
+Parsing module <cla_checker>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_top.v" into library work
+Parsing module <cla_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <cla_top>.
+
+Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=15,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=15.15,CLKOUT0_DIVIDE_F=1.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT2_PHASE=0.0,CLKOUT3_PHASE=0.0,CLKOUT4_PHASE=0.0,CLKOUT5_PHASE=0.0,CLKOUT6_PHASE=0.0,CLKOUT1_DIVIDE=2,CLKOUT2_DIVIDE=1,CLKOUT3_DIVIDE=1,CLKOUT4_DIVIDE=1,CLKOUT5_DIVIDE=1,CLKOUT6_DIVIDE=1,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE")>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <cla_checker(w=195)>.
+
+Elaborating module <lfsr>.
+WARNING:HDLCompiler:1127 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker.v" Line 39: Assignment to f ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cla_top>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_top.v".
+    Found 16-bit register for signal <logic_resetn>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <cla_top> synthesized.
+
+Synthesizing Unit <cla_checker>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker.v".
+        w = 195
+    Set property "KEEP = TRUE" for signal <counter>.
+    Set property "DONT_TOUCH = TRUE" for signal <counter>.
+    Set property "KEEP = TRUE" for signal <a>.
+    Set property "DONT_TOUCH = TRUE" for signal <a>.
+    Set property "KEEP = TRUE" for signal <b>.
+    Set property "DONT_TOUCH = TRUE" for signal <b>.
+    Set property "KEEP = TRUE" for signal <sum>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum>.
+    Found 195-bit register for signal <a>.
+    Found 195-bit register for signal <b>.
+    Found 195-bit register for signal <sum>.
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <carry_in>.
+    Found 196-bit adder for signal <n0028> created at line 43.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal sum may hinder XST clustering optimizations.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 587 D-type flip-flop(s).
+Unit <cla_checker> synthesized.
+
+Synthesizing Unit <lfsr>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/lfsr.v".
+    Found 195-bit register for signal <q>.
+    Summary:
+	inferred 195 D-type flip-flop(s).
+Unit <lfsr> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 196-bit adder                                         : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 195-bit register                                      : 4
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <cla_checker>.
+Unit <cla_checker> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 196-bit adder                                         : 1
+# Registers                                            : 798
+ Flip-Flops                                            : 798
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance MMCM_BASE_inst in unit cla_top of type MMCM_BASE has been replaced by MMCM_ADV
+
+Optimizing unit <cla_top> ...
+
+Optimizing unit <cla_checker> ...
+
+Optimizing unit <lfsr> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cla_top, actual ratio is 0.
+
+Final Macro Processing ...
+
+Processing Unit <cla_top> :
+INFO:Xst:741 - HDL ADVISOR - A 16-bit shift register was found for signal <logic_resetn_0> and currently occupies 16 logic cells (8 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <cla_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 798
+ Flip-Flops                                            : 798
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cla_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 855
+#      GND                         : 1
+#      INV                         : 199
+#      LUT2                        : 196
+#      LUT3                        : 1
+#      LUT4                        : 2
+#      LUT6                        : 32
+#      MUXCY                       : 228
+#      VCC                         : 1
+#      XORCY                       : 195
+# FlipFlops/Latches                : 798
+#      FDC                         : 16
+#      FDR                         : 587
+#      FDRE                        : 1
+#      FDSE                        : 194
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      OBUF                        : 2
+# Others                           : 1
+#      MMCM_ADV                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             798  out of  301440     0%  
+ Number of Slice LUTs:                  430  out of  150720     0%  
+    Number used as Logic:               430  out of  150720     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1001
+   Number with an unused Flip Flop:     203  out of   1001    20%  
+   Number with an unused LUT:           571  out of   1001    57%  
+   Number of fully used LUT-FF pairs:   227  out of   1001    22%  
+   Number of unique control sets:         4
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    600     0%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+user_clk                           | MMCM_ADV:CLKOUT1       | 798   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 39.281ns (Maximum Frequency: 25.457MHz)
+   Minimum input arrival time before clock: 1.338ns
+   Maximum output required time after clock: 0.783ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'user_clk'
+  Clock period: 39.281ns (frequency: 25.457MHz)
+  Total number of paths / destination ports: 59302 / 1579
+-------------------------------------------------------------------------
+Delay:               5.237ns (Levels of Logic = 196)
+  Source:            cla_inst/a_0 (FF)
+  Destination:       cla_inst/sum_194 (FF)
+  Source Clock:      user_clk rising 7.5X
+  Destination Clock: user_clk rising 7.5X
+
+  Data Path: cla_inst/a_0 to cla_inst/sum_194
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.375   0.491  cla_inst/a_0 (cla_inst/a<0>)
+     LUT2:I0->O            1   0.068   0.000  cla_inst/Madd_n0028_lut<1> (cla_inst/Madd_n0028_lut<1>)
+     MUXCY:S->O            1   0.290   0.000  cla_inst/Madd_n0028_cy<1> (cla_inst/Madd_n0028_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<2> (cla_inst/Madd_n0028_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<3> (cla_inst/Madd_n0028_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<4> (cla_inst/Madd_n0028_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<5> (cla_inst/Madd_n0028_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<6> (cla_inst/Madd_n0028_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<7> (cla_inst/Madd_n0028_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<8> (cla_inst/Madd_n0028_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<9> (cla_inst/Madd_n0028_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<10> (cla_inst/Madd_n0028_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<11> (cla_inst/Madd_n0028_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<12> (cla_inst/Madd_n0028_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<13> (cla_inst/Madd_n0028_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<14> (cla_inst/Madd_n0028_cy<14>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<15> (cla_inst/Madd_n0028_cy<15>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<16> (cla_inst/Madd_n0028_cy<16>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<17> (cla_inst/Madd_n0028_cy<17>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<18> (cla_inst/Madd_n0028_cy<18>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<19> (cla_inst/Madd_n0028_cy<19>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<20> (cla_inst/Madd_n0028_cy<20>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<21> (cla_inst/Madd_n0028_cy<21>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<22> (cla_inst/Madd_n0028_cy<22>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<23> (cla_inst/Madd_n0028_cy<23>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<24> (cla_inst/Madd_n0028_cy<24>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<25> (cla_inst/Madd_n0028_cy<25>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<26> (cla_inst/Madd_n0028_cy<26>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<27> (cla_inst/Madd_n0028_cy<27>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<28> (cla_inst/Madd_n0028_cy<28>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<29> (cla_inst/Madd_n0028_cy<29>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<30> (cla_inst/Madd_n0028_cy<30>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<31> (cla_inst/Madd_n0028_cy<31>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<32> (cla_inst/Madd_n0028_cy<32>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<33> (cla_inst/Madd_n0028_cy<33>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<34> (cla_inst/Madd_n0028_cy<34>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<35> (cla_inst/Madd_n0028_cy<35>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<36> (cla_inst/Madd_n0028_cy<36>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<37> (cla_inst/Madd_n0028_cy<37>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<38> (cla_inst/Madd_n0028_cy<38>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<39> (cla_inst/Madd_n0028_cy<39>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<40> (cla_inst/Madd_n0028_cy<40>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<41> (cla_inst/Madd_n0028_cy<41>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<42> (cla_inst/Madd_n0028_cy<42>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<43> (cla_inst/Madd_n0028_cy<43>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<44> (cla_inst/Madd_n0028_cy<44>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<45> (cla_inst/Madd_n0028_cy<45>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<46> (cla_inst/Madd_n0028_cy<46>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<47> (cla_inst/Madd_n0028_cy<47>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<48> (cla_inst/Madd_n0028_cy<48>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<49> (cla_inst/Madd_n0028_cy<49>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<50> (cla_inst/Madd_n0028_cy<50>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<51> (cla_inst/Madd_n0028_cy<51>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<52> (cla_inst/Madd_n0028_cy<52>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<53> (cla_inst/Madd_n0028_cy<53>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<54> (cla_inst/Madd_n0028_cy<54>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<55> (cla_inst/Madd_n0028_cy<55>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<56> (cla_inst/Madd_n0028_cy<56>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<57> (cla_inst/Madd_n0028_cy<57>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<58> (cla_inst/Madd_n0028_cy<58>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<59> (cla_inst/Madd_n0028_cy<59>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<60> (cla_inst/Madd_n0028_cy<60>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<61> (cla_inst/Madd_n0028_cy<61>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<62> (cla_inst/Madd_n0028_cy<62>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<63> (cla_inst/Madd_n0028_cy<63>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<64> (cla_inst/Madd_n0028_cy<64>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<65> (cla_inst/Madd_n0028_cy<65>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<66> (cla_inst/Madd_n0028_cy<66>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<67> (cla_inst/Madd_n0028_cy<67>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<68> (cla_inst/Madd_n0028_cy<68>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<69> (cla_inst/Madd_n0028_cy<69>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<70> (cla_inst/Madd_n0028_cy<70>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<71> (cla_inst/Madd_n0028_cy<71>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<72> (cla_inst/Madd_n0028_cy<72>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<73> (cla_inst/Madd_n0028_cy<73>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<74> (cla_inst/Madd_n0028_cy<74>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<75> (cla_inst/Madd_n0028_cy<75>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<76> (cla_inst/Madd_n0028_cy<76>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<77> (cla_inst/Madd_n0028_cy<77>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<78> (cla_inst/Madd_n0028_cy<78>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<79> (cla_inst/Madd_n0028_cy<79>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<80> (cla_inst/Madd_n0028_cy<80>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<81> (cla_inst/Madd_n0028_cy<81>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<82> (cla_inst/Madd_n0028_cy<82>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<83> (cla_inst/Madd_n0028_cy<83>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<84> (cla_inst/Madd_n0028_cy<84>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<85> (cla_inst/Madd_n0028_cy<85>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<86> (cla_inst/Madd_n0028_cy<86>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<87> (cla_inst/Madd_n0028_cy<87>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<88> (cla_inst/Madd_n0028_cy<88>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<89> (cla_inst/Madd_n0028_cy<89>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<90> (cla_inst/Madd_n0028_cy<90>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<91> (cla_inst/Madd_n0028_cy<91>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<92> (cla_inst/Madd_n0028_cy<92>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<93> (cla_inst/Madd_n0028_cy<93>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<94> (cla_inst/Madd_n0028_cy<94>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<95> (cla_inst/Madd_n0028_cy<95>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<96> (cla_inst/Madd_n0028_cy<96>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<97> (cla_inst/Madd_n0028_cy<97>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<98> (cla_inst/Madd_n0028_cy<98>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<99> (cla_inst/Madd_n0028_cy<99>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<100> (cla_inst/Madd_n0028_cy<100>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<101> (cla_inst/Madd_n0028_cy<101>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<102> (cla_inst/Madd_n0028_cy<102>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<103> (cla_inst/Madd_n0028_cy<103>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<104> (cla_inst/Madd_n0028_cy<104>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<105> (cla_inst/Madd_n0028_cy<105>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<106> (cla_inst/Madd_n0028_cy<106>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<107> (cla_inst/Madd_n0028_cy<107>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<108> (cla_inst/Madd_n0028_cy<108>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<109> (cla_inst/Madd_n0028_cy<109>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<110> (cla_inst/Madd_n0028_cy<110>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<111> (cla_inst/Madd_n0028_cy<111>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<112> (cla_inst/Madd_n0028_cy<112>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<113> (cla_inst/Madd_n0028_cy<113>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<114> (cla_inst/Madd_n0028_cy<114>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<115> (cla_inst/Madd_n0028_cy<115>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<116> (cla_inst/Madd_n0028_cy<116>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<117> (cla_inst/Madd_n0028_cy<117>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<118> (cla_inst/Madd_n0028_cy<118>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<119> (cla_inst/Madd_n0028_cy<119>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<120> (cla_inst/Madd_n0028_cy<120>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<121> (cla_inst/Madd_n0028_cy<121>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<122> (cla_inst/Madd_n0028_cy<122>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<123> (cla_inst/Madd_n0028_cy<123>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<124> (cla_inst/Madd_n0028_cy<124>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<125> (cla_inst/Madd_n0028_cy<125>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<126> (cla_inst/Madd_n0028_cy<126>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<127> (cla_inst/Madd_n0028_cy<127>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<128> (cla_inst/Madd_n0028_cy<128>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<129> (cla_inst/Madd_n0028_cy<129>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<130> (cla_inst/Madd_n0028_cy<130>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<131> (cla_inst/Madd_n0028_cy<131>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<132> (cla_inst/Madd_n0028_cy<132>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<133> (cla_inst/Madd_n0028_cy<133>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<134> (cla_inst/Madd_n0028_cy<134>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<135> (cla_inst/Madd_n0028_cy<135>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<136> (cla_inst/Madd_n0028_cy<136>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<137> (cla_inst/Madd_n0028_cy<137>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<138> (cla_inst/Madd_n0028_cy<138>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<139> (cla_inst/Madd_n0028_cy<139>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<140> (cla_inst/Madd_n0028_cy<140>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<141> (cla_inst/Madd_n0028_cy<141>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<142> (cla_inst/Madd_n0028_cy<142>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<143> (cla_inst/Madd_n0028_cy<143>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<144> (cla_inst/Madd_n0028_cy<144>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<145> (cla_inst/Madd_n0028_cy<145>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<146> (cla_inst/Madd_n0028_cy<146>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<147> (cla_inst/Madd_n0028_cy<147>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<148> (cla_inst/Madd_n0028_cy<148>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<149> (cla_inst/Madd_n0028_cy<149>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<150> (cla_inst/Madd_n0028_cy<150>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<151> (cla_inst/Madd_n0028_cy<151>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<152> (cla_inst/Madd_n0028_cy<152>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<153> (cla_inst/Madd_n0028_cy<153>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<154> (cla_inst/Madd_n0028_cy<154>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<155> (cla_inst/Madd_n0028_cy<155>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<156> (cla_inst/Madd_n0028_cy<156>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<157> (cla_inst/Madd_n0028_cy<157>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<158> (cla_inst/Madd_n0028_cy<158>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<159> (cla_inst/Madd_n0028_cy<159>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<160> (cla_inst/Madd_n0028_cy<160>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<161> (cla_inst/Madd_n0028_cy<161>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<162> (cla_inst/Madd_n0028_cy<162>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<163> (cla_inst/Madd_n0028_cy<163>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<164> (cla_inst/Madd_n0028_cy<164>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<165> (cla_inst/Madd_n0028_cy<165>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<166> (cla_inst/Madd_n0028_cy<166>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<167> (cla_inst/Madd_n0028_cy<167>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<168> (cla_inst/Madd_n0028_cy<168>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<169> (cla_inst/Madd_n0028_cy<169>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<170> (cla_inst/Madd_n0028_cy<170>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<171> (cla_inst/Madd_n0028_cy<171>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<172> (cla_inst/Madd_n0028_cy<172>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<173> (cla_inst/Madd_n0028_cy<173>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<174> (cla_inst/Madd_n0028_cy<174>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<175> (cla_inst/Madd_n0028_cy<175>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<176> (cla_inst/Madd_n0028_cy<176>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<177> (cla_inst/Madd_n0028_cy<177>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<178> (cla_inst/Madd_n0028_cy<178>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<179> (cla_inst/Madd_n0028_cy<179>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<180> (cla_inst/Madd_n0028_cy<180>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<181> (cla_inst/Madd_n0028_cy<181>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0028_cy<182> (cla_inst/Madd_n0028_cy<182>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<183> (cla_inst/Madd_n0028_cy<183>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<184> (cla_inst/Madd_n0028_cy<184>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<185> (cla_inst/Madd_n0028_cy<185>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<186> (cla_inst/Madd_n0028_cy<186>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<187> (cla_inst/Madd_n0028_cy<187>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<188> (cla_inst/Madd_n0028_cy<188>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<189> (cla_inst/Madd_n0028_cy<189>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<190> (cla_inst/Madd_n0028_cy<190>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<191> (cla_inst/Madd_n0028_cy<191>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<192> (cla_inst/Madd_n0028_cy<192>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0028_cy<193> (cla_inst/Madd_n0028_cy<193>)
+     MUXCY:CI->O           0   0.019   0.000  cla_inst/Madd_n0028_cy<194> (cla_inst/Madd_n0028_cy<194>)
+     XORCY:CI->O           1   0.239   0.000  cla_inst/Madd_n0028_xor<195> (cla_inst/n0028<195>)
+     FDR:D                     0.011          cla_inst/sum_194
+    ----------------------------------------
+    Total                      5.237ns (4.746ns logic, 0.491ns route)
+                                       (90.6% logic, 9.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'user_clk'
+  Total number of paths / destination ports: 195 / 195
+-------------------------------------------------------------------------
+Offset:              1.338ns (Levels of Logic = 2)
+  Source:            en (PAD)
+  Destination:       cla_inst/lsfr_128/q_194 (FF)
+  Destination Clock: user_clk rising 7.5X
+
+  Data Path: en to cla_inst/lsfr_128/q_194
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.003   0.399  en_IBUF (en_IBUF)
+     INV:I->O            195   0.086   0.587  cla_inst/lsfr_128/en_inv1_INV_0 (cla_inst/lsfr_128/en_inv)
+     FDSE:CE                   0.263          cla_inst/lsfr_128/q_0
+    ----------------------------------------
+    Total                      1.338ns (0.352ns logic, 0.986ns route)
+                                       (26.3% logic, 73.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'user_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.783ns (Levels of Logic = 1)
+  Source:            cla_inst/error (FF)
+  Destination:       error (PAD)
+  Source Clock:      user_clk rising 7.5X
+
+  Data Path: cla_inst/error to error
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.375   0.405  cla_inst/error (cla_inst/error)
+     OBUF:I->O                 0.003          error_OBUF (error)
+    ----------------------------------------
+    Total                      0.783ns (0.378ns logic, 0.405ns route)
+                                       (48.3% logic, 51.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock user_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+user_clk       |    5.237|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 9.97 secs
+ 
+--> 
+
+
+Total memory usage is 395832 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+

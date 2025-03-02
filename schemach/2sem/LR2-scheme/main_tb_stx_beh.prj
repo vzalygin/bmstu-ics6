@@ -1,0 +1,7 @@
+verilog isim_temp "seven_segment_driver.v"
+verilog isim_temp "led_decode.v"
+verilog isim_temp "lab3.v"
+verilog isim_temp "lab2_example.v"
+verilog isim_temp "main.v"
+verilog isim_temp "main_tb.v"
+verilog isim_temp "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

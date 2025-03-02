@@ -1,0 +1,5 @@
+set -tmpdir "/home/kseniia/tmp/LR2-scheme/xst/projnav.tmp"
+set -xsthdpdir "/home/kseniia/tmp/LR2-scheme/xst"
+elaborate
+-ifn lab3.prj
+-ifmt mixed
