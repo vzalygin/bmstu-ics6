@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2025-03-01T21:09:16</DateModified>
+  <DateModified>2025-03-15T15:15:55</DateModified>
   <ModuleName>cla_top</ModuleName>
-  <SummaryTimeStamp>2025-03-01T21:06:48</SummaryTimeStamp>
+  <SummaryTimeStamp>2025-03-15T15:15:05</SummaryTimeStamp>
   <SavedFilePath>/mnt/c/repos/bmstu-ics6/ecm/lab1/part2/iseconfig/cla_top.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/mnt/c/repos/bmstu-ics6/ecm/lab1/part2</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/mnt/c/repos/bmstu-ics6/ecm/lab1/part2/</ImplementationReportsDirectory>
   <DateInitialized>2025-03-01T20:56:46</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

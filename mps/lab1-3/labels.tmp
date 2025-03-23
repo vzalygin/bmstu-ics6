@@ -5,7 +5,7 @@
  <INCLUDE_PATH>
   <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</SOURCE_FILE>
+ <SOURCE_FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
  </INCLUDED_FILES>
@@ -19,11 +19,20 @@
   <FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <INIT><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>13</LINE></INIT>
-  <WAITSTART><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>28</LINE></WAITSTART>
-  <LOOP><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>32</LINE></LOOP>
-  <RIGHT><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>44</LINE></RIGHT>
-  <NEXT><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>49</LINE></NEXT>
-  <CONTINUE><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab1-3.asm</FILE><LINE>57</LINE></CONTINUE>
+  <INIT><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>30</LINE></INIT>
+  <start><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>95</LINE></start>
+  <stop><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>103</LINE></stop>
+  <wait><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>56</LINE></wait>
+  <work><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>62</LINE></work>
+  <nex><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>79</LINE></nex>
+  <left><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>75</LINE></left>
+  <next><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>89</LINE></next>
+  <right><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>86</LINE></right>
+  <wait_start><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>98</LINE></wait_start>
+  <wait_stop><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>106</LINE></wait_stop>
+  <delay><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>111</LINE></delay>
+  <d0><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>113</LINE></d0>
+  <d1><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>115</LINE></d1>
+  <d2><FILE>C:\repos\bmstu-ics6\mps\lab1-3\lab2-3.asm</FILE><LINE>117</LINE></d2>
  </LABELS>
 </ASSEMBLER_INFO>

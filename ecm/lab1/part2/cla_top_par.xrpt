@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Sat Mar  1 21:02:57 2025">
+  <application stringID="par" timeStamp="Sat Mar 15 15:26:12 2025">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -32,7 +32,7 @@
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/vzalygin/.local/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/bin:/opt/Xilinx/14.7/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.7/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.7/ISE_DS/common/bin/lin64:/home/vzalygin/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2404.1.66.0_x64__79rhkp1fndgsc:/mnt/c/Program Files (x86)/Atmel/AVR Tools/AVR Toolchain/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Typst:/mnt/c/Users/viazy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/viazy/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/viazy/AppData/Roaming/npm:/snap/bin"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/vzalygin/.local/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/bin:/opt/Xilinx/14.7/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.7/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.7/ISE_DS/common/bin/lin64:/home/vzalygin/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2404.1.68.0_x64__79rhkp1fndgsc:/mnt/c/Program Files (x86)/Atmel/AVR Tools/AVR Toolchain/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Typst:/mnt/c/Users/viazy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/viazy/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/viazy/AppData/Roaming/npm:/snap/bin"/>
         </row>
         <row stringID="row" value="6">
           <item stringID="variable" value="LMC_HOME"/>
@@ -49,7 +49,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx"/>
-          <item stringID="speed" value="2096.063 MHz"/>
+          <item stringID="speed" value="2095.991 MHz"/>
         </row>
       </table>
     </section>
@@ -63,12 +63,12 @@
     </task>
     <task stringID="PAR_PAR">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="2 mins 6 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="2 mins 6 secs "/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_ROUTER" value="1 mins 17 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_ROUTER" value="1 mins 17 secs "/>
         <item dataType="int" stringID="PAR_UNROUTES" value="0"/>
-        <item dataType="float" stringID="PAR_TIMING_SCORE" value="770774.000000"/>
-        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="2 mins 30 secs "/>
-        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="2 mins 15 secs "/>
+        <item dataType="float" stringID="PAR_TIMING_SCORE" value="0.000000"/>
+        <item stringID="PAR_REAL_TIME_COMPLETION_PAR" value="1 mins 40 secs "/>
+        <item stringID="PAR_CPU_TIME_COMPLETION_PAR" value="1 mins 25 secs "/>
       </section>
     </task>
     <task stringID="PAR_par">
@@ -87,9 +87,9 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGCTRL_X0Y1"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="170.000000"/>
-            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.146000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.810000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="151.000000"/>
+            <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.040000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.706000"/>
           </row>
           <row stringID="row" value="2">
             <item label="Clock Net" stringID="CLOCK_NET" value="MMCM_BASE_inst_ML_NEW_I1"/>
@@ -97,7 +97,7 @@
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.000000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="1.322000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.868000"/>
           </row>
           <row stringID="row" value="3">
             <item label="Clock Net" stringID="CLOCK_NET" value="MMCM_BASE_inst_ML_NEW_OUT"/>
@@ -113,7 +113,7 @@
             <item label="Resource" stringID="RESOURCE" value="Local"/>
             <item dataType="float" label="Fanout" stringID="FANOUT" value="3.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.119000"/>
-            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.727000"/>
+            <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.468000"/>
           </row>
         </table>
       </section>
@@ -7029,7 +7029,7 @@
     </task>
   </application>
 
-  <application stringID="Par" timeStamp="Sat Mar  1 21:02:59 2025">
+  <application stringID="Par" timeStamp="Sat Mar 15 15:26:13 2025">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -7056,7 +7056,7 @@
         </row>
         <row stringID="row" value="5">
           <item stringID="variable" value="PATH"/>
-          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/vzalygin/.local/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/bin:/opt/Xilinx/14.7/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.7/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.7/ISE_DS/common/bin/lin64:/home/vzalygin/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2404.1.66.0_x64__79rhkp1fndgsc:/mnt/c/Program Files (x86)/Atmel/AVR Tools/AVR Toolchain/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Typst:/mnt/c/Users/viazy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/viazy/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/viazy/AppData/Roaming/npm:/snap/bin"/>
+          <item stringID="value" value="/opt/Xilinx/14.7/ISE_DS/ISE//bin/lin64:/home/vzalygin/.local/bin:/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/util:/opt/Xilinx/14.7/ISE_DS/ISE/sysgen/bin:/opt/Xilinx/14.7/ISE_DS/ISE/../../../DocNav:/opt/Xilinx/14.7/ISE_DS/PlanAhead/bin:/opt/Xilinx/14.7/ISE_DS/EDK/bin/lin64:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/powerpc-eabi/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/arm/lin/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_be/bin:/opt/Xilinx/14.7/ISE_DS/EDK/gnu/microblaze/linux_toolchain/lin64_le/bin:/opt/Xilinx/14.7/ISE_DS/common/bin/lin64:/home/vzalygin/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2404.1.68.0_x64__79rhkp1fndgsc:/mnt/c/Program Files (x86)/Atmel/AVR Tools/AVR Toolchain/bin:/mnt/c/Python311/Scripts/:/mnt/c/Python311/:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/Typst:/mnt/c/Users/viazy/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/viazy/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/viazy/AppData/Roaming/npm:/snap/bin"/>
         </row>
         <row stringID="row" value="6">
           <item stringID="variable" value="LMC_HOME"/>
@@ -7073,7 +7073,7 @@
         <column stringID="speed"/>
         <row stringID="row" value="0">
           <item stringID="arch" value="AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx"/>
-          <item stringID="speed" value="2096.063 MHz"/>
+          <item stringID="speed" value="2095.991 MHz"/>
         </row>
       </table>
     </section>
@@ -7085,7 +7085,7 @@
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHTHRU" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SLICE_LATCHLOGIC" value="0"/>
         </item>
-        <item AVAILABLE="150720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="505">
+        <item AVAILABLE="150720" dataType="int" label="Number of Slice LUTS" stringID="PAR_SLICE_LUTS" value="450">
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LOGIC_O6ONLY" value="434"/>
           <item dataType="int" stringID="PAR_NUM_LOGIC_O5ANDO6" value="1"/>
@@ -7102,20 +7102,20 @@
           <item dataType="int" stringID="PAR_NUM_SRL_O6ONLY" value="0"/>
           <item dataType="int" stringID="PAR_NUM_SRL_O5ANDO6" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="70"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_EXO5" value="15"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_O5ANDO6" value="0"/>
-          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="70"/>
+          <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_FLOP" value="15"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_CARRY4" value="0"/>
           <item dataType="int" stringID="PAR_NUM_LUT_RT_DRIVES_OTHERS" value="0"/>
         </item>
-        <item AVAILABLE="37680" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="182">
-          <item AVAILABLE="23080" dataType="int" stringID="PAR_NUM_SLICEL" value="182"/>
+        <item AVAILABLE="37680" dataType="int" stringID="PAR_OCCUPIED_SLICES" value="169">
+          <item AVAILABLE="23080" dataType="int" stringID="PAR_NUM_SLICEL" value="169"/>
           <item AVAILABLE="14600" dataType="int" stringID="PAR_NUM_SLICEM" value="0"/>
         </item>
-        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="633">
-          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="37"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="128"/>
-          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="468"/>
+        <item dataType="int" stringID="PAR_OCCUPIED_LUT_AND_FF" value="638">
+          <item dataType="int" stringID="PAR_OCCUPIED_LUT_ONLY" value="40"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_ONLY" value="188"/>
+          <item dataType="int" stringID="PAR_OCCUPIED_FF_AND_LUT" value="410"/>
         </item>
       </section>
       <section stringID="PAR_IOB_REPORTING">

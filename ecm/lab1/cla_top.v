@@ -13,7 +13,7 @@ reg[15:0] logic_resetn;
 
    MMCM_BASE #(
       .BANDWIDTH("OPTIMIZED"),   // Jitter programming ("HIGH","LOW","OPTIMIZED")
-      .CLKFBOUT_MULT_F(15),     // Multiply value for all CLKOUT (5.0-64.0).
+      .CLKFBOUT_MULT_F(16),     // Multiply value for all CLKOUT (5.0-64.0).
       .CLKFBOUT_PHASE(0.0),      // Phase offset in degrees of CLKFB (0.00-360.00).
       .CLKIN1_PERIOD(15.15),       // Input clock period in ns to ps resolution (i.e. 33.333 is 30 MHz).
       .CLKOUT0_DIVIDE_F(1.0),    // Divide amount for CLKOUT0 (1.000-128.000).
@@ -34,7 +34,7 @@ reg[15:0] logic_resetn;
       .CLKOUT5_PHASE(0.0),
       .CLKOUT6_PHASE(0.0),
       // CLKOUT1_DIVIDE - CLKOUT6_DIVIDE: Divide amount for each CLKOUT (1-128)
-      .CLKOUT1_DIVIDE(2),
+      .CLKOUT1_DIVIDE(6),
       .CLKOUT2_DIVIDE(1),
       .CLKOUT3_DIVIDE(1),
       .CLKOUT4_DIVIDE(1),
@@ -84,9 +84,9 @@ reg[15:0] logic_resetn;
     BUFG bufgctrl_clk (
       .I(int_clk),
       .O(clk_bufg)
-  );
+  ); 
 
-	 //Logic reset
+	//Logic reset
 	always @(posedge clk_bufg or negedge locked) begin
 		 if (!locked) begin
 			  logic_resetn <= 0;

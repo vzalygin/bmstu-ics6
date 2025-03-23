@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Mar 01 21:02:30 2025
+// Written by: Map P.20131013 on Sat Mar 15 15:25:42 2025
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -311,7 +311,7 @@ TIMEGRP int_clk = BEL "logic_resetn_0" BEL "logic_resetn_1" BEL
 PIN MMCM_BASE_inst_pins<2> = BEL "MMCM_BASE_inst" PINNAME CLKIN1;
 TIMEGRP userclk = PIN "MMCM_BASE_inst_pins<2>";
 ts0 = PERIOD TIMEGRP "userclk" 15.15 ns HIGH 50%;
-TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 7.5 HIGH 50%;
+TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 2.66666667 HIGH 50%;
 PIN rst_pins<0> = BEL "rst" PINNAME PAD;
 PIN MMCM_PHASE_CALIBRATION_ML_LUT2_4_pins<2> = BEL
         "MMCM_PHASE_CALIBRATION_ML_LUT2_4" PINNAME O6;
