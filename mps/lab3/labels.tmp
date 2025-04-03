@@ -5,7 +5,7 @@
  <INCLUDE_PATH>
   <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
  </INCLUDE_PATH>
- <SOURCE_FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</SOURCE_FILE>
+ <SOURCE_FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</SOURCE_FILE>
  <INCLUDED_FILES>
   <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
  </INCLUDED_FILES>
@@ -19,10 +19,13 @@
   <FILE>C:\repos\bmstu-ics6\mps\lab3\lab3.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <INIT><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</FILE><LINE>9</LINE></INIT>
-  <T0_OVF><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</FILE><LINE>36</LINE></T0_OVF>
-  <LOOP><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</FILE><LINE>31</LINE></LOOP>
-  <DELAY><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</FILE><LINE>46</LINE></DELAY>
-  <dd><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm</FILE><LINE>50</LINE></dd>
+  <INIT><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>39</LINE></INIT>
+  <test_on><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>52</LINE></test_on>
+  <tmr1_on><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>77</LINE></tmr1_on>
+  <tmr2_on><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>81</LINE></tmr2_on>
+  <test_off><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>67</LINE></test_off>
+  <wait_0><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>59</LINE></wait_0>
+  <wait_00><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>63</LINE></wait_00>
+  <wait_1><FILE>C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm</FILE><LINE>73</LINE></wait_1>
  </LABELS>
 </ASSEMBLER_INFO>
