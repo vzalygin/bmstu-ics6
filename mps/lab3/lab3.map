@@ -1,5 +1,5 @@
 
-AVRASM ver. 2.1.42  C:\repos\bmstu-ics6\mps\lab3\lab3-1v2.asm Fri Mar 21 10:19:35 2025
+AVRASM ver. 2.1.42  C:\repos\bmstu-ics6\mps\lab3\lab3-5.asm Thu Apr 03 23:04:39 2025
 
 
 EQU  SIGNATURE_000 0000001e
@@ -472,8 +472,19 @@ EQU  ERDYaddr     0000000f
 EQU  SPMRaddr     00000010
 EQU  INT_VECTORS_SIZE 00000011
 DEF  temp         r16
-CSEG INIT         00000008
-CSEG T0_OVF       0000001f
-CSEG LOOP         0000001c
-CSEG DELAY        00000027
-CSEG dd           0000002a
+EQU  led          00000000
+EQU  start        00000000
+EQU  start2       00000001
+EQU  stop         00000002
+EQU  PRESCALER_1  00000001
+EQU  TIMER_SETTINGS 000000c3
+EQU  VALUE        00000100
+EQU  VALUE2       00000300
+CSEG INIT         00000001
+CSEG test_on      00000010
+CSEG tmr1_on      00000025
+CSEG tmr2_on      0000002e
+CSEG test_off     0000001b
+CSEG wait_0       00000015
+CSEG wait_00      00000018
+CSEG wait_1       00000022
