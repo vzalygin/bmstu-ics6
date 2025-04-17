@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/user/ecm/lab1/part2/cla_top.ncd
+OUTFILE=/home/user/ecm/lab1/part2/cla_top.bit
+FAMILY=Virtex6
+PART=xc6vlx240t-1ff1156
+WORKINGDIR=/home/user/ecm/lab1/part2
+LICENSE=ISE
+USER_INFO=__0_0_0

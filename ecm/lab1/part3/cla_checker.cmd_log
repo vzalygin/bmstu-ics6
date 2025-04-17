@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_checker.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_checker.syr" 

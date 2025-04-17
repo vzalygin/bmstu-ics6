@@ -1,0 +1,14 @@
+## X5 / 66MHz
+NET "user_clk" LOC = U23;
+NET "user_clk" TNM_NET = "userclk";
+# 66 Mhz
+TIMESPEC ts0 = PERIOD "userclk" 15.15 ns HIGH 50 %;
+## Кнопка сброса SW10 (высокий активный уровень)
+NET "rst" LOC = H10;
+NET "rst" TIG;
+## Состояние "Синхросигнал стабилен", Светодиод: north
+NET "locked" LOC = AH27;
+## Состояние "Ошибка", Светодиод: south
+NET "error" LOC = AH28;
+## Сигнал "Разрешение работы счетчиков": north
+NET "en" LOC = A19;

@@ -1,0 +1,141 @@
+
+lab4.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         0000007e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000006  00800060  0000007e  000000f2  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000006cc  00000000  00000000  000000f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000097  00000000  00000000  000007c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  0000085b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000032  00000000  00000000  0000087b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000000f6  00000000  00000000  000008ad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000009f  00000000  00000000  000009a3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000120  00000000  00000000  00000a42  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000020  00000000  00000000  00000b64  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000008d  00000000  00000000  00000b84  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_pubtypes 0000001e  00000000  00000000  00000c11  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	22 c0       	rjmp	.+68     	; 0x48 <__bad_interrupt>
+   4:	21 c0       	rjmp	.+66     	; 0x48 <__bad_interrupt>
+   6:	20 c0       	rjmp	.+64     	; 0x48 <__bad_interrupt>
+   8:	1f c0       	rjmp	.+62     	; 0x48 <__bad_interrupt>
+   a:	1e c0       	rjmp	.+60     	; 0x48 <__bad_interrupt>
+   c:	1d c0       	rjmp	.+58     	; 0x48 <__bad_interrupt>
+   e:	1c c0       	rjmp	.+56     	; 0x48 <__bad_interrupt>
+  10:	1b c0       	rjmp	.+54     	; 0x48 <__bad_interrupt>
+  12:	1a c0       	rjmp	.+52     	; 0x48 <__bad_interrupt>
+  14:	19 c0       	rjmp	.+50     	; 0x48 <__bad_interrupt>
+  16:	18 c0       	rjmp	.+48     	; 0x48 <__bad_interrupt>
+  18:	17 c0       	rjmp	.+46     	; 0x48 <__bad_interrupt>
+  1a:	16 c0       	rjmp	.+44     	; 0x48 <__bad_interrupt>
+  1c:	15 c0       	rjmp	.+42     	; 0x48 <__bad_interrupt>
+  1e:	14 c0       	rjmp	.+40     	; 0x48 <__bad_interrupt>
+  20:	13 c0       	rjmp	.+38     	; 0x48 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	ee e7       	ldi	r30, 0x7E	; 126
+  36:	f0 e0       	ldi	r31, 0x00	; 0
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a6 36       	cpi	r26, 0x66	; 102
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+  44:	02 d0       	rcall	.+4      	; 0x4a <main>
+  46:	19 c0       	rjmp	.+50     	; 0x7a <_exit>
+
+00000048 <__bad_interrupt>:
+  48:	db cf       	rjmp	.-74     	; 0x0 <__vectors>
+
+0000004a <main>:
+#define DATA_LENGTH 3
+const unsigned char data[DATA_LENGTH] = {65, 86, 82};
+int main() {
+    /* Инициализация UART */
+    /* Настройка скорости передачи */
+    UBRRH = (unsigned char)(ubrrValue >> 8);
+  4a:	10 bc       	out	0x20, r1	; 32
+    UBRRL = (unsigned char)ubrrValue;
+  4c:	87 e1       	ldi	r24, 0x17	; 23
+  4e:	89 b9       	out	0x09, r24	; 9
+    /* Включение режима передатчика */
+    UCSRB = (1 << TXEN);
+  50:	88 e0       	ldi	r24, 0x08	; 8
+  52:	8a b9       	out	0x0a, r24	; 10
+    /* Установка формата передачи: 8 бит данных, 1 бит стопа */
+    UCSRC = (1 << URSEL) | (3 << UCSZ0);
+  54:	86 e8       	ldi	r24, 0x86	; 134
+  56:	80 bd       	out	0x20, r24	; 32
+    /* Инициализация портов ввода-вывода */
+    /* Настройка PB0 на ввод */
+    PORTB = (1 << BUTTON_START);
+  58:	81 e0       	ldi	r24, 0x01	; 1
+  5a:	88 bb       	out	0x18, r24	; 24
+    /* Бесконечный цикл */
+    while (1) {
+        /* Проверка нажатия кнопки */
+        if (!(PINB & (1 << BUTTON_START))) {
+  5c:	b0 99       	sbic	0x16, 0	; 22
+  5e:	fe cf       	rjmp	.-4      	; 0x5c <main+0x12>
+            /* Ожидание отпускания кнопки */
+            while (!(PINB & (1 << BUTTON_START)));
+  60:	b0 9b       	sbis	0x16, 0	; 22
+  62:	fe cf       	rjmp	.-4      	; 0x60 <main+0x16>
+  64:	e2 e6       	ldi	r30, 0x62	; 98
+  66:	f0 e0       	ldi	r31, 0x00	; 0
+
+            /* Цикл передачи данных */
+            for (uint8_t i = 0; i < DATA_LENGTH; i++) {
+                /* Ожидание освобождения буфера */
+                while (!(UCSRA & (1 << UDRE)));
+  68:	5d 9b       	sbis	0x0b, 5	; 11
+  6a:	fe cf       	rjmp	.-4      	; 0x68 <main+0x1e>
+                /* Отправка i-го байта */
+                UDR = data[i];
+  6c:	81 91       	ld	r24, Z+
+  6e:	8c b9       	out	0x0c, r24	; 12
+        if (!(PINB & (1 << BUTTON_START))) {
+            /* Ожидание отпускания кнопки */
+            while (!(PINB & (1 << BUTTON_START)));
+
+            /* Цикл передачи данных */
+            for (uint8_t i = 0; i < DATA_LENGTH; i++) {
+  70:	80 e0       	ldi	r24, 0x00	; 0
+  72:	e5 36       	cpi	r30, 0x65	; 101
+  74:	f8 07       	cpc	r31, r24
+  76:	c1 f7       	brne	.-16     	; 0x68 <main+0x1e>
+  78:	f1 cf       	rjmp	.-30     	; 0x5c <main+0x12>
+
+0000007a <_exit>:
+  7a:	f8 94       	cli
+
+0000007c <__stop_program>:
+  7c:	ff cf       	rjmp	.-2      	; 0x7c <__stop_program>

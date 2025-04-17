@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.syr" 
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /mnt/c/repos/bmstu-ics6/ecm/lab1/cla.ucf -p xc6vlx240t-ff1156-1 cla_top.ngc cla_top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cla_top_map.ncd cla_top.ngd cla_top.pcf 
+par -w -intstyle ise -ol high -mt off cla_top_map.ncd cla_top.ncd cla_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml cla_top.twx cla_top.ncd -o cla_top.twr cla_top.pcf 
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /mnt/c/repos/bmstu-ics6/ecm/lab1/cla.ucf -p xc6vlx240t-ff1156-1 cla_top.ngc cla_top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cla_top_map.ncd cla_top.ngd cla_top.pcf 
+par -w -intstyle ise -ol high -mt off cla_top_map.ncd cla_top.ncd cla_top.pcf 
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/cla_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /mnt/c/repos/bmstu-ics6/ecm/lab1/cla.ucf -p xc6vlx240t-ff1156-1 cla_top.ngc cla_top.ngd  
+map -intstyle ise -p xc6vlx240t-ff1156-1 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o cla_top_map.ncd cla_top.ngd cla_top.pcf 
+par -w -intstyle ise -ol high -mt off cla_top_map.ncd cla_top.ncd cla_top.pcf 
+trce -intstyle ise -v 3 -s 1 -n 3 -fastpaths -xml cla_top.twx cla_top.ncd -o cla_top.twr cla_top.pcf 

@@ -27,13 +27,13 @@
 -g USR_ACCESS:None
 -g next_config_addr:None
 -g JTAG_SysMon:Enable
--g DCIUpdateMode:Quiet
+-g DCIUpdateMode:AsRequired
 -g StartUpClk:CClk
 -g DONE_cycle:4
 -g GTS_cycle:5
 -g GWE_cycle:6
 -g Match_cycle:Auto
 -g Security:None
--g DonePipe:No
+-g DonePipe:Yes
 -g DriveDone:No
 -g Encrypt:No

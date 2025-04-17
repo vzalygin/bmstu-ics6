@@ -10,7 +10,7 @@ Target Device  : xc6vlx240t
 Target Package : ff1156
 Target Speed   : -1
 Mapper Version : virtex6 -- $Revision: 1.55 $
-Mapped Date    : Sat Mar 15 15:24:14 2025
+Mapped Date    : Sat Mar 29 14:15:04 2025
 
 Design Summary
 --------------
@@ -86,8 +86,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                2.86
 
 Peak Memory Usage:  1131 MB
-Total REAL time to MAP completion:  1 mins 30 secs 
-Total CPU time to MAP completion:   1 mins 29 secs 
+Total REAL time to MAP completion:  1 mins 26 secs 
+Total CPU time to MAP completion:   1 mins 24 secs 
 
 Table of Contents
 -----------------

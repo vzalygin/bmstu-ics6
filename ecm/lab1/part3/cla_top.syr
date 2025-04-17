@@ -1,0 +1,1349 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: cla_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cla_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cla_top"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : cla_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/part3/ipcore_dir/ila.v" into library work
+Parsing module <ila>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/lfsr.v" into library work
+Parsing module <lfsr>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_pipelined.v" into library work
+Parsing module <pipelined_adder>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" into library work
+Parsing module <cla_checker_pipelined>.
+Analyzing Verilog file "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_top.v" into library work
+Parsing module <cla_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <cla_top>.
+
+Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=16,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=15.15,CLKOUT0_DIVIDE_F=1.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT2_PHASE=0.0,CLKOUT3_PHASE=0.0,CLKOUT4_PHASE=0.0,CLKOUT5_PHASE=0.0,CLKOUT6_PHASE=0.0,CLKOUT1_DIVIDE=6,CLKOUT2_DIVIDE=1,CLKOUT3_DIVIDE=1,CLKOUT4_DIVIDE=1,CLKOUT5_DIVIDE=1,CLKOUT6_DIVIDE=1,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE")>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <cla_checker_pipelined(w=195)>.
+
+Elaborating module <lfsr>.
+
+Elaborating module <pipelined_adder(w=128,s=4)>.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 47: Size mismatch in connection of port <op1>. Formal port size is 128-bit while actual signal size is 195-bit.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 48: Size mismatch in connection of port <op2>. Formal port size is 128-bit while actual signal size is 195-bit.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 52: Size mismatch in connection of port <res>. Formal port size is 128-bit while actual signal size is 195-bit.
+
+Elaborating module <ila>.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 76: Size mismatch in connection of port <TRIG0>. Formal port size is 128-bit while actual signal size is 195-bit.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 77: Size mismatch in connection of port <TRIG1>. Formal port size is 128-bit while actual signal size is 195-bit.
+WARNING:HDLCompiler:189 - "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v" Line 78: Size mismatch in connection of port <TRIG2>. Formal port size is 128-bit while actual signal size is 195-bit.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cla_top>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_top.v".
+    Found 16-bit register for signal <logic_resetn>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <cla_top> synthesized.
+
+Synthesizing Unit <cla_checker_pipelined>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_checker_pipelined.v".
+        w = 195
+    Set property "KEEP = TRUE" for signal <counter>.
+    Set property "DONT_TOUCH = TRUE" for signal <counter>.
+    Set property "KEEP = TRUE" for signal <sum<194>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<194>>.
+    Set property "KEEP = TRUE" for signal <sum<193>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<193>>.
+    Set property "KEEP = TRUE" for signal <sum<192>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<192>>.
+    Set property "KEEP = TRUE" for signal <sum<191>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<191>>.
+    Set property "KEEP = TRUE" for signal <sum<190>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<190>>.
+    Set property "KEEP = TRUE" for signal <sum<189>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<189>>.
+    Set property "KEEP = TRUE" for signal <sum<188>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<188>>.
+    Set property "KEEP = TRUE" for signal <sum<187>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<187>>.
+    Set property "KEEP = TRUE" for signal <sum<186>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<186>>.
+    Set property "KEEP = TRUE" for signal <sum<185>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<185>>.
+    Set property "KEEP = TRUE" for signal <sum<184>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<184>>.
+    Set property "KEEP = TRUE" for signal <sum<183>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<183>>.
+    Set property "KEEP = TRUE" for signal <sum<182>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<182>>.
+    Set property "KEEP = TRUE" for signal <sum<181>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<181>>.
+    Set property "KEEP = TRUE" for signal <sum<180>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<180>>.
+    Set property "KEEP = TRUE" for signal <sum<179>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<179>>.
+    Set property "KEEP = TRUE" for signal <sum<178>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<178>>.
+    Set property "KEEP = TRUE" for signal <sum<177>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<177>>.
+    Set property "KEEP = TRUE" for signal <sum<176>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<176>>.
+    Set property "KEEP = TRUE" for signal <sum<175>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<175>>.
+    Set property "KEEP = TRUE" for signal <sum<174>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<174>>.
+    Set property "KEEP = TRUE" for signal <sum<173>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<173>>.
+    Set property "KEEP = TRUE" for signal <sum<172>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<172>>.
+    Set property "KEEP = TRUE" for signal <sum<171>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<171>>.
+    Set property "KEEP = TRUE" for signal <sum<170>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<170>>.
+    Set property "KEEP = TRUE" for signal <sum<169>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<169>>.
+    Set property "KEEP = TRUE" for signal <sum<168>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<168>>.
+    Set property "KEEP = TRUE" for signal <sum<167>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<167>>.
+    Set property "KEEP = TRUE" for signal <sum<166>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<166>>.
+    Set property "KEEP = TRUE" for signal <sum<165>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<165>>.
+    Set property "KEEP = TRUE" for signal <sum<164>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<164>>.
+    Set property "KEEP = TRUE" for signal <sum<163>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<163>>.
+    Set property "KEEP = TRUE" for signal <sum<162>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<162>>.
+    Set property "KEEP = TRUE" for signal <sum<161>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<161>>.
+    Set property "KEEP = TRUE" for signal <sum<160>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<160>>.
+    Set property "KEEP = TRUE" for signal <sum<159>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<159>>.
+    Set property "KEEP = TRUE" for signal <sum<158>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<158>>.
+    Set property "KEEP = TRUE" for signal <sum<157>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<157>>.
+    Set property "KEEP = TRUE" for signal <sum<156>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<156>>.
+    Set property "KEEP = TRUE" for signal <sum<155>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<155>>.
+    Set property "KEEP = TRUE" for signal <sum<154>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<154>>.
+    Set property "KEEP = TRUE" for signal <sum<153>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<153>>.
+    Set property "KEEP = TRUE" for signal <sum<152>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<152>>.
+    Set property "KEEP = TRUE" for signal <sum<151>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<151>>.
+    Set property "KEEP = TRUE" for signal <sum<150>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<150>>.
+    Set property "KEEP = TRUE" for signal <sum<149>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<149>>.
+    Set property "KEEP = TRUE" for signal <sum<148>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<148>>.
+    Set property "KEEP = TRUE" for signal <sum<147>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<147>>.
+    Set property "KEEP = TRUE" for signal <sum<146>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<146>>.
+    Set property "KEEP = TRUE" for signal <sum<145>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<145>>.
+    Set property "KEEP = TRUE" for signal <sum<144>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<144>>.
+    Set property "KEEP = TRUE" for signal <sum<143>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<143>>.
+    Set property "KEEP = TRUE" for signal <sum<142>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<142>>.
+    Set property "KEEP = TRUE" for signal <sum<141>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<141>>.
+    Set property "KEEP = TRUE" for signal <sum<140>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<140>>.
+    Set property "KEEP = TRUE" for signal <sum<139>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<139>>.
+    Set property "KEEP = TRUE" for signal <sum<138>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<138>>.
+    Set property "KEEP = TRUE" for signal <sum<137>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<137>>.
+    Set property "KEEP = TRUE" for signal <sum<136>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<136>>.
+    Set property "KEEP = TRUE" for signal <sum<135>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<135>>.
+    Set property "KEEP = TRUE" for signal <sum<134>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<134>>.
+    Set property "KEEP = TRUE" for signal <sum<133>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<133>>.
+    Set property "KEEP = TRUE" for signal <sum<132>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<132>>.
+    Set property "KEEP = TRUE" for signal <sum<131>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<131>>.
+    Set property "KEEP = TRUE" for signal <sum<130>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<130>>.
+    Set property "KEEP = TRUE" for signal <sum<129>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<129>>.
+    Set property "KEEP = TRUE" for signal <sum<128>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<128>>.
+    Set property "KEEP = TRUE" for signal <sum<127:0>>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum<127:0>>.
+    Set property "KEEP = TRUE" for signal <a<194:128>>.
+    Set property "DONT_TOUCH = TRUE" for signal <a<194:128>>.
+    Set property "KEEP = TRUE" for signal <a<127:0>>.
+    Set property "DONT_TOUCH = TRUE" for signal <a<127:0>>.
+    Set property "KEEP = TRUE" for signal <b<194:128>>.
+    Set property "DONT_TOUCH = TRUE" for signal <b<194:128>>.
+    Set property "KEEP = TRUE" for signal <b<127:0>>.
+    Set property "DONT_TOUCH = TRUE" for signal <b<127:0>>.
+    Found 128-bit register for signal <a<127:0>>.
+    Found 128-bit register for signal <b<127:0>>.
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <carry_in>.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal sum<128> may hinder XST clustering optimizations.
+    Summary:
+	inferred 258 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <cla_checker_pipelined> synthesized.
+
+Synthesizing Unit <lfsr>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/lfsr.v".
+    Found 195-bit register for signal <q>.
+    Summary:
+	inferred 195 D-type flip-flop(s).
+Unit <lfsr> synthesized.
+
+Synthesizing Unit <pipelined_adder>.
+    Related source file is "/mnt/c/repos/bmstu-ics6/ecm/lab1/cla_pipelined.v".
+        w = 128
+        s = 4
+    Found 1-bit register for signal <stage_reg<0><29>>.
+    Found 1-bit register for signal <stage_reg<0><28>>.
+    Found 1-bit register for signal <stage_reg<0><27>>.
+    Found 1-bit register for signal <stage_reg<0><26>>.
+    Found 1-bit register for signal <stage_reg<0><25>>.
+    Found 1-bit register for signal <stage_reg<0><24>>.
+    Found 1-bit register for signal <stage_reg<0><23>>.
+    Found 1-bit register for signal <stage_reg<0><22>>.
+    Found 1-bit register for signal <stage_reg<0><21>>.
+    Found 1-bit register for signal <stage_reg<0><20>>.
+    Found 1-bit register for signal <stage_reg<0><19>>.
+    Found 1-bit register for signal <stage_reg<0><18>>.
+    Found 1-bit register for signal <stage_reg<0><17>>.
+    Found 1-bit register for signal <stage_reg<0><16>>.
+    Found 1-bit register for signal <stage_reg<0><15>>.
+    Found 1-bit register for signal <stage_reg<0><14>>.
+    Found 1-bit register for signal <stage_reg<0><13>>.
+    Found 1-bit register for signal <stage_reg<0><12>>.
+    Found 1-bit register for signal <stage_reg<0><11>>.
+    Found 1-bit register for signal <stage_reg<0><10>>.
+    Found 1-bit register for signal <stage_reg<0><9>>.
+    Found 1-bit register for signal <stage_reg<0><8>>.
+    Found 1-bit register for signal <stage_reg<0><7>>.
+    Found 1-bit register for signal <stage_reg<0><6>>.
+    Found 1-bit register for signal <stage_reg<0><5>>.
+    Found 1-bit register for signal <stage_reg<0><4>>.
+    Found 1-bit register for signal <stage_reg<0><3>>.
+    Found 1-bit register for signal <stage_reg<0><2>>.
+    Found 1-bit register for signal <stage_reg<0><1>>.
+    Found 1-bit register for signal <stage_reg<0><0>>.
+    Found 1-bit register for signal <stage_reg<1><29>>.
+    Found 1-bit register for signal <stage_reg<1><28>>.
+    Found 1-bit register for signal <stage_reg<1><27>>.
+    Found 1-bit register for signal <stage_reg<1><26>>.
+    Found 1-bit register for signal <stage_reg<1><25>>.
+    Found 1-bit register for signal <stage_reg<1><24>>.
+    Found 1-bit register for signal <stage_reg<1><23>>.
+    Found 1-bit register for signal <stage_reg<1><22>>.
+    Found 1-bit register for signal <stage_reg<1><21>>.
+    Found 1-bit register for signal <stage_reg<1><20>>.
+    Found 1-bit register for signal <stage_reg<1><19>>.
+    Found 1-bit register for signal <stage_reg<1><18>>.
+    Found 1-bit register for signal <stage_reg<1><17>>.
+    Found 1-bit register for signal <stage_reg<1><16>>.
+    Found 1-bit register for signal <stage_reg<1><15>>.
+    Found 1-bit register for signal <stage_reg<1><14>>.
+    Found 1-bit register for signal <stage_reg<1><13>>.
+    Found 1-bit register for signal <stage_reg<1><12>>.
+    Found 1-bit register for signal <stage_reg<1><11>>.
+    Found 1-bit register for signal <stage_reg<1><10>>.
+    Found 1-bit register for signal <stage_reg<1><9>>.
+    Found 1-bit register for signal <stage_reg<1><8>>.
+    Found 1-bit register for signal <stage_reg<1><7>>.
+    Found 1-bit register for signal <stage_reg<1><6>>.
+    Found 1-bit register for signal <stage_reg<1><5>>.
+    Found 1-bit register for signal <stage_reg<1><4>>.
+    Found 1-bit register for signal <stage_reg<1><3>>.
+    Found 1-bit register for signal <stage_reg<1><2>>.
+    Found 1-bit register for signal <stage_reg<1><1>>.
+    Found 1-bit register for signal <stage_reg<1><0>>.
+    Found 1-bit register for signal <stage_reg<2><29>>.
+    Found 1-bit register for signal <stage_reg<2><28>>.
+    Found 1-bit register for signal <stage_reg<2><27>>.
+    Found 1-bit register for signal <stage_reg<2><26>>.
+    Found 1-bit register for signal <stage_reg<2><25>>.
+    Found 1-bit register for signal <stage_reg<2><24>>.
+    Found 1-bit register for signal <stage_reg<2><23>>.
+    Found 1-bit register for signal <stage_reg<2><22>>.
+    Found 1-bit register for signal <stage_reg<2><21>>.
+    Found 1-bit register for signal <stage_reg<2><20>>.
+    Found 1-bit register for signal <stage_reg<2><19>>.
+    Found 1-bit register for signal <stage_reg<2><18>>.
+    Found 1-bit register for signal <stage_reg<2><17>>.
+    Found 1-bit register for signal <stage_reg<2><16>>.
+    Found 1-bit register for signal <stage_reg<2><15>>.
+    Found 1-bit register for signal <stage_reg<2><14>>.
+    Found 1-bit register for signal <stage_reg<2><13>>.
+    Found 1-bit register for signal <stage_reg<2><12>>.
+    Found 1-bit register for signal <stage_reg<2><11>>.
+    Found 1-bit register for signal <stage_reg<2><10>>.
+    Found 1-bit register for signal <stage_reg<2><9>>.
+    Found 1-bit register for signal <stage_reg<2><8>>.
+    Found 1-bit register for signal <stage_reg<2><7>>.
+    Found 1-bit register for signal <stage_reg<2><6>>.
+    Found 1-bit register for signal <stage_reg<2><5>>.
+    Found 1-bit register for signal <stage_reg<2><4>>.
+    Found 1-bit register for signal <stage_reg<2><3>>.
+    Found 1-bit register for signal <stage_reg<2><2>>.
+    Found 1-bit register for signal <stage_reg<2><1>>.
+    Found 1-bit register for signal <stage_reg<2><0>>.
+    Found 1-bit register for signal <stage_reg<3><29>>.
+    Found 1-bit register for signal <stage_reg<3><28>>.
+    Found 1-bit register for signal <stage_reg<3><27>>.
+    Found 1-bit register for signal <stage_reg<3><26>>.
+    Found 1-bit register for signal <stage_reg<3><25>>.
+    Found 1-bit register for signal <stage_reg<3><24>>.
+    Found 1-bit register for signal <stage_reg<3><23>>.
+    Found 1-bit register for signal <stage_reg<3><22>>.
+    Found 1-bit register for signal <stage_reg<3><21>>.
+    Found 1-bit register for signal <stage_reg<3><20>>.
+    Found 1-bit register for signal <stage_reg<3><19>>.
+    Found 1-bit register for signal <stage_reg<3><18>>.
+    Found 1-bit register for signal <stage_reg<3><17>>.
+    Found 1-bit register for signal <stage_reg<3><16>>.
+    Found 1-bit register for signal <stage_reg<3><15>>.
+    Found 1-bit register for signal <stage_reg<3><14>>.
+    Found 1-bit register for signal <stage_reg<3><13>>.
+    Found 1-bit register for signal <stage_reg<3><12>>.
+    Found 1-bit register for signal <stage_reg<3><11>>.
+    Found 1-bit register for signal <stage_reg<3><10>>.
+    Found 1-bit register for signal <stage_reg<3><9>>.
+    Found 1-bit register for signal <stage_reg<3><8>>.
+    Found 1-bit register for signal <stage_reg<3><7>>.
+    Found 1-bit register for signal <stage_reg<3><6>>.
+    Found 1-bit register for signal <stage_reg<3><5>>.
+    Found 1-bit register for signal <stage_reg<3><4>>.
+    Found 1-bit register for signal <stage_reg<3><3>>.
+    Found 1-bit register for signal <stage_reg<3><2>>.
+    Found 1-bit register for signal <stage_reg<3><1>>.
+    Found 1-bit register for signal <stage_reg<3><0>>.
+    Found 1-bit register for signal <stage_reg<1><61>>.
+    Found 1-bit register for signal <stage_reg<1><60>>.
+    Found 1-bit register for signal <stage_reg<1><59>>.
+    Found 1-bit register for signal <stage_reg<1><58>>.
+    Found 1-bit register for signal <stage_reg<1><57>>.
+    Found 1-bit register for signal <stage_reg<1><56>>.
+    Found 1-bit register for signal <stage_reg<1><55>>.
+    Found 1-bit register for signal <stage_reg<1><54>>.
+    Found 1-bit register for signal <stage_reg<1><53>>.
+    Found 1-bit register for signal <stage_reg<1><52>>.
+    Found 1-bit register for signal <stage_reg<1><51>>.
+    Found 1-bit register for signal <stage_reg<1><50>>.
+    Found 1-bit register for signal <stage_reg<1><49>>.
+    Found 1-bit register for signal <stage_reg<1><48>>.
+    Found 1-bit register for signal <stage_reg<1><47>>.
+    Found 1-bit register for signal <stage_reg<1><46>>.
+    Found 1-bit register for signal <stage_reg<1><45>>.
+    Found 1-bit register for signal <stage_reg<1><44>>.
+    Found 1-bit register for signal <stage_reg<1><43>>.
+    Found 1-bit register for signal <stage_reg<1><42>>.
+    Found 1-bit register for signal <stage_reg<1><41>>.
+    Found 1-bit register for signal <stage_reg<1><40>>.
+    Found 1-bit register for signal <stage_reg<1><39>>.
+    Found 1-bit register for signal <stage_reg<1><38>>.
+    Found 1-bit register for signal <stage_reg<1><37>>.
+    Found 1-bit register for signal <stage_reg<1><36>>.
+    Found 1-bit register for signal <stage_reg<1><35>>.
+    Found 1-bit register for signal <stage_reg<1><34>>.
+    Found 1-bit register for signal <stage_reg<1><33>>.
+    Found 1-bit register for signal <stage_reg<1><32>>.
+    Found 1-bit register for signal <stage_reg<1><31>>.
+    Found 1-bit register for signal <stage_reg<1><30>>.
+    Found 1-bit register for signal <stage_reg<2><61>>.
+    Found 1-bit register for signal <stage_reg<2><60>>.
+    Found 1-bit register for signal <stage_reg<2><59>>.
+    Found 1-bit register for signal <stage_reg<2><58>>.
+    Found 1-bit register for signal <stage_reg<2><57>>.
+    Found 1-bit register for signal <stage_reg<2><56>>.
+    Found 1-bit register for signal <stage_reg<2><55>>.
+    Found 1-bit register for signal <stage_reg<2><54>>.
+    Found 1-bit register for signal <stage_reg<2><53>>.
+    Found 1-bit register for signal <stage_reg<2><52>>.
+    Found 1-bit register for signal <stage_reg<2><51>>.
+    Found 1-bit register for signal <stage_reg<2><50>>.
+    Found 1-bit register for signal <stage_reg<2><49>>.
+    Found 1-bit register for signal <stage_reg<2><48>>.
+    Found 1-bit register for signal <stage_reg<2><47>>.
+    Found 1-bit register for signal <stage_reg<2><46>>.
+    Found 1-bit register for signal <stage_reg<2><45>>.
+    Found 1-bit register for signal <stage_reg<2><44>>.
+    Found 1-bit register for signal <stage_reg<2><43>>.
+    Found 1-bit register for signal <stage_reg<2><42>>.
+    Found 1-bit register for signal <stage_reg<2><41>>.
+    Found 1-bit register for signal <stage_reg<2><40>>.
+    Found 1-bit register for signal <stage_reg<2><39>>.
+    Found 1-bit register for signal <stage_reg<2><38>>.
+    Found 1-bit register for signal <stage_reg<2><37>>.
+    Found 1-bit register for signal <stage_reg<2><36>>.
+    Found 1-bit register for signal <stage_reg<2><35>>.
+    Found 1-bit register for signal <stage_reg<2><34>>.
+    Found 1-bit register for signal <stage_reg<2><33>>.
+    Found 1-bit register for signal <stage_reg<2><32>>.
+    Found 1-bit register for signal <stage_reg<2><31>>.
+    Found 1-bit register for signal <stage_reg<2><30>>.
+    Found 1-bit register for signal <stage_reg<3><61>>.
+    Found 1-bit register for signal <stage_reg<3><60>>.
+    Found 1-bit register for signal <stage_reg<3><59>>.
+    Found 1-bit register for signal <stage_reg<3><58>>.
+    Found 1-bit register for signal <stage_reg<3><57>>.
+    Found 1-bit register for signal <stage_reg<3><56>>.
+    Found 1-bit register for signal <stage_reg<3><55>>.
+    Found 1-bit register for signal <stage_reg<3><54>>.
+    Found 1-bit register for signal <stage_reg<3><53>>.
+    Found 1-bit register for signal <stage_reg<3><52>>.
+    Found 1-bit register for signal <stage_reg<3><51>>.
+    Found 1-bit register for signal <stage_reg<3><50>>.
+    Found 1-bit register for signal <stage_reg<3><49>>.
+    Found 1-bit register for signal <stage_reg<3><48>>.
+    Found 1-bit register for signal <stage_reg<3><47>>.
+    Found 1-bit register for signal <stage_reg<3><46>>.
+    Found 1-bit register for signal <stage_reg<3><45>>.
+    Found 1-bit register for signal <stage_reg<3><44>>.
+    Found 1-bit register for signal <stage_reg<3><43>>.
+    Found 1-bit register for signal <stage_reg<3><42>>.
+    Found 1-bit register for signal <stage_reg<3><41>>.
+    Found 1-bit register for signal <stage_reg<3><40>>.
+    Found 1-bit register for signal <stage_reg<3><39>>.
+    Found 1-bit register for signal <stage_reg<3><38>>.
+    Found 1-bit register for signal <stage_reg<3><37>>.
+    Found 1-bit register for signal <stage_reg<3><36>>.
+    Found 1-bit register for signal <stage_reg<3><35>>.
+    Found 1-bit register for signal <stage_reg<3><34>>.
+    Found 1-bit register for signal <stage_reg<3><33>>.
+    Found 1-bit register for signal <stage_reg<3><32>>.
+    Found 1-bit register for signal <stage_reg<3><31>>.
+    Found 1-bit register for signal <stage_reg<3><30>>.
+    Found 1-bit register for signal <stage_reg<2><93>>.
+    Found 1-bit register for signal <stage_reg<2><92>>.
+    Found 1-bit register for signal <stage_reg<2><91>>.
+    Found 1-bit register for signal <stage_reg<2><90>>.
+    Found 1-bit register for signal <stage_reg<2><89>>.
+    Found 1-bit register for signal <stage_reg<2><88>>.
+    Found 1-bit register for signal <stage_reg<2><87>>.
+    Found 1-bit register for signal <stage_reg<2><86>>.
+    Found 1-bit register for signal <stage_reg<2><85>>.
+    Found 1-bit register for signal <stage_reg<2><84>>.
+    Found 1-bit register for signal <stage_reg<2><83>>.
+    Found 1-bit register for signal <stage_reg<2><82>>.
+    Found 1-bit register for signal <stage_reg<2><81>>.
+    Found 1-bit register for signal <stage_reg<2><80>>.
+    Found 1-bit register for signal <stage_reg<2><79>>.
+    Found 1-bit register for signal <stage_reg<2><78>>.
+    Found 1-bit register for signal <stage_reg<2><77>>.
+    Found 1-bit register for signal <stage_reg<2><76>>.
+    Found 1-bit register for signal <stage_reg<2><75>>.
+    Found 1-bit register for signal <stage_reg<2><74>>.
+    Found 1-bit register for signal <stage_reg<2><73>>.
+    Found 1-bit register for signal <stage_reg<2><72>>.
+    Found 1-bit register for signal <stage_reg<2><71>>.
+    Found 1-bit register for signal <stage_reg<2><70>>.
+    Found 1-bit register for signal <stage_reg<2><69>>.
+    Found 1-bit register for signal <stage_reg<2><68>>.
+    Found 1-bit register for signal <stage_reg<2><67>>.
+    Found 1-bit register for signal <stage_reg<2><66>>.
+    Found 1-bit register for signal <stage_reg<2><65>>.
+    Found 1-bit register for signal <stage_reg<2><64>>.
+    Found 1-bit register for signal <stage_reg<2><63>>.
+    Found 1-bit register for signal <stage_reg<2><62>>.
+    Found 1-bit register for signal <stage_reg<3><93>>.
+    Found 1-bit register for signal <stage_reg<3><92>>.
+    Found 1-bit register for signal <stage_reg<3><91>>.
+    Found 1-bit register for signal <stage_reg<3><90>>.
+    Found 1-bit register for signal <stage_reg<3><89>>.
+    Found 1-bit register for signal <stage_reg<3><88>>.
+    Found 1-bit register for signal <stage_reg<3><87>>.
+    Found 1-bit register for signal <stage_reg<3><86>>.
+    Found 1-bit register for signal <stage_reg<3><85>>.
+    Found 1-bit register for signal <stage_reg<3><84>>.
+    Found 1-bit register for signal <stage_reg<3><83>>.
+    Found 1-bit register for signal <stage_reg<3><82>>.
+    Found 1-bit register for signal <stage_reg<3><81>>.
+    Found 1-bit register for signal <stage_reg<3><80>>.
+    Found 1-bit register for signal <stage_reg<3><79>>.
+    Found 1-bit register for signal <stage_reg<3><78>>.
+    Found 1-bit register for signal <stage_reg<3><77>>.
+    Found 1-bit register for signal <stage_reg<3><76>>.
+    Found 1-bit register for signal <stage_reg<3><75>>.
+    Found 1-bit register for signal <stage_reg<3><74>>.
+    Found 1-bit register for signal <stage_reg<3><73>>.
+    Found 1-bit register for signal <stage_reg<3><72>>.
+    Found 1-bit register for signal <stage_reg<3><71>>.
+    Found 1-bit register for signal <stage_reg<3><70>>.
+    Found 1-bit register for signal <stage_reg<3><69>>.
+    Found 1-bit register for signal <stage_reg<3><68>>.
+    Found 1-bit register for signal <stage_reg<3><67>>.
+    Found 1-bit register for signal <stage_reg<3><66>>.
+    Found 1-bit register for signal <stage_reg<3><65>>.
+    Found 1-bit register for signal <stage_reg<3><64>>.
+    Found 1-bit register for signal <stage_reg<3><63>>.
+    Found 1-bit register for signal <stage_reg<3><62>>.
+    Found 1-bit register for signal <stage_reg<3><127>>.
+    Found 1-bit register for signal <stage_reg<3><126>>.
+    Found 1-bit register for signal <stage_reg<3><125>>.
+    Found 1-bit register for signal <stage_reg<3><124>>.
+    Found 1-bit register for signal <stage_reg<3><123>>.
+    Found 1-bit register for signal <stage_reg<3><122>>.
+    Found 1-bit register for signal <stage_reg<3><121>>.
+    Found 1-bit register for signal <stage_reg<3><120>>.
+    Found 1-bit register for signal <stage_reg<3><119>>.
+    Found 1-bit register for signal <stage_reg<3><118>>.
+    Found 1-bit register for signal <stage_reg<3><117>>.
+    Found 1-bit register for signal <stage_reg<3><116>>.
+    Found 1-bit register for signal <stage_reg<3><115>>.
+    Found 1-bit register for signal <stage_reg<3><114>>.
+    Found 1-bit register for signal <stage_reg<3><113>>.
+    Found 1-bit register for signal <stage_reg<3><112>>.
+    Found 1-bit register for signal <stage_reg<3><111>>.
+    Found 1-bit register for signal <stage_reg<3><110>>.
+    Found 1-bit register for signal <stage_reg<3><109>>.
+    Found 1-bit register for signal <stage_reg<3><108>>.
+    Found 1-bit register for signal <stage_reg<3><107>>.
+    Found 1-bit register for signal <stage_reg<3><106>>.
+    Found 1-bit register for signal <stage_reg<3><105>>.
+    Found 1-bit register for signal <stage_reg<3><104>>.
+    Found 1-bit register for signal <stage_reg<3><103>>.
+    Found 1-bit register for signal <stage_reg<3><102>>.
+    Found 1-bit register for signal <stage_reg<3><101>>.
+    Found 1-bit register for signal <stage_reg<3><100>>.
+    Found 1-bit register for signal <stage_reg<3><99>>.
+    Found 1-bit register for signal <stage_reg<3><98>>.
+    Found 1-bit register for signal <stage_reg<3><97>>.
+    Found 1-bit register for signal <stage_reg<3><96>>.
+    Found 1-bit register for signal <stage_reg<3><95>>.
+    Found 1-bit register for signal <stage_reg<3><94>>.
+    Found 1-bit register for signal <valid>.
+    Found 128-bit register for signal <res>.
+    Found 4-bit register for signal <valid_reg>.
+    Found 1-bit register for signal <stage_op1<1><127>>.
+    Found 1-bit register for signal <stage_op1<1><126>>.
+    Found 1-bit register for signal <stage_op1<1><125>>.
+    Found 1-bit register for signal <stage_op1<1><124>>.
+    Found 1-bit register for signal <stage_op1<1><123>>.
+    Found 1-bit register for signal <stage_op1<1><122>>.
+    Found 1-bit register for signal <stage_op1<1><121>>.
+    Found 1-bit register for signal <stage_op1<1><120>>.
+    Found 1-bit register for signal <stage_op1<1><119>>.
+    Found 1-bit register for signal <stage_op1<1><118>>.
+    Found 1-bit register for signal <stage_op1<1><117>>.
+    Found 1-bit register for signal <stage_op1<1><116>>.
+    Found 1-bit register for signal <stage_op1<1><115>>.
+    Found 1-bit register for signal <stage_op1<1><114>>.
+    Found 1-bit register for signal <stage_op1<1><113>>.
+    Found 1-bit register for signal <stage_op1<1><112>>.
+    Found 1-bit register for signal <stage_op1<1><111>>.
+    Found 1-bit register for signal <stage_op1<1><110>>.
+    Found 1-bit register for signal <stage_op1<1><109>>.
+    Found 1-bit register for signal <stage_op1<1><108>>.
+    Found 1-bit register for signal <stage_op1<1><107>>.
+    Found 1-bit register for signal <stage_op1<1><106>>.
+    Found 1-bit register for signal <stage_op1<1><105>>.
+    Found 1-bit register for signal <stage_op1<1><104>>.
+    Found 1-bit register for signal <stage_op1<1><103>>.
+    Found 1-bit register for signal <stage_op1<1><102>>.
+    Found 1-bit register for signal <stage_op1<1><101>>.
+    Found 1-bit register for signal <stage_op1<1><100>>.
+    Found 1-bit register for signal <stage_op1<1><99>>.
+    Found 1-bit register for signal <stage_op1<1><98>>.
+    Found 1-bit register for signal <stage_op1<1><97>>.
+    Found 1-bit register for signal <stage_op1<1><96>>.
+    Found 1-bit register for signal <stage_op1<1><95>>.
+    Found 1-bit register for signal <stage_op1<1><94>>.
+    Found 1-bit register for signal <stage_op1<1><93>>.
+    Found 1-bit register for signal <stage_op1<1><92>>.
+    Found 1-bit register for signal <stage_op1<1><91>>.
+    Found 1-bit register for signal <stage_op1<1><90>>.
+    Found 1-bit register for signal <stage_op1<1><89>>.
+    Found 1-bit register for signal <stage_op1<1><88>>.
+    Found 1-bit register for signal <stage_op1<1><87>>.
+    Found 1-bit register for signal <stage_op1<1><86>>.
+    Found 1-bit register for signal <stage_op1<1><85>>.
+    Found 1-bit register for signal <stage_op1<1><84>>.
+    Found 1-bit register for signal <stage_op1<1><83>>.
+    Found 1-bit register for signal <stage_op1<1><82>>.
+    Found 1-bit register for signal <stage_op1<1><81>>.
+    Found 1-bit register for signal <stage_op1<1><80>>.
+    Found 1-bit register for signal <stage_op1<1><79>>.
+    Found 1-bit register for signal <stage_op1<1><78>>.
+    Found 1-bit register for signal <stage_op1<1><77>>.
+    Found 1-bit register for signal <stage_op1<1><76>>.
+    Found 1-bit register for signal <stage_op1<1><75>>.
+    Found 1-bit register for signal <stage_op1<1><74>>.
+    Found 1-bit register for signal <stage_op1<1><73>>.
+    Found 1-bit register for signal <stage_op1<1><72>>.
+    Found 1-bit register for signal <stage_op1<1><71>>.
+    Found 1-bit register for signal <stage_op1<1><70>>.
+    Found 1-bit register for signal <stage_op1<1><69>>.
+    Found 1-bit register for signal <stage_op1<1><68>>.
+    Found 1-bit register for signal <stage_op1<1><67>>.
+    Found 1-bit register for signal <stage_op1<1><66>>.
+    Found 1-bit register for signal <stage_op1<1><65>>.
+    Found 1-bit register for signal <stage_op1<1><64>>.
+    Found 1-bit register for signal <stage_op1<1><63>>.
+    Found 1-bit register for signal <stage_op1<1><62>>.
+    Found 1-bit register for signal <stage_op1<1><61>>.
+    Found 1-bit register for signal <stage_op1<1><60>>.
+    Found 1-bit register for signal <stage_op1<1><59>>.
+    Found 1-bit register for signal <stage_op1<1><58>>.
+    Found 1-bit register for signal <stage_op1<1><57>>.
+    Found 1-bit register for signal <stage_op1<1><56>>.
+    Found 1-bit register for signal <stage_op1<1><55>>.
+    Found 1-bit register for signal <stage_op1<1><54>>.
+    Found 1-bit register for signal <stage_op1<1><53>>.
+    Found 1-bit register for signal <stage_op1<1><52>>.
+    Found 1-bit register for signal <stage_op1<1><51>>.
+    Found 1-bit register for signal <stage_op1<1><50>>.
+    Found 1-bit register for signal <stage_op1<1><49>>.
+    Found 1-bit register for signal <stage_op1<1><48>>.
+    Found 1-bit register for signal <stage_op1<1><47>>.
+    Found 1-bit register for signal <stage_op1<1><46>>.
+    Found 1-bit register for signal <stage_op1<1><45>>.
+    Found 1-bit register for signal <stage_op1<1><44>>.
+    Found 1-bit register for signal <stage_op1<1><43>>.
+    Found 1-bit register for signal <stage_op1<1><42>>.
+    Found 1-bit register for signal <stage_op1<1><41>>.
+    Found 1-bit register for signal <stage_op1<1><40>>.
+    Found 1-bit register for signal <stage_op1<1><39>>.
+    Found 1-bit register for signal <stage_op1<1><38>>.
+    Found 1-bit register for signal <stage_op1<1><37>>.
+    Found 1-bit register for signal <stage_op1<1><36>>.
+    Found 1-bit register for signal <stage_op1<1><35>>.
+    Found 1-bit register for signal <stage_op1<1><34>>.
+    Found 1-bit register for signal <stage_op1<1><33>>.
+    Found 1-bit register for signal <stage_op1<1><32>>.
+    Found 1-bit register for signal <stage_op1<1><31>>.
+    Found 1-bit register for signal <stage_op1<1><30>>.
+    Found 1-bit register for signal <stage_op1<2><127>>.
+    Found 1-bit register for signal <stage_op1<2><126>>.
+    Found 1-bit register for signal <stage_op1<2><125>>.
+    Found 1-bit register for signal <stage_op1<2><124>>.
+    Found 1-bit register for signal <stage_op1<2><123>>.
+    Found 1-bit register for signal <stage_op1<2><122>>.
+    Found 1-bit register for signal <stage_op1<2><121>>.
+    Found 1-bit register for signal <stage_op1<2><120>>.
+    Found 1-bit register for signal <stage_op1<2><119>>.
+    Found 1-bit register for signal <stage_op1<2><118>>.
+    Found 1-bit register for signal <stage_op1<2><117>>.
+    Found 1-bit register for signal <stage_op1<2><116>>.
+    Found 1-bit register for signal <stage_op1<2><115>>.
+    Found 1-bit register for signal <stage_op1<2><114>>.
+    Found 1-bit register for signal <stage_op1<2><113>>.
+    Found 1-bit register for signal <stage_op1<2><112>>.
+    Found 1-bit register for signal <stage_op1<2><111>>.
+    Found 1-bit register for signal <stage_op1<2><110>>.
+    Found 1-bit register for signal <stage_op1<2><109>>.
+    Found 1-bit register for signal <stage_op1<2><108>>.
+    Found 1-bit register for signal <stage_op1<2><107>>.
+    Found 1-bit register for signal <stage_op1<2><106>>.
+    Found 1-bit register for signal <stage_op1<2><105>>.
+    Found 1-bit register for signal <stage_op1<2><104>>.
+    Found 1-bit register for signal <stage_op1<2><103>>.
+    Found 1-bit register for signal <stage_op1<2><102>>.
+    Found 1-bit register for signal <stage_op1<2><101>>.
+    Found 1-bit register for signal <stage_op1<2><100>>.
+    Found 1-bit register for signal <stage_op1<2><99>>.
+    Found 1-bit register for signal <stage_op1<2><98>>.
+    Found 1-bit register for signal <stage_op1<2><97>>.
+    Found 1-bit register for signal <stage_op1<2><96>>.
+    Found 1-bit register for signal <stage_op1<2><95>>.
+    Found 1-bit register for signal <stage_op1<2><94>>.
+    Found 1-bit register for signal <stage_op1<2><93>>.
+    Found 1-bit register for signal <stage_op1<2><92>>.
+    Found 1-bit register for signal <stage_op1<2><91>>.
+    Found 1-bit register for signal <stage_op1<2><90>>.
+    Found 1-bit register for signal <stage_op1<2><89>>.
+    Found 1-bit register for signal <stage_op1<2><88>>.
+    Found 1-bit register for signal <stage_op1<2><87>>.
+    Found 1-bit register for signal <stage_op1<2><86>>.
+    Found 1-bit register for signal <stage_op1<2><85>>.
+    Found 1-bit register for signal <stage_op1<2><84>>.
+    Found 1-bit register for signal <stage_op1<2><83>>.
+    Found 1-bit register for signal <stage_op1<2><82>>.
+    Found 1-bit register for signal <stage_op1<2><81>>.
+    Found 1-bit register for signal <stage_op1<2><80>>.
+    Found 1-bit register for signal <stage_op1<2><79>>.
+    Found 1-bit register for signal <stage_op1<2><78>>.
+    Found 1-bit register for signal <stage_op1<2><77>>.
+    Found 1-bit register for signal <stage_op1<2><76>>.
+    Found 1-bit register for signal <stage_op1<2><75>>.
+    Found 1-bit register for signal <stage_op1<2><74>>.
+    Found 1-bit register for signal <stage_op1<2><73>>.
+    Found 1-bit register for signal <stage_op1<2><72>>.
+    Found 1-bit register for signal <stage_op1<2><71>>.
+    Found 1-bit register for signal <stage_op1<2><70>>.
+    Found 1-bit register for signal <stage_op1<2><69>>.
+    Found 1-bit register for signal <stage_op1<2><68>>.
+    Found 1-bit register for signal <stage_op1<2><67>>.
+    Found 1-bit register for signal <stage_op1<2><66>>.
+    Found 1-bit register for signal <stage_op1<2><65>>.
+    Found 1-bit register for signal <stage_op1<2><64>>.
+    Found 1-bit register for signal <stage_op1<2><63>>.
+    Found 1-bit register for signal <stage_op1<2><62>>.
+    Found 1-bit register for signal <stage_op1<3><127>>.
+    Found 1-bit register for signal <stage_op1<3><126>>.
+    Found 1-bit register for signal <stage_op1<3><125>>.
+    Found 1-bit register for signal <stage_op1<3><124>>.
+    Found 1-bit register for signal <stage_op1<3><123>>.
+    Found 1-bit register for signal <stage_op1<3><122>>.
+    Found 1-bit register for signal <stage_op1<3><121>>.
+    Found 1-bit register for signal <stage_op1<3><120>>.
+    Found 1-bit register for signal <stage_op1<3><119>>.
+    Found 1-bit register for signal <stage_op1<3><118>>.
+    Found 1-bit register for signal <stage_op1<3><117>>.
+    Found 1-bit register for signal <stage_op1<3><116>>.
+    Found 1-bit register for signal <stage_op1<3><115>>.
+    Found 1-bit register for signal <stage_op1<3><114>>.
+    Found 1-bit register for signal <stage_op1<3><113>>.
+    Found 1-bit register for signal <stage_op1<3><112>>.
+    Found 1-bit register for signal <stage_op1<3><111>>.
+    Found 1-bit register for signal <stage_op1<3><110>>.
+    Found 1-bit register for signal <stage_op1<3><109>>.
+    Found 1-bit register for signal <stage_op1<3><108>>.
+    Found 1-bit register for signal <stage_op1<3><107>>.
+    Found 1-bit register for signal <stage_op1<3><106>>.
+    Found 1-bit register for signal <stage_op1<3><105>>.
+    Found 1-bit register for signal <stage_op1<3><104>>.
+    Found 1-bit register for signal <stage_op1<3><103>>.
+    Found 1-bit register for signal <stage_op1<3><102>>.
+    Found 1-bit register for signal <stage_op1<3><101>>.
+    Found 1-bit register for signal <stage_op1<3><100>>.
+    Found 1-bit register for signal <stage_op1<3><99>>.
+    Found 1-bit register for signal <stage_op1<3><98>>.
+    Found 1-bit register for signal <stage_op1<3><97>>.
+    Found 1-bit register for signal <stage_op1<3><96>>.
+    Found 1-bit register for signal <stage_op1<3><95>>.
+    Found 1-bit register for signal <stage_op1<3><94>>.
+    Found 1-bit register for signal <stage_op2<1><127>>.
+    Found 1-bit register for signal <stage_op2<1><126>>.
+    Found 1-bit register for signal <stage_op2<1><125>>.
+    Found 1-bit register for signal <stage_op2<1><124>>.
+    Found 1-bit register for signal <stage_op2<1><123>>.
+    Found 1-bit register for signal <stage_op2<1><122>>.
+    Found 1-bit register for signal <stage_op2<1><121>>.
+    Found 1-bit register for signal <stage_op2<1><120>>.
+    Found 1-bit register for signal <stage_op2<1><119>>.
+    Found 1-bit register for signal <stage_op2<1><118>>.
+    Found 1-bit register for signal <stage_op2<1><117>>.
+    Found 1-bit register for signal <stage_op2<1><116>>.
+    Found 1-bit register for signal <stage_op2<1><115>>.
+    Found 1-bit register for signal <stage_op2<1><114>>.
+    Found 1-bit register for signal <stage_op2<1><113>>.
+    Found 1-bit register for signal <stage_op2<1><112>>.
+    Found 1-bit register for signal <stage_op2<1><111>>.
+    Found 1-bit register for signal <stage_op2<1><110>>.
+    Found 1-bit register for signal <stage_op2<1><109>>.
+    Found 1-bit register for signal <stage_op2<1><108>>.
+    Found 1-bit register for signal <stage_op2<1><107>>.
+    Found 1-bit register for signal <stage_op2<1><106>>.
+    Found 1-bit register for signal <stage_op2<1><105>>.
+    Found 1-bit register for signal <stage_op2<1><104>>.
+    Found 1-bit register for signal <stage_op2<1><103>>.
+    Found 1-bit register for signal <stage_op2<1><102>>.
+    Found 1-bit register for signal <stage_op2<1><101>>.
+    Found 1-bit register for signal <stage_op2<1><100>>.
+    Found 1-bit register for signal <stage_op2<1><99>>.
+    Found 1-bit register for signal <stage_op2<1><98>>.
+    Found 1-bit register for signal <stage_op2<1><97>>.
+    Found 1-bit register for signal <stage_op2<1><96>>.
+    Found 1-bit register for signal <stage_op2<1><95>>.
+    Found 1-bit register for signal <stage_op2<1><94>>.
+    Found 1-bit register for signal <stage_op2<1><93>>.
+    Found 1-bit register for signal <stage_op2<1><92>>.
+    Found 1-bit register for signal <stage_op2<1><91>>.
+    Found 1-bit register for signal <stage_op2<1><90>>.
+    Found 1-bit register for signal <stage_op2<1><89>>.
+    Found 1-bit register for signal <stage_op2<1><88>>.
+    Found 1-bit register for signal <stage_op2<1><87>>.
+    Found 1-bit register for signal <stage_op2<1><86>>.
+    Found 1-bit register for signal <stage_op2<1><85>>.
+    Found 1-bit register for signal <stage_op2<1><84>>.
+    Found 1-bit register for signal <stage_op2<1><83>>.
+    Found 1-bit register for signal <stage_op2<1><82>>.
+    Found 1-bit register for signal <stage_op2<1><81>>.
+    Found 1-bit register for signal <stage_op2<1><80>>.
+    Found 1-bit register for signal <stage_op2<1><79>>.
+    Found 1-bit register for signal <stage_op2<1><78>>.
+    Found 1-bit register for signal <stage_op2<1><77>>.
+    Found 1-bit register for signal <stage_op2<1><76>>.
+    Found 1-bit register for signal <stage_op2<1><75>>.
+    Found 1-bit register for signal <stage_op2<1><74>>.
+    Found 1-bit register for signal <stage_op2<1><73>>.
+    Found 1-bit register for signal <stage_op2<1><72>>.
+    Found 1-bit register for signal <stage_op2<1><71>>.
+    Found 1-bit register for signal <stage_op2<1><70>>.
+    Found 1-bit register for signal <stage_op2<1><69>>.
+    Found 1-bit register for signal <stage_op2<1><68>>.
+    Found 1-bit register for signal <stage_op2<1><67>>.
+    Found 1-bit register for signal <stage_op2<1><66>>.
+    Found 1-bit register for signal <stage_op2<1><65>>.
+    Found 1-bit register for signal <stage_op2<1><64>>.
+    Found 1-bit register for signal <stage_op2<1><63>>.
+    Found 1-bit register for signal <stage_op2<1><62>>.
+    Found 1-bit register for signal <stage_op2<1><61>>.
+    Found 1-bit register for signal <stage_op2<1><60>>.
+    Found 1-bit register for signal <stage_op2<1><59>>.
+    Found 1-bit register for signal <stage_op2<1><58>>.
+    Found 1-bit register for signal <stage_op2<1><57>>.
+    Found 1-bit register for signal <stage_op2<1><56>>.
+    Found 1-bit register for signal <stage_op2<1><55>>.
+    Found 1-bit register for signal <stage_op2<1><54>>.
+    Found 1-bit register for signal <stage_op2<1><53>>.
+    Found 1-bit register for signal <stage_op2<1><52>>.
+    Found 1-bit register for signal <stage_op2<1><51>>.
+    Found 1-bit register for signal <stage_op2<1><50>>.
+    Found 1-bit register for signal <stage_op2<1><49>>.
+    Found 1-bit register for signal <stage_op2<1><48>>.
+    Found 1-bit register for signal <stage_op2<1><47>>.
+    Found 1-bit register for signal <stage_op2<1><46>>.
+    Found 1-bit register for signal <stage_op2<1><45>>.
+    Found 1-bit register for signal <stage_op2<1><44>>.
+    Found 1-bit register for signal <stage_op2<1><43>>.
+    Found 1-bit register for signal <stage_op2<1><42>>.
+    Found 1-bit register for signal <stage_op2<1><41>>.
+    Found 1-bit register for signal <stage_op2<1><40>>.
+    Found 1-bit register for signal <stage_op2<1><39>>.
+    Found 1-bit register for signal <stage_op2<1><38>>.
+    Found 1-bit register for signal <stage_op2<1><37>>.
+    Found 1-bit register for signal <stage_op2<1><36>>.
+    Found 1-bit register for signal <stage_op2<1><35>>.
+    Found 1-bit register for signal <stage_op2<1><34>>.
+    Found 1-bit register for signal <stage_op2<1><33>>.
+    Found 1-bit register for signal <stage_op2<1><32>>.
+    Found 1-bit register for signal <stage_op2<1><31>>.
+    Found 1-bit register for signal <stage_op2<1><30>>.
+    Found 1-bit register for signal <stage_op2<2><127>>.
+    Found 1-bit register for signal <stage_op2<2><126>>.
+    Found 1-bit register for signal <stage_op2<2><125>>.
+    Found 1-bit register for signal <stage_op2<2><124>>.
+    Found 1-bit register for signal <stage_op2<2><123>>.
+    Found 1-bit register for signal <stage_op2<2><122>>.
+    Found 1-bit register for signal <stage_op2<2><121>>.
+    Found 1-bit register for signal <stage_op2<2><120>>.
+    Found 1-bit register for signal <stage_op2<2><119>>.
+    Found 1-bit register for signal <stage_op2<2><118>>.
+    Found 1-bit register for signal <stage_op2<2><117>>.
+    Found 1-bit register for signal <stage_op2<2><116>>.
+    Found 1-bit register for signal <stage_op2<2><115>>.
+    Found 1-bit register for signal <stage_op2<2><114>>.
+    Found 1-bit register for signal <stage_op2<2><113>>.
+    Found 1-bit register for signal <stage_op2<2><112>>.
+    Found 1-bit register for signal <stage_op2<2><111>>.
+    Found 1-bit register for signal <stage_op2<2><110>>.
+    Found 1-bit register for signal <stage_op2<2><109>>.
+    Found 1-bit register for signal <stage_op2<2><108>>.
+    Found 1-bit register for signal <stage_op2<2><107>>.
+    Found 1-bit register for signal <stage_op2<2><106>>.
+    Found 1-bit register for signal <stage_op2<2><105>>.
+    Found 1-bit register for signal <stage_op2<2><104>>.
+    Found 1-bit register for signal <stage_op2<2><103>>.
+    Found 1-bit register for signal <stage_op2<2><102>>.
+    Found 1-bit register for signal <stage_op2<2><101>>.
+    Found 1-bit register for signal <stage_op2<2><100>>.
+    Found 1-bit register for signal <stage_op2<2><99>>.
+    Found 1-bit register for signal <stage_op2<2><98>>.
+    Found 1-bit register for signal <stage_op2<2><97>>.
+    Found 1-bit register for signal <stage_op2<2><96>>.
+    Found 1-bit register for signal <stage_op2<2><95>>.
+    Found 1-bit register for signal <stage_op2<2><94>>.
+    Found 1-bit register for signal <stage_op2<2><93>>.
+    Found 1-bit register for signal <stage_op2<2><92>>.
+    Found 1-bit register for signal <stage_op2<2><91>>.
+    Found 1-bit register for signal <stage_op2<2><90>>.
+    Found 1-bit register for signal <stage_op2<2><89>>.
+    Found 1-bit register for signal <stage_op2<2><88>>.
+    Found 1-bit register for signal <stage_op2<2><87>>.
+    Found 1-bit register for signal <stage_op2<2><86>>.
+    Found 1-bit register for signal <stage_op2<2><85>>.
+    Found 1-bit register for signal <stage_op2<2><84>>.
+    Found 1-bit register for signal <stage_op2<2><83>>.
+    Found 1-bit register for signal <stage_op2<2><82>>.
+    Found 1-bit register for signal <stage_op2<2><81>>.
+    Found 1-bit register for signal <stage_op2<2><80>>.
+    Found 1-bit register for signal <stage_op2<2><79>>.
+    Found 1-bit register for signal <stage_op2<2><78>>.
+    Found 1-bit register for signal <stage_op2<2><77>>.
+    Found 1-bit register for signal <stage_op2<2><76>>.
+    Found 1-bit register for signal <stage_op2<2><75>>.
+    Found 1-bit register for signal <stage_op2<2><74>>.
+    Found 1-bit register for signal <stage_op2<2><73>>.
+    Found 1-bit register for signal <stage_op2<2><72>>.
+    Found 1-bit register for signal <stage_op2<2><71>>.
+    Found 1-bit register for signal <stage_op2<2><70>>.
+    Found 1-bit register for signal <stage_op2<2><69>>.
+    Found 1-bit register for signal <stage_op2<2><68>>.
+    Found 1-bit register for signal <stage_op2<2><67>>.
+    Found 1-bit register for signal <stage_op2<2><66>>.
+    Found 1-bit register for signal <stage_op2<2><65>>.
+    Found 1-bit register for signal <stage_op2<2><64>>.
+    Found 1-bit register for signal <stage_op2<2><63>>.
+    Found 1-bit register for signal <stage_op2<2><62>>.
+    Found 1-bit register for signal <stage_op2<3><127>>.
+    Found 1-bit register for signal <stage_op2<3><126>>.
+    Found 1-bit register for signal <stage_op2<3><125>>.
+    Found 1-bit register for signal <stage_op2<3><124>>.
+    Found 1-bit register for signal <stage_op2<3><123>>.
+    Found 1-bit register for signal <stage_op2<3><122>>.
+    Found 1-bit register for signal <stage_op2<3><121>>.
+    Found 1-bit register for signal <stage_op2<3><120>>.
+    Found 1-bit register for signal <stage_op2<3><119>>.
+    Found 1-bit register for signal <stage_op2<3><118>>.
+    Found 1-bit register for signal <stage_op2<3><117>>.
+    Found 1-bit register for signal <stage_op2<3><116>>.
+    Found 1-bit register for signal <stage_op2<3><115>>.
+    Found 1-bit register for signal <stage_op2<3><114>>.
+    Found 1-bit register for signal <stage_op2<3><113>>.
+    Found 1-bit register for signal <stage_op2<3><112>>.
+    Found 1-bit register for signal <stage_op2<3><111>>.
+    Found 1-bit register for signal <stage_op2<3><110>>.
+    Found 1-bit register for signal <stage_op2<3><109>>.
+    Found 1-bit register for signal <stage_op2<3><108>>.
+    Found 1-bit register for signal <stage_op2<3><107>>.
+    Found 1-bit register for signal <stage_op2<3><106>>.
+    Found 1-bit register for signal <stage_op2<3><105>>.
+    Found 1-bit register for signal <stage_op2<3><104>>.
+    Found 1-bit register for signal <stage_op2<3><103>>.
+    Found 1-bit register for signal <stage_op2<3><102>>.
+    Found 1-bit register for signal <stage_op2<3><101>>.
+    Found 1-bit register for signal <stage_op2<3><100>>.
+    Found 1-bit register for signal <stage_op2<3><99>>.
+    Found 1-bit register for signal <stage_op2<3><98>>.
+    Found 1-bit register for signal <stage_op2<3><97>>.
+    Found 1-bit register for signal <stage_op2<3><96>>.
+    Found 1-bit register for signal <stage_op2<3><95>>.
+    Found 1-bit register for signal <stage_op2<3><94>>.
+    Found 1-bit register for signal <c_reg<3>>.
+    Found 1-bit register for signal <c_reg<2>>.
+    Found 1-bit register for signal <c_reg<1>>.
+    Found 32-bit adder for signal <n2001> created at line 82.
+    Found 34-bit adder for signal <n2004> created at line 82.
+    Found 34-bit adder for signal <n2007> created at line 82.
+    Found 35-bit adder for signal <n1985> created at line 82.
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred 846 D-type flip-flop(s).
+Unit <pipelined_adder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 1
+# Registers                                            : 595
+ 1-bit register                                        : 588
+ 128-bit register                                      : 4
+ 16-bit register                                       : 1
+ 195-bit register                                      : 1
+ 4-bit register                                        : 1
+# Multiplexers                                         : 1
+ 1-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ila.ngc>.
+Loading core <ila> for timing and area information for instance <ila_inst>.
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+
+Synthesizing (advanced) Unit <cla_checker_pipelined>.
+Unit <cla_checker_pipelined> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 4
+ 32-bit adder                                          : 1
+ 34-bit adder                                          : 2
+ 35-bit adder                                          : 1
+# Registers                                            : 1315
+ Flip-Flops                                            : 1315
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance MMCM_BASE_inst in unit cla_top of type MMCM_BASE has been replaced by MMCM_ADV
+
+Optimizing unit <cla_top> ...
+
+Optimizing unit <cla_checker_pipelined> ...
+
+Optimizing unit <lfsr> ...
+
+Optimizing unit <pipelined_adder> ...
+
+Mapping all equations...
+WARNING:Xst:1513 - No elements found for TNM 'D_CLK' on object 'cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_SCNT_CMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/CLK_I'.
+WARNING:Xst:1513 - No elements found for TNM 'D_CLK' on object 'cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_HCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/CLK_I'.
+WARNING:Xst:1513 - No elements found for TNM 'D_CLK' on object 'cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/U_CAP_ADDRGEN/U_WCNT_LCMP/I_CS_GAND.U_CS_GAND_SRL/I_V6.U_CS_GAND_SRL_V6/I_USE_RPM_NE0.U_GAND_SRL_SET/CLK_I'.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cla_top, actual ratio is 1.
+FlipFlop cla_inst/error has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+Processing Unit <cla_top> :
+INFO:Xst:741 - HDL ADVISOR - A 16-bit shift register was found for signal <logic_resetn_0> and currently occupies 16 logic cells (8 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <cla_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1316
+ Flip-Flops                                            : 1316
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cla_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1222
+#      GND                         : 66
+#      INV                         : 132
+#      LUT1                        : 59
+#      LUT2                        : 152
+#      LUT3                        : 17
+#      LUT4                        : 31
+#      LUT5                        : 3
+#      LUT6                        : 98
+#      MUXCY                       : 131
+#      MUXCY_L                     : 272
+#      MUXF7                       : 33
+#      MUXF8                       : 15
+#      VCC                         : 27
+#      XORCY                       : 186
+# FlipFlops/Latches                : 3053
+#      FD                          : 776
+#      FDC                         : 24
+#      FDCE                        : 6
+#      FDE                         : 59
+#      FDP                         : 778
+#      FDR                         : 831
+#      FDRE                        : 366
+#      FDS                         : 18
+#      FDSE                        : 194
+#      LDC                         : 1
+# RAMS                             : 11
+#      RAMB36E1                    : 11
+# Shift Registers                  : 624
+#      SRL16                       : 386
+#      SRL16E                      : 1
+#      SRLC16E                     : 8
+#      SRLC32E                     : 229
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      OBUF                        : 2
+# Others                           : 2
+#      MMCM_ADV                    : 1
+#      TIMESPEC                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3052  out of  301440     1%  
+ Number of Slice LUTs:                 1116  out of  150720     0%  
+    Number used as Logic:               492  out of  150720     0%  
+    Number used as Memory:              624  out of  58400     1%  
+       Number used as SRL:              624
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   3479
+   Number with an unused Flip Flop:     427  out of   3479    12%  
+   Number with an unused LUT:          2363  out of   3479    67%  
+   Number of fully used LUT-FF pairs:   689  out of   3479    19%  
+   Number of unique control sets:        64
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    600     0%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               11  out of    416     2%  
+    Number using Block RAM only:         11
+ Number of BUFG/BUFGCTRLs:                2  out of     32     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+user_clk                           | MMCM_ADV:CLKOUT1       | 3378  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                    | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36)| 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36)  | 62    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36)| 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36)  | 36    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(cla_inst/ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                          | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36)  | 22    |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 9.304ns (Maximum Frequency: 107.481MHz)
+   Minimum input arrival time before clock: 1.344ns
+   Maximum output required time after clock: 0.777ns
+   Maximum combinational path delay: No path found
+
+=========================================================================
+Timing constraint: TS_D2_TO_T2 = FROM TIMEGRP "D2_CLK" TO TIMEGRP "FFS" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TS_J2_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TS_J3_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+Timing constraint: TS_J4_TO_D2 = FROM TIMEGRP "FFS" TO TIMEGRP "D2_CLK" TIG;
+-------------------------------------------------------------------------
+WARNING:Xst:1415 - No path found for this constraint.
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock user_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+user_clk       |    3.489|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 14.41 secs
+ 
+--> 
+
+
+Total memory usage is 414964 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :   14 (   0 filtered)
+

@@ -1,0 +1,265 @@
+
+lab4-rx.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000128  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000002  00800060  00000128  000001bc  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000004  00800062  00800062  000001be  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  000001c0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000097  00000000  00000000  0000088c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000020  00000000  00000000  00000923  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000053  00000000  00000000  00000943  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   0000011a  00000000  00000000  00000996  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000000ad  00000000  00000000  00000ab0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000158  00000000  00000000  00000b5d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000030  00000000  00000000  00000cb8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000000a9  00000000  00000000  00000ce8  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    0000002a  00000000  00000000  00000d91  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 0000001e  00000000  00000000  00000dbb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	2a c0       	rjmp	.+84     	; 0x58 <__bad_interrupt>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__bad_interrupt>
+   6:	28 c0       	rjmp	.+80     	; 0x58 <__bad_interrupt>
+   8:	27 c0       	rjmp	.+78     	; 0x58 <__bad_interrupt>
+   a:	26 c0       	rjmp	.+76     	; 0x58 <__bad_interrupt>
+   c:	25 c0       	rjmp	.+74     	; 0x58 <__bad_interrupt>
+   e:	24 c0       	rjmp	.+72     	; 0x58 <__bad_interrupt>
+  10:	23 c0       	rjmp	.+70     	; 0x58 <__bad_interrupt>
+  12:	23 c0       	rjmp	.+70     	; 0x5a <__vector_9>
+  14:	21 c0       	rjmp	.+66     	; 0x58 <__bad_interrupt>
+  16:	20 c0       	rjmp	.+64     	; 0x58 <__bad_interrupt>
+  18:	1f c0       	rjmp	.+62     	; 0x58 <__bad_interrupt>
+  1a:	1e c0       	rjmp	.+60     	; 0x58 <__bad_interrupt>
+  1c:	1d c0       	rjmp	.+58     	; 0x58 <__bad_interrupt>
+  1e:	1c c0       	rjmp	.+56     	; 0x58 <__bad_interrupt>
+  20:	1b c0       	rjmp	.+54     	; 0x58 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	e8 e2       	ldi	r30, 0x28	; 40
+  36:	f1 e0       	ldi	r31, 0x01	; 1
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a2 36       	cpi	r26, 0x62	; 98
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+
+00000044 <__do_clear_bss>:
+  44:	10 e0       	ldi	r17, 0x00	; 0
+  46:	a2 e6       	ldi	r26, 0x62	; 98
+  48:	b0 e0       	ldi	r27, 0x00	; 0
+  4a:	01 c0       	rjmp	.+2      	; 0x4e <.do_clear_bss_start>
+
+0000004c <.do_clear_bss_loop>:
+  4c:	1d 92       	st	X+, r1
+
+0000004e <.do_clear_bss_start>:
+  4e:	a6 36       	cpi	r26, 0x66	; 102
+  50:	b1 07       	cpc	r27, r17
+  52:	e1 f7       	brne	.-8      	; 0x4c <.do_clear_bss_loop>
+  54:	21 d0       	rcall	.+66     	; 0x98 <main>
+  56:	66 c0       	rjmp	.+204    	; 0x124 <_exit>
+
+00000058 <__bad_interrupt>:
+  58:	d3 cf       	rjmp	.-90     	; 0x0 <__vectors>
+
+0000005a <__vector_9>:
+/* Принимаемые данные */
+#define DATA_LENGTH 3
+unsigned char data[DATA_LENGTH] = {0};
+uint8_t receivedBytes = 0;
+/* Обработчик прерывания UART_RXC */
+ISR(USART_RX_vect) {
+  5a:	1f 92       	push	r1
+  5c:	0f 92       	push	r0
+  5e:	0f b6       	in	r0, 0x3f	; 63
+  60:	0f 92       	push	r0
+  62:	11 24       	eor	r1, r1
+  64:	8f 93       	push	r24
+  66:	9f 93       	push	r25
+  68:	ef 93       	push	r30
+  6a:	ff 93       	push	r31
+    if (receivedBytes < DATA_LENGTH) {
+  6c:	80 91 65 00 	lds	r24, 0x0065
+  70:	83 30       	cpi	r24, 0x03	; 3
+  72:	48 f4       	brcc	.+18     	; 0x86 <__vector_9+0x2c>
+        data[receivedBytes++] = UDR;
+  74:	9c b1       	in	r25, 0x0c	; 12
+  76:	e8 2f       	mov	r30, r24
+  78:	f0 e0       	ldi	r31, 0x00	; 0
+  7a:	ee 59       	subi	r30, 0x9E	; 158
+  7c:	ff 4f       	sbci	r31, 0xFF	; 255
+  7e:	90 83       	st	Z, r25
+  80:	8f 5f       	subi	r24, 0xFF	; 255
+  82:	80 93 65 00 	sts	0x0065, r24
+    }
+}
+  86:	ff 91       	pop	r31
+  88:	ef 91       	pop	r30
+  8a:	9f 91       	pop	r25
+  8c:	8f 91       	pop	r24
+  8e:	0f 90       	pop	r0
+  90:	0f be       	out	0x3f, r0	; 63
+  92:	0f 90       	pop	r0
+  94:	1f 90       	pop	r1
+  96:	18 95       	reti
+
+00000098 <main>:
+int main() {
+    /* Инициализация UART */
+    /* Настройка скорости передачи */
+    UBRRH = (unsigned char)(ubrrValue >> 8);
+  98:	10 bc       	out	0x20, r1	; 32
+    UBRRL = (unsigned char)ubrrValue;
+  9a:	87 e1       	ldi	r24, 0x17	; 23
+  9c:	89 b9       	out	0x09, r24	; 9
+    /* Включение режима приемника с прерываниями */
+    UCSRB = (1 << RXEN) | (1 << RXCIE);
+  9e:	80 e9       	ldi	r24, 0x90	; 144
+  a0:	8a b9       	out	0x0a, r24	; 10
+    /* Установка формата передачи: 8 бит данных, 1 бит стопа */
+    UCSRC = (1 << URSEL) | (3 << UCSZ0);
+  a2:	86 e8       	ldi	r24, 0x86	; 134
+  a4:	80 bd       	out	0x20, r24	; 32
+    /* Инициализация портов ввода-вывода */
+    /* Настройка PB0 на ввод */
+    PORTB = (1 << BUTTON_SHOW);
+  a6:	81 e0       	ldi	r24, 0x01	; 1
+  a8:	88 bb       	out	0x18, r24	; 24
+    /* Настройка PC на вывод */
+    DDRC = 0xFF;
+  aa:	8f ef       	ldi	r24, 0xFF	; 255
+  ac:	84 bb       	out	0x14, r24	; 20
+    /* Погасить светодиоды, подключенные к PC */
+    PORTC = 0xFF;
+  ae:	85 bb       	out	0x15, r24	; 21
+    /* Глобальное разрешение прерываний */
+    sei();
+  b0:	78 94       	sei
+    /* Вывод полученных данных на светодиоды, байт за байтом */
+    uint8_t i = 0; /* Счетчик байтов */
+  b2:	80 e0       	ldi	r24, 0x00	; 0
+            /* Ожидание отпускания кнопки */
+            while (!(PINB & (1 << BUTTON_SHOW)));
+
+            /* Вывод данных с инверсией битов для светодиодов */
+            PORTC = ~data[i];
+            i = (i + 1) % DATA_LENGTH;
+  b4:	23 e0       	ldi	r18, 0x03	; 3
+  b6:	30 e0       	ldi	r19, 0x00	; 0
+    /* Вывод полученных данных на светодиоды, байт за байтом */
+    uint8_t i = 0; /* Счетчик байтов */
+    /* Бесконечный цикл */
+    while (1) {
+        /* Проверка нажатия кнопки */
+        if (!(PINB & (1 << BUTTON_SHOW))) {
+  b8:	b0 99       	sbic	0x16, 0	; 22
+  ba:	fe cf       	rjmp	.-4      	; 0xb8 <main+0x20>
+            /* Ожидание отпускания кнопки */
+            while (!(PINB & (1 << BUTTON_SHOW)));
+  bc:	b0 9b       	sbis	0x16, 0	; 22
+  be:	fe cf       	rjmp	.-4      	; 0xbc <main+0x24>
+
+            /* Вывод данных с инверсией битов для светодиодов */
+            PORTC = ~data[i];
+  c0:	90 e0       	ldi	r25, 0x00	; 0
+  c2:	fc 01       	movw	r30, r24
+  c4:	ee 59       	subi	r30, 0x9E	; 158
+  c6:	ff 4f       	sbci	r31, 0xFF	; 255
+  c8:	40 81       	ld	r20, Z
+  ca:	40 95       	com	r20
+  cc:	45 bb       	out	0x15, r20	; 21
+            i = (i + 1) % DATA_LENGTH;
+  ce:	01 96       	adiw	r24, 0x01	; 1
+  d0:	b9 01       	movw	r22, r18
+  d2:	01 d0       	rcall	.+2      	; 0xd6 <__divmodhi4>
+  d4:	f1 cf       	rjmp	.-30     	; 0xb8 <main+0x20>
+
+000000d6 <__divmodhi4>:
+  d6:	97 fb       	bst	r25, 7
+  d8:	09 2e       	mov	r0, r25
+  da:	07 26       	eor	r0, r23
+  dc:	0a d0       	rcall	.+20     	; 0xf2 <__divmodhi4_neg1>
+  de:	77 fd       	sbrc	r23, 7
+  e0:	04 d0       	rcall	.+8      	; 0xea <__divmodhi4_neg2>
+  e2:	0c d0       	rcall	.+24     	; 0xfc <__udivmodhi4>
+  e4:	06 d0       	rcall	.+12     	; 0xf2 <__divmodhi4_neg1>
+  e6:	00 20       	and	r0, r0
+  e8:	1a f4       	brpl	.+6      	; 0xf0 <__divmodhi4_exit>
+
+000000ea <__divmodhi4_neg2>:
+  ea:	70 95       	com	r23
+  ec:	61 95       	neg	r22
+  ee:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000000f0 <__divmodhi4_exit>:
+  f0:	08 95       	ret
+
+000000f2 <__divmodhi4_neg1>:
+  f2:	f6 f7       	brtc	.-4      	; 0xf0 <__divmodhi4_exit>
+  f4:	90 95       	com	r25
+  f6:	81 95       	neg	r24
+  f8:	9f 4f       	sbci	r25, 0xFF	; 255
+  fa:	08 95       	ret
+
+000000fc <__udivmodhi4>:
+  fc:	aa 1b       	sub	r26, r26
+  fe:	bb 1b       	sub	r27, r27
+ 100:	51 e1       	ldi	r21, 0x11	; 17
+ 102:	07 c0       	rjmp	.+14     	; 0x112 <__udivmodhi4_ep>
+
+00000104 <__udivmodhi4_loop>:
+ 104:	aa 1f       	adc	r26, r26
+ 106:	bb 1f       	adc	r27, r27
+ 108:	a6 17       	cp	r26, r22
+ 10a:	b7 07       	cpc	r27, r23
+ 10c:	10 f0       	brcs	.+4      	; 0x112 <__udivmodhi4_ep>
+ 10e:	a6 1b       	sub	r26, r22
+ 110:	b7 0b       	sbc	r27, r23
+
+00000112 <__udivmodhi4_ep>:
+ 112:	88 1f       	adc	r24, r24
+ 114:	99 1f       	adc	r25, r25
+ 116:	5a 95       	dec	r21
+ 118:	a9 f7       	brne	.-22     	; 0x104 <__udivmodhi4_loop>
+ 11a:	80 95       	com	r24
+ 11c:	90 95       	com	r25
+ 11e:	bc 01       	movw	r22, r24
+ 120:	cd 01       	movw	r24, r26
+ 122:	08 95       	ret
+
+00000124 <_exit>:
+ 124:	f8 94       	cli
+
+00000126 <__stop_program>:
+ 126:	ff cf       	rjmp	.-2      	; 0x126 <__stop_program>
