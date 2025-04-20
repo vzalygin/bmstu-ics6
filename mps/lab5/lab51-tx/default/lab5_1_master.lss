@@ -1,0 +1,143 @@
+
+lab5_1_master.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000080  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000004  00800060  00000080  000000f4  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .stab         000006cc  00000000  00000000  000000f8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000097  00000000  00000000  000007c4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  0000085b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000024  00000000  00000000  0000087b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000000d2  00000000  00000000  0000089f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 0000009f  00000000  00000000  00000971  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000136  00000000  00000000  00000a10  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000020  00000000  00000000  00000b48  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000082  00000000  00000000  00000b68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_pubtypes 0000001e  00000000  00000000  00000bea  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	22 c0       	rjmp	.+68     	; 0x48 <__bad_interrupt>
+   4:	21 c0       	rjmp	.+66     	; 0x48 <__bad_interrupt>
+   6:	20 c0       	rjmp	.+64     	; 0x48 <__bad_interrupt>
+   8:	1f c0       	rjmp	.+62     	; 0x48 <__bad_interrupt>
+   a:	1e c0       	rjmp	.+60     	; 0x48 <__bad_interrupt>
+   c:	1d c0       	rjmp	.+58     	; 0x48 <__bad_interrupt>
+   e:	1c c0       	rjmp	.+56     	; 0x48 <__bad_interrupt>
+  10:	1b c0       	rjmp	.+54     	; 0x48 <__bad_interrupt>
+  12:	1a c0       	rjmp	.+52     	; 0x48 <__bad_interrupt>
+  14:	19 c0       	rjmp	.+50     	; 0x48 <__bad_interrupt>
+  16:	18 c0       	rjmp	.+48     	; 0x48 <__bad_interrupt>
+  18:	17 c0       	rjmp	.+46     	; 0x48 <__bad_interrupt>
+  1a:	16 c0       	rjmp	.+44     	; 0x48 <__bad_interrupt>
+  1c:	15 c0       	rjmp	.+42     	; 0x48 <__bad_interrupt>
+  1e:	14 c0       	rjmp	.+40     	; 0x48 <__bad_interrupt>
+  20:	13 c0       	rjmp	.+38     	; 0x48 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	e0 e8       	ldi	r30, 0x80	; 128
+  36:	f0 e0       	ldi	r31, 0x00	; 0
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a4 36       	cpi	r26, 0x64	; 100
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+  44:	02 d0       	rcall	.+4      	; 0x4a <main>
+  46:	1a c0       	rjmp	.+52     	; 0x7c <_exit>
+
+00000048 <__bad_interrupt>:
+  48:	db cf       	rjmp	.-74     	; 0x0 <__vectors>
+
+0000004a <main>:
+const unsigned char data[DATA_LENGTH] = {'M', 'P', 'S'};
+ 
+int main() { 
+	/* Инициализация SPI */
+	/* Настройка выводов MOSI, SCK, SS на вывод */
+	DDRB = (1<<PIN_MOSI)|(1<<PIN_SCK)|(1<<PIN_SS); 
+  4a:	80 eb       	ldi	r24, 0xB0	; 176
+  4c:	87 bb       	out	0x17, r24	; 23
+	SPCR = (1<<SPE)|(1<<MSTR)|(1<<SPR0); 
+  4e:	81 e5       	ldi	r24, 0x51	; 81
+  50:	8d b9       	out	0x0d, r24	; 13
+	DDRB |= (1<<PIN_SS1); 
+  52:	b9 9a       	sbi	0x17, 1	; 23
+	PORTB |= (1<<PIN_SS1); 
+  54:	c1 9a       	sbi	0x18, 1	; 24
+	PORTE = (1<<BUTTON_START); 
+  56:	81 e0       	ldi	r24, 0x01	; 1
+  58:	87 b9       	out	0x07, r24	; 7
+
+	while(1) { 
+
+		if (!(PINE & (1<<BUTTON_START))) { 
+  5a:	28 99       	sbic	0x05, 0	; 5
+  5c:	fe cf       	rjmp	.-4      	; 0x5a <main+0x10>
+
+		while (!(PINE & (1<<BUTTON_START))) 
+  5e:	28 9b       	sbis	0x05, 0	; 5
+  60:	fe cf       	rjmp	.-4      	; 0x5e <main+0x14>
+  62:	e0 e6       	ldi	r30, 0x60	; 96
+  64:	f0 e0       	ldi	r31, 0x00	; 0
+			; 
+			/* Цикл передачи данных */
+			for (uint8_t i = 0; i < DATA_LENGTH; i++) { 
+				/* Выбор ведомого */
+                PORTB &= ~(1<<PIN_SS1); 
+  66:	c1 98       	cbi	0x18, 1	; 24
+ 				/* Отправка i-го байта */
+                SPDR = data[i]; 
+  68:	81 91       	ld	r24, Z+
+  6a:	8f b9       	out	0x0f, r24	; 15
+
+                while( !(SPSR & (1<<SPIF)) ) 
+  6c:	77 9b       	sbis	0x0e, 7	; 14
+  6e:	fe cf       	rjmp	.-4      	; 0x6c <main+0x22>
+                    ; 
+ 
+                PORTB |= (1<<PIN_SS1); 
+  70:	c1 9a       	sbi	0x18, 1	; 24
+		if (!(PINE & (1<<BUTTON_START))) { 
+
+		while (!(PINE & (1<<BUTTON_START))) 
+			; 
+			/* Цикл передачи данных */
+			for (uint8_t i = 0; i < DATA_LENGTH; i++) { 
+  72:	80 e0       	ldi	r24, 0x00	; 0
+  74:	e3 36       	cpi	r30, 0x63	; 99
+  76:	f8 07       	cpc	r31, r24
+  78:	b1 f7       	brne	.-20     	; 0x66 <main+0x1c>
+  7a:	ef cf       	rjmp	.-34     	; 0x5a <main+0x10>
+
+0000007c <_exit>:
+  7c:	f8 94       	cli
+
+0000007e <__stop_program>:
+  7e:	ff cf       	rjmp	.-2      	; 0x7e <__stop_program>

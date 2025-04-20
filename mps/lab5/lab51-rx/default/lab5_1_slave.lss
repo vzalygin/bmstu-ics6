@@ -1,0 +1,247 @@
+
+lab5_1_slave.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000112  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .bss          00000004  00800060  00800060  00000186  2**0
+                  ALLOC
+  2 .stab         000006cc  00000000  00000000  00000188  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  3 .stabstr      00000097  00000000  00000000  00000854  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_aranges 00000020  00000000  00000000  000008eb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_pubnames 00000045  00000000  00000000  0000090b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000000f6  00000000  00000000  00000950  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000000a6  00000000  00000000  00000a46  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000155  00000000  00000000  00000aec  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000030  00000000  00000000  00000c44  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000099  00000000  00000000  00000c74  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    0000002a  00000000  00000000  00000d0d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 0000001e  00000000  00000000  00000d37  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	1f c0       	rjmp	.+62     	; 0x42 <__bad_interrupt>
+   4:	1e c0       	rjmp	.+60     	; 0x42 <__bad_interrupt>
+   6:	1d c0       	rjmp	.+58     	; 0x42 <__bad_interrupt>
+   8:	1c c0       	rjmp	.+56     	; 0x42 <__bad_interrupt>
+   a:	1b c0       	rjmp	.+54     	; 0x42 <__bad_interrupt>
+   c:	1a c0       	rjmp	.+52     	; 0x42 <__bad_interrupt>
+   e:	19 c0       	rjmp	.+50     	; 0x42 <__bad_interrupt>
+  10:	19 c0       	rjmp	.+50     	; 0x44 <__vector_8>
+  12:	17 c0       	rjmp	.+46     	; 0x42 <__bad_interrupt>
+  14:	16 c0       	rjmp	.+44     	; 0x42 <__bad_interrupt>
+  16:	15 c0       	rjmp	.+42     	; 0x42 <__bad_interrupt>
+  18:	14 c0       	rjmp	.+40     	; 0x42 <__bad_interrupt>
+  1a:	13 c0       	rjmp	.+38     	; 0x42 <__bad_interrupt>
+  1c:	12 c0       	rjmp	.+36     	; 0x42 <__bad_interrupt>
+  1e:	11 c0       	rjmp	.+34     	; 0x42 <__bad_interrupt>
+  20:	10 c0       	rjmp	.+32     	; 0x42 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_clear_bss>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	01 c0       	rjmp	.+2      	; 0x38 <.do_clear_bss_start>
+
+00000036 <.do_clear_bss_loop>:
+  36:	1d 92       	st	X+, r1
+
+00000038 <.do_clear_bss_start>:
+  38:	a4 36       	cpi	r26, 0x64	; 100
+  3a:	b1 07       	cpc	r27, r17
+  3c:	e1 f7       	brne	.-8      	; 0x36 <.do_clear_bss_loop>
+  3e:	26 d0       	rcall	.+76     	; 0x8c <main>
+  40:	66 c0       	rjmp	.+204    	; 0x10e <_exit>
+
+00000042 <__bad_interrupt>:
+  42:	de cf       	rjmp	.-68     	; 0x0 <__vectors>
+
+00000044 <__vector_8>:
+#define DATA_LENGTH 3 
+unsigned char data[DATA_LENGTH] = { 0 }; 
+uint8_t receivedBytes = 0; 
+ 
+
+ISR(SPI_STC_vect) { 
+  44:	1f 92       	push	r1
+  46:	0f 92       	push	r0
+  48:	0f b6       	in	r0, 0x3f	; 63
+  4a:	0f 92       	push	r0
+  4c:	11 24       	eor	r1, r1
+  4e:	8f 93       	push	r24
+  50:	9f 93       	push	r25
+  52:	ef 93       	push	r30
+  54:	ff 93       	push	r31
+ if (receivedBytes < DATA_LENGTH) { 
+  56:	80 91 63 00 	lds	r24, 0x0063
+  5a:	83 30       	cpi	r24, 0x03	; 3
+  5c:	48 f4       	brcc	.+18     	; 0x70 <__vector_8+0x2c>
+        data[receivedBytes++] = SPDR; 
+  5e:	9f b1       	in	r25, 0x0f	; 15
+  60:	e8 2f       	mov	r30, r24
+  62:	f0 e0       	ldi	r31, 0x00	; 0
+  64:	e0 5a       	subi	r30, 0xA0	; 160
+  66:	ff 4f       	sbci	r31, 0xFF	; 255
+  68:	90 83       	st	Z, r25
+  6a:	8f 5f       	subi	r24, 0xFF	; 255
+  6c:	80 93 63 00 	sts	0x0063, r24
+    } 
+
+ if (receivedBytes == DATA_LENGTH) { 
+  70:	80 91 63 00 	lds	r24, 0x0063
+  74:	83 30       	cpi	r24, 0x03	; 3
+  76:	09 f4       	brne	.+2      	; 0x7a <__vector_8+0x36>
+        PORTC = 0x00; 
+  78:	15 ba       	out	0x15, r1	; 21
+    } 
+} 
+  7a:	ff 91       	pop	r31
+  7c:	ef 91       	pop	r30
+  7e:	9f 91       	pop	r25
+  80:	8f 91       	pop	r24
+  82:	0f 90       	pop	r0
+  84:	0f be       	out	0x3f, r0	; 63
+  86:	0f 90       	pop	r0
+  88:	1f 90       	pop	r1
+  8a:	18 95       	reti
+
+0000008c <main>:
+ 
+int main() { 
+
+    SPCR = (1<<SPE)|(1<<SPIE); 
+  8c:	80 ec       	ldi	r24, 0xC0	; 192
+  8e:	8d b9       	out	0x0d, r24	; 13
+ 
+ 
+    PORTE = (1<<BUTTON_SHOW); 
+  90:	81 e0       	ldi	r24, 0x01	; 1
+  92:	87 b9       	out	0x07, r24	; 7
+
+    DDRC = 0xFF; 
+  94:	8f ef       	ldi	r24, 0xFF	; 255
+  96:	84 bb       	out	0x14, r24	; 20
+
+    PORTC = 0xFF; 
+  98:	85 bb       	out	0x15, r24	; 21
+ 
+    sei(); 
+  9a:	78 94       	sei
+ 
+    uint8_t i = 0;
+  9c:	80 e0       	ldi	r24, 0x00	; 0
+        if (!(PINE & (1<<BUTTON_SHOW))) { 
+
+			while (!(PINE & (1<<BUTTON_SHOW))) 
+				; 
+				PORTC = ~data[i]; 
+				i = (i + 1) % DATA_LENGTH; 
+  9e:	23 e0       	ldi	r18, 0x03	; 3
+  a0:	30 e0       	ldi	r19, 0x00	; 0
+ 
+    uint8_t i = 0;
+
+    while(1) { 
+
+        if (!(PINE & (1<<BUTTON_SHOW))) { 
+  a2:	28 99       	sbic	0x05, 0	; 5
+  a4:	fe cf       	rjmp	.-4      	; 0xa2 <main+0x16>
+
+			while (!(PINE & (1<<BUTTON_SHOW))) 
+  a6:	28 9b       	sbis	0x05, 0	; 5
+  a8:	fe cf       	rjmp	.-4      	; 0xa6 <main+0x1a>
+				; 
+				PORTC = ~data[i]; 
+  aa:	90 e0       	ldi	r25, 0x00	; 0
+  ac:	fc 01       	movw	r30, r24
+  ae:	e0 5a       	subi	r30, 0xA0	; 160
+  b0:	ff 4f       	sbci	r31, 0xFF	; 255
+  b2:	40 81       	ld	r20, Z
+  b4:	40 95       	com	r20
+  b6:	45 bb       	out	0x15, r20	; 21
+				i = (i + 1) % DATA_LENGTH; 
+  b8:	01 96       	adiw	r24, 0x01	; 1
+  ba:	b9 01       	movw	r22, r18
+  bc:	01 d0       	rcall	.+2      	; 0xc0 <__divmodhi4>
+  be:	f1 cf       	rjmp	.-30     	; 0xa2 <main+0x16>
+
+000000c0 <__divmodhi4>:
+  c0:	97 fb       	bst	r25, 7
+  c2:	09 2e       	mov	r0, r25
+  c4:	07 26       	eor	r0, r23
+  c6:	0a d0       	rcall	.+20     	; 0xdc <__divmodhi4_neg1>
+  c8:	77 fd       	sbrc	r23, 7
+  ca:	04 d0       	rcall	.+8      	; 0xd4 <__divmodhi4_neg2>
+  cc:	0c d0       	rcall	.+24     	; 0xe6 <__udivmodhi4>
+  ce:	06 d0       	rcall	.+12     	; 0xdc <__divmodhi4_neg1>
+  d0:	00 20       	and	r0, r0
+  d2:	1a f4       	brpl	.+6      	; 0xda <__divmodhi4_exit>
+
+000000d4 <__divmodhi4_neg2>:
+  d4:	70 95       	com	r23
+  d6:	61 95       	neg	r22
+  d8:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000000da <__divmodhi4_exit>:
+  da:	08 95       	ret
+
+000000dc <__divmodhi4_neg1>:
+  dc:	f6 f7       	brtc	.-4      	; 0xda <__divmodhi4_exit>
+  de:	90 95       	com	r25
+  e0:	81 95       	neg	r24
+  e2:	9f 4f       	sbci	r25, 0xFF	; 255
+  e4:	08 95       	ret
+
+000000e6 <__udivmodhi4>:
+  e6:	aa 1b       	sub	r26, r26
+  e8:	bb 1b       	sub	r27, r27
+  ea:	51 e1       	ldi	r21, 0x11	; 17
+  ec:	07 c0       	rjmp	.+14     	; 0xfc <__udivmodhi4_ep>
+
+000000ee <__udivmodhi4_loop>:
+  ee:	aa 1f       	adc	r26, r26
+  f0:	bb 1f       	adc	r27, r27
+  f2:	a6 17       	cp	r26, r22
+  f4:	b7 07       	cpc	r27, r23
+  f6:	10 f0       	brcs	.+4      	; 0xfc <__udivmodhi4_ep>
+  f8:	a6 1b       	sub	r26, r22
+  fa:	b7 0b       	sbc	r27, r23
+
+000000fc <__udivmodhi4_ep>:
+  fc:	88 1f       	adc	r24, r24
+  fe:	99 1f       	adc	r25, r25
+ 100:	5a 95       	dec	r21
+ 102:	a9 f7       	brne	.-22     	; 0xee <__udivmodhi4_loop>
+ 104:	80 95       	com	r24
+ 106:	90 95       	com	r25
+ 108:	bc 01       	movw	r22, r24
+ 10a:	cd 01       	movw	r24, r26
+ 10c:	08 95       	ret
+
+0000010e <_exit>:
+ 10e:	f8 94       	cli
+
+00000110 <__stop_program>:
+ 110:	ff cf       	rjmp	.-2      	; 0x110 <__stop_program>
