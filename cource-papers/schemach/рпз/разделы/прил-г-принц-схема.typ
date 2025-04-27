@@ -1,5 +1,5 @@
-#import "@local/gost732-2017:0.1.1": *
-#import "@local/bmstu:0.1.1": *
+#import "@local/gost732-2017:0.2.0": *
+#import "@local/bmstu:0.2.0": *
 
 #show: приложение.with(буква: "Г", содержание: [ Электрическая принципиальная схема ])
 
