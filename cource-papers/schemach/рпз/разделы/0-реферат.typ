@@ -1,4 +1,4 @@
-#import "@local/gost732-2017:0.2.0": *
+#import "@local/gost732-2017:0.3.0": *
 
 = Реферат
 #v(0.5em)
