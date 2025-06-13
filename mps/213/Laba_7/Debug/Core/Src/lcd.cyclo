@@ -1,0 +1,5 @@
+../Core/Src/lcd.c:9:6:sendData	4
+../Core/Src/lcd.c:25:6:initLCD	1
+../Core/Src/lcd.c:59:6:writeLCD	1
+../Core/Src/lcd.c:67:6:writeStringLCD	2
+../Core/Src/lcd.c:73:6:moveXY	5
