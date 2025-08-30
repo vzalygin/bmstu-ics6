@@ -16,3 +16,9 @@
 [submodule "cource-papers/trps/рпз/материалы/приватно"]
 	path = cource-papers/trps/рпз/материалы/приватно
 	url = https://github.com/vzalygin/bmstu-ics6-private
+[submodule "cource-papers/db/приватно"]
+	path = cource-papers/db/приватно
+	url = https://github.com/vzalygin/bmstu-ics6-private
+[submodule "practices/summer-2024/приватно"]
+	path = practices/summer-2024/приватно
+	url = https://github.com/vzalygin/bmstu-ics6-private
