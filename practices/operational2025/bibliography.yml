@@ -1,0 +1,30 @@
+gigachat:
+  type: Web
+  title: LLM Gigachat - принципы работы
+  url: 
+    value: https://developers.sber.ru/help/gigachat-api/large-language-models
+    date: 2025-07-10
+основы-тайм-менеджмента:
+  type: Web
+  title: Основы тайм-менеджмента 
+  url: 
+     value: https://5prism.ru/articles/samorealizacziya/planirovanie-rabochego-vremeni/
+     date: 2025-07-12
+статистика-временных-затрат:
+  type: Web
+  title: Сколько времени уходит на составление расписания
+  url: 
+     value: https://vc.ru/life/758697-10-minut-na-planirovanie-v-nedelyu-znachitelno-povyshayut-shansy-na-uspeh
+     date: 2025-07-15
+аналоги:
+  type: Web
+  title: Аналоги приложений планирования
+  url: 
+     value: https://d-element.ru/about/blog/effektivnyy-taym-menedzhment-ili-kak-organizovat-planirovanie-zadach-na-den/
+     date: 2025-07-15
+тайм-менеджмент-в-ковид:
+  type: Web
+  title: Важность тайм менеджмента во время дистанционного обучения
+  url:
+     value: https://www.snta.ru/press-center/vazhnost-taym-menedzhmenta-pri-distantsionnom-obuchenii/
+     date: 2025-07-15

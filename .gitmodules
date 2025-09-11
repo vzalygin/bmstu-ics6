@@ -22,3 +22,6 @@
 [submodule "practices/summer-2024/приватно"]
 	path = practices/summer-2024/приватно
 	url = https://github.com/vzalygin/bmstu-ics6-private
+[submodule "practices/operational2025/приватно"]
+	path = practices/operational2025/приватно
+	url = https://github.com/vzalygin/bmstu-ics6-private
