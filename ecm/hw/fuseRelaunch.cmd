@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/smag/Study/bmstu/6term/EVM/HW/Project/HW/fsm_sequence_checket_tb_isim_beh.exe" -prj "/home/smag/Study/bmstu/6term/EVM/HW/Project/HW/fsm_sequence_checket_tb_beh.prj" "work.fsm_sequence_checket_tb" "work.glbl" 

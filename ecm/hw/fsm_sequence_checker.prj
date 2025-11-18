@@ -1,0 +1,2 @@
+verilog work "ascii_type_detector.v"
+verilog work "fsm_sequence_checker.v"

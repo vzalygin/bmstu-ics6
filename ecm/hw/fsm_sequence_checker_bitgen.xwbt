@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/smag/Study/bmstu/6term/EVM/HW/Project/HW/fsm_sequence_checker.ncd
+OUTFILE=/home/smag/Study/bmstu/6term/EVM/HW/Project/HW/fsm_sequence_checker.bit
+FAMILY=Spartan3E
+PART=xc3s500e-5vq100
+WORKINGDIR=/home/smag/Study/bmstu/6term/EVM/HW/Project/HW
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/smag/Study/bmstu/6term/EVM/HW/Project/HW/fsm_sequence_checket_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="fsm_sequence_checket_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="/fsm_sequence_checket_tb/sequence_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">sequence_valid</obj_property>
+      <obj_property name="ObjectShortName">sequence_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/output_strobe" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">output_strobe</obj_property>
+      <obj_property name="ObjectShortName">output_strobe</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/ascii_char" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ascii_char[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ascii_char[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/char_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">char_valid</obj_property>
+      <obj_property name="ObjectShortName">char_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/uut/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/uut/midf_rx" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">midf_rx</obj_property>
+      <obj_property name="ObjectShortName">midf_rx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/fsm_sequence_checket_tb/uut/clk_div_rx" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_div_rx[11:0]</obj_property>
+      <obj_property name="ObjectShortName">clk_div_rx[11:0]</obj_property>
+   </wvobject>
+</wave_config>
