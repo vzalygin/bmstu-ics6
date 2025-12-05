@@ -2,6 +2,8 @@
 
 #show: гост732-2017
 
+#metadata(true) <gost732-2017-feature-table-head-small-spacing>
+
 #страница(image("материалы/титульник.jpg", height: 100%), номер: нет)
 
 #страница(image("материалы/задание.jpg", height: 100%), номер: нет)
