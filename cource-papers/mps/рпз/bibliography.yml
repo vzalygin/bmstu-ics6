@@ -1,0 +1,48 @@
+datasheet-atmega:
+  type: Web
+  title: Datasheet ATMega128A
+  url:
+    value: https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-8151-8-bit-AVR-ATmega128A_Datasheet.pdf
+    date: 2025-10-10
+datasheet-ch340:
+  type: Web
+  title: Datasheet CH340
+  url:
+    value: https://www.mpja.com/download/35227cpdata.pdf
+    date: 2025-10-10
+datasheet-pam8403:
+  type: Web
+  title: Datasheet PAM8403
+  url:
+    value: https://static.chipdip.ru/lib/050/DOC035050562.pdf
+    date: 2025-10-10
+datasheet-reg:
+  type: Web
+  title: Datasheet SNx4HC573A
+  url:
+    value: https://static.chipdip.ru/lib/973/DOC054973478.pdf
+    date: 2025-10-10
+datasheet-mem:
+  type: Web
+  title: Datasheet AS6C1008
+  url:
+    value: https://static.chipdip.ru/lib/708/DOC011708899.pdf
+    date: 2025-10-10
+настройка-внешней-памяти:
+  type: Web
+  title: Статья об интерфейсе внешней памяти XMEM
+  url:
+    value: http://www.gaw.ru/html.cgi/txt/doc/micros/avr/arh128/2_1.htm
+    date: 2025-10-15
+звук-мобильная-связь:
+  type: Web
+  title: Электронный учебно-методический комплекс по дисциплине ЦСП
+  url:
+    value: https://biik.ru/uchebnik/csp/page29.html
+    date: 2025-10-20
+репозиторий-sam:
+  type: Web
+  title: Репозиторий с исходным кодом TTS-программы SAM
+  url:
+    value: https://github.com/s-macke/SAM
+    date: 2025-09-30
