@@ -25,3 +25,6 @@
 [submodule "practices/operational2025/приватно"]
 	path = practices/operational2025/приватно
 	url = https://github.com/vzalygin/bmstu-ics6-private
+[submodule "handheld-sam"]
+	path = cource-papers/mps/рпз/handheld-sam
+	url = https://github.com/vzalygin/handheld-sam
