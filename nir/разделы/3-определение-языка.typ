@@ -1,3 +1,3 @@
-#include "../version.typ"
+#import "../version.typ": *
 
 = Определение языка и исполняющей машины

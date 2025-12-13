@@ -1,8 +1,8 @@
-#import "version.typ"
+#import "version.typ": *
 
 #show: гост732-2017
 
-Анализ синтаксиса и семантики стековых языков программирования
+/*Анализ синтаксиса и семантики стековых языков программирования
 
 про что хочу рассказать
 
@@ -23,8 +23,13 @@
     - статический анализ
     - стандартная библиотека
     - управление памятью
-    - оптимизации
+    - оптимизации*/
 
+#metadata(true) <gost732-2017-feature-table-head-small-spacing>
+
+#страница(image("материалы/титул.jpg", height: 100%), номер: нет)
+#страница(image("материалы/задание.jpg", height: 100%), номер: нет)
+#содержание()
 #include "разделы/0-реферат.typ"
 #include "разделы/1-сокращения.typ"
 #include "разделы/2-введение.typ"
@@ -32,8 +37,7 @@
 #include "разделы/4-обзор.typ"
 #include "разделы/5-синтаксис.typ"
 #include "разделы/6-семантика.typ"
-#include "разделы/7-выводы.typ"
-#include "разделы/8-заключение.typ"
+#include "разделы/7-заключение.typ"
 
 // Костыль, чтобы убрать отступы в списке использованных источников
 #set bibliography(
@@ -42,11 +46,7 @@
 #show bibliography: it_bib => {
   set block(inset: 0pt)
   show block: it_block => {
-    if it_block.body.func() != [].func() {
-      it_block.body
-    } else {
-      par(it_block.body)
-    }
+    par(it_block.body)
   }
   it_bib
 }

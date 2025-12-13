@@ -1,3 +1,3 @@
-#include "../version.typ"
+#import "../version.typ": *
 
 = Анализ синтаксиса

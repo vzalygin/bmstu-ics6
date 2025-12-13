@@ -1,3 +1,5 @@
-#include "../version.typ"
+#import "../version.typ": *
 
 #show: определения_обозначения_сокращения
+
+компилятор
