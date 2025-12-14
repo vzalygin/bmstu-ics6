@@ -28,6 +28,18 @@ datasheet-mem:
   url:
     value: https://static.chipdip.ru/lib/708/DOC011708899.pdf
     date: 2025-10-10
+usb-spec:
+  type: Web
+  title: USB 2.0 Specification
+  url:
+    value: https://www.usb.org/document-library/usb-20-specification
+    date: 2025-10-09
+datasheet-d:
+  type: Web
+  title: Datasheet FBS1850
+  url:
+    value: https://static.chipdip.ru/lib/610/DOC061610482.pdf
+    date: 2025-10-10
 настройка-внешней-памяти:
   type: Web
   title: Статья об интерфейсе внешней памяти XMEM
