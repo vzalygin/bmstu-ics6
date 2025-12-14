@@ -1,25 +1,84 @@
-https://forth-standard.org/standard/words
-https://www.forth.com/resources/forth-programming-language/
-
-про типы
-https://hypercubed.github.io/joy/html/j01tut.html
-joy math
-https://hypercubed.github.io/joy/html/j02maf.html
-определение композиции
-https://hypercubed.github.io/joy/html/j04alg.html
-либа joy
-https://hypercubed.github.io/joy/html/j09imp.html
-
-https://dcreager.net/remarkable/Diggins2008a.pdf
-https://dcreager.net/remarkable/Diggins2008b.pdf
-https://github.com/cdiggins/cat-language
-
-https://factorcode.org/slava/dls.pdf
-
-про синтаксис
-https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Understanding_the_text_format
-вообще спека
-https://webassembly.github.io/spec/versions/core/WebAssembly-1.0.pdf
-
-про языки стековые в принципе
-https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
+forth-standard:
+  type: Web
+  title: ANS Forth standard
+  url:
+    value: https://forth-standard.org/standard/words
+    date: 2025-10-10
+forth-page:
+  type: Web
+  title: Forth documentation
+  url:
+    value: https://www.forth.com/resources/forth-programming-language/
+    date: 2025-10-10
+joy-tut:
+  type: Web
+  title: An informal tutorial on Joy
+  url:
+    value: https://hypercubed.github.io/joy/html/j01tut.html
+    date: 2025-10-10
+joy-math:
+  type: Web
+  title: Mathematical foundations of Joy
+  url:
+    value: https://hypercubed.github.io/joy/html/j02maf.html
+    date: 2025-10-10
+joy-alg:
+  type: Web
+  title: The Algebra of Joy
+  url:
+    value: https://hypercubed.github.io/joy/html/j04alg.html
+    date: 2025-10-10
+joy-impl:
+  type: Web
+  title: The prototype implementation of Joy
+  url:
+    value: https://hypercubed.github.io/joy/html/j09imp.html
+    date: 2025-10-10
+cat-a:
+  type: Web
+  title: Simple Type Inference for Higher-Order Stack-Oriented Languages
+  url:
+    value: https://dcreager.net/remarkable/Diggins2008a.pdf
+    date: 2025-10-10
+cat-b:
+  type: Web
+  title: Typing Functional Stack-Based Languages
+  url:
+    value: https://dcreager.net/remarkable/Diggins2008b.pdf
+    date: 2025-10-10
+cat-github:
+  type: Web
+  title: Cat language repository
+  url:
+    value: https://github.com/cdiggins/cat-language
+    date: 2025-10-10
+factor-paper:
+  type: Web
+  title: "Factor: a dynamic stack-based programming language"
+  url:
+    value: https://factorcode.org/slava/dls.pdf
+    date: 2025-11-20
+factor-wiki:
+  type: Web
+  title: Factor wiki
+  url:
+    value: https://concatenative.org/wiki/view/Factor
+    date: 2025-11-20
+wasm-syntax:
+  type: Web
+  title: Understanding WebAssembly text format
+  url:
+    value: https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Understanding_the_text_format
+    date: 2025-10-10
+wasm-spec:
+  type: Web
+  title: WebAssembly Specification 1.0
+  url:
+    value: https://webassembly.github.io/spec/versions/core/WebAssembly-1.0.pdf
+    date: 2025-10-10
+stack-paper:
+  type: Web
+  title: A foundation for typed concatenative languages
+  url:
+    value: https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
+    date: 2025-10-10
