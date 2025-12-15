@@ -82,3 +82,21 @@ stack-paper:
   url:
     value: https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
     date: 2025-10-10
+ertl-diss:
+  type: Web
+  title: "Implementation of stack-based languages on register machines"
+  url:
+    value: https://repositum.tuwien.at/handle/20.500.12708/13464
+    date: 2025-12-16
+ertl-stack-caching:
+  type: Web
+  title: "Stack Caching for Interpreters"
+  url:
+    value: https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Resources/ertl94sc.pdf
+    date: 2025-12-16
+ertl-gregg04:
+  type: Web
+  title: "Combining Stack Caching with Dynamic Superinstructions"
+  url:
+    value: https://dl.acm.org/doi/10.1145/1059579.1059583
+    date: 2025-12-16
