@@ -3,13 +3,13 @@ forth-standard:
   title: ANS Forth standard
   url:
     value: https://forth-standard.org/standard/words
-    date: 2025-10-10
+    date: 2025-09-25
 forth-page:
   type: Web
   title: Forth documentation
   url:
     value: https://www.forth.com/resources/forth-programming-language/
-    date: 2025-10-10
+    date: 2025-09-25
 joy-tut:
   type: Web
   title: An informal tutorial on Joy
@@ -39,19 +39,19 @@ cat-a:
   title: Simple Type Inference for Higher-Order Stack-Oriented Languages
   url:
     value: https://dcreager.net/remarkable/Diggins2008a.pdf
-    date: 2025-10-10
+    date: 2025-10-13
 cat-b:
   type: Web
   title: Typing Functional Stack-Based Languages
   url:
     value: https://dcreager.net/remarkable/Diggins2008b.pdf
-    date: 2025-10-10
+    date: 2025-10-13
 cat-github:
   type: Web
   title: Cat language repository
   url:
     value: https://github.com/cdiggins/cat-language
-    date: 2025-10-10
+    date: 2025-10-13
 factor-paper:
   type: Web
   title: "Factor: a dynamic stack-based programming language"
@@ -69,34 +69,34 @@ wasm-syntax:
   title: Understanding WebAssembly text format
   url:
     value: https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Understanding_the_text_format
-    date: 2025-10-10
+    date: 2025-11-11
 wasm-spec:
   type: Web
   title: WebAssembly Specification 1.0
   url:
     value: https://webassembly.github.io/spec/versions/core/WebAssembly-1.0.pdf
-    date: 2025-10-10
+    date: 2025-11-11
 stack-paper:
   type: Web
   title: A foundation for typed concatenative languages
   url:
     value: https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
-    date: 2025-10-10
+    date: 2025-10-15
 ertl-diss:
   type: Web
   title: "Implementation of stack-based languages on register machines"
   url:
     value: https://repositum.tuwien.at/handle/20.500.12708/13464
-    date: 2025-12-16
+    date: 2025-12-10
 ertl-stack-caching:
   type: Web
   title: "Stack Caching for Interpreters"
   url:
     value: https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Resources/ertl94sc.pdf
-    date: 2025-12-16
+    date: 2025-12-10
 ertl-gregg04:
   type: Web
   title: "Combining Stack Caching with Dynamic Superinstructions"
   url:
     value: https://dl.acm.org/doi/10.1145/1059579.1059583
-    date: 2025-12-16
+    date: 2025-12-10
