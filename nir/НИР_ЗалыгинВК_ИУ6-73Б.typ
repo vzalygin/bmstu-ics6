@@ -26,18 +26,6 @@
     - оптимизации*/
 
 #metadata(true) <gost732-2017-feature-table-head-small-spacing>
-
-#страница(image("материалы/титул.jpg", height: 100%), номер: нет)
-#страница(image("материалы/задание.jpg", height: 100%), номер: нет)
-#include "разделы/0-реферат.typ"
-#содержание()
-#include "разделы/1-сокращения.typ"
-#include "разделы/2-введение.typ"
-#include "разделы/3-обзор.typ"
-#include "разделы/4-результаты.typ"
-#include "разделы/5-заключение.typ"
-// #include "разделы/6-тз.typ"
-
 // Костыль, чтобы убрать отступы в списке использованных источников
 #set bibliography(
   style: "bib.csl",
@@ -49,4 +37,15 @@
   }
   it_bib
 }
+
+#страница(image("материалы/титул.jpg", height: 100%), номер: нет)
+#страница(image("материалы/задание.jpg", height: 100%), номер: нет)
+#include "разделы/0-реферат.typ"
+#содержание()
+#include "разделы/1-сокращения.typ"
+#include "разделы/2-введение.typ"
+#include "разделы/3-обзор.typ"
+#include "разделы/4-результаты.typ"
+#include "разделы/5-заключение.typ"
 #bibliography("bibliography.yml")
+#include "разделы/6-прил-а.typ"
