@@ -99,23 +99,19 @@ markov('abbca', [
     rule('', 'γ'),
 ]) # abbcaabbca
 
-# гроб, недоделано
 markov('abbca', [
     rule('γa', 'aAγ'),
     rule('γb', 'bBγ'),
     rule('γc', 'cCγ'),
     rule('γ', 'μ'),
 
-    # rule('Aμ', 'μa'),
-    # rule('Bμ', 'μb'),
-    # rule('Cμ', 'μc'),
     rule('Ga', 'aG'),
     rule('Gb', 'bG'),
     rule('Gc', 'cG'),
 
-    rule('GAμ', 'μa'),
-    rule('GBμ', 'μB'),
-    rule('GСμ', 'μС'),
+    rule('GAμ', 'Fμa'),
+    rule('GBμ', 'Fμb'),
+    rule('GСμ', 'Fμc'),
 
     rule('GAA', 'AGA'),
     rule('GAB', 'BGA'),
@@ -123,7 +119,7 @@ markov('abbca', [
     rule('GBA', 'AGB'),
     rule('GBB', 'BGB'),
     rule('GBC', 'CGB'),
-    rule('GСA', 'AGС'),
+    rule('GCA', 'AGС'),
     rule('GСB', 'BGС'),
     rule('GСC', 'CGС'),
 
@@ -137,12 +133,14 @@ markov('abbca', [
     rule('Cb', 'bC'),
     rule('Cc', 'cC'),
 
-    # rule('A', 'GA'),
-    # rule('B', 'GB'),
-    # rule('C', 'GC'),
+    rule('AF', 'FA'),
+    rule('BF', 'FB'),
+    rule('CF', 'FC'),
+    rule('aF', 'aG'),
+    rule('bF', 'bG'),
+    rule('cF', 'cG'),
 
-    rule_stop('μ', ''),
+    rule_stop('Gμ', ''),
 
-    rule('', 'γ'),
-    rule('', 'G'),
+    rule('', 'Gγ'),
 ]) # abbcaaсbba
