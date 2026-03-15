@@ -72,9 +72,9 @@ wasm-syntax:
     date: 2025-11-11
 wasm-spec:
   type: Web
-  title: WebAssembly Specification 1.0
+  title: WebAssembly Specification 2.0
   url:
-    value: https://webassembly.github.io/spec/versions/core/WebAssembly-1.0.pdf
+    value: https://webassembly.github.io/spec/versions/core/WebAssembly-2.0.pdf
     date: 2025-11-11
 stack-paper:
   type: Web
@@ -100,3 +100,21 @@ ertl-gregg04:
   url:
     value: https://dl.acm.org/doi/10.1145/1059579.1059583
     date: 2025-12-10
+документация-rust:
+  type: Web
+  title: Документация Rust
+  url:
+      value: https://www.rust-lang.org/learn
+      date: 2026-01-29
+технология-программирования:
+  type: Book
+  title: >-
+      Технология программирования: Учебник для вузов
+  author: Иванова Г.С.
+  edition: 3-е изд., стер.
+  publisher:
+      name: КНОРУС
+      location: >-
+          – М.
+  page-total: 334
+  date: 2018
