@@ -18,3 +18,28 @@
 // 3 Технологическая часть (10 страниц)
 // 
 // TODO в чем разница между проектироавнием и разработкой для названий разделов
+
+#import "../version.typ": *
+
+// Костыль, чтобы убрать отступы в списке использованных источников
+#set bibliography(
+  style: "bib.csl",
+)
+#show bibliography: it_bib => {
+  set block(inset: 0pt)
+  show block: it_block => {
+    par(it_block.body)
+  }
+  it_bib
+}
+
+#страница(image("материалы/титул.jpg", height: 100%), номер: нет)
+#содержание()
+#include "разделы/0-реферат.typ"
+#include "разделы/1-сокращения.typ"
+#include "разделы/2-введение.typ"
+#include "разделы/3-исследовательская.typ"
+#include "разделы/4-конструкторская.typ"
+#include "разделы/5-технологическая.typ"
+#include "разделы/6-заключение.typ"
+#bibliography("bibliography.yml")

@@ -1,4 +1,5 @@
 # Практики
 
-- технологическая практика [technological2024](./technological2024);
-- эксплуатационная практика [operational2025](./operational2025).
+- технологическая практика [2024technological](./2024technological);
+- эксплуатационная практика [2025operational](./2025operational).
+- преддипломная практика [2026pregraduate](./2026pregraduate).
