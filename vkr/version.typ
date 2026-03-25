@@ -5,3 +5,7 @@
 #let c(content) = {
   text(size: 12pt, hyphenate: false)[#block(breakable: false)[#content]]
 }
+
+#let cc(content) = {
+  text(size: 10pt, hyphenate: false)[#block(breakable: false)[#content]]
+}
