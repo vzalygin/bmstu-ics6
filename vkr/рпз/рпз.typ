@@ -53,3 +53,6 @@
 #include "разделы/6-технологическая.typ"
 #include "разделы/7-заключение.typ"
 #bibliography("bibliography.yml")
+#include "разделы/8-приложение-а.typ"
+#include "разделы/9-приложение-б.typ"
+#include "разделы/10-приложение-в.typ"
