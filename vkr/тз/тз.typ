@@ -26,10 +26,12 @@
 
 4.1 Исходными данными для разработки являются следующие материалы:
 
-// TODO тут указать автора, тип отчета и тд
-4.1.1 Simple  Type  Inference  for  HigherUOrder  StackUOriented  Languages [Электронный  ресурс].  URL:  https://dcreager.net/remarkable/Diggins2008a.pdf (дата обращения: 13.10.2025).
+// T ODO тут указать автора, тип отчета и тд
+4.1.1 Christopher  Diggins.  Simple  Type  Inference  for  Higher-Order  Stack-
+Oriented Languages. 2008.
 
-4.1.2 Cat  language  repository  [Электронный  ресурс].  URL:  https://github.com/cdiggins/catlanguage (дата обращения: 13.10.2025).
+4.1.2 Владимиров  К.И.  Оптимизирующие  компиляторы.  Структура  и
+алгоритмы: 978–5–17–167965–1. — Москва: АСТ, 2024. 272 с.
 
 4.1.3 WebAssembly  Specification  2.0  [Электронный  ресурс].  URL:
 https://webassembly.github.io/spec/versions/core/WebAssemblyU2.0.pdf  (дата  обращения: 11.11.2025).

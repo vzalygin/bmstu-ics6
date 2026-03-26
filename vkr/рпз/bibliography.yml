@@ -34,30 +34,45 @@ joy-impl:
   url:
     value: https://hypercubed.github.io/joy/html/j09imp.html
     date: 2025-10-10
+# cat-a:
+#   type: Web
+#   title: Simple Type Inference for Higher-Order Stack-Oriented Languages
+#   url:
+#     value: https://dcreager.net/remarkable/Diggins2008a.pdf
+#     date: 2025-10-13
+# cat-b:
+#   type: Web
+#   title: Typing Functional Stack-Based Languages
+#   url:
+#     value: https://dcreager.net/remarkable/Diggins2008b.pdf
+#     date: 2025-10-13
 cat-a:
-  type: Web
-  title: Simple Type Inference for Higher-Order Stack-Oriented Languages
-  url:
-    value: https://dcreager.net/remarkable/Diggins2008a.pdf
-    date: 2025-10-13
+    type: Article
+    author: Christopher Diggins
+    title: Simple Type Inference for Higher-Order Stack-Oriented Languages
+    date: 2008-04-20
 cat-b:
-  type: Web
-  title: Typing Functional Stack-Based Languages
-  url:
-    value: https://dcreager.net/remarkable/Diggins2008b.pdf
-    date: 2025-10-13
+    type: Article
+    author: Christopher Diggins
+    title: Typing Functional Stack-Based Languages
+    date: 2008-05-01
 cat-github:
   type: Web
   title: Cat language repository
   url:
     value: https://github.com/cdiggins/cat-language
     date: 2025-10-13
+# factor-paper:
+#   type: Web
+#   title: "Factor: a dynamic stack-based programming language"
+#   url:
+#     value: https://factorcode.org/slava/dls.pdf
+#     date: 2025-11-20
 factor-paper:
-  type: Web
-  title: "Factor: a dynamic stack-based programming language"
-  url:
-    value: https://factorcode.org/slava/dls.pdf
-    date: 2025-11-20
+    type: Article
+    author: [ "Slava Pestov", "Daniel Ehrenberg", "Joe Groff" ]
+    title: "Factor: a dynamic stack-based programming language"
+    date: 2010-01-01
 factor-wiki:
   type: Web
   title: Factor wiki
@@ -76,30 +91,35 @@ wasm-spec:
   url:
     value: https://webassembly.github.io/spec/versions/core/WebAssembly-2.0.pdf
     date: 2025-11-11
+# stack-paper:
+#   type: Web
+#   title: A foundation for typed concatenative languages
+#   url:
+#     value: https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
+#     date: 2025-10-15
 stack-paper:
-  type: Web
-  title: A foundation for typed concatenative languages
-  url:
-    value: https://www2.ccs.neu.edu/racket/pubs/dissertation-kleffner.pdf
-    date: 2025-10-15
-ertl-diss:
-  type: Web
-  title: "Implementation of stack-based languages on register machines"
-  url:
-    value: https://repositum.tuwien.at/handle/20.500.12708/13464
-    date: 2025-12-10
-ertl-stack-caching:
-  type: Web
-  title: "Stack Caching for Interpreters"
-  url:
-    value: https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Resources/ertl94sc.pdf
-    date: 2025-12-10
-ertl-gregg04:
-  type: Web
-  title: "Combining Stack Caching with Dynamic Superinstructions"
-  url:
-    value: https://dl.acm.org/doi/10.1145/1059579.1059583
-    date: 2025-12-10
+    type: Article
+    author: "Robert Kleffner"
+    title: "A foundation for typed concatenative languages"
+    date: 2017-04-01
+# ertl-diss:
+#   type: Web
+#   title: "Implementation of stack-based languages on register machines"
+#   url:
+#     value: https://repositum.tuwien.at/handle/20.500.12708/13464
+#     date: 2025-12-10
+# ertl-stack-caching:
+#   type: Web
+#   title: "Stack Caching for Interpreters"
+#   url:
+#     value: https://www2.cs.arizona.edu/~collberg/Teaching/553/2011/Resources/ertl94sc.pdf
+#     date: 2025-12-10
+# ertl-gregg04:
+#   type: Web
+#   title: "Combining Stack Caching with Dynamic Superinstructions"
+#   url:
+#     value: https://dl.acm.org/doi/10.1145/1059579.1059583
+#     date: 2025-12-10
 документация-rust:
   type: Web
   title: Документация Rust
@@ -115,6 +135,17 @@ ertl-gregg04:
   publisher:
       name: КНОРУС
       location: >-
-          – М.
+          – Москва
   page-total: 334
   date: 2018
+владимиров:
+  type: Book
+  title: >-
+      Оптимизирующие компиляторы. Структура и алгоритмы
+  author: Владимиров К.И.
+  publisher:
+      name: АСТ
+      location: — Москва
+  page-total: 272
+  date: 2024
+  serial-number: 978-5-17-167965-1
