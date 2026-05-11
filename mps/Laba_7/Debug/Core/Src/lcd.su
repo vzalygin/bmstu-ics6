@@ -1,0 +1,5 @@
+../Core/Src/lcd.c:8:6:sendData	24	static
+../Core/Src/lcd.c:20:6:initLCD	24	static
+../Core/Src/lcd.c:54:6:writeLCD	24	static
+../Core/Src/lcd.c:62:6:writeStringLCD	24	static
+../Core/Src/lcd.c:68:6:moveXY	24	static

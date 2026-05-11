@@ -1,0 +1,13 @@
+# Output products list for <ila666>
+ila666.asy
+ila666.cdc
+ila666.gise
+ila666.ngc
+ila666.sym
+ila666.v
+ila666.veo
+ila666.xco
+ila666.xise
+ila666_flist.txt
+ila666_readme.txt
+ila666_xmdf.tcl

@@ -1,0 +1,120 @@
+Release 14.4 ngdbuild P.49d (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx2/14.4/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc
+/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf -p xc6vlx75t-ff484-1
+cla_checker.ngc cla_checker.ngd
+
+Reading NGO file "/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/part2/cla_checker.ngc"
+...
+Loading design module "ipcore_dir/ila.ngc"...
+Loading design module "ipcore_dir/icon.ngc"...
+INFO:NgdBuild:1317 - Using core chipscope_ila_v1 requires a ChipScopePro
+   license.  The following blocks are instances of core chipscope_ila_v1:
+	/cla_checker/cla_checker
+	/cla_checker/ila_inst
+
+-----------------------------------------------
+INFO:Security:71 - If a license for part 'xc6vlx75t' is available, it will be
+possible to use 'ChipScopePro_TDP' instead of 'ChipScopePro'.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current
+version of Xilinx tools will continue to function, but you no longer qualify for
+Xilinx software updates or new releases.
+
+-----------------------------------------------
+
+-----------------------------------------------
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file
+"/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+ERROR:ConstraintSystem:59 - Constraint <NET "user_clk" LOC = U23;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(2)]: NET "user_clk" not found.
+    Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "user_clk" LOC = U23;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(2)]' could not be found and so
+   the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "user_clk" TNM_NET = "userclk";>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(3)]: NET "user_clk" not found.
+    Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem:56 - Constraint <TIMESPEC ts0 = PERIOD "userclk" 15.15
+   ns HIGH 50 %;> [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(5)]: Unable to
+   find an active 'TNM' or 'TimeGrp' constraint named 'userclk'.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "rst" LOC = H10;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(7)]: NET "rst" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "rst" LOC = H10;> [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(7)]'
+   could not be found and so the Locate constraint will be removed.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "rst" TIG;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(8)]: NET "rst" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+ERROR:ConstraintSystem:59 - Constraint <NET "locked" LOC = AH27;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(10)]: NET "locked" not found. 
+   Please verify that:
+   1. The specified design element actually exists in the original design.
+   2. The specified object is spelled correctly in the constraint source file.
+
+WARNING:ConstraintSystem - A target design object for the Locate constraint
+   '<NET "locked" LOC = AH27;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(10)]' could not be found and
+   so the Locate constraint will be removed.
+
+WARNING:ConstraintSystem:191 - The TNM 'userclk', does not directly or
+   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
+   used by the referencing Period constraint 'ts0'. If clock manager blocks are
+   directly or indirectly driven, a new TNM constraint will not be derived even
+   though the referencing constraint is a PERIOD constraint unless an output of
+   the clock manager drives flip-flops, latches or RAMs. This TNM is used in the
+   following user PERIOD specification:
+   <TIMESPEC ts0 = PERIOD "userclk" 15.15 ns HIGH 50 %;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(5)]
+
+WARNING:ConstraintSystem:197 - The following specification is invalid because
+   the referenced TNM constraint was removed:
+   <TIMESPEC ts0 = PERIOD "userclk" 15.15 ns HIGH 50 %;>
+   [/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf(5)]
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     5
+  Number of warnings:   6
+
+Total memory usage is 441680 kilobytes
+
+Total REAL time to NGDBUILD completion:  15 sec
+Total CPU time to NGDBUILD completion:   14 sec
+
+One or more errors were found during NGDBUILD.  No NGD file will be written.
+
+Writing NGDBUILD log file "cla_checker.bld"...

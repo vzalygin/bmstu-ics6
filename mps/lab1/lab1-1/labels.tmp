@@ -1,0 +1,30 @@
+<ASSEMBLER_INFO>
+ <VERSION>2.1.42</VERSION>
+ <DEVICE>ATmega8515</DEVICE>
+ <WORKING_DIR>C:\repos\bmstu-ics6\mps\lab1</WORKING_DIR>
+ <INCLUDE_PATH>
+  <DIR>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes</DIR>
+ </INCLUDE_PATH>
+ <SOURCE_FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</SOURCE_FILE>
+ <INCLUDED_FILES>
+  <FILE>C:\Program Files (x86)\Atmel\AVR Tools\AvrAssembler2\Appnotes\m8515def.inc</FILE>
+ </INCLUDED_FILES>
+ <OBJECT_FILES>
+  <FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.obj</FILE>
+ </OBJECT_FILES>
+ <HEX_FILES>
+  <FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.hex</FILE>
+ </HEX_FILES>
+ <OUTPUT_FILES>
+  <FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.map</FILE>
+ </OUTPUT_FILES>
+ <LABELS>
+  <INIT><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>7</LINE></INIT>
+  <LOOP><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>13</LINE></LOOP>
+  <l1><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>17</LINE></l1>
+  <l2><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>18</LINE></l2>
+  <l3><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>19</LINE></l3>
+  <d1><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>29</LINE></d1>
+  <d2><FILE>C:\repos\bmstu-ics6\mps\lab1\lab1.asm</FILE><LINE>31</LINE></d2>
+ </LABELS>
+</ASSEMBLER_INFO>

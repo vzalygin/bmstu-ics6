@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/mnt/c/repos/bmstu-ics6/schemach/2sem/lab3/main.ncd
+OUTFILE=/mnt/c/repos/bmstu-ics6/schemach/2sem/lab3/main.bit
+FAMILY=Spartan3
+PART=xc3s200-5ft256
+WORKINGDIR=/mnt/c/repos/bmstu-ics6/schemach/2sem/lab3
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,53 @@
+технология-программирования:
+    type: Book
+    title: >-
+        Технология программирования: Учебник для вузов
+    author: Иванова Г.С.
+    edition: 3-е изд., стер.
+    publisher:
+        name: КНОРУС
+        location: >-
+            – М.
+    page-total: 334
+    date: 2018
+слайды:
+    type: Performance
+    title: >-
+        Лекции по дисциплине "Машино-зависимые языки и основы компиляции"
+    author: Иванова Г.С.
+документация-rust:
+    type: Web
+    title: Документация Rust
+    url:
+        value: https://www.rust-lang.org/learn
+        date: 2024-09-29
+документация-nom:
+    type: Web
+    title: Документация библиотеки Nom
+    url:
+        value: https://docs.rs/crate/nom/latest
+        date: 2024-10-05
+документация-clap:
+    type: Web
+    title: Документация библиотеки Clap
+    url:
+        value: https://docs.rs/crate/clap/latest
+        date: 2024-10-15
+спецификация-ассемблера-x64:
+    type: Web
+    title: Спецификация ассемблера архитектуры x64
+    url:
+        value: https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf
+        date: 2024-10-05
+cli-guidelines:
+    type: Web
+    title: Идиомы проектирования интерфейсов командной строки
+    url:
+        value: https://clig.dev/
+        date: 2024-10-06
+unix:
+    type: Web
+    title: Философия UNIX
+    url:
+        value: http://www.catb.org/esr/writings/taoup/html/ch01s06.html
+        date: 2024-10-03

@@ -1,0 +1,290 @@
+
+lab5_6_master.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         00000136  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000006  00800060  00000136  000001ca  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000001  00800066  00800066  000001d0  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  000001d0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000097  00000000  00000000  0000089c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000020  00000000  00000000  00000933  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000047  00000000  00000000  00000953  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000221  00000000  00000000  0000099a  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 00000168  00000000  00000000  00000bbb  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   00000237  00000000  00000000  00000d23  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000030  00000000  00000000  00000f5c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000000fa  00000000  00000000  00000f8c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000000bd  00000000  00000000  00001086  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_pubtypes 0000002b  00000000  00000000  00001143  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	2a c0       	rjmp	.+84     	; 0x58 <__bad_interrupt>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__bad_interrupt>
+   6:	28 c0       	rjmp	.+80     	; 0x58 <__bad_interrupt>
+   8:	27 c0       	rjmp	.+78     	; 0x58 <__bad_interrupt>
+   a:	26 c0       	rjmp	.+76     	; 0x58 <__bad_interrupt>
+   c:	25 c0       	rjmp	.+74     	; 0x58 <__bad_interrupt>
+   e:	24 c0       	rjmp	.+72     	; 0x58 <__bad_interrupt>
+  10:	23 c0       	rjmp	.+70     	; 0x58 <__bad_interrupt>
+  12:	22 c0       	rjmp	.+68     	; 0x58 <__bad_interrupt>
+  14:	21 c0       	rjmp	.+66     	; 0x58 <__bad_interrupt>
+  16:	20 c0       	rjmp	.+64     	; 0x58 <__bad_interrupt>
+  18:	1f c0       	rjmp	.+62     	; 0x58 <__bad_interrupt>
+  1a:	1e c0       	rjmp	.+60     	; 0x58 <__bad_interrupt>
+  1c:	1d c0       	rjmp	.+58     	; 0x58 <__bad_interrupt>
+  1e:	1c c0       	rjmp	.+56     	; 0x58 <__bad_interrupt>
+  20:	1b c0       	rjmp	.+54     	; 0x58 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	e6 e3       	ldi	r30, 0x36	; 54
+  36:	f1 e0       	ldi	r31, 0x01	; 1
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a6 36       	cpi	r26, 0x66	; 102
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+
+00000044 <__do_clear_bss>:
+  44:	10 e0       	ldi	r17, 0x00	; 0
+  46:	a6 e6       	ldi	r26, 0x66	; 102
+  48:	b0 e0       	ldi	r27, 0x00	; 0
+  4a:	01 c0       	rjmp	.+2      	; 0x4e <.do_clear_bss_start>
+
+0000004c <.do_clear_bss_loop>:
+  4c:	1d 92       	st	X+, r1
+
+0000004e <.do_clear_bss_start>:
+  4e:	a7 36       	cpi	r26, 0x67	; 103
+  50:	b1 07       	cpc	r27, r17
+  52:	e1 f7       	brne	.-8      	; 0x4c <.do_clear_bss_loop>
+  54:	09 d0       	rcall	.+18     	; 0x68 <main>
+  56:	6d c0       	rjmp	.+218    	; 0x132 <_exit>
+
+00000058 <__bad_interrupt>:
+  58:	d3 cf       	rjmp	.-90     	; 0x0 <__vectors>
+
+0000005a <SpiSendReceive>:
+uint8_t currentByte = 0;
+
+#define START_SYM 0xAA
+
+char SpiSendReceive(char c) {
+    PORTB &= ~(1 << PIN_SS1);
+  5a:	c1 98       	cbi	0x18, 1	; 24
+    SPDR = c;
+  5c:	8f b9       	out	0x0f, r24	; 15
+    while (!(SPSR & (1 << SPIF)))
+  5e:	77 9b       	sbis	0x0e, 7	; 14
+  60:	fe cf       	rjmp	.-4      	; 0x5e <SpiSendReceive+0x4>
+        ;
+    PORTB |= (1 << PIN_SS1);
+  62:	c1 9a       	sbi	0x18, 1	; 24
+    return SPDR;
+  64:	8f b1       	in	r24, 0x0f	; 15
+}
+  66:	08 95       	ret
+
+00000068 <main>:
+
+int main() {
+  68:	0f 93       	push	r16
+  6a:	1f 93       	push	r17
+  6c:	cf 93       	push	r28
+  6e:	df 93       	push	r29
+    DDRB = (1 << PIN_MOSI) | (1 << PIN_SCK) | (1 << PIN_SS);
+  70:	80 eb       	ldi	r24, 0xB0	; 176
+  72:	87 bb       	out	0x17, r24	; 23
+    DDRB |= (1 << PIN_SS1);
+  74:	b9 9a       	sbi	0x17, 1	; 23
+    PORTB |= (1 << PIN_SS1);
+  76:	c1 9a       	sbi	0x18, 1	; 24
+
+    /* ????????? DORD = 1: ??????? ??? ?????? */
+    SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR0) | (1 << CPHA) | (1 << DORD);
+  78:	85 e7       	ldi	r24, 0x75	; 117
+  7a:	8d b9       	out	0x0d, r24	; 13
+
+    PORTE = (1 << BUTTON_START) | (1 << BUTTON_SHOW);
+  7c:	83 e0       	ldi	r24, 0x03	; 3
+  7e:	87 b9       	out	0x07, r24	; 7
+    DDRC = 0xFF;
+  80:	8f ef       	ldi	r24, 0xFF	; 255
+  82:	84 bb       	out	0x14, r24	; 20
+    PORTC = 0xFF;
+  84:	85 bb       	out	0x15, r24	; 21
+
+        if (!(PINE & (1 << BUTTON_SHOW))) {
+            while (!(PINE & (1 << BUTTON_SHOW)))
+                ;
+            PORTC = ~data[currentByte];
+            currentByte = (currentByte + 1) % DATA_LENGTH;
+  86:	c5 e0       	ldi	r28, 0x05	; 5
+  88:	d0 e0       	ldi	r29, 0x00	; 0
+    PORTE = (1 << BUTTON_START) | (1 << BUTTON_SHOW);
+    DDRC = 0xFF;
+    PORTC = 0xFF;
+
+    while (1) {
+        if (!(PINE & (1 << BUTTON_START))) {
+  8a:	28 99       	sbic	0x05, 0	; 5
+  8c:	18 c0       	rjmp	.+48     	; 0xbe <main+0x56>
+            while (!(PINE & (1 << BUTTON_START)))
+  8e:	28 9b       	sbis	0x05, 0	; 5
+  90:	fe cf       	rjmp	.-4      	; 0x8e <main+0x26>
+                ;
+
+            SpiSendReceive(START_SYM);
+  92:	8a ea       	ldi	r24, 0xAA	; 170
+  94:	e2 df       	rcall	.-60     	; 0x5a <SpiSendReceive>
+	#else
+		//round up by default
+		__ticks_dc = (uint32_t)(ceil(fabs(__tmp)));
+	#endif
+
+	__builtin_avr_delay_cycles(__ticks_dc);
+  96:	8c e0       	ldi	r24, 0x0C	; 12
+  98:	8a 95       	dec	r24
+  9a:	f1 f7       	brne	.-4      	; 0x98 <main+0x30>
+  9c:	00 00       	nop
+  9e:	00 e6       	ldi	r16, 0x60	; 96
+  a0:	10 e0       	ldi	r17, 0x00	; 0
+            _delay_us(10);
+
+            for (uint8_t i = 0; i < DATA_LENGTH; i++) {
+                data[i] = SpiSendReceive(data[i]);
+  a2:	f8 01       	movw	r30, r16
+  a4:	80 81       	ld	r24, Z
+  a6:	d9 df       	rcall	.-78     	; 0x5a <SpiSendReceive>
+  a8:	f8 01       	movw	r30, r16
+  aa:	81 93       	st	Z+, r24
+  ac:	8f 01       	movw	r16, r30
+  ae:	fc e0       	ldi	r31, 0x0C	; 12
+  b0:	fa 95       	dec	r31
+  b2:	f1 f7       	brne	.-4      	; 0xb0 <main+0x48>
+  b4:	00 00       	nop
+                ;
+
+            SpiSendReceive(START_SYM);
+            _delay_us(10);
+
+            for (uint8_t i = 0; i < DATA_LENGTH; i++) {
+  b6:	80 e0       	ldi	r24, 0x00	; 0
+  b8:	05 36       	cpi	r16, 0x65	; 101
+  ba:	18 07       	cpc	r17, r24
+  bc:	91 f7       	brne	.-28     	; 0xa2 <main+0x3a>
+                data[i] = SpiSendReceive(data[i]);
+                _delay_us(10);
+            }
+        }
+
+        if (!(PINE & (1 << BUTTON_SHOW))) {
+  be:	29 99       	sbic	0x05, 1	; 5
+  c0:	e4 cf       	rjmp	.-56     	; 0x8a <main+0x22>
+            while (!(PINE & (1 << BUTTON_SHOW)))
+  c2:	29 9b       	sbis	0x05, 1	; 5
+  c4:	fe cf       	rjmp	.-4      	; 0xc2 <main+0x5a>
+                ;
+            PORTC = ~data[currentByte];
+  c6:	80 91 66 00 	lds	r24, 0x0066
+  ca:	90 e0       	ldi	r25, 0x00	; 0
+  cc:	fc 01       	movw	r30, r24
+  ce:	e0 5a       	subi	r30, 0xA0	; 160
+  d0:	ff 4f       	sbci	r31, 0xFF	; 255
+  d2:	20 81       	ld	r18, Z
+  d4:	20 95       	com	r18
+  d6:	25 bb       	out	0x15, r18	; 21
+            currentByte = (currentByte + 1) % DATA_LENGTH;
+  d8:	01 96       	adiw	r24, 0x01	; 1
+  da:	be 01       	movw	r22, r28
+  dc:	03 d0       	rcall	.+6      	; 0xe4 <__divmodhi4>
+  de:	80 93 66 00 	sts	0x0066, r24
+  e2:	d3 cf       	rjmp	.-90     	; 0x8a <main+0x22>
+
+000000e4 <__divmodhi4>:
+  e4:	97 fb       	bst	r25, 7
+  e6:	09 2e       	mov	r0, r25
+  e8:	07 26       	eor	r0, r23
+  ea:	0a d0       	rcall	.+20     	; 0x100 <__divmodhi4_neg1>
+  ec:	77 fd       	sbrc	r23, 7
+  ee:	04 d0       	rcall	.+8      	; 0xf8 <__divmodhi4_neg2>
+  f0:	0c d0       	rcall	.+24     	; 0x10a <__udivmodhi4>
+  f2:	06 d0       	rcall	.+12     	; 0x100 <__divmodhi4_neg1>
+  f4:	00 20       	and	r0, r0
+  f6:	1a f4       	brpl	.+6      	; 0xfe <__divmodhi4_exit>
+
+000000f8 <__divmodhi4_neg2>:
+  f8:	70 95       	com	r23
+  fa:	61 95       	neg	r22
+  fc:	7f 4f       	sbci	r23, 0xFF	; 255
+
+000000fe <__divmodhi4_exit>:
+  fe:	08 95       	ret
+
+00000100 <__divmodhi4_neg1>:
+ 100:	f6 f7       	brtc	.-4      	; 0xfe <__divmodhi4_exit>
+ 102:	90 95       	com	r25
+ 104:	81 95       	neg	r24
+ 106:	9f 4f       	sbci	r25, 0xFF	; 255
+ 108:	08 95       	ret
+
+0000010a <__udivmodhi4>:
+ 10a:	aa 1b       	sub	r26, r26
+ 10c:	bb 1b       	sub	r27, r27
+ 10e:	51 e1       	ldi	r21, 0x11	; 17
+ 110:	07 c0       	rjmp	.+14     	; 0x120 <__udivmodhi4_ep>
+
+00000112 <__udivmodhi4_loop>:
+ 112:	aa 1f       	adc	r26, r26
+ 114:	bb 1f       	adc	r27, r27
+ 116:	a6 17       	cp	r26, r22
+ 118:	b7 07       	cpc	r27, r23
+ 11a:	10 f0       	brcs	.+4      	; 0x120 <__udivmodhi4_ep>
+ 11c:	a6 1b       	sub	r26, r22
+ 11e:	b7 0b       	sbc	r27, r23
+
+00000120 <__udivmodhi4_ep>:
+ 120:	88 1f       	adc	r24, r24
+ 122:	99 1f       	adc	r25, r25
+ 124:	5a 95       	dec	r21
+ 126:	a9 f7       	brne	.-22     	; 0x112 <__udivmodhi4_loop>
+ 128:	80 95       	com	r24
+ 12a:	90 95       	com	r25
+ 12c:	bc 01       	movw	r22, r24
+ 12e:	cd 01       	movw	r24, r26
+ 130:	08 95       	ret
+
+00000132 <_exit>:
+ 132:	f8 94       	cli
+
+00000134 <__stop_program>:
+ 134:	ff cf       	rjmp	.-2      	; 0x134 <__stop_program>

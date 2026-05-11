@@ -1,0 +1,10 @@
+[Inputs]
+clk
+rst
+=U[7:0]=
+[Outputs]
+=C[7:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel automata
+

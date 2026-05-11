@@ -1,0 +1,881 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Reading design: cla_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "cla_top.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "cla_top"
+Output Format                      : NGC
+Target Device                      : xc6vlx240t-1-ff1156
+
+---- Source Options
+Top Module Name                    : cla_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/user/ecm/lab1/part2/ipcore_dir/ila.v" into library work
+Parsing module <ila>.
+Analyzing Verilog file "/home/user/ecm/lab1/part2/ipcore_dir/icon.v" into library work
+Parsing module <icon>.
+Analyzing Verilog file "/home/user/ecm/lab1/lfsr.v" into library work
+Parsing module <lfsr>.
+Analyzing Verilog file "/home/user/ecm/lab1/cla_checker.v" into library work
+Parsing module <cla_checker>.
+Analyzing Verilog file "/home/user/ecm/lab1/cla_top.v" into library work
+Parsing module <cla_top>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <cla_top>.
+
+Elaborating module <MMCM_BASE(BANDWIDTH="OPTIMIZED",CLKFBOUT_MULT_F=15,CLKFBOUT_PHASE=0.0,CLKIN1_PERIOD=15.15,CLKOUT0_DIVIDE_F=1.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT2_DUTY_CYCLE=0.5,CLKOUT3_DUTY_CYCLE=0.5,CLKOUT4_DUTY_CYCLE=0.5,CLKOUT5_DUTY_CYCLE=0.5,CLKOUT6_DUTY_CYCLE=0.5,CLKOUT0_PHASE=0.0,CLKOUT1_PHASE=0.0,CLKOUT2_PHASE=0.0,CLKOUT3_PHASE=0.0,CLKOUT4_PHASE=0.0,CLKOUT5_PHASE=0.0,CLKOUT6_PHASE=0.0,CLKOUT1_DIVIDE=2,CLKOUT2_DIVIDE=1,CLKOUT3_DIVIDE=1,CLKOUT4_DIVIDE=1,CLKOUT5_DIVIDE=1,CLKOUT6_DIVIDE=1,CLKOUT4_CASCADE="FALSE",CLOCK_HOLD="FALSE",DIVCLK_DIVIDE=1,REF_JITTER1=0.0,STARTUP_WAIT="FALSE")>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <cla_checker(w=195)>.
+
+Elaborating module <lfsr>.
+WARNING:HDLCompiler:1127 - "/home/user/ecm/lab1/cla_checker.v" Line 39: Assignment to f ignored, since the identifier is never used
+
+Elaborating module <icon>.
+
+Elaborating module <ila>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <cla_top>.
+    Related source file is "/home/user/ecm/lab1/cla_top.v".
+    Found 16-bit register for signal <logic_resetn>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <cla_top> synthesized.
+
+Synthesizing Unit <cla_checker>.
+    Related source file is "/home/user/ecm/lab1/cla_checker.v".
+        w = 195
+    Set property "KEEP = TRUE" for signal <counter>.
+    Set property "DONT_TOUCH = TRUE" for signal <counter>.
+    Set property "KEEP = TRUE" for signal <a>.
+    Set property "DONT_TOUCH = TRUE" for signal <a>.
+    Set property "KEEP = TRUE" for signal <b>.
+    Set property "DONT_TOUCH = TRUE" for signal <b>.
+    Set property "KEEP = TRUE" for signal <sum>.
+    Set property "DONT_TOUCH = TRUE" for signal <sum>.
+    Found 195-bit register for signal <a>.
+    Found 195-bit register for signal <b>.
+    Found 195-bit register for signal <sum>.
+    Found 1-bit register for signal <error>.
+    Found 1-bit register for signal <carry_in>.
+    Found 196-bit adder for signal <n0029> created at line 43.
+INFO:Xst:2774 - HDL ADVISOR - KEEP property attached to signal sum may hinder XST clustering optimizations.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred 587 D-type flip-flop(s).
+Unit <cla_checker> synthesized.
+
+Synthesizing Unit <lfsr>.
+    Related source file is "/home/user/ecm/lab1/lfsr.v".
+    Found 195-bit register for signal <q>.
+    Summary:
+	inferred 195 D-type flip-flop(s).
+Unit <lfsr> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 196-bit adder                                         : 1
+# Registers                                            : 7
+ 1-bit register                                        : 2
+ 16-bit register                                       : 1
+ 195-bit register                                      : 4
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/ila.ngc>.
+Reading core <ipcore_dir/icon.ngc>.
+Loading core <ila> for timing and area information for instance <ila_inst>.
+Loading core <icon> for timing and area information for instance <icon_inst>.
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+INFO:Xst:1901 - Instance U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36 in unit U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36 of type RAMB36 has been replaced by RAMB36E1
+
+Synthesizing (advanced) Unit <cla_checker>.
+Unit <cla_checker> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 196-bit adder                                         : 1
+# Registers                                            : 798
+ Flip-Flops                                            : 798
+# Xors                                                 : 1
+ 1-bit xor4                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:1901 - Instance MMCM_BASE_inst in unit cla_top of type MMCM_BASE has been replaced by MMCM_ADV
+
+Optimizing unit <cla_top> ...
+
+Optimizing unit <cla_checker> ...
+
+Optimizing unit <lfsr> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block cla_top, actual ratio is 1.
+
+Final Macro Processing ...
+
+Processing Unit <cla_top> :
+INFO:Xst:741 - HDL ADVISOR - A 16-bit shift register was found for signal <logic_resetn_0> and currently occupies 16 logic cells (8 slices). Removing the set/reset logic would take advantage of SRL32 (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+Unit <cla_top> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 798
+ Flip-Flops                                            : 798
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : cla_top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1784
+#      GND                         : 99
+#      INV                         : 205
+#      LUT1                        : 67
+#      LUT2                        : 224
+#      LUT3                        : 17
+#      LUT4                        : 96
+#      LUT5                        : 4
+#      LUT6                        : 148
+#      MUXCY                       : 228
+#      MUXCY_L                     : 387
+#      MUXF5                       : 2
+#      MUXF6                       : 1
+#      MUXF7                       : 10
+#      MUXF8                       : 2
+#      VCC                         : 33
+#      XORCY                       : 261
+# FlipFlops/Latches                : 3370
+#      FD                          : 1175
+#      FDC                         : 25
+#      FDCE                        : 16
+#      FDE                         : 32
+#      FDP                         : 1180
+#      FDR                         : 637
+#      FDRE                        : 92
+#      FDS                         : 18
+#      FDSE                        : 194
+#      LDC                         : 1
+# RAMS                             : 17
+#      RAMB18E1                    : 1
+#      RAMB36E1                    : 16
+# Shift Registers                  : 933
+#      SRL16                       : 587
+#      SRL16E                      : 1
+#      SRLC16E                     : 8
+#      SRLC32E                     : 337
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 5
+#      IBUF                        : 3
+#      OBUF                        : 2
+# Others                           : 2
+#      BSCAN_VIRTEX6               : 1
+#      MMCM_ADV                    : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6vlx240tff1156-1 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            3370  out of  301440     1%  
+ Number of Slice LUTs:                 1694  out of  150720     1%  
+    Number used as Logic:               761  out of  150720     0%  
+    Number used as Memory:              933  out of  58400     1%  
+       Number used as SRL:              933
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   4171
+   Number with an unused Flip Flop:     801  out of   4171    19%  
+   Number with an unused LUT:          2477  out of   4171    59%  
+   Number of fully used LUT-FF pairs:   893  out of   4171    21%  
+   Number of unique control sets:        64
+
+IO Utilization: 
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of    600     0%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               17  out of    416     4%  
+    Number using Block RAM only:         17
+ Number of BUFG/BUFGCTRLs:                3  out of     32     9%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+Clock Signal                                                                                      | Clock buffer(FF name)                                        | Load  |
+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+user_clk                                                                                          | MMCM_ADV:CLKOUT1                                             | 3871  |
+cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL                                         | BUFG                                                         | 464   |
+cla_inst/icon_inst/CONTROL0<13>(cla_inst/icon_inst/U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE:O)| NONE(*)(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DIRTY_LDC)| 1     |
+cla_inst/icon_inst/U0/iUPDATE_OUT                                                                 | NONE(cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD)               | 1     |
+--------------------------------------------------------------------------------------------------+--------------------------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+Control Signal                                                                                                                                                                                                                                                                                                                                                                | Buffer(FF name)                                                                                                                                                                                                                                                                                                                                    | Load  |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/XST_VCC:P)| NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36)| 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/N11(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/XST_VCC:P)  | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36)  | 124   |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[10].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[12].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[13].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/XST_GND:G) | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[15].u_ramb36/U_RAMB36)| 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[2].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[4].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[6].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[7].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[8].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/N0(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/XST_GND:G)   | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36)  | 72    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_ECR_glue_set(cla_inst/ila_inst/XST_VCC:P)                                                                                                                                                                                                                                                                                          | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[3].u_ramb36/U_RAMB36)  | 64    |
+cla_inst/ila_inst/U0/I_NO_D.U_ILA/iCAP_WR_EN(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_G2_SQ.U_CAPCTRL/I_INTCAP_F.U_CAPWE1:Q)                                                                                                                                                                                                                                                       | NONE(cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B18KGT0.u_ramb18/U_RAMB18E1)                                                                                                                                                                         | 8     |
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 39.326ns (Maximum Frequency: 25.428MHz)
+   Minimum input arrival time before clock: 3.424ns
+   Maximum output required time after clock: 0.791ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'user_clk'
+  Clock period: 39.326ns (frequency: 25.428MHz)
+  Total number of paths / destination ports: 63732 / 5586
+-------------------------------------------------------------------------
+Delay:               5.243ns (Levels of Logic = 196)
+  Source:            cla_inst/a_0 (FF)
+  Destination:       cla_inst/sum_194 (FF)
+  Source Clock:      user_clk rising 7.5X
+  Destination Clock: user_clk rising 7.5X
+
+  Data Path: cla_inst/a_0 to cla_inst/sum_194
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.375   0.497  cla_inst/a_0 (cla_inst/a<0>)
+     LUT2:I0->O            1   0.068   0.000  cla_inst/Madd_n0029_lut<1> (cla_inst/Madd_n0029_lut<1>)
+     MUXCY:S->O            1   0.290   0.000  cla_inst/Madd_n0029_cy<1> (cla_inst/Madd_n0029_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<2> (cla_inst/Madd_n0029_cy<2>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<3> (cla_inst/Madd_n0029_cy<3>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<4> (cla_inst/Madd_n0029_cy<4>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<5> (cla_inst/Madd_n0029_cy<5>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<6> (cla_inst/Madd_n0029_cy<6>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<7> (cla_inst/Madd_n0029_cy<7>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<8> (cla_inst/Madd_n0029_cy<8>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<9> (cla_inst/Madd_n0029_cy<9>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<10> (cla_inst/Madd_n0029_cy<10>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<11> (cla_inst/Madd_n0029_cy<11>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<12> (cla_inst/Madd_n0029_cy<12>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<13> (cla_inst/Madd_n0029_cy<13>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<14> (cla_inst/Madd_n0029_cy<14>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<15> (cla_inst/Madd_n0029_cy<15>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<16> (cla_inst/Madd_n0029_cy<16>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<17> (cla_inst/Madd_n0029_cy<17>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<18> (cla_inst/Madd_n0029_cy<18>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<19> (cla_inst/Madd_n0029_cy<19>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<20> (cla_inst/Madd_n0029_cy<20>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<21> (cla_inst/Madd_n0029_cy<21>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<22> (cla_inst/Madd_n0029_cy<22>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<23> (cla_inst/Madd_n0029_cy<23>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<24> (cla_inst/Madd_n0029_cy<24>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<25> (cla_inst/Madd_n0029_cy<25>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<26> (cla_inst/Madd_n0029_cy<26>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<27> (cla_inst/Madd_n0029_cy<27>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<28> (cla_inst/Madd_n0029_cy<28>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<29> (cla_inst/Madd_n0029_cy<29>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<30> (cla_inst/Madd_n0029_cy<30>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<31> (cla_inst/Madd_n0029_cy<31>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<32> (cla_inst/Madd_n0029_cy<32>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<33> (cla_inst/Madd_n0029_cy<33>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<34> (cla_inst/Madd_n0029_cy<34>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<35> (cla_inst/Madd_n0029_cy<35>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<36> (cla_inst/Madd_n0029_cy<36>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<37> (cla_inst/Madd_n0029_cy<37>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<38> (cla_inst/Madd_n0029_cy<38>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<39> (cla_inst/Madd_n0029_cy<39>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<40> (cla_inst/Madd_n0029_cy<40>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<41> (cla_inst/Madd_n0029_cy<41>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<42> (cla_inst/Madd_n0029_cy<42>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<43> (cla_inst/Madd_n0029_cy<43>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<44> (cla_inst/Madd_n0029_cy<44>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<45> (cla_inst/Madd_n0029_cy<45>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<46> (cla_inst/Madd_n0029_cy<46>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<47> (cla_inst/Madd_n0029_cy<47>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<48> (cla_inst/Madd_n0029_cy<48>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<49> (cla_inst/Madd_n0029_cy<49>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<50> (cla_inst/Madd_n0029_cy<50>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<51> (cla_inst/Madd_n0029_cy<51>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<52> (cla_inst/Madd_n0029_cy<52>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<53> (cla_inst/Madd_n0029_cy<53>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<54> (cla_inst/Madd_n0029_cy<54>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<55> (cla_inst/Madd_n0029_cy<55>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<56> (cla_inst/Madd_n0029_cy<56>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<57> (cla_inst/Madd_n0029_cy<57>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<58> (cla_inst/Madd_n0029_cy<58>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<59> (cla_inst/Madd_n0029_cy<59>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<60> (cla_inst/Madd_n0029_cy<60>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<61> (cla_inst/Madd_n0029_cy<61>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<62> (cla_inst/Madd_n0029_cy<62>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<63> (cla_inst/Madd_n0029_cy<63>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<64> (cla_inst/Madd_n0029_cy<64>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<65> (cla_inst/Madd_n0029_cy<65>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<66> (cla_inst/Madd_n0029_cy<66>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<67> (cla_inst/Madd_n0029_cy<67>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<68> (cla_inst/Madd_n0029_cy<68>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<69> (cla_inst/Madd_n0029_cy<69>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<70> (cla_inst/Madd_n0029_cy<70>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<71> (cla_inst/Madd_n0029_cy<71>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<72> (cla_inst/Madd_n0029_cy<72>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<73> (cla_inst/Madd_n0029_cy<73>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<74> (cla_inst/Madd_n0029_cy<74>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<75> (cla_inst/Madd_n0029_cy<75>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<76> (cla_inst/Madd_n0029_cy<76>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<77> (cla_inst/Madd_n0029_cy<77>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<78> (cla_inst/Madd_n0029_cy<78>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<79> (cla_inst/Madd_n0029_cy<79>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<80> (cla_inst/Madd_n0029_cy<80>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<81> (cla_inst/Madd_n0029_cy<81>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<82> (cla_inst/Madd_n0029_cy<82>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<83> (cla_inst/Madd_n0029_cy<83>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<84> (cla_inst/Madd_n0029_cy<84>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<85> (cla_inst/Madd_n0029_cy<85>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<86> (cla_inst/Madd_n0029_cy<86>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<87> (cla_inst/Madd_n0029_cy<87>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<88> (cla_inst/Madd_n0029_cy<88>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<89> (cla_inst/Madd_n0029_cy<89>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<90> (cla_inst/Madd_n0029_cy<90>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<91> (cla_inst/Madd_n0029_cy<91>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<92> (cla_inst/Madd_n0029_cy<92>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<93> (cla_inst/Madd_n0029_cy<93>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<94> (cla_inst/Madd_n0029_cy<94>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<95> (cla_inst/Madd_n0029_cy<95>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<96> (cla_inst/Madd_n0029_cy<96>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<97> (cla_inst/Madd_n0029_cy<97>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<98> (cla_inst/Madd_n0029_cy<98>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<99> (cla_inst/Madd_n0029_cy<99>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<100> (cla_inst/Madd_n0029_cy<100>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<101> (cla_inst/Madd_n0029_cy<101>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<102> (cla_inst/Madd_n0029_cy<102>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<103> (cla_inst/Madd_n0029_cy<103>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<104> (cla_inst/Madd_n0029_cy<104>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<105> (cla_inst/Madd_n0029_cy<105>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<106> (cla_inst/Madd_n0029_cy<106>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<107> (cla_inst/Madd_n0029_cy<107>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<108> (cla_inst/Madd_n0029_cy<108>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<109> (cla_inst/Madd_n0029_cy<109>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<110> (cla_inst/Madd_n0029_cy<110>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<111> (cla_inst/Madd_n0029_cy<111>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<112> (cla_inst/Madd_n0029_cy<112>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<113> (cla_inst/Madd_n0029_cy<113>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<114> (cla_inst/Madd_n0029_cy<114>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<115> (cla_inst/Madd_n0029_cy<115>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<116> (cla_inst/Madd_n0029_cy<116>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<117> (cla_inst/Madd_n0029_cy<117>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<118> (cla_inst/Madd_n0029_cy<118>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<119> (cla_inst/Madd_n0029_cy<119>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<120> (cla_inst/Madd_n0029_cy<120>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<121> (cla_inst/Madd_n0029_cy<121>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<122> (cla_inst/Madd_n0029_cy<122>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<123> (cla_inst/Madd_n0029_cy<123>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<124> (cla_inst/Madd_n0029_cy<124>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<125> (cla_inst/Madd_n0029_cy<125>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<126> (cla_inst/Madd_n0029_cy<126>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<127> (cla_inst/Madd_n0029_cy<127>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<128> (cla_inst/Madd_n0029_cy<128>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<129> (cla_inst/Madd_n0029_cy<129>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<130> (cla_inst/Madd_n0029_cy<130>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<131> (cla_inst/Madd_n0029_cy<131>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<132> (cla_inst/Madd_n0029_cy<132>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<133> (cla_inst/Madd_n0029_cy<133>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<134> (cla_inst/Madd_n0029_cy<134>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<135> (cla_inst/Madd_n0029_cy<135>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<136> (cla_inst/Madd_n0029_cy<136>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<137> (cla_inst/Madd_n0029_cy<137>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<138> (cla_inst/Madd_n0029_cy<138>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<139> (cla_inst/Madd_n0029_cy<139>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<140> (cla_inst/Madd_n0029_cy<140>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<141> (cla_inst/Madd_n0029_cy<141>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<142> (cla_inst/Madd_n0029_cy<142>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<143> (cla_inst/Madd_n0029_cy<143>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<144> (cla_inst/Madd_n0029_cy<144>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<145> (cla_inst/Madd_n0029_cy<145>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<146> (cla_inst/Madd_n0029_cy<146>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<147> (cla_inst/Madd_n0029_cy<147>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<148> (cla_inst/Madd_n0029_cy<148>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<149> (cla_inst/Madd_n0029_cy<149>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<150> (cla_inst/Madd_n0029_cy<150>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<151> (cla_inst/Madd_n0029_cy<151>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<152> (cla_inst/Madd_n0029_cy<152>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<153> (cla_inst/Madd_n0029_cy<153>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<154> (cla_inst/Madd_n0029_cy<154>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<155> (cla_inst/Madd_n0029_cy<155>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<156> (cla_inst/Madd_n0029_cy<156>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<157> (cla_inst/Madd_n0029_cy<157>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<158> (cla_inst/Madd_n0029_cy<158>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<159> (cla_inst/Madd_n0029_cy<159>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<160> (cla_inst/Madd_n0029_cy<160>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<161> (cla_inst/Madd_n0029_cy<161>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<162> (cla_inst/Madd_n0029_cy<162>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<163> (cla_inst/Madd_n0029_cy<163>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<164> (cla_inst/Madd_n0029_cy<164>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<165> (cla_inst/Madd_n0029_cy<165>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<166> (cla_inst/Madd_n0029_cy<166>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<167> (cla_inst/Madd_n0029_cy<167>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<168> (cla_inst/Madd_n0029_cy<168>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<169> (cla_inst/Madd_n0029_cy<169>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<170> (cla_inst/Madd_n0029_cy<170>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<171> (cla_inst/Madd_n0029_cy<171>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<172> (cla_inst/Madd_n0029_cy<172>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<173> (cla_inst/Madd_n0029_cy<173>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<174> (cla_inst/Madd_n0029_cy<174>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<175> (cla_inst/Madd_n0029_cy<175>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<176> (cla_inst/Madd_n0029_cy<176>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<177> (cla_inst/Madd_n0029_cy<177>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<178> (cla_inst/Madd_n0029_cy<178>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<179> (cla_inst/Madd_n0029_cy<179>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<180> (cla_inst/Madd_n0029_cy<180>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<181> (cla_inst/Madd_n0029_cy<181>)
+     MUXCY:CI->O           1   0.020   0.000  cla_inst/Madd_n0029_cy<182> (cla_inst/Madd_n0029_cy<182>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<183> (cla_inst/Madd_n0029_cy<183>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<184> (cla_inst/Madd_n0029_cy<184>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<185> (cla_inst/Madd_n0029_cy<185>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<186> (cla_inst/Madd_n0029_cy<186>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<187> (cla_inst/Madd_n0029_cy<187>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<188> (cla_inst/Madd_n0029_cy<188>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<189> (cla_inst/Madd_n0029_cy<189>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<190> (cla_inst/Madd_n0029_cy<190>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<191> (cla_inst/Madd_n0029_cy<191>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<192> (cla_inst/Madd_n0029_cy<192>)
+     MUXCY:CI->O           1   0.019   0.000  cla_inst/Madd_n0029_cy<193> (cla_inst/Madd_n0029_cy<193>)
+     MUXCY:CI->O           0   0.019   0.000  cla_inst/Madd_n0029_cy<194> (cla_inst/Madd_n0029_cy<194>)
+     XORCY:CI->O           1   0.239   0.000  cla_inst/Madd_n0029_xor<195> (cla_inst/n0029<195>)
+     FDR:D                     0.011          cla_inst/sum_194
+    ----------------------------------------
+    Total                      5.243ns (4.746ns logic, 0.497ns route)
+                                       (90.5% logic, 9.5% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Clock period: 6.271ns (frequency: 159.464MHz)
+  Total number of paths / destination ports: 7342 / 1114
+-------------------------------------------------------------------------
+Delay:               6.271ns (Levels of Logic = 9)
+  Source:            cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 (RAM)
+  Destination:       cla_inst/icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Source Clock:      cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+  Destination Clock: cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 to cla_inst/icon_inst/U0/U_ICON/U_TDO_reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB36E1:CLKARDCLK->DOADO7    1   2.073   0.638  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36 (DOA7)
+     end scope: 'cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36:DOA7'
+     LUT6:I2->O            1   0.068   0.638  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_1914)
+     LUT6:I2->O            1   0.068   0.638  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_148 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_148)
+     LUT6:I2->O            1   0.068   0.638  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_92 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_92)
+     LUT6:I2->O            1   0.068   0.000  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_41 (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_4)
+     MUXF7:I0->O           1   0.245   0.491  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RD_COL_MUX/I9.U_MUX512/Mmux_O_2_f7 (U0/I_NO_D.U_ILA/iDATA_DOUT)
+     LUT3:I1->O            1   0.068   0.491  U0/I_NO_D.U_ILA/U_DOUT (CONTROL<3>)
+     end scope: 'cla_inst/ila_inst:CONTROL<3>'
+     begin scope: 'cla_inst/icon_inst:CONTROL0<3>'
+     LUT6:I4->O            1   0.068   0.000  U0/U_ICON/U_TDO_MUX/U_CS_MUX/I4.U_MUX16/Mmux_O11 (U0/U_ICON/iTDO_next)
+     FDE:D                     0.011          U0/U_ICON/U_TDO_reg
+    ----------------------------------------
+    Total                      6.271ns (2.737ns logic, 3.534ns route)
+                                       (43.6% logic, 56.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'cla_inst/icon_inst/U0/iUPDATE_OUT'
+  Clock period: 1.284ns (frequency: 778.816MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               1.284ns (Levels of Logic = 1)
+  Source:            cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination:       cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Source Clock:      cla_inst/icon_inst/U0/iUPDATE_OUT rising
+  Destination Clock: cla_inst/icon_inst/U0/iUPDATE_OUT rising
+
+  Data Path: cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD to cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.375   0.413  U0/U_ICON/U_iDATA_CMD (U0/U_ICON/iDATA_CMD)
+     INV:I->O              1   0.086   0.399  U0/U_ICON/U_iDATA_CMD_n (U0/U_ICON/iDATA_CMD_n)
+     FDC:D                     0.011          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      1.284ns (0.472ns logic, 0.812ns route)
+                                       (36.8% logic, 63.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'user_clk'
+  Total number of paths / destination ports: 1378 / 1378
+-------------------------------------------------------------------------
+Offset:              2.723ns (Levels of Logic = 4)
+  Source:            cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_RFDRE (FF)
+  Destination Clock: user_clk rising 7.5X
+
+  Data Path: cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_STAT/U_DSL1/U_RFDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX6:SHIFT    3   0.000   0.431  U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.068   0.791  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O            5   0.068   0.444  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[9].U_LCE (CONTROL0<13>)
+     end scope: 'cla_inst/icon_inst:CONTROL0<13>'
+     begin scope: 'cla_inst/ila_inst:CONTROL<13>'
+     LUT2:I1->O            4   0.068   0.419  U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_CLEAR (U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/iCLR)
+     FDCE:CLR                  0.434          U0/I_NO_D.U_ILA/U_RST/U_HALT_XFER/U_RFDRE
+    ----------------------------------------
+    Total                      2.723ns (0.638ns logic, 2.085ns route)
+                                       (23.4% logic, 76.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 508 / 498
+-------------------------------------------------------------------------
+Offset:              3.424ns (Levels of Logic = 5)
+  Source:            cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT (PAD)
+  Destination:       cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[0].U_FDRE (FF)
+  Destination Clock: cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SHIFT to cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[0].U_FDRE
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX6:SHIFT    3   0.000   0.431  U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/iSHIFT_OUT)
+     LUT2:I1->O           32   0.068   0.791  U0/U_ICON/U_CTRL_OUT/U_DATA_VALID (U0/U_ICON/U_CTRL_OUT/iDATA_VALID)
+     LUT4:I0->O           22   0.068   0.627  U0/U_ICON/U_CTRL_OUT/F_NCP[0].F_CMD[10].U_LCE (CONTROL0<14>)
+     end scope: 'cla_inst/icon_inst:CONTROL0<14>'
+     begin scope: 'cla_inst/ila_inst:CONTROL<14>'
+     LUT2:I0->O            1   0.068   0.417  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_OR_RST_RD_ROW_WIDE (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/rd_col_addr_wide_rst)
+     LUT2:I1->O            9   0.068   0.452  U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_rst (U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/rst)
+     FDRE:R                    0.434          U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/I_MULT_ROW.U_RD_COL_ADDR_B/u_cnt/G[8].U_FDRE
+    ----------------------------------------
+    Total                      3.424ns (0.706ns logic, 2.718ns route)
+                                       (20.6% logic, 79.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'cla_inst/icon_inst/U0/iUPDATE_OUT'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.324ns (Levels of Logic = 1)
+  Source:            cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL (PAD)
+  Destination:       cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD (FF)
+  Destination Clock: cla_inst/icon_inst/U0/iUPDATE_OUT rising
+
+  Data Path: cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:SEL to cla_inst/icon_inst/U0/U_ICON/U_iDATA_CMD
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+    BSCAN_VIRTEX6:SEL      2   0.000   0.405  U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS (U0/U_ICON/iSEL)
+     INV:I->O              1   0.086   0.399  U0/U_ICON/U_iSEL_n (U0/U_ICON/iSEL_n)
+     FDC:CLR                   0.434          U0/U_ICON/U_iDATA_CMD
+    ----------------------------------------
+    Total                      1.324ns (0.520ns logic, 0.804ns route)
+                                       (39.3% logic, 60.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'user_clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.791ns (Levels of Logic = 1)
+  Source:            cla_inst/error (FF)
+  Destination:       error (PAD)
+  Source Clock:      user_clk rising 7.5X
+
+  Data Path: cla_inst/error to error
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              3   0.375   0.413  cla_inst/error (cla_inst/error)
+     OBUF:I->O                 0.003          error_OBUF (error)
+    ----------------------------------------
+    Total                      0.791ns (0.378ns logic, 0.413ns route)
+                                       (47.8% logic, 52.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              0.375ns (Levels of Logic = 0)
+  Source:            cla_inst/icon_inst/U0/U_ICON/U_TDO_reg (FF)
+  Destination:       cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO (PAD)
+  Source Clock:      cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL rising
+
+  Data Path: cla_inst/icon_inst/U0/U_ICON/U_TDO_reg to cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS:TDO
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              0   0.375   0.000  U0/U_ICON/U_TDO_reg (U0/U_ICON/iTDO)
+    BSCAN_VIRTEX6:TDO          0.000          U0/U_ICON/I_YES_BSCAN.U_BS/I_V6.ISYN.I_USE_SOFTBSCAN_EQ0.U_BS
+    ----------------------------------------
+    Total                      0.375ns (0.375ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock cla_inst/icon_inst/CONTROL0<13>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+user_clk       |         |         |    1.327|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+cla_inst/icon_inst/CONTROL0<13>                          |         |    3.038|         |         |
+cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    6.271|         |         |         |
+cla_inst/icon_inst/U0/iUPDATE_OUT                        |    1.753|         |         |         |
+user_clk                                                 |    2.768|         |         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock cla_inst/icon_inst/U0/iUPDATE_OUT
+---------------------------------+---------+---------+---------+---------+
+                                 | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                     |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------+---------+---------+---------+---------+
+cla_inst/icon_inst/U0/iUPDATE_OUT|    1.284|         |         |         |
+---------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock user_clk
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+cla_inst/icon_inst/U0/U_ICON/I_YES_BSCAN.U_BS/iDRCK_LOCAL|    4.303|         |         |         |
+user_clk                                                 |    5.243|         |         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 67.00 secs
+Total CPU time to Xst completion: 63.45 secs
+ 
+--> 
+
+
+Total memory usage is 417940 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
+

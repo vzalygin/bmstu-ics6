@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/part2/cla_checker.xst" -ofn "/mnt/c/repos/bmstu-ics6/ecm-dist/lab1/part2/cla_checker.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc /mnt/c/repos/bmstu-ics6/ecm-dist/lab1/cla.ucf -p xc6vlx75t-ff484-1 cla_checker.ngc cla_checker.ngd  

@@ -1,0 +1,4 @@
+verilog work "ascii_type_detector.v"
+verilog work "fsm_sequence_checker.v"
+verilog work "fsm_sequence_checket_tb.v"
+verilog work "/home/smag/Programs/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

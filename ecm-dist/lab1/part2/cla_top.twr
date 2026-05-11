@@ -1,0 +1,1809 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 1 -n
+3 -fastpaths -xml cla_top.twx cla_top.ncd -o cla_top.twr cla_top.pcf
+
+Design file:              cla_top.ncd
+Physical constraint file: cla_top.pcf
+Device,package,speed:     xc6vlx240t,ff1156,C,-1 (PRODUCTION 1.17 2013-10-13, STEPPING level 0)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: ts0 = PERIOD TIMEGRP "userclk" 15.15 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   6.000ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: ts0 = PERIOD TIMEGRP "userclk" 15.15 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 0.592ns (period - min period limit)
+  Period: 2.020ns
+  Min period limit: 1.428ns (700.280MHz) (Tmmcmper_CLKOUT(Foutmax))
+  Physical resource: MMCM_BASE_inst/CLKOUT1
+  Logical resource: MMCM_BASE_inst/CLKOUT1
+  Location pin: MMCM_ADV_X0Y4.CLKOUT1
+  Clock network: int_clk
+--------------------------------------------------------------------------------
+Slack: 9.150ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 15.150ns
+  Low pulse: 7.575ns
+  Low pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: MMCM_BASE_inst/CLKIN1
+  Logical resource: MMCM_BASE_inst/CLKIN1
+  Location pin: MMCM_ADV_X0Y4.CLKIN1
+  Clock network: user_clk_IBUF
+--------------------------------------------------------------------------------
+Slack: 9.150ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 15.150ns
+  High pulse: 7.575ns
+  High pulse limit: 3.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: MMCM_BASE_inst/CLKIN1
+  Logical resource: MMCM_BASE_inst/CLKIN1
+  Location pin: MMCM_ADV_X0Y4.CLKIN1
+  Clock network: user_clk_IBUF
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 7.5 HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 64772 paths analyzed, 6564 endpoints analyzed, 998 failing endpoints
+ 1015 timing errors detected. (998 setup errors, 0 hold errors, 17 component switching limit errors)
+ Minimum period is   5.254ns.
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/sum_194 (SLICE_X32Y121.CIN), 574 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.234ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/carry_in (FF)
+  Destination:          cla_inst/sum_194 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.993ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/carry_in to cla_inst/sum_194
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y78.DQ      Tcko                  0.337   cla_inst/carry_in
+                                                       cla_inst/carry_in
+    SLICE_X32Y73.AX      net (fanout=3)        0.532   cla_inst/carry_in
+    SLICE_X32Y73.COUT    Taxcy                 0.295   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.140   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_194
+    -------------------------------------------------  ---------------------------
+    Total                                      4.993ns (4.438ns logic, 0.555ns route)
+                                                       (88.9% logic, 11.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.162ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/b_1 (FF)
+  Destination:          cla_inst/sum_194 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.921ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/b_1 to cla_inst/sum_194
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y74.BQ      Tcko                  0.337   cla_inst/b<3>
+                                                       cla_inst/b_1
+    SLICE_X32Y73.C4      net (fanout=2)        0.415   cla_inst/b<1>
+    SLICE_X32Y73.COUT    Topcyc                0.340   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_lut<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.140   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_194
+    -------------------------------------------------  ---------------------------
+    Total                                      4.921ns (4.483ns logic, 0.438ns route)
+                                                       (91.1% logic, 8.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.150ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/a_3 (FF)
+  Destination:          cla_inst/sum_194 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.915ns (Levels of Logic = 48)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.207ns (1.429 - 1.636)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/a_3 to cla_inst/sum_194
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y73.DQ      Tcko                  0.337   cla_inst/a<3>
+                                                       cla_inst/a_3
+    SLICE_X32Y74.A4      net (fanout=3)        0.417   cla_inst/a<3>
+    SLICE_X32Y74.COUT    Topcya                0.410   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_lut<4>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.140   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_194
+    -------------------------------------------------  ---------------------------
+    Total                                      4.915ns (4.475ns logic, 0.440ns route)
+                                                       (91.0% logic, 9.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/sum_192 (SLICE_X32Y121.CIN), 574 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.194ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/carry_in (FF)
+  Destination:          cla_inst/sum_192 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.953ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/carry_in to cla_inst/sum_192
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y78.DQ      Tcko                  0.337   cla_inst/carry_in
+                                                       cla_inst/carry_in
+    SLICE_X32Y73.AX      net (fanout=3)        0.532   cla_inst/carry_in
+    SLICE_X32Y73.COUT    Taxcy                 0.295   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.100   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_192
+    -------------------------------------------------  ---------------------------
+    Total                                      4.953ns (4.398ns logic, 0.555ns route)
+                                                       (88.8% logic, 11.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.122ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/b_1 (FF)
+  Destination:          cla_inst/sum_192 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.881ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/b_1 to cla_inst/sum_192
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y74.BQ      Tcko                  0.337   cla_inst/b<3>
+                                                       cla_inst/b_1
+    SLICE_X32Y73.C4      net (fanout=2)        0.415   cla_inst/b<1>
+    SLICE_X32Y73.COUT    Topcyc                0.340   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_lut<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.100   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_192
+    -------------------------------------------------  ---------------------------
+    Total                                      4.881ns (4.443ns logic, 0.438ns route)
+                                                       (91.0% logic, 9.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.110ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/a_3 (FF)
+  Destination:          cla_inst/sum_192 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.875ns (Levels of Logic = 48)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.207ns (1.429 - 1.636)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/a_3 to cla_inst/sum_192
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y73.DQ      Tcko                  0.337   cla_inst/a<3>
+                                                       cla_inst/a_3
+    SLICE_X32Y74.A4      net (fanout=3)        0.417   cla_inst/a<3>
+    SLICE_X32Y74.COUT    Topcya                0.410   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_lut<4>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.100   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_192
+    -------------------------------------------------  ---------------------------
+    Total                                      4.875ns (4.435ns logic, 0.440ns route)
+                                                       (91.0% logic, 9.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/sum_193 (SLICE_X32Y121.CIN), 574 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.169ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/carry_in (FF)
+  Destination:          cla_inst/sum_193 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.928ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/carry_in to cla_inst/sum_193
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y78.DQ      Tcko                  0.337   cla_inst/carry_in
+                                                       cla_inst/carry_in
+    SLICE_X32Y73.AX      net (fanout=3)        0.532   cla_inst/carry_in
+    SLICE_X32Y73.COUT    Taxcy                 0.295   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.075   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_193
+    -------------------------------------------------  ---------------------------
+    Total                                      4.928ns (4.373ns logic, 0.555ns route)
+                                                       (88.7% logic, 11.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.097ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/b_1 (FF)
+  Destination:          cla_inst/sum_193 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.856ns (Levels of Logic = 49)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.213ns (1.429 - 1.642)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/b_1 to cla_inst/sum_193
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y74.BQ      Tcko                  0.337   cla_inst/b<3>
+                                                       cla_inst/b_1
+    SLICE_X32Y73.C4      net (fanout=2)        0.415   cla_inst/b<1>
+    SLICE_X32Y73.COUT    Topcyc                0.340   cla_inst/sum<2>
+                                                       cla_inst/Madd_n0029_lut<2>
+                                                       cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<3>
+    SLICE_X32Y74.COUT    Tbyp                  0.078   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.075   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_193
+    -------------------------------------------------  ---------------------------
+    Total                                      4.856ns (4.418ns logic, 0.438ns route)
+                                                       (91.0% logic, 9.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     -3.085ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               cla_inst/a_3 (FF)
+  Destination:          cla_inst/sum_193 (FF)
+  Requirement:          2.020ns
+  Data Path Delay:      4.850ns (Levels of Logic = 48)(Component delays alone exceeds constraint)
+  Clock Path Skew:      -0.207ns (1.429 - 1.636)
+  Source Clock:         clk_bufg rising at 0.000ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.048ns
+
+  Clock Uncertainty:          0.048ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Discrete Jitter (DJ):       0.065ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: cla_inst/a_3 to cla_inst/sum_193
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y73.DQ      Tcko                  0.337   cla_inst/a<3>
+                                                       cla_inst/a_3
+    SLICE_X32Y74.A4      net (fanout=3)        0.417   cla_inst/a<3>
+    SLICE_X32Y74.COUT    Topcya                0.410   cla_inst/sum<6>
+                                                       cla_inst/Madd_n0029_lut<4>
+                                                       cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<7>
+    SLICE_X32Y75.COUT    Tbyp                  0.078   cla_inst/sum<10>
+                                                       cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<11>
+    SLICE_X32Y76.COUT    Tbyp                  0.078   cla_inst/sum<14>
+                                                       cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<15>
+    SLICE_X32Y77.COUT    Tbyp                  0.078   cla_inst/sum<18>
+                                                       cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<19>
+    SLICE_X32Y78.COUT    Tbyp                  0.078   cla_inst/sum<22>
+                                                       cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<23>
+    SLICE_X32Y79.COUT    Tbyp                  0.078   cla_inst/sum<26>
+                                                       cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<27>
+    SLICE_X32Y80.COUT    Tbyp                  0.078   cla_inst/sum<30>
+                                                       cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<31>
+    SLICE_X32Y81.COUT    Tbyp                  0.078   cla_inst/sum<34>
+                                                       cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<35>
+    SLICE_X32Y82.COUT    Tbyp                  0.078   cla_inst/sum<38>
+                                                       cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<39>
+    SLICE_X32Y83.COUT    Tbyp                  0.078   cla_inst/sum<42>
+                                                       cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<43>
+    SLICE_X32Y84.COUT    Tbyp                  0.078   cla_inst/sum<46>
+                                                       cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<47>
+    SLICE_X32Y85.COUT    Tbyp                  0.078   cla_inst/sum<50>
+                                                       cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<51>
+    SLICE_X32Y86.COUT    Tbyp                  0.078   cla_inst/sum<54>
+                                                       cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<55>
+    SLICE_X32Y87.COUT    Tbyp                  0.078   cla_inst/sum<58>
+                                                       cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<59>
+    SLICE_X32Y88.COUT    Tbyp                  0.078   cla_inst/sum<62>
+                                                       cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<63>
+    SLICE_X32Y89.COUT    Tbyp                  0.078   cla_inst/sum<66>
+                                                       cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<67>
+    SLICE_X32Y90.COUT    Tbyp                  0.078   cla_inst/sum<70>
+                                                       cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<71>
+    SLICE_X32Y91.COUT    Tbyp                  0.078   cla_inst/sum<74>
+                                                       cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<75>
+    SLICE_X32Y92.COUT    Tbyp                  0.078   cla_inst/sum<78>
+                                                       cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<79>
+    SLICE_X32Y93.COUT    Tbyp                  0.078   cla_inst/sum<82>
+                                                       cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<83>
+    SLICE_X32Y94.COUT    Tbyp                  0.078   cla_inst/sum<86>
+                                                       cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<87>
+    SLICE_X32Y95.COUT    Tbyp                  0.078   cla_inst/sum<90>
+                                                       cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<91>
+    SLICE_X32Y96.COUT    Tbyp                  0.078   cla_inst/sum<94>
+                                                       cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<95>
+    SLICE_X32Y97.COUT    Tbyp                  0.078   cla_inst/sum<98>
+                                                       cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<99>
+    SLICE_X32Y98.COUT    Tbyp                  0.078   cla_inst/sum<102>
+                                                       cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.CIN     net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<103>
+    SLICE_X32Y99.COUT    Tbyp                  0.078   cla_inst/sum<106>
+                                                       cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.CIN    net (fanout=1)        0.023   cla_inst/Madd_n0029_cy<107>
+    SLICE_X32Y100.COUT   Tbyp                  0.078   cla_inst/sum<110>
+                                                       cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<111>
+    SLICE_X32Y101.COUT   Tbyp                  0.078   cla_inst/sum<114>
+                                                       cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<115>
+    SLICE_X32Y102.COUT   Tbyp                  0.078   cla_inst/sum<118>
+                                                       cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<119>
+    SLICE_X32Y103.COUT   Tbyp                  0.078   cla_inst/sum<122>
+                                                       cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<123>
+    SLICE_X32Y104.COUT   Tbyp                  0.078   cla_inst/sum<126>
+                                                       cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<127>
+    SLICE_X32Y105.COUT   Tbyp                  0.078   cla_inst/sum<130>
+                                                       cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<131>
+    SLICE_X32Y106.COUT   Tbyp                  0.078   cla_inst/sum<134>
+                                                       cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<135>
+    SLICE_X32Y107.COUT   Tbyp                  0.078   cla_inst/sum<138>
+                                                       cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<139>
+    SLICE_X32Y108.COUT   Tbyp                  0.078   cla_inst/sum<142>
+                                                       cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<143>
+    SLICE_X32Y109.COUT   Tbyp                  0.078   cla_inst/sum<146>
+                                                       cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<147>
+    SLICE_X32Y110.COUT   Tbyp                  0.078   cla_inst/sum<150>
+                                                       cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<151>
+    SLICE_X32Y111.COUT   Tbyp                  0.078   cla_inst/sum<154>
+                                                       cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<155>
+    SLICE_X32Y112.COUT   Tbyp                  0.078   cla_inst/sum<158>
+                                                       cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<159>
+    SLICE_X32Y113.COUT   Tbyp                  0.078   cla_inst/sum<162>
+                                                       cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<163>
+    SLICE_X32Y114.COUT   Tbyp                  0.078   cla_inst/sum<166>
+                                                       cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<167>
+    SLICE_X32Y115.COUT   Tbyp                  0.078   cla_inst/sum<170>
+                                                       cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<171>
+    SLICE_X32Y116.COUT   Tbyp                  0.078   cla_inst/sum<174>
+                                                       cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<175>
+    SLICE_X32Y117.COUT   Tbyp                  0.078   cla_inst/sum<178>
+                                                       cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<179>
+    SLICE_X32Y118.COUT   Tbyp                  0.078   cla_inst/sum<182>
+                                                       cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<183>
+    SLICE_X32Y119.COUT   Tbyp                  0.078   cla_inst/sum<186>
+                                                       cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<187>
+    SLICE_X32Y120.COUT   Tbyp                  0.078   cla_inst/sum<190>
+                                                       cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CIN    net (fanout=1)        0.000   cla_inst/Madd_n0029_cy<191>
+    SLICE_X32Y121.CLK    Tcinck                0.075   cla_inst/sum<194>
+                                                       cla_inst/Madd_n0029_xor<195>
+                                                       cla_inst/sum_193
+    -------------------------------------------------  ---------------------------
+    Total                                      4.850ns (4.410ns logic, 0.440ns route)
+                                                       (90.9% logic, 9.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 7.5 HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36 (RAMB36_X2Y23.DIBDI29), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.015ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[562].I_SRLT_NE_0.FF (FF)
+  Destination:          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.169ns (Levels of Logic = 0)
+  Clock Path Skew:      0.154ns (0.586 - 0.432)
+  Source Clock:         clk_bufg rising at 2.020ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[562].I_SRLT_NE_0.FF to cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X38Y111.DQ        Tcko                  0.115   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<562>
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[562].I_SRLT_NE_0.FF
+    RAMB36_X2Y23.DIBDI29    net (fanout=1)        0.252   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<562>
+    RAMB36_X2Y23.CLKBWRCLKL Trckd_DIB   (-Th)     0.198   cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[14].u_ramb36/U_RAMB36
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.169ns (-0.083ns logic, 0.252ns route)
+                                                          (-49.1% logic, 149.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 (RAMB36_X3Y19.DIBDI19), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.015ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[389].I_SRLT_NE_0.FF (FF)
+  Destination:          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.177ns (Levels of Logic = 0)
+  Clock Path Skew:      0.162ns (0.608 - 0.446)
+  Source Clock:         clk_bufg rising at 2.020ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[389].I_SRLT_NE_0.FF to cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X48Y97.CQ         Tcko                  0.115   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<388>
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[389].I_SRLT_NE_0.FF
+    RAMB36_X3Y19.DIBDI19    net (fanout=1)        0.260   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<389>
+    RAMB36_X3Y19.CLKBWRCLKL Trckd_DIB   (-Th)     0.198   cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[5].u_ramb36/U_RAMB36
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.177ns (-0.083ns logic, 0.260ns route)
+                                                          (-46.9% logic, 146.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 (RAMB36_X1Y19.DIBDI21), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.015ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[301].I_SRLT_NE_0.FF (FF)
+  Destination:          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.161ns (Levels of Logic = 0)
+  Clock Path Skew:      0.146ns (0.585 - 0.439)
+  Source Clock:         clk_bufg rising at 2.020ns
+  Destination Clock:    clk_bufg rising at 2.020ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[301].I_SRLT_NE_0.FF to cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36
+    Location                Delay type         Delay(ns)  Physical Resource
+                                                          Logical Resource(s)
+    ----------------------------------------------------  -------------------
+    SLICE_X20Y95.BQ         Tcko                  0.115   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<299>
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/I_DQ.U_DQQ/DLY_9.DLY_9_GEN[301].I_SRLT_NE_0.FF
+    RAMB36_X1Y19.DIBDI21    net (fanout=1)        0.244   cla_inst/ila_inst/U0/I_NO_D.U_ILA/iDATA<301>
+    RAMB36_X1Y19.CLKBWRCLKL Trckd_DIB   (-Th)     0.198   cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36
+                                                          cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[0].u_ramb36/U_RAMB36
+    ----------------------------------------------------  ---------------------------
+    Total                                         0.161ns (-0.083ns logic, 0.244ns route)
+                                                          (-51.6% logic, 151.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_int_clk = PERIOD TIMEGRP "int_clk" ts0 / 7.5 HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: -0.202ns (period - min period limit)
+  Period: 2.020ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKB)
+  Physical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Logical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[1].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Location pin: RAMB36_X2Y16.CLKBWRCLKL
+  Clock network: clk_bufg
+--------------------------------------------------------------------------------
+Slack: -0.202ns (period - min period limit)
+  Period: 2.020ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKB)
+  Physical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Logical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[11].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Location pin: RAMB36_X3Y18.CLKBWRCLKL
+  Clock network: clk_bufg
+--------------------------------------------------------------------------------
+Slack: -0.202ns (period - min period limit)
+  Period: 2.020ns
+  Min period limit: 2.222ns (450.045MHz) (Trper_CLKB)
+  Physical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Logical resource: cla_inst/ila_inst/U0/I_NO_D.U_ILA/U_CAPSTOR/I_CASE1.I_YES_TB.U_TRACE_BUFFER/U_RAM/I_V6.U_CS_BRAM_CASCADE_V6/I_DEPTH_LTEQ_32K.U_SBRAM_0/I_B36KGT0.G_RAMB36[9].u_ramb36/U_RAMB36/CLKBWRCLKL
+  Location pin: RAMB36_X1Y21.CLKBWRCLKL
+  Clock network: clk_bufg
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for ts0
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|ts0                            |     15.150ns|      6.000ns|     39.405ns|            0|         1015|            0|        64772|
+| TS_int_clk                    |      2.020ns|      5.254ns|          N/A|         1015|            0|        64772|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock user_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+user_clk       |    5.254|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 1015  Score: 655927  (Setup/Max: 652493, Hold: 0, Component Switching Limit: 3434)
+
+Constraints cover 64772 paths, 0 nets, and 7341 connections
+
+Design statistics:
+   Minimum period:   6.000ns{1}   (Maximum frequency: 166.667MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat Mar 29 15:47:01 2025 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 843 MB
+
+
+

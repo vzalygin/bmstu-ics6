@@ -1,0 +1,6 @@
+verilog work "ipcore_dir/ila.v"
+verilog work "ipcore_dir/icon666.v"
+verilog work "../lfsr.v"
+verilog work "../cla_pipelined.v"
+verilog work "../cla_checker_pipelined.v"
+verilog work "../cla_top.v"

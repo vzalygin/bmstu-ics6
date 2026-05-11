@@ -1,0 +1,223 @@
+
+lab5_2_master.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000ec  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000004  00800060  000000ec  00000180  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000002  00800064  00800064  00000184  2**0
+                  ALLOC
+  3 .stab         000006cc  00000000  00000000  00000184  2**2
+                  CONTENTS, READONLY, DEBUGGING
+  4 .stabstr      00000097  00000000  00000000  00000850  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000020  00000000  00000000  000008e7  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_pubnames 00000059  00000000  00000000  00000907  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_info   00000112  00000000  00000000  00000960  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_abbrev 000000a3  00000000  00000000  00000a72  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_line   0000018e  00000000  00000000  00000b15  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_frame  00000030  00000000  00000000  00000ca4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_str    000000ab  00000000  00000000  00000cd4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_pubtypes 0000001e  00000000  00000000  00000d7f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	10 c0       	rjmp	.+32     	; 0x22 <__ctors_end>
+   2:	2a c0       	rjmp	.+84     	; 0x58 <__bad_interrupt>
+   4:	29 c0       	rjmp	.+82     	; 0x58 <__bad_interrupt>
+   6:	28 c0       	rjmp	.+80     	; 0x58 <__bad_interrupt>
+   8:	27 c0       	rjmp	.+78     	; 0x58 <__bad_interrupt>
+   a:	26 c0       	rjmp	.+76     	; 0x58 <__bad_interrupt>
+   c:	25 c0       	rjmp	.+74     	; 0x58 <__bad_interrupt>
+   e:	24 c0       	rjmp	.+72     	; 0x58 <__bad_interrupt>
+  10:	24 c0       	rjmp	.+72     	; 0x5a <__vector_8>
+  12:	22 c0       	rjmp	.+68     	; 0x58 <__bad_interrupt>
+  14:	21 c0       	rjmp	.+66     	; 0x58 <__bad_interrupt>
+  16:	20 c0       	rjmp	.+64     	; 0x58 <__bad_interrupt>
+  18:	1f c0       	rjmp	.+62     	; 0x58 <__bad_interrupt>
+  1a:	1e c0       	rjmp	.+60     	; 0x58 <__bad_interrupt>
+  1c:	1d c0       	rjmp	.+58     	; 0x58 <__bad_interrupt>
+  1e:	1c c0       	rjmp	.+56     	; 0x58 <__bad_interrupt>
+  20:	1b c0       	rjmp	.+54     	; 0x58 <__bad_interrupt>
+
+00000022 <__ctors_end>:
+  22:	11 24       	eor	r1, r1
+  24:	1f be       	out	0x3f, r1	; 63
+  26:	cf e5       	ldi	r28, 0x5F	; 95
+  28:	d2 e0       	ldi	r29, 0x02	; 2
+  2a:	de bf       	out	0x3e, r29	; 62
+  2c:	cd bf       	out	0x3d, r28	; 61
+
+0000002e <__do_copy_data>:
+  2e:	10 e0       	ldi	r17, 0x00	; 0
+  30:	a0 e6       	ldi	r26, 0x60	; 96
+  32:	b0 e0       	ldi	r27, 0x00	; 0
+  34:	ec ee       	ldi	r30, 0xEC	; 236
+  36:	f0 e0       	ldi	r31, 0x00	; 0
+  38:	02 c0       	rjmp	.+4      	; 0x3e <__SP_H__>
+  3a:	05 90       	lpm	r0, Z+
+  3c:	0d 92       	st	X+, r0
+  3e:	a4 36       	cpi	r26, 0x64	; 100
+  40:	b1 07       	cpc	r27, r17
+  42:	d9 f7       	brne	.-10     	; 0x3a <__CCP__+0x6>
+
+00000044 <__do_clear_bss>:
+  44:	10 e0       	ldi	r17, 0x00	; 0
+  46:	a4 e6       	ldi	r26, 0x64	; 100
+  48:	b0 e0       	ldi	r27, 0x00	; 0
+  4a:	01 c0       	rjmp	.+2      	; 0x4e <.do_clear_bss_start>
+
+0000004c <.do_clear_bss_loop>:
+  4c:	1d 92       	st	X+, r1
+
+0000004e <.do_clear_bss_start>:
+  4e:	a6 36       	cpi	r26, 0x66	; 102
+  50:	b1 07       	cpc	r27, r17
+  52:	e1 f7       	brne	.-8      	; 0x4c <.do_clear_bss_loop>
+  54:	24 d0       	rcall	.+72     	; 0x9e <main>
+  56:	48 c0       	rjmp	.+144    	; 0xe8 <_exit>
+
+00000058 <__bad_interrupt>:
+  58:	d3 cf       	rjmp	.-90     	; 0x0 <__vectors>
+
+0000005a <__vector_8>:
+volatile uint8_t data_index = 0;
+/* Флаг нажатия кнопки */
+volatile uint8_t start_transmission = 0;
+
+/* Обработчик прерывания SPI */
+ISR(SPI_STC_vect) {
+  5a:	1f 92       	push	r1
+  5c:	0f 92       	push	r0
+  5e:	0f b6       	in	r0, 0x3f	; 63
+  60:	0f 92       	push	r0
+  62:	11 24       	eor	r1, r1
+  64:	8f 93       	push	r24
+  66:	ef 93       	push	r30
+  68:	ff 93       	push	r31
+    // Завершена передача data[data_index]
+    PORTB |= (1 << PIN_SS1); // Деактивация ведомого
+  6a:	c1 9a       	sbi	0x18, 1	; 24
+
+    data_index++;
+  6c:	80 91 64 00 	lds	r24, 0x0064
+  70:	8f 5f       	subi	r24, 0xFF	; 255
+  72:	80 93 64 00 	sts	0x0064, r24
+    if (data_index < DATA_LENGTH) {
+  76:	80 91 64 00 	lds	r24, 0x0064
+  7a:	83 30       	cpi	r24, 0x03	; 3
+  7c:	40 f4       	brcc	.+16     	; 0x8e <__vector_8+0x34>
+        // Активация ведомого и передача следующего байта
+        PORTB &= ~(1 << PIN_SS1);
+  7e:	c1 98       	cbi	0x18, 1	; 24
+        SPDR = data[data_index];
+  80:	e0 91 64 00 	lds	r30, 0x0064
+  84:	f0 e0       	ldi	r31, 0x00	; 0
+  86:	e0 5a       	subi	r30, 0xA0	; 160
+  88:	ff 4f       	sbci	r31, 0xFF	; 255
+  8a:	80 81       	ld	r24, Z
+  8c:	8f b9       	out	0x0f, r24	; 15
+    }
+}
+  8e:	ff 91       	pop	r31
+  90:	ef 91       	pop	r30
+  92:	8f 91       	pop	r24
+  94:	0f 90       	pop	r0
+  96:	0f be       	out	0x3f, r0	; 63
+  98:	0f 90       	pop	r0
+  9a:	1f 90       	pop	r1
+  9c:	18 95       	reti
+
+0000009e <main>:
+
+int main() {
+    /* Настройка выводов MOSI, SCK, SS на вывод */
+    DDRB = (1 << PIN_MOSI) | (1 << PIN_SCK) | (1 << PIN_SS);
+  9e:	80 eb       	ldi	r24, 0xB0	; 176
+  a0:	87 bb       	out	0x17, r24	; 23
+    DDRB |= (1 << PIN_SS1);
+  a2:	b9 9a       	sbi	0x17, 1	; 23
+    PORTB |= (1 << PIN_SS1);
+  a4:	c1 9a       	sbi	0x18, 1	; 24
+
+    /* Инициализация SPI: включить SPI, мастер, прерывания, делитель /16 */
+    SPCR = (1 << SPE) | (1 << MSTR) | (1 << SPR0) | (1 << SPIE);
+  a6:	81 ed       	ldi	r24, 0xD1	; 209
+  a8:	8d b9       	out	0x0d, r24	; 13
+
+    /* Настройка кнопки START (PE0) на ввод с подтяжкой */
+    DDRE &= ~(1 << BUTTON_START);
+  aa:	30 98       	cbi	0x06, 0	; 6
+    PORTE |= (1 << BUTTON_START);
+  ac:	38 9a       	sbi	0x07, 0	; 7
+
+    /* Разрешение глобальных прерываний */
+    sei();
+  ae:	78 94       	sei
+            while (!(PINE & (1 << BUTTON_START)))
+                ;
+
+            // Подготовка передачи
+            data_index = 0;
+            start_transmission = 1;
+  b0:	81 e0       	ldi	r24, 0x01	; 1
+
+    /* Разрешение глобальных прерываний */
+    sei();
+
+    while (1) {
+        if (!(PINE & (1 << BUTTON_START)) && !start_transmission) {
+  b2:	28 99       	sbic	0x05, 0	; 5
+  b4:	12 c0       	rjmp	.+36     	; 0xda <main+0x3c>
+  b6:	90 91 65 00 	lds	r25, 0x0065
+  ba:	99 23       	and	r25, r25
+  bc:	71 f4       	brne	.+28     	; 0xda <main+0x3c>
+            // Ожидание отпускания кнопки
+            while (!(PINE & (1 << BUTTON_START)))
+  be:	28 9b       	sbis	0x05, 0	; 5
+  c0:	fe cf       	rjmp	.-4      	; 0xbe <main+0x20>
+                ;
+
+            // Подготовка передачи
+            data_index = 0;
+  c2:	10 92 64 00 	sts	0x0064, r1
+            start_transmission = 1;
+  c6:	80 93 65 00 	sts	0x0065, r24
+
+            // Старт передачи первого байта
+            PORTB &= ~(1 << PIN_SS1);     // Активировать ведомого
+  ca:	c1 98       	cbi	0x18, 1	; 24
+            SPDR = data[data_index];      // Передать первый байт
+  cc:	e0 91 64 00 	lds	r30, 0x0064
+  d0:	f0 e0       	ldi	r31, 0x00	; 0
+  d2:	e0 5a       	subi	r30, 0xA0	; 160
+  d4:	ff 4f       	sbci	r31, 0xFF	; 255
+  d6:	90 81       	ld	r25, Z
+  d8:	9f b9       	out	0x0f, r25	; 15
+        }
+
+        // Сброс флага после передачи всех данных
+        if (data_index >= DATA_LENGTH) {
+  da:	90 91 64 00 	lds	r25, 0x0064
+  de:	93 30       	cpi	r25, 0x03	; 3
+  e0:	40 f3       	brcs	.-48     	; 0xb2 <main+0x14>
+            start_transmission = 0;
+  e2:	10 92 65 00 	sts	0x0065, r1
+  e6:	e5 cf       	rjmp	.-54     	; 0xb2 <main+0x14>
+
+000000e8 <_exit>:
+  e8:	f8 94       	cli
+
+000000ea <__stop_program>:
+  ea:	ff cf       	rjmp	.-2      	; 0xea <__stop_program>

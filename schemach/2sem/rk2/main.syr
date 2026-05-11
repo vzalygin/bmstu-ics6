@@ -1,0 +1,451 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+Reading design: main.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main"
+Output Format                      : NGC
+Target Device                      : xc3s200-5-ft256
+
+---- Source Options
+Top Module Name                    : main
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "seven_segment_driver.v" in library work
+Compiling verilog file "led_decode.v" in library work
+Module <seven_segment_driver> compiled
+Compiling verilog file "lab2_example.v" in library work
+Module <led_decode> compiled
+Compiling verilog file "main.v" in library work
+Module <lab2_example> compiled
+Module <main> compiled
+No errors in compilation
+Analysis of file <"main.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main> in library <work>.
+
+Analyzing hierarchy for module <lab2_example> in library <work> with parameters.
+	STATE0 = "10"
+	STATE1 = "00"
+	STATE2 = "11"
+	STATE3 = "01"
+
+Analyzing hierarchy for module <seven_segment_driver> in library <work>.
+
+Analyzing hierarchy for module <led_decode> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main>.
+Module <main> is correct for synthesis.
+ 
+Analyzing module <lab2_example> in library <work>.
+	STATE0 = 2'b10
+	STATE1 = 2'b00
+	STATE2 = 2'b11
+	STATE3 = 2'b01
+Module <lab2_example> is correct for synthesis.
+ 
+Analyzing module <seven_segment_driver> in library <work>.
+Module <seven_segment_driver> is correct for synthesis.
+ 
+Analyzing module <led_decode> in library <work>.
+Module <led_decode> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <lab2_example>.
+    Related source file is "lab2_example.v".
+    Found 1-bit xor2 for signal <cnt$xor0000> created at line 29.
+    Found 21-bit up counter for signal <counter>.
+    Found 2-bit register for signal <s>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   2 D-type flip-flop(s).
+Unit <lab2_example> synthesized.
+
+
+Synthesizing Unit <seven_segment_driver>.
+    Related source file is "seven_segment_driver.v".
+    Found 4-bit register for signal <a>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <seven_segment_driver> synthesized.
+
+
+Synthesizing Unit <led_decode>.
+    Related source file is "led_decode.v".
+    Found 16x8-bit ROM for signal <seg_data>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <led_decode> synthesized.
+
+
+Synthesizing Unit <main>.
+    Related source file is "main.v".
+    Found 1-bit register for signal <cnt_ff>.
+    Found 17-bit up counter for signal <counter>.
+    Found 16-bit up counter for signal <main_counter>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <main> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+# Registers                                            : 3
+ 1-bit register                                        : 1
+ 2-bit register                                        : 1
+ 4-bit register                                        : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x8-bit ROM                                          : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+ 21-bit up counter                                     : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main> ...
+
+Optimizing unit <lab2_example> ...
+
+Optimizing unit <seven_segment_driver> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 61
+ Flip-Flops                                            : 61
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main.ngr
+Top Level Output File Name         : main
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 17
+
+Cell Usage :
+# BELS                             : 208
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 51
+#      LUT2                        : 9
+#      LUT3                        : 1
+#      LUT4                        : 25
+#      MUXCY                       : 62
+#      VCC                         : 1
+#      XORCY                       : 54
+# FlipFlops/Latches                : 61
+#      FDR                         : 40
+#      FDRE                        : 17
+#      FDS                         : 1
+#      FDSE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 16
+#      IBUF                        : 2
+#      OBUF                        : 14
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s200ft256-5 
+
+ Number of Slices:                       48  out of   1920     2%  
+ Number of Slice Flip Flops:             61  out of   3840     1%  
+ Number of 4 input LUTs:                 90  out of   3840     2%  
+ Number of IOs:                          17
+ Number of bonded IOBs:                  17  out of    173     9%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 61    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 6.404ns (Maximum Frequency: 156.151MHz)
+   Minimum input arrival time before clock: 5.210ns
+   Maximum output required time after clock: 10.870ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.404ns (frequency: 156.151MHz)
+  Total number of paths / destination ports: 999 / 119
+-------------------------------------------------------------------------
+Delay:               6.404ns (Levels of Logic = 6)
+  Source:            counter_5 (FF)
+  Destination:       counter_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: counter_5 to counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.626   1.040  counter_5 (counter_5)
+     LUT4:I0->O            1   0.479   0.000  counter_ovf_wg_lut<1> (counter_ovf_wg_lut<1>)
+     MUXCY:S->O            1   0.435   0.000  counter_ovf_wg_cy<1> (counter_ovf_wg_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  counter_ovf_wg_cy<2> (counter_ovf_wg_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  counter_ovf_wg_cy<3> (counter_ovf_wg_cy<3>)
+     MUXCY:CI->O           5   0.246   0.953  counter_ovf_wg_cy<4> (counter_ovf)
+     LUT2:I1->O           17   0.479   1.143  counter_or00001 (counter_or0000)
+     FDR:R                     0.892          counter_0
+    ----------------------------------------
+    Total                      6.404ns (3.267ns logic, 3.137ns route)
+                                       (51.0% logic, 49.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 62 / 62
+-------------------------------------------------------------------------
+Offset:              5.210ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       lab2_example_inst/counter_20 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to lab2_example_inst/counter_20
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            25   0.715   1.836  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           21   0.479   1.288  lab2_example_inst/counter_or00001 (lab2_example_inst/counter_or0000)
+     FDR:R                     0.892          lab2_example_inst/counter_0
+    ----------------------------------------
+    Total                      5.210ns (2.086ns logic, 3.124ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 230 / 13
+-------------------------------------------------------------------------
+Offset:              10.870ns (Levels of Logic = 4)
+  Source:            main_counter_8 (FF)
+  Destination:       led<6> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: main_counter_8 to led<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   0.626   1.040  main_counter_8 (main_counter_8)
+     LUT4:I0->O            1   0.479   0.976  ssd_inst/d_0_or000010 (ssd_inst/d_0_or000010)
+     LUT2:I0->O            7   0.479   1.201  ssd_inst/d_0_or000022 (driver_decoder_bus<0>)
+     LUT4:I0->O            1   0.479   0.681  led_decode_inst/Mrom_seg_data61 (led_6_OBUF)
+     OBUF:I->O                 4.909          led_6_OBUF (led<6>)
+    ----------------------------------------
+    Total                     10.870ns (6.972ns logic, 3.898ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.46 secs
+ 
+--> 
+
+
+Total memory usage is 497980 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

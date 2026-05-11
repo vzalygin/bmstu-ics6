@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/main_test.xst" -ofn "/mnt/c/repos/bmstu-ics6/schemach/2sem/lab42/main_test.syr" 

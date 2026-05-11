@@ -1,0 +1,3 @@
+verilog work "seven_segment_driver.v"
+verilog work "test_seven_seg_driver.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

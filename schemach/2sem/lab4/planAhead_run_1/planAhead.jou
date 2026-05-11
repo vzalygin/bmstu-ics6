@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Fri Nov  8 10:01:14 2024
+# Process ID: 14069
+# Log file: /mnt/c/repos/bmstu-ics6/schemach/2sem/lab3/planAhead_run_1/planAhead.log
+# Journal file: /mnt/c/repos/bmstu-ics6/schemach/2sem/lab3/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /mnt/c/repos/bmstu-ics6/schemach/2sem/lab3/pa.fromNetlist.tcl
