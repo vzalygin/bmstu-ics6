@@ -2,7 +2,7 @@
 
 #set text(size: 12pt)
 
-#страница(image("./титул_тз.pdf", height: 100%), номер: нет)
+#page(align(left, image("./титул_тз.jpg", width: 100%)), margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm), footer: align(center)[#text(fill: white)[1]])
 
 #ненумерованный_заголовок(содержание: нет)[#text(weight: "regular")[ 1 ВВЕДЕНИЕ ]]
 
