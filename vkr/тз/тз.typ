@@ -2,7 +2,7 @@
 
 #set text(size: 12pt)
 
-#page(align(left, image("./титул_тз.pdf", width: 100%)), margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm), footer: align(center)[#text(fill: white)[1]])
+#page(align(left, image("./титул_тз.jpg", width: 100%)), margin: (left: 3cm, right: 1.5cm, top: 2cm, bottom: 2cm), footer: align(center)[#text(fill: white)[1]])
 
 #ненумерованный_заголовок(содержание: нет)[#text(weight: "regular")[ 1 ВВЕДЕНИЕ ]]
 
@@ -133,7 +133,7 @@ https://webassembly.github.io/spec/versions/core/WebAssemblyU2.0.pdf  (дата 
 
 Условия эксплуатации в соответствии с СанПиН 2.2.2/2.4.1340-03.
 
-\ \
+\
 
 5.4 Требования к составу и параметрам технических средств
 
