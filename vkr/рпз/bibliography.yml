@@ -3,37 +3,37 @@ forth-standard:
   title: ANS Forth standard
   url:
     value: https://forth-standard.org/standard/words
-    date: 2025-09-25
+    date: 2026-01-25
 forth-page:
   type: Web
   title: Forth documentation
   url:
     value: https://www.forth.com/resources/forth-programming-language/
-    date: 2025-09-25
+    date: 2026-01-25
 joy-tut:
   type: Web
   title: An informal tutorial on Joy
   url:
     value: https://hypercubed.github.io/joy/html/j01tut.html
-    date: 2025-10-10
+    date: 2026-02-10
 joy-math:
   type: Web
   title: Mathematical foundations of Joy
   url:
     value: https://hypercubed.github.io/joy/html/j02maf.html
-    date: 2025-10-10
+    date: 2026-02-10
 joy-alg:
   type: Web
   title: The Algebra of Joy
   url:
     value: https://hypercubed.github.io/joy/html/j04alg.html
-    date: 2025-10-10
+    date: 2026-02-10
 joy-impl:
   type: Web
   title: The prototype implementation of Joy
   url:
     value: https://hypercubed.github.io/joy/html/j09imp.html
-    date: 2025-10-10
+    date: 2026-02-10
 # cat-a:
 #   type: Web
 #   title: Simple Type Inference for Higher-Order Stack-Oriented Languages
@@ -47,15 +47,21 @@ joy-impl:
 #     value: https://dcreager.net/remarkable/Diggins2008b.pdf
 #     date: 2025-10-13
 cat-a:
-    type: Article
+    type: Web
     author: Christopher Diggins
     title: Simple Type Inference for Higher-Order Stack-Oriented Languages
     date: 2008-04-20
+    url:
+      value: https://dcreager.net/pdf/Diggins2008a.pdf
+      date: 2026-02-13
 cat-b:
-    type: Article
+    type: Web
     author: Christopher Diggins
     title: Typing Functional Stack-Based Languages
     date: 2008-05-01
+    url:
+      value: https://dcreager.net/pdf/Diggins2008b.pdf
+      date: 2026-02-13
 cat-github:
   type: Web
   title: Cat language repository
@@ -72,7 +78,14 @@ factor-paper:
     type: Article
     author: [ "Slava Pestov", "Daniel Ehrenberg", "Joe Groff" ]
     title: "Factor: a dynamic stack-based programming language"
-    date: 2010-01-01
+    date: 2010-10-18
+    serial-number:
+      acm: 978-1-4503-0405-4/10/10
+    page-range: 43-57
+    parent:
+      type: Periodical
+      title: DLS
+      volume: 2010
 factor-wiki:
   type: Web
   title: Factor wiki
