@@ -8,7 +8,7 @@ forth-page:
   type: Web
   title: Forth documentation
   url:
-    value: https://www.forth.com/resources/forth-programming-language/
+    value: https://www.forth.com/resources/forth-programming-language
     date: 2026-01-25
 joy-tut:
   type: Web
@@ -79,8 +79,6 @@ factor-paper:
     author: [ "Slava Pestov", "Daniel Ehrenberg", "Joe Groff" ]
     title: "Factor: a dynamic stack-based programming language"
     date: 2010-10-18
-    serial-number:
-      acm: 978-1-4503-0405-4/10/10
     page-range: 43-57
     parent:
       type: Periodical
@@ -147,8 +145,7 @@ stack-paper:
   edition: 3-е изд., стер.
   publisher:
       name: КНОРУС
-      location: >-
-          – Москва
+      location: Москва
   page-total: 334
   date: 2018
 владимиров:
@@ -158,7 +155,6 @@ stack-paper:
   author: Владимиров К.И.
   publisher:
       name: АСТ
-      location: — Москва
+      location: Москва
   page-total: 272
   date: 2024
-  serial-number: 978-5-17-167965-1

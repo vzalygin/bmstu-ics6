@@ -8,3 +8,7 @@
 #let cc(content) = {
   text(size: 10pt, hyphenate: false)[#block(breakable: false)[#content]]
 }
+
+#let cl(content) = align(left)[#c[#content]]
+
+#let ccl(content) = align(left)[#cc[#content]]

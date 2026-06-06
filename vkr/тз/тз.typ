@@ -30,8 +30,8 @@
 4.1.1 Christopher  Diggins.  Simple  Type  Inference  for  Higher-Order  Stack-
 Oriented Languages. 2008.
 
-4.1.2 Владимиров  К.И.  Оптимизирующие  компиляторы.  Структура  и
-алгоритмы: 978–5–17–167965–1. — Москва: АСТ, 2024. 272 с.
+4.1.2 Владимиров  К.И.  Оптимизирующие  компиляторы.  Структура  и 
+алгоритмы. Москва: АСТ, 2024. 272 с.
 
 4.1.3 WebAssembly  Specification  2.0  [Электронный  ресурс].  URL:
 https://webassembly.github.io/spec/versions/core/WebAssemblyU2.0.pdf  (дата  обращения: 11.11.2025).

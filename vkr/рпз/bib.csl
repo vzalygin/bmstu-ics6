@@ -47,6 +47,8 @@
       <term name="editor" form="verb-short">под ред.</term>
       <!-- Поскольку порядковые числительные используются только для "изд.", то достаточно одного простого определения, но в принципе это должно полностью определяться локалью, включая род терминов -->
       <term name="ordinal">-е</term>
+      <term name="page" form="short">с.</term>
+      <term name="page" form="short" plural="true">с.</term>
     </terms>
   </locale>
   <!-- Macros -->
@@ -142,7 +144,7 @@
   <macro name="page">
     <!-- it is assumed that fields "page" and "# of Pages" do not exist simultaneously -->
     <group delimiter=" ">
-      <label variable="page" form="short" text-case="capitalize-first" plural="never"/>
+      <label variable="page" form="short" plural="never"/>
       <text variable="page"/>
     </group>
     <group delimiter=" ">
