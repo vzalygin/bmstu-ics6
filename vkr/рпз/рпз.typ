@@ -39,19 +39,20 @@
 }
 
 #страница(image("титул.pdf", height: 100%), номер: нет)
-#[
-  #pagebreak(weak: true)
-  Задание.
-  #pagebreak(weak: true)
-]
-#[
-  #pagebreak(weak: true)
-  Календарный план.
-  #pagebreak(weak: true)
-]
-// #страница(image("материалы/Задание-календарный план_page-0001.jpg", height: 100%))
-// #страница(image("материалы/Задание-календарный план_page-0002.jpg", height: 100%))
-// #страница(image("материалы/Задание-календарный план_page-0003.jpg", height: 100%))
+// #[
+//   #pagebreak(weak: true)
+//   Задание.
+//   #pagebreak(weak: true)
+// ]
+// #[
+//   #pagebreak(weak: true)
+//   Календарный план.
+//   #pagebreak(weak: true)
+// ]
+#page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)))
+#page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)))
+#counter(page).update(3)
+#page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)))
 #counter(page).update(4)
 #include "разделы/0-аннотация.typ"
 #include "разделы/1-реферат.typ"
