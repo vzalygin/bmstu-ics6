@@ -25,6 +25,11 @@
 
 #import "../version.typ": *
 
+#show: гост732-2017.with(
+  фича-маленький-отступ-вокруг-таблиц: нет,
+  фича-переносы-слов: нет
+)
+
 // Костыль, чтобы убрать отступы в списке использованных источников
 #set bibliography(
   style: "bib.csl",
@@ -53,9 +58,9 @@
 // #page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)))
 // #counter(page).update(3)
 // #page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)))
-#page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)),footer: align(center)[#text(fill: white)[2]])
-#page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)),footer: align(center)[#text(fill: white)[3]])
-#page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)),footer: align(center)[#text(fill: white)[3]])
+#page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)),footer: align(center)[#text(fill: white)[1]])
+#page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)),footer: align(center)[#text(fill: white)[1]])
+#page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)),footer: align(center)[#text(fill: white)[1]])
 #counter(page).update(4)
 #include "разделы/0-аннотация.typ"
 #include "разделы/1-реферат.typ"
