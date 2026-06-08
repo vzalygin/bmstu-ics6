@@ -49,10 +49,13 @@
 //   Календарный план.
 //   #pagebreak(weak: true)
 // ]
-#page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)))
-#page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)))
-#counter(page).update(3)
-#page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)))
+// #page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)))
+// #page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)))
+// #counter(page).update(3)
+// #page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)))
+#page(align(left, image("материалы/Задание-календарный план_page-0001.jpg", width: 100%)),footer: align(center)[#text(fill: white)[2]])
+#page(align(left, image("материалы/Задание-календарный план_page-0002.jpg", width: 100%)),footer: align(center)[#text(fill: white)[3]])
+#page(align(left, image("материалы/Задание-календарный план_page-0003.jpg", width: 100%)),footer: align(center)[#text(fill: white)[3]])
 #counter(page).update(4)
 #include "разделы/0-аннотация.typ"
 #include "разделы/1-реферат.typ"
